@@ -7,8 +7,10 @@ import Post, { liveFilter } from '../models/Post.js';
 const router = Router();
 const base = () => (process.env.SITE_URL || 'https://example.com').replace(/\/$/, '');
 
+// The public read APIs stay crawlable: Google renders the React pages and needs their data,
+// otherwise country / yantra / blog pages look empty to it ("Soft 404").
 router.get('/robots.txt', (_req, res) => {
-  res.type('text/plain').send(`User-agent: *\nAllow: /\nDisallow: /cart\nDisallow: /admin\nDisallow: /api/\n\nSitemap: ${base()}/sitemap.xml\n`);
+  res.type('text/plain').send(`User-agent: *\nAllow: /\nDisallow: /cart\nDisallow: /admin\nDisallow: /api/\nAllow: /api/countries\nAllow: /api/posts\nAllow: /api/yantras\n\nSitemap: ${base()}/sitemap.xml\n`);
 });
 
 router.get('/sitemap.xml', async (_req, res, next) => {
