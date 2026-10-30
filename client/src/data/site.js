@@ -2,10 +2,10 @@
 export const SITE = {
   name: 'Pt. Rajneesh Sharma',
   tagline: 'Vedic · KP · Nadi · Vastu · Jaipur',
-  whatsappNumber: '', // e.g. '919XXXXXXXXX' (country code, no +) — empty shows [NUMBER]
-  email: '', // e.g. 'contact@your-domain.com'
+  whatsappNumber: '919928911181', // e.g. '919XXXXXXXXX' (country code, no +) — empty shows [NUMBER]
+  email: 'astrologygovind@gmail.com', // e.g. 'contact@your-domain.com'
   address: 'Shyam Nagar Metro Station, opp. Pillar No. 118, New Sanganer Road, Sodala, Jaipur 302019',
-  timings: '', // e.g. 'Mon–Sat, 10am–7pm'
+  timings: 'Mon–Sat, 10am–7pm', // e.g. 'Mon–Sat, 10am–7pm'
   youtube: '#',
   instagram: '#',
   facebook: '#',
