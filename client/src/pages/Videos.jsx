@@ -3,9 +3,10 @@ import { PageShell } from '../components/Layout.jsx';
 import { Breadcrumb } from '../components/ui.jsx';
 import { PlayIcon } from '../components/Icons.jsx';
 import { SITE } from '../data/site.js';
+import { YT_VIDEOS, ytEmbed, ytThumb } from '../data/videos.js';
 import { useT } from '../context/AppContext.jsx';
 
-// Add real videos here: set `src` (mp4 in client/public/media) or `youtubeId`. Text fields are { en, hi }.
+// Videos come from data/videos.js (YouTube). An mp4 in client/public/media can be added with `src`. Text fields are { en, hi }.
 const L = (en, hi) => ({ en, hi });
 const KIND = {
   'Pandit ji': L('Pandit ji', 'पंडित जी'),
@@ -14,22 +15,11 @@ const KIND = {
   Vastu: L('Vastu', 'वास्तु'),
 };
 const YT = L('YouTube', 'YouTube');
-const VIDEOS = [
-  { cat: 'Pandit ji', title: L('Meet Pandit ji', 'पंडित जी का परिचय'), sub: L('At the office · 30 sec', 'ऑफिस में · 30 सेकंड'), len: '0:30' },
-  { cat: 'Client', title: L('[Client name], [City]', '[क्लाइंट का नाम], [शहर]'), sub: L('Nadi reading · office visit', 'नाड़ी रीडिंग · ऑफिस विज़िट'), len: '[1:20]' },
-  { cat: 'Client', title: L('[Client name], [Country]', '[क्लाइंट का नाम], [देश]'), sub: L('KP Prashna · video call', 'केपी प्रश्न · वीडियो कॉल'), len: '[0:55]' },
-  { cat: 'Pandit ji', title: L('How a Nadi reading works', 'नाड़ी रीडिंग कैसे होती है'), sub: L('The process explained', 'प्रक्रिया समझें'), len: '[2:40]' },
-  { cat: 'Client', title: L('[Client name], [City]', '[क्लाइंट का नाम], [शहर]'), sub: L('Vastu · home', 'वास्तु · घर'), len: '[1:05]' },
-  { cat: 'Yantra', title: L('Installation guide — [Yantra name]', 'स्थापना विधि — [यंत्र का नाम]'), sub: L('Pandit ji', 'पंडित जी'), len: '[1:00]' },
-  { cat: 'Client', title: L('[Client name], [Country]', '[क्लाइंट का नाम], [देश]'), sub: L('Yantra · business', 'यंत्र · व्यापार'), len: '[1:30]' },
-  { cat: 'Vastu', title: L('[Vastu video title]', '[वास्तु वीडियो का शीर्षक]'), sub: YT, len: '[—]' },
-  { cat: 'Yantra', title: L('Pran-pratishtha — [Yantra name]', 'प्राण-प्रतिष्ठा — [यंत्र का नाम]'), sub: L('Video proof', 'वीडियो प्रमाण'), len: '[0:45]' },
-  { cat: 'Pandit ji', title: L('[YouTube video title]', '[YouTube वीडियो का शीर्षक]'), sub: YT, len: '[—]' },
-  { cat: 'Vastu', title: L('[Vastu video title]', '[वास्तु वीडियो का शीर्षक]'), sub: YT, len: '[—]' },
-  { cat: 'Pandit ji', title: L('[YouTube video title]', '[YouTube वीडियो का शीर्षक]'), sub: YT, len: '[—]' },
-].map((v, id) => ({ id, src: '', youtubeId: '', kind: KIND[v.cat], ...v }));
+const VIDEOS = YT_VIDEOS.map((v, id) => ({ id, src: '', sub: YT, len: '', kind: KIND[v.cat], ...v }));
 
-const TABS = [['all', L('All', 'सभी')], ['Client', L('Client testimonials', 'क्लाइंट के अनुभव')], ['Pandit ji', L('Pandit ji’s videos', 'पंडित जी के वीडियो')], ['Yantra', L('Yantra videos', 'यंत्र वीडियो')], ['Vastu', L('Vastu', 'वास्तु')]];
+// Only categories that have at least one video get a tab.
+const TABS = [['all', L('All', 'सभी')], ['Client', L('Client testimonials', 'क्लाइंट के अनुभव')], ['Pandit ji', L('Pandit ji’s videos', 'पंडित जी के वीडियो')], ['Yantra', L('Yantra videos', 'यंत्र वीडियो')], ['Vastu', L('Vastu', 'वास्तु')]]
+  .filter(([k]) => k === 'all' || VIDEOS.some((v) => v.cat === k));
 
 export default function Videos() {
   const t = useT();
@@ -49,7 +39,7 @@ export default function Videos() {
           </div>
           <div style={{ position: 'relative', aspectRatio: '16 / 9', border: '1px solid var(--line-2)', borderRadius: 4, background: 'var(--bg-2)', overflow: 'hidden' }}>
             {f.youtubeId ? (
-              <iframe title={t(f.title)} src={`https://www.youtube-nocookie.com/embed/${f.youtubeId}`} loading="lazy" allowFullScreen style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }} />
+              <iframe title={t(f.title)} src={ytEmbed(f.youtubeId)} loading="lazy" allowFullScreen style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }} />
             ) : f.src ? (
               <video src={f.src} controls playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
             ) : (
@@ -72,15 +62,18 @@ export default function Videos() {
 
       <section className="section-tight" style={{ paddingBottom: 100 }}>
         <div className="wrap-wide stack" style={{ '--gap': '28px' }}>
-          <div className="row" style={{ '--gap': '10px' }} role="group" aria-label={t('Video category', 'वीडियो श्रेणी')}>
-            {TABS.map(([k, l]) => <button key={k} type="button" aria-pressed={tab === k} className={`chip${tab === k ? ' on' : ''}`} style={{ minHeight: 44 }} onClick={() => setTab(k)}>{t(l)}</button>)}
-          </div>
+          {TABS.length > 2 && (
+            <div className="row" style={{ '--gap': '10px' }} role="group" aria-label={t('Video category', 'वीडियो श्रेणी')}>
+              {TABS.map(([k, l]) => <button key={k} type="button" aria-pressed={tab === k} className={`chip${tab === k ? ' on' : ''}`} style={{ minHeight: 44 }} onClick={() => setTab(k)}>{t(l)}</button>)}
+            </div>
+          )}
           <div className="grid-fill" style={{ '--min': '280px' }}>
             {list.map((v) => (
               <button key={v.id} type="button" className="ycard reveal" onClick={() => { setFeat(v.id); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ padding: 0, textAlign: 'left', cursor: 'pointer', borderColor: v.id === feat ? 'var(--gold)' : undefined }}>
-                <span style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', aspectRatio: '16 / 9', background: 'var(--bg-3)', borderBottom: '1px solid var(--line)' }}>
-                  <span className="play" style={{ width: 52, height: 52 }}><PlayIcon size={16} /></span>
-                  <span style={{ position: 'absolute', right: 12, bottom: 10, padding: '3px 8px', borderRadius: 4, background: 'rgba(6,7,13,.85)', fontSize: 11, color: 'var(--text-2)' }}>{v.len}</span>
+                <span style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', aspectRatio: '16 / 9', background: 'var(--bg-3)', borderBottom: '1px solid var(--line)', overflow: 'hidden' }}>
+                  {v.youtubeId && <img src={ytThumb(v.youtubeId)} alt="" loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />}
+                  <span className="play" style={{ position: 'relative', width: 52, height: 52 }}><PlayIcon size={16} /></span>
+                  {v.len && <span style={{ position: 'absolute', right: 12, bottom: 10, padding: '3px 8px', borderRadius: 4, background: 'rgba(6,7,13,.85)', fontSize: 11, color: 'var(--text-2)' }}>{v.len}</span>}
                 </span>
                 <span className="stack" style={{ '--gap': '6px', padding: '16px 18px 20px' }}>
                   <span className="eyebrow" style={{ letterSpacing: '.25em' }}>{t(v.kind)}</span>

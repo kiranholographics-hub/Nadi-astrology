@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PageShell } from '../components/Layout.jsx';
-import { Faq, Marquee, PlayBox, SectionHead, Stats, Steps } from '../components/ui.jsx';
+import { Faq, Marquee, SectionHead, Stats, Steps } from '../components/ui.jsx';
 import { YantraCard } from '../components/Yantra.jsx';
 import { CameraIcon, ChevronLeft, ChevronRight, PlayIcon } from '../components/Icons.jsx';
 import { useApp, usePrice, useT } from '../context/AppContext.jsx';
 import { getYantras } from '../api/index.js';
 import { SITE, show } from '../data/site.js';
+import { YT_VIDEOS, ytEmbed } from '../data/videos.js';
 import { HOME_FAQ } from '../data/faqs.js';
 import { GALLERY } from '../data/gallery.js';
 import PhotoRows from '../components/PhotoRows.jsx';
@@ -220,7 +221,14 @@ export default function Home() {
         <div className="wrap stack" style={{ '--gap': '40px' }}>
           <SectionHead title={<>{t('Watch:', 'देखें:')} <em>{t('Astrology & Vastu Videos', 'ज्योतिष और वास्तु वीडियो')}</em></>} right={<a href={SITE.youtube} className="link-arrow">{t('Subscribe on YouTube', 'YouTube चैनल सब्सक्राइब करें')} →</a>} />
           <div className="grid reveal" style={{ '--min': '300px' }}>
-            {[1, 2, 3].map((n) => <PlayBox key={n} label={L(`YouTube video ${n}`, `YouTube वीडियो ${n}`)} />)}
+            {YT_VIDEOS.slice(0, 3).map((v) => (
+              <div key={v.youtubeId} className="stack" style={{ '--gap': '12px' }}>
+                <div style={{ position: 'relative', aspectRatio: '16 / 9', border: '1px solid var(--line-2)', borderRadius: 4, background: 'var(--bg-2)', overflow: 'hidden' }}>
+                  <iframe title={t(v.title)} src={ytEmbed(v.youtubeId)} loading="lazy" allowFullScreen style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }} />
+                </div>
+                <span className="serif" style={{ fontSize: 19, lineHeight: 1.25 }}>{t(v.title)}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
