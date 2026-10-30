@@ -1,3 +1,4 @@
+import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Nadi from './pages/Nadi.jsx';
@@ -18,12 +19,17 @@ import FaqPage from './pages/FaqPage.jsx';
 import { BlogList, BlogPost } from './pages/Blog.jsx';
 import Legal from './pages/Legal.jsx';
 import Gallery from './pages/Gallery.jsx';
+import CountryPage from './pages/CountryPage.jsx';
+
+// Admin is loaded only when someone opens /admin, so the public site stays light.
+const AdminApp = lazy(() => import('./admin/AdminApp.jsx'));
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/nadi-astrology" element={<Nadi />} />
+      <Route path="/nadi-astrology/:slug" element={<CountryPage />} />
       <Route path="/vedic-astrology" element={<Vedic />} />
       <Route path="/kp-prashna" element={<KPPrashna />} />
       <Route path="/vastu-consultant-jaipur" element={<Vastu />} />
@@ -44,6 +50,7 @@ export default function App() {
       <Route path="/terms" element={<Legal page="terms" />} />
       <Route path="/refund-policy" element={<Legal page="refund-policy" />} />
       <Route path="/shipping-policy" element={<Legal page="shipping-policy" />} />
+      <Route path="/admin/*" element={<Suspense fallback={null}><AdminApp /></Suspense>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

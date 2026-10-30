@@ -3,3 +3,5 @@ node_modules
 private_uploads/*
 !private_uploads/.gitkeep
 logs
+uploads/*
+!uploads/.gitkeep

@@ -38,7 +38,18 @@ PORT=5000
 MONGODB_URI=   (Step 1 wali string)
 SITE_URL=https://nadiastrologerindia.com
 TRUST_PROXY=1
+ADMIN_SECRET=  (neeche wali command se banao)
+ADMIN_EMAIL=   (admin login ka email)
+ADMIN_PASSWORD=  (kam se kam 10 characters)
 ```
+
+`ADMIN_SECRET` banane ke liye ek baar ye chalao aur jo aaye use copy karo:
+
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+```
+
+Pehli baar server start hote hi admin login ban jaata hai. Uske baad `.env` se `ADMIN_PASSWORD` hata sakte ho.
 
 `.env` kabhi GitHub par upload mat karna.
 
@@ -85,6 +96,15 @@ Dhyan do: Render ke free plan par disk har deploy par saaf ho jaati hai — thum
 
 ---
 
+## Admin panel — `/admin`
+
+- `https://your-domain/admin` → email + password se login.
+- Sections: Dashboard, Bookings (thumb impression / floor plan yahin se download), Yantra orders, Enquiries, Yantras (price, photo, stock), Visitors, Change password.
+- Password bhool gaye? Server par: `npm run admin:create -- aapka@email.com "naya-password-123"` — purana login sab jagah se logout ho jaata hai.
+- 15 minute mein 10 se zyada galat login try → 15 minute ke liye block.
+- **Visitors mein desh (country)** tabhi dikhega jab site **Cloudflare** (free plan) ke peeche ho — Cloudflare har request ke saath desh bhejta hai. Bina Cloudflare ke desh "Unknown" dikhega; baaki numbers (pages, din, device, kahan se aaye) phir bhi aayenge.
+- Yantra photos `uploads/` folder mein save hote hain (public). Clients ki files `private_uploads/` mein (private). **Dono folders ka backup lo**, aur deploy/update karte waqt in dono ko kabhi delete ya overwrite mat karna.
+
 ## Check karo ki sab chal raha hai
 
 - `https://your-domain/api/health` → `{"ok":true,"db":true}` aana chahiye (`db:false` = MongoDB string / IP whitelist galat)
@@ -100,7 +120,7 @@ cd server
 npm run build:client      # client build karke server/public mein copy
 ```
 
-Phir naya `public/` folder (aur jo `src/` files badli hon) server par upload karo, aur:
+Phir naya `public/` folder (aur jo `src/` files badli hon) server par upload karo — `uploads/` aur `private_uploads/` ko mat chhedna — aur:
 
 ```bash
 npm ci --omit=dev         # sirf jab package.json badla ho
@@ -111,3 +131,4 @@ pm2 restart ptrs-website
 
 - Database: MongoDB Atlas → Backup (ya `mongodump`)
 - `private_uploads/` folder — clients ka personal data hai, iska regular backup lo aur kisi ke saath share mat karo.
+- `uploads/` folder — admin se daali yantra photos.

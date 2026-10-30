@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
 import { Breadcrumb, ClientQuote, Faq, PlayBox, PriceCard, Steps } from '../components/ui.jsx';
 import BookingForm from '../components/BookingForm.jsx';
+import useCountries from '../components/useCountries.js';
 import { useApp, usePrice, useT } from '../context/AppContext.jsx';
 
 const L = (en, hi) => ({ en, hi });
@@ -16,6 +17,7 @@ const KANDAMS = [
 
 export default function Nadi() {
   const t = useT();
+  const countries = useCountries();
   const price = usePrice();
   const { currency } = useApp();
   const note = currency === 'USD' ? L('for international clients · PayPal', 'विदेशी क्लाइंट के लिए · PayPal') : L('India · Razorpay (UPI, card)', 'भारत · Razorpay (UPI, कार्ड)');
@@ -117,6 +119,26 @@ export default function Nadi() {
           <ClientQuote label={L('Nadi client video testimonial', 'नाड़ी क्लाइंट का वीडियो अनुभव')} />
         </div>
       </section>
+
+      {countries.length > 0 && (
+        <section className="section-tight">
+          <div className="wrap stack" style={{ '--gap': '24px' }}>
+            <div className="stack reveal" style={{ '--gap': '10px' }}>
+              <div className="eyebrow">— {t('Worldwide', 'दुनिया भर में')}</div>
+              <h2 className="h2" style={{ fontSize: 'clamp(30px,3.4vw,46px)' }}>{t('Online Nadi readings', 'ऑनलाइन नाड़ी रीडिंग')} <em>{t('from abroad', 'विदेश से')}</em></h2>
+              <p className="body">{t('Slot times in your time zone, fees in USD, and yantra shipping to your country.', 'आपके टाइम ज़ोन में स्लॉट का समय, USD में फ़ीस, और आपके देश तक यंत्र शिपिंग।')}</p>
+            </div>
+            <div className="grid reveal" style={{ '--min': '200px', '--gap': '12px' }}>
+              {countries.map((c) => (
+                <Link key={c.slug} to={`/nadi-astrology/${c.slug}`} className="card" style={{ padding: '20px 22px', gap: 6 }}>
+                  <span className="eyebrow" style={{ letterSpacing: '.25em', fontSize: 11 }}>{c.code}</span>
+                  <span className="serif" style={{ fontSize: 24 }}>{t(c.name, c.nameHi || null)}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Faq title={L('Nadi Astrology FAQ', 'नाड़ी ज्योतिष — प्रश्न-उत्तर')} items={[
         [L('Is a leaf found for everyone?', 'क्या हर व्यक्ति का पट्टा मिलता है?'), L('No — not everyone has a leaf. If yours is not found: [refund policy].', 'नहीं, हर किसी का पट्टा होना ज़रूरी नहीं। न मिले तो [रिफंड नीति]।')],

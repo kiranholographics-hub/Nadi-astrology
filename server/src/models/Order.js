@@ -34,6 +34,9 @@ const orderSchema = new mongoose.Schema(
       gateway: { type: String, enum: ['razorpay', 'paypal', null], default: null },
       reference: String,
     },
+    courier: { type: String, maxlength: 80, default: '' },
+    trackingNumber: { type: String, maxlength: 80, default: '' },
+    adminNotes: { type: String, maxlength: 4000, default: '' },
   },
   { timestamps: true }
 );

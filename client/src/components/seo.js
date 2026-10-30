@@ -106,4 +106,14 @@ export function initAnalytics() {
 }
 export function trackPage(path) {
   if (window.gtag && import.meta.env.VITE_GA_ID) window.gtag('event', 'page_view', { page_path: path });
+  // Own visitor stats for the admin panel (no cookies, no IP stored).
+  try {
+    let sid = sessionStorage.getItem('ptrs.sid');
+    if (!sid) {
+      sid = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      sessionStorage.setItem('ptrs.sid', sid);
+    }
+    const body = JSON.stringify({ path, sid, ref: document.referrer, lang: document.documentElement.lang });
+    fetch('/api/track', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body, keepalive: true }).catch(() => {});
+  } catch { /* never break the page */ }
 }

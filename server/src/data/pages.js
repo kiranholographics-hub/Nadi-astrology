@@ -6,8 +6,5 @@ export const STATIC_PAGES = [
   ['/privacy-policy', 0.2], ['/terms', 0.2], ['/refund-policy', 0.2], ['/shipping-policy', 0.2],
 ];
 
-// Blog post slugs (keep in sync with client/src/data/blog.js) — used for sitemap.xml and 404 detection.
-export const BLOG_SLUGS = ['what-is-nadi-astrology', 'vaitheeswaran-koil-nadi-tradition', 'vastu-remedies-without-demolition', 'kp-prashna-number-1-249'];
-
 // Client-side routes that exist but are not in the sitemap.
 export const OTHER_ROUTES = ['/cart'];

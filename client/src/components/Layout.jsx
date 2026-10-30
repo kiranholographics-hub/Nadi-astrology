@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
+import useCountries from './useCountries.js';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useApp, useT } from '../context/AppContext.jsx';
 import { SITE, show, waLink } from '../data/site.js';
@@ -110,6 +111,7 @@ function Navbar({ cta }) {
 
 function Footer({ disclaimer = DISCLAIMER.default }) {
   const t = useT();
+  const countries = useCountries();
   return (
     <footer className="footer">
       <div className="wrap footer-grid">
@@ -128,6 +130,12 @@ function Footer({ disclaimer = DISCLAIMER.default }) {
           <Link to="/online-vastu-consultation">{t('Online Vastu', 'ऑनलाइन वास्तु')}</Link>
           <Link to="/yantra-shop">{t('Yantra Shop', 'यंत्र शॉप')}</Link>
         </div>
+        {countries.length > 0 && (
+          <div className="footer-col">
+            <span className="eyebrow">{t('Worldwide', 'दुनिया भर में')}</span>
+            {countries.map((c) => <Link key={c.slug} to={`/nadi-astrology/${c.slug}`}>{t(`Nadi in ${c.name === 'United Arab Emirates' ? 'UAE' : c.name}`, `${c.nameHi || c.name} में नाड़ी`)}</Link>)}
+          </div>
+        )}
         <div className="footer-col">
           <span className="eyebrow">{t('Help', 'सहायता')}</span>
           <Link to="/faq">{t('FAQ', 'सामान्य प्रश्न')}</Link>

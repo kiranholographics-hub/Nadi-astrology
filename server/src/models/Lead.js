@@ -12,6 +12,7 @@ const leadSchema = new mongoose.Schema(
     message: { type: String, maxlength: 2000 },
     consent: { type: Boolean, required: true },
     status: { type: String, enum: ['new', 'contacted', 'closed'], default: 'new' },
+    adminNotes: { type: String, maxlength: 4000, default: '' },
   },
   { timestamps: true }
 );

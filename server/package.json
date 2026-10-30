@@ -9,7 +9,8 @@
     "dev": "node --watch src/index.js",
     "seed": "node src/seed/seed.js",
     "build:client": "node scripts/build-client.js",
-    "pm2": "pm2 start deploy/ecosystem.config.cjs --env production"
+    "pm2": "pm2 start deploy/ecosystem.config.cjs --env production",
+    "admin:create": "node scripts/create-admin.js"
   },
   "dependencies": {
     "compression": "^1.7.5",
@@ -20,9 +21,10 @@
     "helmet": "^8.0.0",
     "mongoose": "^8.8.1",
     "morgan": "^1.10.0",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "sanitize-html": "^2.13.1"
   },
-  "description": "Pt. Rajneesh Sharma website \u2014 API + server for the built React site",
+  "description": "Pt. Rajneesh Sharma website — API + server for the built React site",
   "engines": {
     "node": ">=18.18"
   }

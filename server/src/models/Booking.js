@@ -57,6 +57,7 @@ const bookingSchema = new mongoose.Schema(
       reference: String,
       amount: Number,
     },
+    adminNotes: { type: String, maxlength: 4000, default: '' },
   },
   { timestamps: true }
 );

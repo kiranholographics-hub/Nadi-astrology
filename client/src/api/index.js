@@ -54,3 +54,36 @@ export async function createLead(payload) {
     })
   );
 }
+
+// Country pages (/nadi-astrology/:slug). The list is cached for the whole visit.
+let countriesPromise;
+export function getCountries() {
+  countriesPromise ||= fetch('/api/countries')
+    .then((r) => (r.ok ? r.json() : { items: [] }))
+    .catch(() => ({ items: [] }))
+    .then((d) => d.items || []);
+  return countriesPromise;
+}
+
+export async function getCountry(slug) {
+  const res = await fetch(`/api/countries/${encodeURIComponent(slug)}`);
+  if (res.status === 404) return null;
+  return json(res);
+}
+
+// Blog posts (published only)
+export async function getPosts(params = {}) {
+  const qs = new URLSearchParams(params).toString();
+  try {
+    const d = await json(await fetch(`/api/posts${qs ? `?${qs}` : ''}`));
+    return d.items || [];
+  } catch {
+    return [];
+  }
+}
+
+export async function getPost(slug) {
+  const res = await fetch(`/api/posts/${encodeURIComponent(slug)}`);
+  if (res.status === 404) return null;
+  return json(res);
+}

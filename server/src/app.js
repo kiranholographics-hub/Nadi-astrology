@@ -14,8 +14,15 @@ import bookingRoutes from './routes/bookings.js';
 import orderRoutes from './routes/orders.js';
 import leadRoutes from './routes/leads.js';
 import seoRoutes from './routes/seo.js';
+import trackRoutes from './routes/track.js';
+import countryRoutes from './routes/countries.js';
+import postRoutes from './routes/posts.js';
+import Post, { liveFilter } from './models/Post.js';
+import Country from './models/Country.js';
+import adminRoutes from './routes/admin.js';
+import { PUBLIC_DIR } from './middleware/upload.js';
 import Yantra from './models/Yantra.js';
-import { BLOG_SLUGS, OTHER_ROUTES, STATIC_PAGES } from './data/pages.js';
+import { OTHER_ROUTES, STATIC_PAGES } from './data/pages.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const SERVER_ROOT = path.resolve(__dirname, '..');
@@ -33,21 +40,35 @@ function findClientBuild() {
 }
 
 // Known page paths → real 200. Anything else still shows the React 404 page, but with a 404 status (better for SEO).
-const KNOWN = new Set([...STATIC_PAGES.map(([p]) => p), ...OTHER_ROUTES, ...BLOG_SLUGS.map((s) => `/blog/${s}`)]);
+const KNOWN = new Set([...STATIC_PAGES.map(([p]) => p), ...OTHER_ROUTES]);
 let yantraSlugs = new Set();
+let countrySlugs = new Set();
+let postSlugs = new Set();
 let slugsLoadedAt = 0;
-async function isKnownPath(p) {
-  const clean = p.length > 1 ? p.replace(/\/+$/, '') : p;
-  if (KNOWN.has(clean)) return true;
-  const m = clean.match(/^\/yantra-shop\/([a-z0-9-]+)$/);
-  if (!m) return false;
-  if (Date.now() - slugsLoadedAt > 5 * 60 * 1000 && mongoose.connection.readyState === 1) {
+// Admin changes (publish a post, activate a country) call this so new pages answer 200 straight away.
+export function refreshKnownPaths() {
+  slugsLoadedAt = 0;
+}
+
+async function isKnownPath(pathname) {
+  const clean = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;
+  if (KNOWN.has(clean) || clean === '/admin' || clean.startsWith('/admin/')) return true;
+  const y = clean.match(/^\/yantra-shop\/([a-z0-9-]+)$/);
+  const c = clean.match(/^\/nadi-astrology\/([a-z0-9-]+)$/);
+  const b = clean.match(/^\/blog\/([a-z0-9-]+)$/);
+  if (!y && !c && !b) return false;
+  if (Date.now() - slugsLoadedAt > 60 * 1000 && mongoose.connection.readyState === 1) {
+    // (scheduled posts go live on their own; the list refreshes at least once a minute)
     try {
-      yantraSlugs = new Set((await Yantra.find({ active: true }).select('slug').lean()).map((y) => y.slug));
+      yantraSlugs = new Set((await Yantra.find({ active: true }).select('slug').lean()).map((d) => d.slug));
+      countrySlugs = new Set((await Country.find({ status: 'active' }).select('slug').lean()).map((d) => d.slug));
+      postSlugs = new Set((await Post.find(liveFilter()).select('slug').lean()).map((d) => d.slug));
       slugsLoadedAt = Date.now();
     } catch { /* keep the previous list */ }
   }
-  return yantraSlugs.size === 0 || yantraSlugs.has(m[1]);
+  if (y) return yantraSlugs.size === 0 || yantraSlugs.has(y[1]);
+  if (c) return countrySlugs.has(c[1]);
+  return postSlugs.has(b[1]);
 }
 
 export function createApp() {
@@ -69,8 +90,14 @@ export function createApp() {
   app.use('/api/bookings', writeLimiter, bookingRoutes);
   app.use('/api/orders', writeLimiter, orderRoutes);
   app.use('/api/leads', writeLimiter, leadRoutes);
+  app.use('/api/track', trackRoutes);
+  app.use('/api/countries', countryRoutes);
+  app.use('/api/posts', postRoutes);
+  app.use('/api/admin', adminRoutes);
   app.use('/api', (_req, res) => res.status(404).json({ error: 'Not found' }));
   app.use(seoRoutes); // /sitemap.xml, /robots.txt
+  // Yantra photos uploaded from the admin
+  app.use('/uploads', express.static(PUBLIC_DIR, { maxAge: '30d', fallthrough: false }));
 
   const dist = findClientBuild();
   if (dist) {
