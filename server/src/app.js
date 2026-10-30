@@ -76,7 +76,8 @@ export function createApp() {
   app.disable('x-powered-by');
   // Behind Nginx / Hostinger / Render the real visitor IP comes in X-Forwarded-For (needed for rate limiting).
   app.set('trust proxy', process.env.TRUST_PROXY ? Number(process.env.TRUST_PROXY) || process.env.TRUST_PROXY : isProd ? 1 : false);
-  app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
+  // YouTube embeds refuse to play (error 153) without a referrer, so send the origin to other sites.
+  app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false, referrerPolicy: { policy: 'strict-origin-when-cross-origin' } }));
   app.use(compression());
   const origins = process.env.CLIENT_ORIGIN?.split(',').map((s) => s.trim()).filter(Boolean);
   app.use('/api', cors({ origin: origins?.length ? origins : !isProd }));
