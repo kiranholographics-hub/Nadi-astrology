@@ -9,8 +9,8 @@ export const SITE = {
   youtube: '#',
   instagram: '#',
   facebook: '#',
-  mapEmbedUrl: '', // Google Maps embed URL
-  mapsLink: '', // Google Maps share link (Directions button)
+  mapEmbedUrl: 'https://maps.google.com/maps?q=Shyam%20Nagar%20Metro%20Station%2C%20New%20Sanganer%20Road%2C%20Sodala%2C%20Jaipur%20302019&z=16&output=embed', // Google Maps embed URL
+  mapsLink: 'https://www.google.com/maps/search/?api=1&query=Shyam%20Nagar%20Metro%20Station%2C%20New%20Sanganer%20Road%2C%20Sodala%2C%20Jaipur%20302019', // Google Maps share link (Directions button)
   grievanceName: '', // DPDP grievance officer name
   grievanceEmail: '',
   freeShippingAbove: null, // e.g. 999 (₹) — brief suggests a free-shipping threshold
