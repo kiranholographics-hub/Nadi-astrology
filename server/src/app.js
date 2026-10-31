@@ -23,6 +23,7 @@ import adminRoutes from './routes/admin.js';
 import { PUBLIC_DIR } from './middleware/upload.js';
 import Yantra from './models/Yantra.js';
 import { OTHER_ROUTES, STATIC_PAGES } from './data/pages.js';
+import { renderIndex } from './utils/pageMeta.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const SERVER_ROOT = path.resolve(__dirname, '..');
@@ -76,6 +77,13 @@ export function createApp() {
   app.disable('x-powered-by');
   // Behind Nginx / Hostinger / Render the real visitor IP comes in X-Forwarded-For (needed for rate limiting).
   app.set('trust proxy', process.env.TRUST_PROXY ? Number(process.env.TRUST_PROXY) || process.env.TRUST_PROXY : isProd ? 1 : false);
+
+  // One address for Google: www.<domain> → <domain> (SITE_URL), so the site is not indexed twice.
+  const siteUrl = (process.env.SITE_URL || '').replace(/\/$/, '');
+  const siteHost = siteUrl ? new URL(siteUrl).hostname : '';
+  if (siteHost && !siteHost.startsWith('www.')) {
+    app.use((req, res, next) => (req.hostname === `www.${siteHost}` ? res.redirect(301, `${siteUrl}${req.originalUrl}`) : next()));
+  }
   // YouTube embeds refuse to play (error 153) without a referrer, so send the origin to other sites.
   app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false, referrerPolicy: { policy: 'strict-origin-when-cross-origin' } }));
   app.use(compression());
@@ -110,7 +118,10 @@ export function createApp() {
     app.get('*', async (req, res, next) => {
       try {
         const ok = await isKnownPath(req.path);
-        res.status(ok ? 200 : 404).set('Cache-Control', 'no-cache').sendFile(indexHtml);
+        const html = ok ? await renderIndex(indexHtml, req.path, siteUrl || `${req.protocol}://${req.get('host')}`) : null;
+        res.status(ok ? 200 : 404).set('Cache-Control', 'no-cache');
+        if (html) res.type('html').send(html);
+        else res.sendFile(indexHtml);
       } catch (err) {
         next(err);
       }
