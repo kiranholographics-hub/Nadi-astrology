@@ -67,6 +67,30 @@ export default function Vedic() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="wrap stack" style={{ '--gap': '28px', maxWidth: 900 }}>
+          <h2 className="h2 reveal">{t('What is', 'वैदिक ज्योतिष')} <em>{t('Vedic Astrology?', 'क्या है?')}</em></h2>
+          <div className="prose reveal">
+            <p>{t('Vedic astrology (Jyotish) is the traditional astrology of India. It uses your date, time and place of birth to draw your birth chart (kundli) — the position of the nine planets (navagraha) in the twelve houses at the moment you were born. Unlike Western astrology, it uses the sidereal zodiac, which is aligned with the actual stars, and the 27 nakshatras (lunar mansions).', 'वैदिक ज्योतिष भारत की पारंपरिक ज्योतिष विद्या है। इसमें आपकी जन्म तिथि, समय और स्थान से आपकी कुंडली बनाई जाती है — यानी जन्म के समय बारह भावों में नौ ग्रहों (नवग्रह) की स्थिति। पश्चिमी ज्योतिष के विपरीत, इसमें निरयन (साइडेरियल) राशिचक्र और 27 नक्षत्रों का उपयोग होता है, जो आकाश के वास्तविक तारों से मेल खाता है।')}</p>
+            <p>{t('What makes Vedic astrology practical is the dasha system. The Vimshottari dasha divides your life into periods ruled by different planets, so a consultation can tell you not just what your chart promises, but when — which years favour a job change, marriage, property or travel, and which call for patience.', 'वैदिक ज्योतिष को व्यावहारिक बनाती है दशा पद्धति। विंशोत्तरी दशा आपके जीवन को अलग-अलग ग्रहों की अवधियों में बाँटती है, इसलिए परामर्श में सिर्फ़ यह नहीं पता चलता कि कुंडली में क्या लिखा है, बल्कि यह भी कि कब — कौन-से वर्ष नौकरी बदलने, विवाह, संपत्ति या यात्रा के लिए अनुकूल हैं, और कब धैर्य रखना है।')}</p>
+            <p>{t('In a consultation with Pt. Rajneesh Sharma, the birth chart (D-1) is read together with divisional charts such as the Navamsha (D-9) for marriage and the Dashamsha (D-10) for career, the current dasha and the transits of Saturn and Jupiter. You get clear answers to your questions and simple remedies — mantra, daan, gemstone guidance or a yantra — only where they are really needed.', 'पं. रजनीश शर्मा के साथ परामर्श में जन्म कुंडली (D-1) को विभागीय कुंडलियों के साथ पढ़ा जाता है — विवाह के लिए नवांश (D-9) और करियर के लिए दशमांश (D-10) — साथ में चल रही दशा और शनि व गुरु का गोचर। आपको अपने प्रश्नों के साफ़ उत्तर और सरल उपाय मिलते हैं — मंत्र, दान, रत्न सलाह या यंत्र — केवल वहीं जहाँ सच में ज़रूरत हो।')}</p>
+          </div>
+          <div className="grid reveal" style={{ '--min': '190px', '--gap': '16px' }}>
+            {[
+              [L('Career & business', 'करियर और व्यापार'), L('Job or business, the right field, promotion and job-change timing from the 10th house and D-10.', 'नौकरी या व्यापार, सही क्षेत्र, प्रमोशन और नौकरी बदलने का समय — दशम भाव और D-10 से।')],
+              [L('Marriage & relationships', 'विवाह और संबंध'), L('When marriage is likely, the nature of the partner, Manglik dosha and delays — from the 7th house and Navamsha.', 'विवाह कब संभव, जीवनसाथी का स्वभाव, मांगलिक दोष और देरी — सप्तम भाव और नवांश से।')],
+              [L('Health & family', 'स्वास्थ्य और परिवार'), L('Sensitive periods for health, children, parents and property.', 'स्वास्थ्य, संतान, माता-पिता और संपत्ति के लिए संवेदनशील समय।')],
+              [L('Sade Sati & doshas', 'साढ़ेसाती और दोष'), L('Shani Sade Sati, Kaal Sarp, Pitra dosha — what they really mean in your chart, without fear.', 'शनि साढ़ेसाती, कालसर्प, पितृ दोष — आपकी कुंडली में इनका असली अर्थ, बिना डर के।')],
+            ].map(([h, d]) => (
+              <div key={h.en} className="card" style={{ padding: 24, gap: 8 }}>
+                <h3 className="serif" style={{ fontSize: 22, margin: 0, fontWeight: 500 }}>{t(h)}</h3>
+                <p className="body">{t(d)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="packages" className="section">
         <div className="wrap stack" style={{ '--gap': '40px' }}>
           <h2 className="h2 reveal">{t('Packages & Fees', 'पैकेज और फ़ीस')}</h2>
@@ -118,7 +142,14 @@ export default function Vedic() {
         [L('How long is a consultation?', 'परामर्श कितनी देर का होता है?'), L('30 or 60 minutes. Kundli Matching is a report + 20-minute call.', '30 या 60 मिनट। कुंडली मिलान में रिपोर्ट + 20 मिनट कॉल।')],
         [L('What if I don’t know my birth time?', 'जन्म समय नहीं पता तो क्या करें?'), <>{t('KP Prashna does not need a birth time.', 'केपी प्रश्न में जन्म समय की ज़रूरत नहीं होती।')} <Link to="/kp-prashna">{t('See KP Prashna', 'केपी प्रश्न देखें')} →</Link></>],
         [L('Do you also suggest yantras?', 'क्या यंत्र भी सुझाया जाता है?'), <>{t('If needed, a yantra is suggested during the consultation and the direct link is sent to you on WhatsApp.', 'ज़रूरत हो तो परामर्श में यंत्र सुझाया जाता है, और उसका सीधा लिंक WhatsApp पर भेजा जाता है।')} <Link to="/yantra-shop">{t('Yantra Shop', 'यंत्र शॉप')} →</Link></>],
+        [L('What details do I need for a birth chart reading?', 'कुंडली परामर्श के लिए क्या जानकारी चाहिए?'), L('Your date of birth, exact time of birth and place of birth. The birth time from a birth certificate or hospital record is best; even a 10–15 minute difference can change some divisional charts.', 'जन्म तिथि, जन्म का सही समय और जन्म स्थान। जन्म प्रमाण-पत्र या अस्पताल के रिकॉर्ड वाला समय सबसे अच्छा है; 10–15 मिनट का अंतर भी कुछ विभागीय कुंडलियाँ बदल सकता है।')],
+        [L('What is the difference between Vedic and Western astrology?', 'वैदिक और पश्चिमी ज्योतिष में क्या अंतर है?'), L('Vedic astrology uses the sidereal zodiac (aligned with the stars), the 27 nakshatras and the dasha system for timing. Western astrology uses the tropical zodiac, so your sign can differ by one.', 'वैदिक ज्योतिष निरयन राशिचक्र (तारों के अनुसार), 27 नक्षत्र और समय बताने के लिए दशा पद्धति का उपयोग करता है। पश्चिमी ज्योतिष सायन राशिचक्र लेता है, इसलिए आपकी राशि एक आगे-पीछे हो सकती है।')],
+        [L('Should I book 30 or 60 minutes?', '30 मिनट बुक करूँ या 60 मिनट?'), L('30 minutes suits one or two focused questions. Choose 60 minutes for a full life reading — career, marriage, health and the coming dasha periods.', '30 मिनट एक-दो ख़ास प्रश्नों के लिए ठीक है। पूरे जीवन की रीडिंग — करियर, विवाह, स्वास्थ्य और आने वाली दशाओं — के लिए 60 मिनट चुनें।')],
+        [L('Do I have to wear a gemstone?', 'क्या रत्न पहनना ज़रूरी है?'), L('No. A gemstone is suggested only when it clearly suits your chart. Many remedies — mantra, daan, fasting or a yantra — cost little and carry no risk.', 'नहीं। रत्न तभी सुझाया जाता है जब वह कुंडली के अनुसार साफ़ तौर पर उचित हो। कई उपाय — मंत्र, दान, व्रत या यंत्र — कम खर्च के और बिना जोखिम के होते हैं।')],
       ]} />
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+        {t('Related:', 'संबंधित:')} <Link to="/kundli-milan">{t('Kundli matching for marriage', 'शादी के लिए कुंडली मिलान')}</Link><Link to="/kp-prashna">{t('KP Prashna — one question', 'केपी प्रश्न — एक सवाल')}</Link><Link to="/nadi-astrology">{t('Nadi palm leaf reading', 'नाड़ी ताड़-पत्र रीडिंग')}</Link><Link to="/vastu-consultant-jaipur">{t('Astro-Vastu in Jaipur', 'जयपुर में एस्ट्रो-वास्तु')}</Link>
+      </div>
     </PageShell>
   );
 }

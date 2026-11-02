@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
 import { Breadcrumb, Faq, Steps } from '../components/ui.jsx';
@@ -78,6 +79,30 @@ export default function KPPrashna() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="wrap stack" style={{ '--gap': '28px', maxWidth: 900 }}>
+          <h2 className="h2 reveal">{t('What is', 'केपी प्रश्न')} <em>{t('KP Prashna?', 'क्या है?')}</em></h2>
+          <div className="prose reveal">
+            <p>{t('KP Prashna is horary astrology in the Krishnamurti Paddhati (KP) system, developed by Prof. K. S. Krishnamurti. Instead of your birth chart, a chart is cast for the moment your question is judged. You hold the question in your mind and choose a number from 1 to 249; that number fixes the Ascendant of the prashna chart.', 'केपी प्रश्न, प्रो. के. एस. कृष्णमूर्ति द्वारा विकसित कृष्णमूर्ति पद्धति (केपी) का प्रश्न ज्योतिष है। इसमें आपकी जन्म कुंडली की जगह उस पल की कुंडली बनती है जब आपका प्रश्न देखा जाता है। आप प्रश्न मन में रखकर 1 से 249 के बीच एक नंबर चुनते हैं; वही नंबर प्रश्न कुंडली का लग्न तय करता है।')}</p>
+            <p>{t('Why 249? In KP, each sign is divided by nakshatra and then by sub-lord, which gives 249 divisions of the zodiac. The sub-lord of the house related to your question shows whether the matter will happen, and the dasha and ruling planets show when. That is why KP is known for precise yes/no answers with timing.', '249 ही क्यों? केपी में हर राशि को नक्षत्र और फिर सब-लॉर्ड से बाँटा जाता है, जिससे राशिचक्र के 249 भाग बनते हैं। आपके प्रश्न से जुड़े भाव का सब-लॉर्ड बताता है कि काम होगा या नहीं, और दशा व रूलिंग प्लैनेट्स बताते हैं कि कब। इसीलिए केपी समय के साथ सटीक हाँ/ना उत्तर के लिए जाना जाता है।')}</p>
+            <p>{t('Because the chart comes from the number and the moment, KP Prashna works even if you do not know your birth time — and it is often the fastest way to an answer when you face one urgent decision.', 'चूँकि कुंडली नंबर और उस पल से बनती है, इसलिए जन्म समय न पता हो तब भी केपी प्रश्न काम करता है — और जब सामने एक ज़रूरी फ़ैसला हो, तो यह अक्सर उत्तर पाने का सबसे तेज़ तरीका है।')}</p>
+          </div>
+          <div className="grid reveal" style={{ '--min': '190px', '--gap': '16px' }}>
+            {[
+              [L('Job & career', 'नौकरी और करियर'), L('Will I get this job? When will the promotion or transfer come?', 'यह नौकरी मिलेगी? प्रमोशन या ट्रांसफ़र कब होगा?')],
+              [L('Visa & abroad', 'वीज़ा और विदेश'), L('Will my visa be approved? When can I travel or settle abroad?', 'वीज़ा मिलेगा? विदेश जाना या बसना कब होगा?')],
+              [L('Marriage', 'विवाह'), L('Will this proposal work out? When will I get married?', 'यह रिश्ता होगा? मेरी शादी कब होगी?')],
+              [L('Property & money', 'संपत्ति और धन'), L('Will the property deal go through? Will I recover my money? Will I win the case?', 'प्रॉपर्टी का सौदा होगा? पैसा वापस मिलेगा? केस जीतूँगा?')],
+            ].map(([h, d]) => (
+              <div key={h.en} className="card" style={{ padding: 24, gap: 8 }}>
+                <h3 className="serif" style={{ fontSize: 22, margin: 0, fontWeight: 500 }}>{t(h)}</h3>
+                <p className="body">{t(d)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="how" className="section">
         <div className="wrap stack" style={{ '--gap': '44px' }}>
           <h2 className="h2 reveal">{t('How it works', 'कैसे काम करता है')}</h2>
@@ -120,9 +145,15 @@ export default function KPPrashna() {
         <Faq title={L('KP Prashna FAQ', 'केपी प्रश्न — प्रश्न-उत्तर')} items={[
           [L('I don’t know my birth time — will it still work?', 'जन्म समय नहीं पता — फिर भी चलेगा?'), L('Yes. KP Prashna does not need a birth time; the chart is cast from the number you choose and the time of your question.', 'हाँ। केपी प्रश्न में जन्म समय की ज़रूरत नहीं होती; कुंडली आपके चुने नंबर और प्रश्न के समय से बनती है।')],
           [L('How many questions per number?', 'एक नंबर पर कितने प्रश्न?'), L('One number, one question. A second question needs a separate prashna.', 'एक नंबर, एक प्रश्न। दूसरे प्रश्न के लिए अलग प्रश्न।')],
-          [L('What is the difference between KP and Vedic astrology?', 'केपी और वैदिक में क्या फ़र्क है?'), L('[Pandit ji’s answer]', '[पंडित जी का उत्तर]')],
+          [L('What is the difference between KP and Vedic astrology?', 'केपी और वैदिक में क्या फ़र्क है?'), L('KP is built on Vedic astrology but adds the sub-lord and uses the Placidus house system, which makes it sharper for yes/no questions and timing. Vedic astrology is better for a full picture of life, nature and long-term planning. Pandit ji uses both.', 'केपी वैदिक ज्योतिष पर ही आधारित है, लेकिन इसमें सब-लॉर्ड जुड़ता है और प्लेसिडस भाव पद्धति ली जाती है, जिससे हाँ/ना और समय बताने में यह ज़्यादा सटीक होती है। जीवन की पूरी तस्वीर, स्वभाव और लंबी योजना के लिए वैदिक ज्योतिष बेहतर है। पंडित जी दोनों का उपयोग करते हैं।')],
+        [L('How do I choose the number?', 'नंबर कैसे चुनें?'), L('Sit quietly, think about your question, and say the first number between 1 and 249 that comes to mind. Do not calculate or pick a “lucky” number.', 'शांत बैठकर अपने प्रश्न के बारे में सोचें, और 1 से 249 के बीच जो पहला नंबर मन में आए वह बोलें। गिनती न करें और “लकी” नंबर न चुनें।')],
+        [L('Can I ask the same question again?', 'क्या वही प्रश्न दोबारा पूछ सकते हैं?'), L('Not soon after. Asking again with a new number because you did not like the answer does not give a reliable result. Ask again only when the situation has really changed.', 'तुरंत नहीं। जवाब पसंद न आने पर नए नंबर से दोबारा पूछने से भरोसेमंद नतीजा नहीं मिलता। स्थिति सच में बदलने पर ही दोबारा पूछें।')],
+        [L('Can I ask on behalf of someone else?', 'क्या किसी और के लिए प्रश्न पूछ सकते हैं?'), L('Yes — for example a parent asking about a child’s job or marriage. The chart is then read from the house of that relative.', 'हाँ — जैसे माता-पिता बच्चे की नौकरी या शादी के बारे में। तब कुंडली उस रिश्तेदार के भाव से पढ़ी जाती है।')],
         ]} />
       </section>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+        {t('Related:', 'संबंधित:')} <Link to="/blog/kp-prashna-number-1-249">{t('KP Prashna 1–249 explained', 'केपी प्रश्न 1–249 विस्तार से')}</Link><Link to="/vedic-astrology">{t('Vedic birth chart reading', 'वैदिक कुंडली विश्लेषण')}</Link><Link to="/kundli-milan">{t('Kundli matching', 'कुंडली मिलान')}</Link><Link to="/nadi-astrology">{t('Nadi astrology', 'नाड़ी ज्योतिष')}</Link>
+      </div>
     </PageShell>
   );
 }

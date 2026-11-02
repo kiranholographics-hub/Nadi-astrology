@@ -61,6 +61,39 @@ export default function KundliMilan() {
       </section>
 
       <section className="section">
+        <div className="wrap stack" style={{ '--gap': '28px', maxWidth: 900 }}>
+          <h2 className="h2 reveal">{t('What is', 'कुंडली मिलान')} <em>{t('Kundli Matching?', 'क्या है?')}</em></h2>
+          <div className="prose reveal">
+            <p>{t('Kundli matching (kundli milan or horoscope matching) compares the birth charts of the bride and groom before marriage. The best-known part is Ashtakoota guna milan: eight factors (kootas) carrying 36 gunas in all, calculated from the Moon’s nakshatra of each person. Traditionally 18 or more gunas is considered acceptable, 24+ good and 28+ very good.', 'कुंडली मिलान (गुण मिलान) में शादी से पहले लड़के और लड़की की कुंडलियों को मिलाया जाता है। इसका सबसे प्रसिद्ध भाग अष्टकूट गुण मिलान है: आठ कूट, जिनमें कुल 36 गुण होते हैं, और जो दोनों के चंद्र नक्षत्र से निकाले जाते हैं। परंपरा में 18 या उससे अधिक गुण स्वीकार्य, 24+ अच्छे और 28+ बहुत अच्छे माने जाते हैं।')}</p>
+            <p>{t('But the guna score alone is not enough — a match with 30 gunas can still have problems, and one with 20 can work very well. That is why Pandit ji also checks Manglik dosha in both charts and whether it is cancelled, Nadi and Bhakoot dosha and their exceptions, the 7th house and its lord, the Navamsha (D-9) chart, and the dasha periods both of you will run after marriage.', 'लेकिन सिर्फ़ गुणों की संख्या काफ़ी नहीं — 30 गुण वाले मिलान में भी परेशानी हो सकती है और 20 गुण वाला मिलान बहुत अच्छा चल सकता है। इसीलिए पंडित जी दोनों कुंडलियों में मांगलिक दोष और उसका परिहार, नाड़ी और भकूट दोष व उनके अपवाद, सप्तम भाव और उसका स्वामी, नवांश (D-9) कुंडली, और शादी के बाद दोनों की चलने वाली दशाएँ भी देखते हैं।')}</p>
+          </div>
+          <div className="card reveal" style={{ padding: 0, overflow: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
+              <caption style={{ textAlign: 'left', padding: '18px 22px 6px', color: 'var(--muted)', fontSize: 13 }}>{t('Ashtakoota guna milan — the 8 kootas', 'अष्टकूट गुण मिलान — 8 कूट')}</caption>
+              <thead>
+                <tr style={{ textAlign: 'left' }}><th style={{ padding: '12px 22px' }}>{t('Koota', 'कूट')}</th><th style={{ padding: '12px 22px' }}>{t('Gunas', 'गुण')}</th><th style={{ padding: '12px 22px' }}>{t('What it shows', 'क्या बताता है')}</th></tr>
+              </thead>
+              <tbody>
+                {[
+                  [L('Varna', 'वर्ण'), 1, L('Spiritual and work temperament', 'आध्यात्मिक और कार्य स्वभाव')],
+                  [L('Vashya', 'वश्य'), 2, L('Mutual attraction and influence', 'आपसी आकर्षण और प्रभाव')],
+                  [L('Tara', 'तारा'), 3, L('Destiny, health and well-being', 'भाग्य, स्वास्थ्य और कुशलता')],
+                  [L('Yoni', 'योनि'), 4, L('Physical and intimate compatibility', 'शारीरिक और दांपत्य अनुकूलता')],
+                  [L('Graha Maitri', 'ग्रह मैत्री'), 5, L('Mental harmony and friendship', 'मानसिक तालमेल और मित्रता')],
+                  [L('Gana', 'गण'), 6, L('Nature: Deva, Manushya or Rakshasa', 'स्वभाव: देव, मनुष्य या राक्षस')],
+                  [L('Bhakoot', 'भकूट'), 7, L('Family welfare, finances, children', 'परिवार का कल्याण, धन, संतान')],
+                  [L('Nadi', 'नाड़ी'), 8, L('Health and progeny', 'स्वास्थ्य और संतान')],
+                ].map(([k, n, d]) => (
+                  <tr key={k.en} style={{ borderTop: '1px solid var(--line)' }}><td style={{ padding: '12px 22px' }}>{t(k)}</td><td style={{ padding: '12px 22px' }}>{n}</td><td className="muted" style={{ padding: '12px 22px' }}>{t(d)}</td></tr>
+                ))}
+                <tr style={{ borderTop: '1px solid var(--line)', fontWeight: 600 }}><td style={{ padding: '12px 22px' }}>{t('Total', 'कुल')}</td><td style={{ padding: '12px 22px' }}>36</td><td style={{ padding: '12px 22px' }} /></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="wrap stack" style={{ '--gap': '44px' }}>
           <h2 className="h2 reveal">{t('How it works', 'कैसे काम करता है')}</h2>
           <Steps min={260} items={[
@@ -97,8 +130,15 @@ export default function KundliMilan() {
           [L('How long does it take?', 'कितना समय लगता है?'), L('Report + 20-minute call. The report takes [__] days to prepare.', 'रिपोर्ट + 20 मिनट कॉल। रिपोर्ट तैयार होने का समय: [__] दिन।')],
           [L('What if a birth time is unknown?', 'जन्म समय पता न हो तो?'), L('Speak with Pandit ji — he can advise on alternatives such as KP Prashna.', 'पंडित जी से बात करें — केपी प्रश्न जैसे विकल्प पर सलाह मिल सकती है।')],
           [L('Can it be done online?', 'क्या ऑनलाइन हो सकता है?'), L('Yes, by video call. International clients can pay in USD via PayPal.', 'हाँ, वीडियो कॉल पर। विदेश के क्लाइंट PayPal से USD में भुगतान कर सकते हैं।')],
+        [L('How many gunas should match for marriage?', 'शादी के लिए कितने गुण मिलने चाहिए?'), L('Out of 36, 18 or more is traditionally acceptable, 24+ is good and 28+ very good. But the final advice also depends on Manglik dosha, Nadi and Bhakoot dosha and the 7th house — not on the score alone.', '36 में से 18 या अधिक परंपरा से स्वीकार्य, 24+ अच्छे और 28+ बहुत अच्छे माने जाते हैं। लेकिन अंतिम सलाह मांगलिक दोष, नाड़ी व भकूट दोष और सप्तम भाव पर भी निर्भर करती है — सिर्फ़ गुणों पर नहीं।')],
+        [L('What is Manglik dosha, and can a Manglik marry a non-Manglik?', 'मांगलिक दोष क्या है, और क्या मांगलिक की शादी गैर-मांगलिक से हो सकती है?'), L('Manglik dosha is formed when Mars sits in certain houses (1, 2, 4, 7, 8 or 12) of the chart. In many charts it is cancelled by other factors. Where it is not, matching with another Manglik or specific remedies are considered — it should never be a reason for fear.', 'मांगलिक दोष तब बनता है जब मंगल कुंडली के कुछ भावों (1, 2, 4, 7, 8 या 12) में हो। कई कुंडलियों में दूसरे कारणों से इसका परिहार हो जाता है। जहाँ नहीं होता, वहाँ दूसरे मांगलिक से मिलान या ख़ास उपाय देखे जाते हैं — यह कभी डर का कारण नहीं होना चाहिए।')],
+        [L('What is Nadi dosha in kundli matching?', 'कुंडली मिलान में नाड़ी दोष क्या है?'), L('When both partners have the same Nadi (Aadi, Madhya or Antya), the Nadi koota scores 0 of 8 — this is Nadi dosha. There are recognised exceptions, for example when the nakshatras or Moon signs differ in certain ways.', 'जब दोनों की नाड़ी (आदि, मध्य या अंत्य) एक हो, तो नाड़ी कूट में 8 में से 0 गुण मिलते हैं — यही नाड़ी दोष है। इसके मान्य अपवाद भी हैं, जैसे जब नक्षत्र या चंद्र राशि एक ख़ास तरह से अलग हों।')],
+        [L('Is kundli matching useful for love marriage?', 'क्या लव मैरिज में कुंडली मिलान उपयोगी है?'), L('Yes. In a love marriage the question is rarely “yes or no” — the matching shows the areas that need care and the right time for the wedding, with remedies where needed.', 'हाँ। लव मैरिज में सवाल अक्सर “हाँ या ना” का नहीं होता — मिलान से पता चलता है कि किन बातों का ध्यान रखना है और शादी का सही समय क्या है, ज़रूरत हो तो उपायों के साथ।')],
         ]} />
       </section>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+        {t('Related:', 'संबंधित:')} <Link to="/vedic-astrology">{t('Vedic birth chart consultation', 'वैदिक कुंडली परामर्श')}</Link><Link to="/kp-prashna">{t('KP Prashna: “When will I get married?”', 'केपी प्रश्न: “शादी कब होगी?”')}</Link><Link to="/nadi-astrology">{t('Nadi reading — Kandam 7 (marriage)', 'नाड़ी रीडिंग — कांडम 7 (विवाह)')}</Link><Link to="/yantra-shop">{t('Yantras for marriage', 'विवाह के लिए यंत्र')}</Link>
+      </div>
     </PageShell>
   );
 }
