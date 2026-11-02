@@ -15,6 +15,26 @@ const KANDAMS = [
   [L('Kandam 13 · Shanti', 'कांडम 13 · शांति'), L('Past karma and remedies', 'पूर्व कर्म और उपाय')],
 ];
 
+// All 16 kandams (chapters) of a Nadi leaf reading.
+const ALL_KANDAMS = [
+  L('1 · General — a summary of your whole life, with your name and family details', '1 · सामान्य — पूरे जीवन का सार, आपके नाम और परिवार के विवरण के साथ'),
+  L('2 · Family, wealth, education and speech', '2 · परिवार, धन, शिक्षा और वाणी'),
+  L('3 · Siblings, courage and effort', '3 · भाई-बहन, साहस और पराक्रम'),
+  L('4 · Mother, home, land, vehicles and comforts', '4 · माता, घर, ज़मीन, वाहन और सुख'),
+  L('5 · Children and their future', '5 · संतान और उनका भविष्य'),
+  L('6 · Health problems, debts, enemies and court cases', '6 · रोग, कर्ज़, शत्रु और कोर्ट-केस'),
+  L('7 · Marriage and life partner', '7 · विवाह और जीवनसाथी'),
+  L('8 · Longevity and accidents', '8 · आयु और दुर्घटनाएँ'),
+  L('9 · Father, fortune, spirituality and pilgrimages', '9 · पिता, भाग्य, आध्यात्म और तीर्थ'),
+  L('10 · Career, job and business', '10 · करियर, नौकरी और व्यापार'),
+  L('11 · Gains, profits and second marriage', '11 · लाभ, आय और दूसरा विवाह'),
+  L('12 · Expenses, foreign travel and settlement abroad, moksha', '12 · खर्च, विदेश यात्रा और विदेश में बसना, मोक्ष'),
+  L('13 · Shanti — past-life karma and the remedies for it', '13 · शांति — पूर्व जन्म के कर्म और उनके उपाय'),
+  L('14 · Deeksha — mantra and protection (raksha)', '14 · दीक्षा — मंत्र और रक्षा'),
+  L('15 · Aushadha — traditional medicine for illnesses', '15 · औषध — रोगों के लिए पारंपरिक औषधि'),
+  L('16 · Dasa-Bhukti — predictions period by period (planetary dashas)', '16 · दशा-भुक्ति — ग्रहों की दशा के अनुसार समय-समय की भविष्यवाणी'),
+];
+
 export default function Nadi() {
   const t = useT();
   const countries = useCountries();
@@ -60,6 +80,29 @@ export default function Nadi() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="wrap stack" style={{ '--gap': '28px', maxWidth: 900 }}>
+          <h2 className="h2 reveal">{t('What is', 'नाड़ी ज्योतिष')} <em>{t('Nadi Astrology?', 'क्या है?')}</em></h2>
+          <div className="prose reveal">
+            <p>{t('Nadi astrology (Nadi Jyotish) is an ancient South Indian tradition in which predictions are read from palm leaves (taada patra) written in old Tamil script. According to the tradition, these leaves were written by sages such as Agastya and Kaushika, and each leaf describes the life of one person. The best-known centre of the Nadi tradition is Vaitheeswaran Koil in Tamil Nadu, where families of Nadi readers have kept and read the leaves for generations.', 'नाड़ी ज्योतिष दक्षिण भारत की एक प्राचीन परंपरा है, जिसमें पुरानी तमिल लिपि में लिखे ताड़-पत्रों से भविष्य पढ़ा जाता है। परंपरा के अनुसार ये पत्र अगस्त्य, कौशिक जैसे ऋषियों ने लिखे थे, और हर पत्र में एक व्यक्ति के जीवन का वर्णन होता है। नाड़ी परंपरा का सबसे प्रसिद्ध केंद्र तमिलनाडु का वैथीश्वरन कोइल है, जहाँ नाड़ी रीडर्स के परिवार पीढ़ियों से इन पत्रों को सँभालते और पढ़ते आए हैं।')}</p>
+            <p>{t('Your leaf is found from your thumb impression — the right thumb for men and the left thumb for women. The leaves are grouped by thumb-print patterns; the Nadi reader then reads out short statements from each bundle and you answer only “yes” or “no”. When your name, your parents’ names and other details match, your leaf has been found. No birth chart or birth time is needed to find it.', 'आपका पट्टा अंगूठे के निशान से खोजा जाता है — पुरुषों का दायाँ और महिलाओं का बायाँ अंगूठा। पत्र अंगूठे की रेखाओं के प्रकार के अनुसार बँटे होते हैं; नाड़ी रीडर हर गड्डी से छोटे-छोटे वाक्य पढ़ते हैं और आप सिर्फ़ “हाँ” या “ना” कहते हैं। जब आपका नाम, माता-पिता के नाम और बाकी बातें मिल जाती हैं, तो आपका पट्टा मिल गया। पट्टा खोजने के लिए कुंडली या जन्म समय की ज़रूरत नहीं होती।')}</p>
+            <p>{t('Once the leaf is found, it is read chapter by chapter (kandam) — general life, career, marriage, health, foreign travel, and the Shanti kandam with remedies for past karma. Pt. Rajneesh Sharma, a Vedic and KP astrologer in Jaipur, then checks what the leaf says against your birth chart and current dasha, so you get both: the Nadi reading and a clear, practical plan with remedies and timing.', 'पट्टा मिलने के बाद उसे अध्याय (कांडम) के अनुसार पढ़ा जाता है — सामान्य जीवन, करियर, विवाह, स्वास्थ्य, विदेश यात्रा, और शांति कांडम जिसमें पूर्व कर्मों के उपाय होते हैं। इसके बाद जयपुर के वैदिक और केपी ज्योतिषी पं. रजनीश शर्मा पट्टे की बातों को आपकी कुंडली और चल रही दशा से मिलाकर देखते हैं, ताकि आपको दोनों मिलें: नाड़ी रीडिंग और उपाय व समय के साथ एक साफ़, व्यावहारिक योजना।')}</p>
+          </div>
+          <div className="grid reveal" style={{ '--min': '240px', '--gap': '16px' }}>
+            {[
+              [L('Nadi reading in Jaipur', 'जयपुर में नाड़ी रीडिंग'), L('Come to the office in Jaipur, give your thumb impression and sit through the reading with a translator.', 'जयपुर ऑफिस आएँ, अंगूठे का निशान दें और अनुवादक के साथ रीडिंग में बैठें।')],
+              [L('Online Nadi reading', 'ऑनलाइन नाड़ी रीडिंग'), L('From anywhere in India or abroad: upload a thumb photo and join the reading on a video call.', 'भारत या विदेश में कहीं से भी: अंगूठे की फोटो अपलोड करें और वीडियो कॉल पर रीडिंग में जुड़ें।')],
+              [L('Reading + astrology', 'रीडिंग + ज्योतिष'), L('The leaf reading is cross-checked with Vedic/KP astrology, so remedies and timing are practical.', 'पट्टे की रीडिंग को वैदिक/केपी ज्योतिष से मिलाया जाता है, ताकि उपाय और समय व्यावहारिक हों।')],
+            ].map(([h, d]) => (
+              <div key={h.en} className="card" style={{ padding: 26, gap: 8 }}>
+                <h3 className="serif" style={{ fontSize: 24, margin: 0, fontWeight: 500 }}>{t(h)}</h3>
+                <p className="body">{t(d)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="process" className="band">
         <div className="wrap section stack" style={{ '--gap': '44px' }}>
           <h2 className="h2 reveal">{t('Nadi Reading Procedure:', 'नाड़ी रीडिंग की प्रक्रिया:')} <em>{t('4 Steps', '4 चरण')}</em></h2>
@@ -83,7 +126,12 @@ export default function Nadi() {
               </div>
             ))}
           </div>
-          <a href="#" className="link-arrow">{t('List of all 16 kandams', 'सभी 16 कांडम की सूची')} →</a>
+          <details id="all-kandams" className="card reveal" style={{ padding: '22px 26px' }}>
+            <summary className="link-arrow" style={{ cursor: 'pointer' }}>{t('List of all 16 kandams', 'सभी 16 कांडम की सूची')} →</summary>
+            <ol className="body" style={{ listStyle: 'none', padding: 0, margin: '18px 0 0', display: 'grid', gap: 10, fontSize: 16 }}>
+              {ALL_KANDAMS.map((k) => <li key={k.en}>{t(k)}</li>)}
+            </ol>
+          </details>
         </div>
       </section>
 
@@ -142,11 +190,15 @@ export default function Nadi() {
 
       <Faq title={L('Nadi Astrology FAQ', 'नाड़ी ज्योतिष — प्रश्न-उत्तर')} items={[
         [L('Is a leaf found for everyone?', 'क्या हर व्यक्ति का पट्टा मिलता है?'), L('No — not everyone has a leaf. If yours is not found: [refund policy].', 'नहीं, हर किसी का पट्टा होना ज़रूरी नहीं। न मिले तो [रिफंड नीति]।')],
-        [L('Is an online reading as accurate as one at the office?', 'क्या ऑनलाइन रीडिंग ऑफिस जितनी ही सही होती है?'), L('[Answer]', '[उत्तर]')],
+        [L('Is an online reading as accurate as one at the office?', 'क्या ऑनलाइन रीडिंग ऑफिस जितनी ही सही होती है?'), L('Yes. The leaf is searched from your thumb impression, so the process is the same — you answer the reader’s yes/no questions live on the video call, and you receive the recording.', 'हाँ। पट्टा अंगूठे के निशान से खोजा जाता है, इसलिए प्रक्रिया वही रहती है — आप वीडियो कॉल पर लाइव रीडर के हाँ/ना वाले सवालों का जवाब देते हैं, और रिकॉर्डिंग आपको मिलती है।')],
         [L('Who reads the leaf, and what is Pandit ji’s role?', 'पट्टा कौन पढ़ता है और पंडित जी की भूमिका क्या है?'), L('Traditional Nadi readers read the leaf; Pandit ji interprets it alongside your birth chart and suggests remedies.', 'पट्टा पारंपरिक नाड़ी रीडर पढ़ते हैं; पंडित जी कुंडली के साथ विश्लेषण और उपाय बताते हैं।')],
+        [L('Do I need my birth time or birth chart for a Nadi reading?', 'क्या नाड़ी रीडिंग के लिए जन्म समय या कुंडली चाहिए?'), L('No. The leaf is found from the thumb impression alone. If you know your birth details, Pandit ji also uses them for the Vedic/KP analysis.', 'नहीं। पट्टा सिर्फ़ अंगूठे के निशान से मिलता है। जन्म विवरण पता हो तो पंडित जी उसे वैदिक/केपी विश्लेषण में भी इस्तेमाल करते हैं।')],
+        [L('Which thumb impression should I send?', 'किस अंगूठे का निशान भेजें?'), L('Men send the right thumb and women the left thumb. Press the thumb on an ink pad, roll it gently on white paper, and send a clear, well-lit photo.', 'पुरुष दाएँ और महिलाएँ बाएँ अंगूठे का निशान भेजें। अंगूठे को स्याही पैड पर लगाकर सफ़ेद कागज़ पर हल्का घुमाएँ, और साफ़, अच्छी रोशनी में फोटो भेजें।')],
+        [L('In which language is the leaf read?', 'पट्टा किस भाषा में पढ़ा जाता है?'), L('The leaves are written in old Tamil. The reader reads them in Tamil and it is translated into Hindi or English for you during the session.', 'पत्र पुरानी तमिल में लिखे होते हैं। रीडर तमिल में पढ़ते हैं और सत्र के दौरान आपके लिए हिंदी या अंग्रेज़ी में अनुवाद किया जाता है।')],
+        [L('What is the Shanti kandam?', 'शांति कांडम क्या है?'), L('Kandam 13 describes karma from past lives that is said to cause present problems, and the traditional remedies for it — pooja, mantra, temple visits and charity.', 'कांडम 13 में पूर्व जन्म के उन कर्मों का वर्णन होता है जिन्हें वर्तमान समस्याओं का कारण माना जाता है, और उनके पारंपरिक उपाय — पूजा, मंत्र, मंदिर दर्शन और दान।')],
       ]} />
       <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
-        {t('Related:', 'संबंधित:')} <a href="#">{t('Online Nadi Reading', 'ऑनलाइन नाड़ी रीडिंग')}</a><a href="#">{t('Nadi Astrology in Jaipur', 'जयपुर में नाड़ी ज्योतिष')}</a><Link to="/blog/vaitheeswaran-koil-nadi-tradition">{t('Vaitheeswaran Koil history', 'वैथीश्वरन कोइल का इतिहास')}</Link><Link to="/yantra-shop">{t('Shanti yantras', 'शांति यंत्र')}</Link>
+        {t('Related:', 'संबंधित:')} <Link to="/book?service=nadi-general-2-kandam">{t('Book an Online Nadi Reading', 'ऑनलाइन नाड़ी रीडिंग बुक करें')}</Link><Link to="/contact">{t('Nadi Astrology office in Jaipur', 'जयपुर में नाड़ी ज्योतिष ऑफिस')}</Link><Link to="/blog/what-is-nadi-astrology">{t('What is Nadi astrology?', 'नाड़ी ज्योतिष क्या है?')}</Link><Link to="/vedic-astrology">{t('Vedic birth chart reading', 'वैदिक कुंडली विश्लेषण')}</Link><Link to="/blog/vaitheeswaran-koil-nadi-tradition">{t('Vaitheeswaran Koil history', 'वैथीश्वरन कोइल का इतिहास')}</Link><Link to="/yantra-shop">{t('Shanti yantras', 'शांति यंत्र')}</Link>
       </div>
     </PageShell>
   );

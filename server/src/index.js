@@ -9,6 +9,8 @@ import Country from './models/Country.js';
 import { countries } from './data/countries.js';
 import Post from './models/Post.js';
 import { blogSeed } from './data/blogSeed.js';
+import { blogArticles, isPlaceholder } from './data/blogArticles.js';
+import { cleanHtml } from './utils/sanitize.js';
 
 const PORT = Number(process.env.PORT) || 5000;
 const HOST = process.env.HOST || '0.0.0.0';
@@ -44,6 +46,19 @@ async function start() {
   if ((await Post.estimatedDocumentCount()) === 0) {
     await Post.insertMany(blogSeed);
     console.log(`[seed] added ${blogSeed.length} blog drafts`);
+  }
+
+  // Starter drafts that still hold the placeholder text get the written article.
+  // Posts that were already edited in /admin/blog are never touched; status stays as it is.
+  for (const [slug, a] of Object.entries(blogArticles)) {
+    const post = await Post.findOne({ slug }).select('content contentHi seoTitle metaDescription');
+    if (!post || !isPlaceholder(post.content)) continue;
+    post.content = cleanHtml(a.content);
+    if (!post.contentHi) post.contentHi = cleanHtml(a.contentHi);
+    if (!post.seoTitle) post.seoTitle = a.seoTitle;
+    if (!post.metaDescription) post.metaDescription = a.metaDescription;
+    await post.save();
+    console.log(`[seed] filled article text for blog draft "${slug}"`);
   }
 
   await ensureAdmin();

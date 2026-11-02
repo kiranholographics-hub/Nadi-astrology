@@ -17,7 +17,19 @@ const PROPERTIES = [
   [L('Shop', 'दुकान'), <><path d="M6 14 L9 6 H31 L34 14 Z M8 14 V34 H32 V14" /><path d="M16 34 V24 H24 V34" /></>],
   [L('Factory', 'फैक्ट्री'), <path d="M4 34 V18 L14 24 V18 L24 24 V8 H32 V34 Z" />],
 ];
-const ROOMS = [L('East facing', 'पूर्वमुखी'), L('West facing', 'पश्चिममुखी'), L('North facing', 'उत्तरमुखी'), L('South facing', 'दक्षिणमुखी'), L('Main door', 'मुख्य द्वार'), L('Kitchen', 'रसोई'), L('Bedroom', 'शयनकक्ष'), L('Pooja room', 'पूजा कक्ष'), L('Toilet', 'शौचालय'), L('Wealth zone', 'धन क्षेत्र')];
+// Directions and rooms — a short, general Vastu note for each (shown as cards).
+const ROOMS = [
+  [L('East facing house', 'पूर्वमुखी घर'), L('Linked with the Sun, health and recognition. Keep the east side open and light; avoid heavy storage or a toilet in the north-east corner.', 'सूर्य, स्वास्थ्य और मान-सम्मान से जुड़ा। पूर्व दिशा खुली और हल्की रखें; उत्तर-पूर्व कोने में भारी सामान या शौचालय से बचें।')],
+  [L('West facing house', 'पश्चिममुखी घर'), L('Often good for business and gains when the entrance is in the right pada (segment) of the west wall. The south-west should stay heavy and closed.', 'मुख्य द्वार पश्चिम दीवार के सही पद में हो तो अक्सर व्यापार और लाभ के लिए अच्छा। दक्षिण-पश्चिम भारी और बंद रहना चाहिए।')],
+  [L('North facing house', 'उत्तरमुखी घर'), L('The north is the zone of Kuber — money and opportunities. Keep it clutter-free, with water or green elements rather than heavy furniture.', 'उत्तर कुबेर का क्षेत्र है — धन और अवसर। इसे साफ़-सुथरा रखें, भारी फर्नीचर की बजाय पानी या हरियाली रखें।')],
+  [L('South facing house', 'दक्षिणमुखी घर'), L('Not bad by itself, as many fear. What matters is the entrance pada and the birth charts of the family — this is where Astro-Vastu helps most.', 'जैसा लोग डरते हैं, अपने आप में बुरा नहीं। असली बात मुख्य द्वार का पद और परिवार की कुंडलियाँ हैं — यहीं एस्ट्रो-वास्तु सबसे ज़्यादा मदद करता है।')],
+  [L('Main door', 'मुख्य द्वार'), L('The door decides much of the energy coming in. Each wall has 8 padas; the right one depends on the direction and on the owner’s chart.', 'घर में आने वाली ऊर्जा का बड़ा हिस्सा मुख्य द्वार तय करता है। हर दीवार के 8 पद होते हैं; सही पद दिशा और मालिक की कुंडली पर निर्भर है।')],
+  [L('Kitchen', 'रसोई'), L('Best in the south-east (Agni zone), with the cook facing east. North-east and directly opposite the main door are avoided.', 'सबसे अच्छी दक्षिण-पूर्व (अग्नि कोण) में, खाना बनाते समय मुख पूर्व की ओर। उत्तर-पूर्व और मुख्य द्वार के ठीक सामने रसोई से बचें।')],
+  [L('Master bedroom', 'मुख्य शयनकक्ष'), L('South-west gives stability to the head of the family. Sleep with the head to the south or east; avoid mirrors facing the bed.', 'दक्षिण-पश्चिम परिवार के मुखिया को स्थिरता देता है। सिर दक्षिण या पूर्व की ओर रखकर सोएँ; बेड के सामने शीशा न रखें।')],
+  [L('Pooja room', 'पूजा कक्ष'), L('North-east (Ishaan) is ideal, facing east or north while praying. Not under a staircase or next to a toilet wall.', 'उत्तर-पूर्व (ईशान) सबसे अच्छा, पूजा करते समय मुख पूर्व या उत्तर की ओर। सीढ़ी के नीचे या शौचालय की दीवार से सटा न हो।')],
+  [L('Toilet', 'शौचालय'), L('Preferred in the west or north-west; never in the north-east or the centre (Brahmasthan). Many toilet doshas can be corrected without demolition.', 'पश्चिम या उत्तर-पश्चिम बेहतर; उत्तर-पूर्व या घर के बीच (ब्रह्मस्थान) में कभी नहीं। कई शौचालय दोष बिना तोड़-फोड़ ठीक किए जा सकते हैं।')],
+  [L('Wealth zone', 'धन क्षेत्र'), L('The north (and south-west for savings). Keep the locker in the south-west, opening towards the north.', 'उत्तर (और बचत के लिए दक्षिण-पश्चिम)। तिजोरी दक्षिण-पश्चिम में रखें, जिसका दरवाज़ा उत्तर की ओर खुले।')],
+];
 
 export default function Vastu() {
   const t = useT();
@@ -97,9 +109,15 @@ export default function Vastu() {
           </div>
           <div className="stack" style={{ '--gap': '28px' }}>
             <h2 className="h2 reveal" style={{ fontSize: 'clamp(32px,3.6vw,48px)' }}>{t('Directions and rooms', 'घर की दिशा और कमरे')}</h2>
-            <div className="row reveal" style={{ '--gap': '10px' }}>
-              {ROOMS.map((r) => <a key={r.en} href="#" className="chip" style={{ fontSize: 15, padding: '12px 20px' }}>{t(r)}</a>)}
+            <div className="grid reveal" style={{ '--min': '260px', '--gap': '14px' }}>
+              {ROOMS.map(([r, d]) => (
+                <div key={r.en} className="card" style={{ padding: 24, gap: 8 }}>
+                  <h3 className="serif" style={{ fontSize: 22, margin: 0, fontWeight: 500 }}>{t(r)}</h3>
+                  <p className="body">{t(d)}</p>
+                </div>
+              ))}
             </div>
+            <p className="body reveal" style={{ fontSize: 14 }}>{t('These are general guidelines. In Astro-Vastu, the right placement also depends on the birth charts of the people living in the house.', 'ये सामान्य दिशानिर्देश हैं। एस्ट्रो-वास्तु में सही स्थान घर में रहने वालों की कुंडली पर भी निर्भर करता है।')}</p>
           </div>
         </div>
       </section>

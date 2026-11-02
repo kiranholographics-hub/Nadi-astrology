@@ -16,7 +16,7 @@ const WORK = [
 export default function About() {
   const t = useT();
   return (
-    <PageShell title={{ en: 'About Pt. Rajneesh Sharma', hi: 'पं. रजनीश शर्मा के बारे में' }} cta={{ to: '#office', label: { en: 'Book Consultation', hi: 'परामर्श बुक करें' } }} seed={83}>
+    <PageShell title={{ en: 'About — Vedic, KP & Nadi Astrologer in Jaipur', hi: 'परिचय — जयपुर के वैदिक, केपी और नाड़ी ज्योतिषी' }} description={{ en: 'Pt. Rajneesh Sharma: Vedic, KP and Nadi astrologer and Astro-Vastu consultant in Jaipur with 12 years of experience and 4000+ office-visit clients.', hi: 'पं. रजनीश शर्मा: जयपुर के वैदिक, केपी और नाड़ी ज्योतिषी तथा एस्ट्रो-वास्तु सलाहकार — 12 वर्ष का अनुभव, 4000+ ऑफिस विज़िट क्लाइंट।' }} cta={{ to: '#office', label: { en: 'Book Consultation', hi: 'परामर्श बुक करें' } }} seed={83}>
       <section className="hero">
         <div className="wrap-wide stack" style={{ '--gap': '36px' }}>
           <Breadcrumb items={[{ label: { en: 'About', hi: 'परिचय' } }]} />

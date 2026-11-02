@@ -26,7 +26,7 @@ export default function Contact() {
   }
 
   return (
-    <PageShell title={{ en: 'Contact', hi: 'संपर्क' }} description={{ en: 'Contact Pt. Rajneesh Sharma: Jaipur office, WhatsApp, email. Online consultations worldwide.', hi: 'पं. रजनीश शर्मा से संपर्क: जयपुर ऑफिस, WhatsApp, ईमेल। दुनिया भर में ऑनलाइन परामर्श।' }} seed={127}>
+    <PageShell title={{ en: 'Contact Astrologer in Jaipur — Office, WhatsApp & Email', hi: 'जयपुर में ज्योतिषी से संपर्क — ऑफिस, WhatsApp और ईमेल' }} description={{ en: 'Contact Pt. Rajneesh Sharma, astrologer and Vastu consultant in Jaipur: office address, map, WhatsApp, email and timings. Online consultations worldwide.', hi: 'जयपुर के ज्योतिषी और वास्तु सलाहकार पं. रजनीश शर्मा से संपर्क: ऑफिस पता, मैप, WhatsApp, ईमेल और समय। दुनिया भर में ऑनलाइन परामर्श।' }} seed={127}>
       <section className="hero">
         <div className="wrap stack" style={{ '--gap': '36px' }}>
           <Breadcrumb items={[{ label: { en: 'Contact', hi: 'संपर्क' } }]} />
