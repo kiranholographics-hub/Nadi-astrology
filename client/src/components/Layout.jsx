@@ -151,8 +151,8 @@ function Footer({ disclaimer = DISCLAIMER.default }) {
           <Link to="/gallery">{t('Photo Gallery', 'फोटो गैलरी')}</Link>
           <Link to="/blog">{t('Blog', 'ब्लॉग')}</Link>
           <a href={SITE.youtube}>YouTube</a>
-          <a href={SITE.instagram}>Instagram</a>
-          <a href={SITE.facebook}>Facebook</a>
+          {SITE.instagram && SITE.instagram !== '#' && <a href={SITE.instagram}>Instagram</a>}
+          {SITE.facebook && SITE.facebook !== '#' && <a href={SITE.facebook}>Facebook</a>}
         </div>
       </div>
       <div className="wrap footer-bottom">

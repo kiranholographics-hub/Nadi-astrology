@@ -24,6 +24,9 @@ const countrySchema = new mongoose.Schema(
     customsNote: text,
     faqs: [faqSchema],
 
+    // Which batch of starter content has been added (see data/countries.js)
+    contentVersion: { type: Number, default: 0 },
+
     seoTitle: { type: String, maxlength: 70, default: '' },
     metaDescription: { type: String, maxlength: 170, default: '' },
   },

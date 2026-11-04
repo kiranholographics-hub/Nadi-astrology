@@ -38,6 +38,38 @@ export default function OnlineVastu() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="wrap stack" style={{ '--gap': '28px', maxWidth: 900 }}>
+          <h2 className="h2 reveal">{t('What is', 'एस्ट्रो-वास्तु')} <em>{t('Astro-Vastu?', 'क्या है?')}</em></h2>
+          <div className="prose reveal">
+            <p>{t('Classical Vastu Shastra divides a home into 16 zones around its centre (Brahmasthan) and studies what is placed in each — the entrance, kitchen, bedrooms, toilets, water and storage. Astro-Vastu adds one more layer: the birth charts of the people who live there. A zone that is weak for one family member may be supportive for another, so the remedies are matched to your family, not taken from a generic list.', 'पारंपरिक वास्तु शास्त्र घर को उसके केंद्र (ब्रह्मस्थान) के चारों ओर 16 ज़ोन में बाँटता है और देखता है कि हर ज़ोन में क्या है — मुख्य द्वार, रसोई, शयनकक्ष, शौचालय, पानी और भंडारण। एस्ट्रो-वास्तु इसमें एक परत और जोड़ता है: घर में रहने वालों की कुंडलियाँ। जो ज़ोन परिवार के एक सदस्य के लिए कमज़ोर है, वह दूसरे के लिए सहायक हो सकता है, इसलिए उपाय किसी सामान्य सूची से नहीं, आपके परिवार के अनुसार तय होते हैं।')}</p>
+            <p>{t('An online Vastu consultation works because everything Vastu needs can be measured from a correct floor plan and true North. That is why it suits flats and apartments, rented homes, homes abroad, and anyone who wants a Vastu check before buying a property — without waiting for a site visit.', 'ऑनलाइन वास्तु परामर्श इसलिए काम करता है क्योंकि वास्तु के लिए ज़रूरी हर चीज़ सही फ्लोर प्लान और असली उत्तर दिशा से नापी जा सकती है। इसीलिए यह फ्लैट और अपार्टमेंट, किराए के घर, विदेश में घर, और प्रॉपर्टी ख़रीदने से पहले वास्तु जाँच चाहने वालों के लिए उपयुक्त है — बिना साइट विज़िट का इंतज़ार किए।')}</p>
+          </div>
+          <div className="grid reveal" style={{ '--min': '190px', '--gap': '16px' }}>
+            {[
+              [L('Home & flat', 'घर और फ्लैट'), L('Entrance, kitchen, bedrooms, pooja room and toilets — with remedies for health, harmony and finances.', 'मुख्य द्वार, रसोई, शयनकक्ष, पूजा कक्ष और शौचालय — स्वास्थ्य, सामंजस्य और धन के लिए उपाय।')],
+              [L('Office & shop', 'ऑफिस और दुकान'), L('Owner’s seat, cash counter, entrance and the flow of customers and staff.', 'मालिक की सीट, कैश काउंटर, प्रवेश द्वार और ग्राहकों व स्टाफ़ का आना-जाना।')],
+              [L('Plot & new construction', 'प्लॉट और नया निर्माण'), L('Plot shape, road direction and the layout before the walls go up — the cheapest time to get Vastu right.', 'प्लॉट का आकार, सड़क की दिशा और दीवारें उठने से पहले का नक्शा — वास्तु ठीक करने का सबसे सस्ता समय।')],
+              [L('Homes abroad', 'विदेश में घर'), L('Houses and apartments in the USA, UK, Canada, Australia and the Gulf — using the same 16-zone method.', 'अमेरिका, UK, कनाडा, ऑस्ट्रेलिया और खाड़ी देशों में घर और अपार्टमेंट — उसी 16-ज़ोन पद्धति से।')],
+            ].map(([h, d]) => (
+              <div key={h.en} className="card" style={{ padding: 24, gap: 8 }}>
+                <h3 className="serif" style={{ fontSize: 22, margin: 0, fontWeight: 500 }}>{t(h)}</h3>
+                <p className="body">{t(d)}</p>
+              </div>
+            ))}
+          </div>
+          <div className="card reveal" style={{ padding: '26px 28px', gap: 12 }}>
+            <h3 className="serif" style={{ fontSize: 26, margin: 0, fontWeight: 500 }}>{t('How to find true North for your Vastu report', 'वास्तु रिपोर्ट के लिए सही उत्तर दिशा कैसे निकालें')}</h3>
+            <ol className="body" style={{ margin: 0, paddingLeft: '1.2em', display: 'grid', gap: 8, fontSize: 16 }}>
+              <li>{t('Stand in the centre of the house, away from the fridge, TV, steel almirahs and the main electrical board — metal and magnets disturb the compass.', 'घर के बीच में खड़े हों, फ्रिज, टीवी, स्टील की अलमारी और मेन बिजली बोर्ड से दूर — धातु और चुंबक कंपास को भटका देते हैं।')}</li>
+              <li>{t('Open the compass app on your phone, hold the phone flat and wait until the reading is steady. Calibrate it first if the app asks you to.', 'फ़ोन में कंपास ऐप खोलें, फ़ोन को सीधा (समतल) पकड़ें और रीडिंग स्थिर होने तक रुकें। ऐप कहे तो पहले कैलिब्रेट करें।')}</li>
+              <li>{t('Take the reading at 2–3 places in the house and note the degree pointing to North.', 'घर में 2–3 जगह रीडिंग लें और उत्तर दिशा की डिग्री नोट करें।')}</li>
+              <li>{t('Draw an arrow for North on your floor plan. If you are unsure, send a photo of the compass screen with the main door visible behind it.', 'फ्लोर प्लान पर उत्तर का तीर बनाएँ। पक्का न हो तो कंपास स्क्रीन की फोटो इस तरह भेजें कि पीछे मुख्य द्वार दिखे।')}</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
       <section className="band">
         <div className="wrap section stack" style={{ '--gap': '44px' }}>
           <h2 className="h2 reveal">{t('How online Vastu', 'ऑनलाइन वास्तु')} <em>{t('works', 'कैसे होता है')}</em></h2>
@@ -90,8 +122,16 @@ export default function OnlineVastu() {
           [L('How does online Vastu work?', 'ऑनलाइन वास्तु कैसे होता है?'), L('A report is prepared from your floor plan, North direction and family details, followed by a call.', 'फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।')],
           [L('Will I need to demolish anything?', 'क्या तोड़-फोड़ करनी पड़ेगी?'), L('Remedies without demolition come first; structural changes only if truly needed.', 'पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।')],
           [L('How many days does the report take?', 'रिपोर्ट कितने दिन में मिलेगी?'), L('[__] days.', '[__] दिन।')],
+        [L('Is online Vastu as accurate as a site visit?', 'क्या ऑनलाइन वास्तु साइट विज़िट जितना सही होता है?'), L('For most homes and flats, yes — provided the floor plan is to scale and North is measured correctly. A site visit is better for factories, large plots and new construction, where the surroundings matter more.', 'ज़्यादातर घरों और फ्लैट के लिए हाँ — बशर्ते फ्लोर प्लान सही नाप का हो और उत्तर दिशा ठीक से नापी गई हो। फैक्ट्री, बड़े प्लॉट और नए निर्माण के लिए साइट विज़िट बेहतर है, जहाँ आसपास का माहौल ज़्यादा मायने रखता है।')],
+        [L('I don’t have a floor plan. What can I send?', 'मेरे पास फ्लोर प्लान नहीं है। क्या भेजूँ?'), L('A neat hand-drawn sketch with the room sizes, door and window positions and the North arrow is enough. Photos or a video walk-through of each room help as well.', 'कमरों के नाप, दरवाज़े-खिड़की की जगह और उत्तर के तीर के साथ साफ़ हाथ से बना स्केच काफ़ी है। हर कमरे की फोटो या वीडियो भी मदद करते हैं।')],
+        [L('Can Vastu be done for a rented house or flat?', 'क्या किराए के घर या फ्लैट का वास्तु हो सकता है?'), L('Yes. In a rented home the remedies focus on how rooms are used, furniture placement, colours and yantras — nothing that needs the owner’s permission.', 'हाँ। किराए के घर में उपाय कमरों के उपयोग, फर्नीचर की जगह, रंग और यंत्रों पर केंद्रित होते हैं — ऐसा कुछ नहीं जिसके लिए मालिक की अनुमति चाहिए।')],
+        [L('Why are birth details of family members needed?', 'घर वालों के जन्म विवरण क्यों चाहिए?'), L('In Astro-Vastu, the zones of the house are read together with the charts of the people living there, so the remedies suit your family — for example, which zone supports the earning member or a child’s studies.', 'एस्ट्रो-वास्तु में घर के ज़ोन को वहाँ रहने वालों की कुंडलियों के साथ पढ़ा जाता है, ताकि उपाय आपके परिवार के अनुकूल हों — जैसे कौन-सा ज़ोन कमाने वाले सदस्य या बच्चे की पढ़ाई में सहायक है।')],
+        [L('Do you check a property before I buy it?', 'क्या ख़रीदने से पहले प्रॉपर्टी की जाँच करते हैं?'), L('Yes. Send the builder’s plan or brochure layout and the direction of the main road; you get a clear view of the strengths and doshas before you commit.', 'हाँ। बिल्डर का प्लान या ब्रोशर का नक्शा और मुख्य सड़क की दिशा भेजें; पैसा लगाने से पहले आपको उसकी अच्छाइयाँ और दोष साफ़ पता चल जाते हैं।')],
         ]} />
       </section>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+        {t('Related:', 'संबंधित:')} <Link to="/vastu-consultant-jaipur">{t('Vastu consultant in Jaipur — site visit', 'जयपुर में वास्तु सलाहकार — साइट विज़िट')}</Link><Link to="/blog/vastu-remedies-without-demolition">{t('Vastu remedies without demolition', 'बिना तोड़-फोड़ वास्तु उपाय')}</Link><Link to="/yantra-shop?category=Vastu">{t('Vastu yantras', 'वास्तु यंत्र')}</Link><Link to="/vedic-astrology">{t('Vedic birth chart reading', 'वैदिक कुंडली विश्लेषण')}</Link>
+      </div>
     </PageShell>
   );
 }

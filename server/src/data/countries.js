@@ -13,6 +13,40 @@ const COMMON_FAQ = {
   ],
 };
 
+// Extra country-specific FAQs (content version 1). Added to the seed below, and added once
+// to existing country pages on server start (see index.js) — never re-added after that.
+export const COUNTRY_CONTENT_VERSION = 1;
+export const EXTRA_FAQS = {
+  usa: [
+    [t('How do I send my thumb impression from the USA?', 'अमेरिका से अंगूठे का निशान कैसे भेजें?'), t('Buy an ink pad from any Staples, Walmart or CVS. Press your thumb (men: right, women: left), roll it gently on plain white paper, and upload a clear photo in the booking form. Nothing needs to be posted to India.', 'Staples, Walmart या CVS से इंक पैड लें। अंगूठा (पुरुष: दायाँ, महिला: बायाँ) दबाकर सादे सफ़ेद कागज़ पर हल्का घुमाएँ, और बुकिंग फ़ॉर्म में साफ़ फोटो अपलोड करें। भारत कुछ भी डाक से भेजने की ज़रूरत नहीं।')],
+    [t('Can my parents in India join the same call?', 'क्या भारत में मेरे माता-पिता उसी कॉल में जुड़ सकते हैं?'), t('Yes. Family members can join the video call from India and the USA at the same time — useful when the reader asks questions about your parents and family.', 'हाँ। परिवार के सदस्य भारत और अमेरिका से एक साथ वीडियो कॉल में जुड़ सकते हैं — यह तब काम आता है जब रीडर आपके माता-पिता और परिवार के बारे में प्रश्न पूछते हैं।')],
+  ],
+  uk: [
+    [t('Where can I get an ink pad in the UK for the thumb impression?', 'UK में अंगूठे के निशान के लिए इंक पैड कहाँ मिलेगा?'), t('Any WHSmith, Ryman or Argos sells ink pads. Take the print on plain white paper (men: right thumb, women: left thumb) and upload a clear photo — nothing needs to be posted.', 'किसी भी WHSmith, Ryman या Argos पर इंक पैड मिल जाता है। सादे सफ़ेद कागज़ पर निशान लें (पुरुष: दायाँ, महिला: बायाँ अंगूठा) और साफ़ फोटो अपलोड करें — कुछ भी डाक से नहीं भेजना।')],
+    [t('Which app is used for the call from the UK?', 'UK से कॉल किस ऐप पर होती है?'), t('Zoom or WhatsApp video — both work in the UK at no extra cost. You receive the recording of the reading afterwards.', 'Zoom या WhatsApp वीडियो — दोनों UK में बिना अतिरिक्त ख़र्च के चलते हैं। बाद में आपको रीडिंग की रिकॉर्डिंग मिलती है।')],
+  ],
+  canada: [
+    [t('Can the reading be in Tamil for families in Toronto?', 'टोरंटो के परिवारों के लिए क्या रीडिंग तमिल में हो सकती है?'), t('Yes. The leaves are in old Tamil and the Nadi reader can usually speak with you directly in Tamil; Pt. Rajneesh Sharma’s analysis and remedies are in English or Hindi.', 'हाँ। पट्टे पुरानी तमिल में होते हैं और नाड़ी रीडर आमतौर पर सीधे तमिल में बात कर सकते हैं; पं. रजनीश शर्मा का विश्लेषण और उपाय अंग्रेज़ी या हिंदी में होते हैं।')],
+    [t('How do I take my thumb impression in Canada?', 'कनाडा में अंगूठे का निशान कैसे लें?'), t('Ink pads are sold at Staples and Dollarama. Roll your thumb (men: right, women: left) on plain white paper and upload a clear, well-lit photo.', 'इंक पैड Staples और Dollarama पर मिलते हैं। अंगूठा (पुरुष: दायाँ, महिला: बायाँ) सादे सफ़ेद कागज़ पर घुमाएँ और अच्छी रोशनी में साफ़ फोटो अपलोड करें।')],
+  ],
+  australia: [
+    [t('Where do I get an ink pad in Australia?', 'ऑस्ट्रेलिया में इंक पैड कहाँ मिलेगा?'), t('Officeworks and Kmart sell ink pads. Take the print on plain white paper (men: right thumb, women: left thumb) and upload a clear photo in the booking form.', 'Officeworks और Kmart पर इंक पैड मिलते हैं। सादे सफ़ेद कागज़ पर निशान लें (पुरुष: दायाँ, महिला: बायाँ अंगूठा) और बुकिंग फ़ॉर्म में साफ़ फोटो अपलोड करें।')],
+    [t('Can the reading be in Tamil?', 'क्या रीडिंग तमिल में हो सकती है?'), t('Yes. The Nadi reader reads the old-Tamil leaf and can usually speak with you directly in Tamil; the analysis and remedies are explained in English or Hindi.', 'हाँ। नाड़ी रीडर पुरानी तमिल का पट्टा पढ़ते हैं और आमतौर पर सीधे तमिल में बात कर सकते हैं; विश्लेषण और उपाय अंग्रेज़ी या हिंदी में समझाए जाते हैं।')],
+  ],
+  singapore: [
+    [t('How do I send my thumb impression from Singapore?', 'सिंगापुर से अंगूठे का निशान कैसे भेजें?'), t('Get an ink pad from Popular or Daiso, roll your thumb (men: right, women: left) on plain white paper, and upload a clear photo. There is no need to courier anything.', 'Popular या Daiso से इंक पैड लें, अंगूठा (पुरुष: दायाँ, महिला: बायाँ) सादे सफ़ेद कागज़ पर घुमाएँ, और साफ़ फोटो अपलोड करें। कुछ भी कूरियर करने की ज़रूरत नहीं।')],
+    [t('Can family members in India join the reading?', 'क्या भारत में परिवार के सदस्य रीडिंग में जुड़ सकते हैं?'), t('Yes. Relatives in India can join the same video call — the time difference is only 2½ hours.', 'हाँ। भारत में रिश्तेदार उसी वीडियो कॉल में जुड़ सकते हैं — समय का अंतर सिर्फ़ 2½ घंटे है।')],
+  ],
+  malaysia: [
+    [t('How do I take my thumb impression in Malaysia?', 'मलेशिया में अंगूठे का निशान कैसे लें?'), t('Ink pads are available at Popular and MR.DIY. Roll your thumb (men: right, women: left) on plain white paper and upload a clear photo.', 'इंक पैड Popular और MR.DIY पर मिलते हैं। अंगूठा (पुरुष: दायाँ, महिला: बायाँ) सादे सफ़ेद कागज़ पर घुमाएँ और साफ़ फोटो अपलोड करें।')],
+    [t('Can I visit the Jaipur office when I travel to India?', 'भारत आने पर क्या जयपुर ऑफिस आ सकते हैं?'), t('Yes. Book the slot in advance so the leaf search can start before you arrive, and sit through the reading in person.', 'हाँ। स्लॉट पहले से बुक करें ताकि आपके आने से पहले पट्टा खोज शुरू हो सके, और रीडिंग में खुद बैठें।')],
+  ],
+  uae: [
+    [t('Which app is used for the video call in the UAE?', 'UAE में वीडियो कॉल किस ऐप पर होती है?'), t('WhatsApp voice and video calls are restricted in the UAE, so the reading is done on Zoom, which works there. You receive the recording afterwards.', 'UAE में WhatsApp वॉइस और वीडियो कॉल पर रोक है, इसलिए रीडिंग Zoom पर होती है, जो वहाँ चलता है। बाद में आपको रिकॉर्डिंग मिलती है।')],
+    [t('How do I send my thumb impression from Dubai?', 'दुबई से अंगूठे का निशान कैसे भेजें?'), t('Get an ink pad from any stationery shop or Carrefour, roll your thumb (men: right, women: left) on plain white paper, and upload a clear photo.', 'किसी भी स्टेशनरी दुकान या Carrefour से इंक पैड लें, अंगूठा (पुरुष: दायाँ, महिला: बायाँ) सादे सफ़ेद कागज़ पर घुमाएँ, और साफ़ फोटो अपलोड करें।')],
+  ],
+};
+
 export const countries = [
   {
     name: 'United States', nameHi: 'अमेरिका', code: 'US', slug: 'usa', inName: 'the USA', status: 'active', order: 1,
@@ -166,4 +200,4 @@ export const countries = [
     seoTitle: 'Nadi Astrology in Dubai & UAE — Online Palm Leaf Reading',
     metaDescription: 'Nadi palm-leaf reading for Dubai, Abu Dhabi and the UAE by video call, or at the Jaipur office. Remedies by Pt. Rajneesh Sharma. Daytime slots.',
   },
-].map((c) => ({ ...c, faqs: c.faqs.map(([q, a]) => ({ q, a })) }));
+].map((c) => ({ ...c, contentVersion: COUNTRY_CONTENT_VERSION, faqs: [...c.faqs, ...(EXTRA_FAQS[c.slug] || [])].map(([q, a]) => ({ q, a })) }));

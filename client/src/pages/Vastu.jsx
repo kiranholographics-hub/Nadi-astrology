@@ -17,7 +17,19 @@ const PROPERTIES = [
   [L('Shop', 'दुकान'), <><path d="M6 14 L9 6 H31 L34 14 Z M8 14 V34 H32 V14" /><path d="M16 34 V24 H24 V34" /></>],
   [L('Factory', 'फैक्ट्री'), <path d="M4 34 V18 L14 24 V18 L24 24 V8 H32 V34 Z" />],
 ];
-const ROOMS = [L('East facing', 'पूर्वमुखी'), L('West facing', 'पश्चिममुखी'), L('North facing', 'उत्तरमुखी'), L('South facing', 'दक्षिणमुखी'), L('Main door', 'मुख्य द्वार'), L('Kitchen', 'रसोई'), L('Bedroom', 'शयनकक्ष'), L('Pooja room', 'पूजा कक्ष'), L('Toilet', 'शौचालय'), L('Wealth zone', 'धन क्षेत्र')];
+// Directions and rooms — a short, general Vastu note for each (shown as cards).
+const ROOMS = [
+  [L('East facing house', 'पूर्वमुखी घर'), L('Linked with the Sun, health and recognition. Keep the east side open and light; avoid heavy storage or a toilet in the north-east corner.', 'सूर्य, स्वास्थ्य और मान-सम्मान से जुड़ा। पूर्व दिशा खुली और हल्की रखें; उत्तर-पूर्व कोने में भारी सामान या शौचालय से बचें।')],
+  [L('West facing house', 'पश्चिममुखी घर'), L('Often good for business and gains when the entrance is in the right pada (segment) of the west wall. The south-west should stay heavy and closed.', 'मुख्य द्वार पश्चिम दीवार के सही पद में हो तो अक्सर व्यापार और लाभ के लिए अच्छा। दक्षिण-पश्चिम भारी और बंद रहना चाहिए।')],
+  [L('North facing house', 'उत्तरमुखी घर'), L('The north is the zone of Kuber — money and opportunities. Keep it clutter-free, with water or green elements rather than heavy furniture.', 'उत्तर कुबेर का क्षेत्र है — धन और अवसर। इसे साफ़-सुथरा रखें, भारी फर्नीचर की बजाय पानी या हरियाली रखें।')],
+  [L('South facing house', 'दक्षिणमुखी घर'), L('Not bad by itself, as many fear. What matters is the entrance pada and the birth charts of the family — this is where Astro-Vastu helps most.', 'जैसा लोग डरते हैं, अपने आप में बुरा नहीं। असली बात मुख्य द्वार का पद और परिवार की कुंडलियाँ हैं — यहीं एस्ट्रो-वास्तु सबसे ज़्यादा मदद करता है।')],
+  [L('Main door', 'मुख्य द्वार'), L('The door decides much of the energy coming in. Each wall has 8 padas; the right one depends on the direction and on the owner’s chart.', 'घर में आने वाली ऊर्जा का बड़ा हिस्सा मुख्य द्वार तय करता है। हर दीवार के 8 पद होते हैं; सही पद दिशा और मालिक की कुंडली पर निर्भर है।')],
+  [L('Kitchen', 'रसोई'), L('Best in the south-east (Agni zone), with the cook facing east. North-east and directly opposite the main door are avoided.', 'सबसे अच्छी दक्षिण-पूर्व (अग्नि कोण) में, खाना बनाते समय मुख पूर्व की ओर। उत्तर-पूर्व और मुख्य द्वार के ठीक सामने रसोई से बचें।')],
+  [L('Master bedroom', 'मुख्य शयनकक्ष'), L('South-west gives stability to the head of the family. Sleep with the head to the south or east; avoid mirrors facing the bed.', 'दक्षिण-पश्चिम परिवार के मुखिया को स्थिरता देता है। सिर दक्षिण या पूर्व की ओर रखकर सोएँ; बेड के सामने शीशा न रखें।')],
+  [L('Pooja room', 'पूजा कक्ष'), L('North-east (Ishaan) is ideal, facing east or north while praying. Not under a staircase or next to a toilet wall.', 'उत्तर-पूर्व (ईशान) सबसे अच्छा, पूजा करते समय मुख पूर्व या उत्तर की ओर। सीढ़ी के नीचे या शौचालय की दीवार से सटा न हो।')],
+  [L('Toilet', 'शौचालय'), L('Preferred in the west or north-west; never in the north-east or the centre (Brahmasthan). Many toilet doshas can be corrected without demolition.', 'पश्चिम या उत्तर-पश्चिम बेहतर; उत्तर-पूर्व या घर के बीच (ब्रह्मस्थान) में कभी नहीं। कई शौचालय दोष बिना तोड़-फोड़ ठीक किए जा सकते हैं।')],
+  [L('Wealth zone', 'धन क्षेत्र'), L('The north (and south-west for savings). Keep the locker in the south-west, opening towards the north.', 'उत्तर (और बचत के लिए दक्षिण-पश्चिम)। तिजोरी दक्षिण-पश्चिम में रखें, जिसका दरवाज़ा उत्तर की ओर खुले।')],
+];
 
 export default function Vastu() {
   const t = useT();
@@ -97,9 +109,15 @@ export default function Vastu() {
           </div>
           <div className="stack" style={{ '--gap': '28px' }}>
             <h2 className="h2 reveal" style={{ fontSize: 'clamp(32px,3.6vw,48px)' }}>{t('Directions and rooms', 'घर की दिशा और कमरे')}</h2>
-            <div className="row reveal" style={{ '--gap': '10px' }}>
-              {ROOMS.map((r) => <a key={r.en} href="#" className="chip" style={{ fontSize: 15, padding: '12px 20px' }}>{t(r)}</a>)}
+            <div className="grid reveal" style={{ '--min': '260px', '--gap': '14px' }}>
+              {ROOMS.map(([r, d]) => (
+                <div key={r.en} className="card" style={{ padding: 24, gap: 8 }}>
+                  <h3 className="serif" style={{ fontSize: 22, margin: 0, fontWeight: 500 }}>{t(r)}</h3>
+                  <p className="body">{t(d)}</p>
+                </div>
+              ))}
             </div>
+            <p className="body reveal" style={{ fontSize: 14 }}>{t('These are general guidelines. In Astro-Vastu, the right placement also depends on the birth charts of the people living in the house.', 'ये सामान्य दिशानिर्देश हैं। एस्ट्रो-वास्तु में सही स्थान घर में रहने वालों की कुंडली पर भी निर्भर करता है।')}</p>
           </div>
         </div>
       </section>
@@ -141,6 +159,16 @@ export default function Vastu() {
           <div className="stack reveal" style={{ flex: '1 1 340px', '--gap': '12px' }}>
             {[L('Plot selection — direction and shape', 'प्लॉट चयन — दिशा और आकार'), L('Floor plan review — with your architect', 'नक्शा (फ्लोर प्लान) समीक्षा — आर्किटेक्ट के साथ'), L('Placement of main door, kitchen, pooja room, bedroom', 'मुख्य द्वार, रसोई, पूजा कक्ष, शयनकक्ष की जगह'), L('Site visits during construction', 'निर्माण के दौरान साइट विज़िट')].map((x) => <span key={x.en} className="tick" style={{ fontSize: 16 }}>{t(x)}</span>)}
             <a href="#form" className="btn" style={{ alignSelf: 'flex-start', marginTop: 10 }}>{t('Contact us for planning', 'प्लानिंग के लिए संपर्क करें')}</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap stack" style={{ '--gap': '28px', maxWidth: 900 }}>
+          <h2 className="h2 reveal">{t('Vastu consultant', 'जयपुर में')} <em>{t('in Jaipur', 'वास्तु सलाहकार')}</em></h2>
+          <div className="prose reveal">
+            <p>{t('Pt. Rajneesh Sharma’s office is on New Sanganer Road, Sodala, near Shyam Nagar metro station, and site visits are done across Jaipur — homes and flats in Mansarovar, Malviya Nagar, Vaishali Nagar, Jagatpura, C-Scheme, Raja Park and along Tonk Road and Ajmer Road, and shops, offices and factories in areas such as Sitapura and VKI. Site visits elsewhere in Rajasthan and outstation are arranged on request.', 'पं. रजनीश शर्मा का ऑफिस न्यू सांगानेर रोड, सोडाला में श्याम नगर मेट्रो स्टेशन के पास है, और पूरे जयपुर में साइट विज़िट होती है — मानसरोवर, मालवीय नगर, वैशाली नगर, जगतपुरा, सी-स्कीम, राजा पार्क और टोंक रोड व अजमेर रोड पर घर और फ्लैट, तथा सीतापुरा और वीकेआई जैसे इलाक़ों में दुकान, ऑफिस और फैक्ट्री। राजस्थान में और बाहर साइट विज़िट अनुरोध पर तय की जाती है।')}</p>
+            <p>{t('In a site visit the true North is measured with a compass on site, each zone of the building is checked, and the birth charts of the family are read alongside the plan. You receive a written report with a priority list — what to change first — and remedies without demolition wherever possible. For flats, homes abroad or a quick check before buying, the online Astro-Vastu report is often enough.', 'साइट विज़िट में असली उत्तर दिशा साइट पर कंपास से नापी जाती है, भवन का हर ज़ोन जाँचा जाता है, और नक्शे के साथ परिवार की कुंडलियाँ पढ़ी जाती हैं। आपको प्राथमिकता सूची के साथ लिखित रिपोर्ट मिलती है — पहले क्या बदलें — और जहाँ संभव हो बिना तोड़-फोड़ के उपाय। फ्लैट, विदेश में घर या ख़रीदने से पहले जल्दी जाँच के लिए ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट अक्सर काफ़ी होती है।')}</p>
           </div>
         </div>
       </section>
@@ -190,8 +218,14 @@ export default function Vastu() {
       <Faq title={L('Vastu FAQ', 'वास्तु — प्रश्न-उत्तर')} items={[
         [L('Will I need to demolish anything?', 'क्या तोड़-फोड़ करनी पड़ेगी?'), L('Remedies without demolition come first; structural changes only if truly needed.', 'पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।')],
         [L('How does online Vastu work?', 'ऑनलाइन वास्तु कैसे होता है?'), L('A report is prepared from your floor plan, North direction and family details, followed by a call.', 'फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।')],
-        [L('Is a south-facing home bad?', 'क्या दक्षिणमुखी घर बुरा होता है?'), L('[Pandit ji’s answer]', '[पंडित जी का उत्तर]')],
+        [L('Is a south-facing home bad?', 'क्या दक्षिणमुखी घर बुरा होता है?'), L('No. A south-facing home is not bad by itself. What matters is the pada (segment) of the south wall where the entrance sits, the layout inside, and the birth charts of the family. Many south-facing homes do very well; where there is a dosha, it can usually be corrected without demolition.', 'नहीं। दक्षिणमुखी घर अपने-आप में बुरा नहीं होता। असली बात यह है कि मुख्य द्वार दक्षिण दीवार के किस पद में है, अंदर का नक्शा कैसा है, और परिवार की कुंडलियाँ क्या कहती हैं। बहुत से दक्षिणमुखी घर बहुत अच्छे रहते हैं; जहाँ दोष हो, वहाँ आमतौर पर बिना तोड़-फोड़ ठीक किया जा सकता है।')],
+        [L('Do you do site visits outside Jaipur?', 'क्या जयपुर से बाहर साइट विज़िट करते हैं?'), L('Yes, across Rajasthan and outstation on request; travel is charged separately. For a home or flat far away, the online Astro-Vastu report is often the simpler choice.', 'हाँ, अनुरोध पर पूरे राजस्थान और बाहर भी; यात्रा का ख़र्च अलग होता है। दूर के घर या फ्लैट के लिए ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट अक्सर आसान विकल्प है।')],
+        [L('Should I check Vastu before buying a flat?', 'क्या फ्लैट ख़रीदने से पहले वास्तु देखना चाहिए?'), L('Yes — it is the cheapest time. A quick call with the builder’s floor plan shows the entrance pada, kitchen and toilet positions and whether the flat suits your family’s charts.', 'हाँ — यही सबसे सस्ता समय है। बिल्डर के फ्लोर प्लान के साथ क्विक कॉल से मुख्य द्वार का पद, रसोई और शौचालय की जगह, और फ्लैट आपके परिवार की कुंडलियों के अनुकूल है या नहीं, पता चल जाता है।')],
+        [L('Does Vastu work for offices and factories?', 'क्या ऑफिस और फैक्ट्री के लिए वास्तु काम करता है?'), L('Yes. In a workplace the owner’s seat, cash and accounts, the entrance, machinery, raw material and finished goods each have their own zone. A site visit is recommended for factories.', 'हाँ। कार्यस्थल में मालिक की सीट, कैश और अकाउंट, प्रवेश द्वार, मशीनें, कच्चा माल और तैयार माल — हर एक का अपना ज़ोन होता है। फैक्ट्री के लिए साइट विज़िट की सलाह दी जाती है।')],
       ]} />
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+        {t('Related:', 'संबंधित:')} <Link to="/online-vastu-consultation">{t('Online Vastu consultation', 'ऑनलाइन वास्तु परामर्श')}</Link><Link to="/blog/vastu-remedies-without-demolition">{t('Vastu remedies without demolition', 'बिना तोड़-फोड़ वास्तु उपाय')}</Link><Link to="/blog/main-door-vastu-direction-remedies">{t('Main door Vastu', 'मुख्य द्वार का वास्तु')}</Link><Link to="/yantra-shop/vastu-dosh-nivaran-yantra">{t('Vastu Dosh Nivaran Yantra', 'वास्तु दोष निवारण यंत्र')}</Link>
+      </div>
     </PageShell>
   );
 }

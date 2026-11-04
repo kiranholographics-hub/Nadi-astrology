@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import Yantra from '../models/Yantra.js';
 import { categories } from '../data/yantras.js';
+import { yantraContent } from '../data/yantraContent.js';
 
 const router = Router();
 
@@ -29,7 +30,7 @@ router.get('/:slug', async (req, res, next) => {
       .limit(2)
       .select('name slug priceINR priceUSD art category')
       .lean();
-    res.json({ item, related });
+    res.json({ item, related, content: yantraContent[item.slug] || null });
   } catch (err) {
     next(err);
   }

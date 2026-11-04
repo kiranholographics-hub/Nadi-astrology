@@ -9,6 +9,12 @@ import Country from './models/Country.js';
 import { countries } from './data/countries.js';
 import Post from './models/Post.js';
 import { blogSeed } from './data/blogSeed.js';
+import { blogArticles, isPlaceholder } from './data/blogArticles.js';
+import { EXTRA_FAQS, COUNTRY_CONTENT_VERSION } from './data/countries.js';
+import { cleanHtml } from './utils/sanitize.js';
+import { BLOG_BATCH, blogPosts2 } from './data/blogArticles2.js';
+import { BLOG_BATCH3, blogPosts3 } from './data/blogArticles3.js';
+import SeedState from './models/SeedState.js';
 
 const PORT = Number(process.env.PORT) || 5000;
 const HOST = process.env.HOST || '0.0.0.0';
@@ -44,6 +50,43 @@ async function start() {
   if ((await Post.estimatedDocumentCount()) === 0) {
     await Post.insertMany(blogSeed);
     console.log(`[seed] added ${blogSeed.length} blog drafts`);
+  }
+
+  // Later batches of blog articles: each added once as drafts (slugs that already exist are skipped).
+  for (const [key, posts] of [[BLOG_BATCH, blogPosts2], [BLOG_BATCH3, blogPosts3]]) {
+    if (await SeedState.exists({ key })) continue;
+    let added = 0;
+    for (const p of posts) {
+      if (await Post.exists({ slug: p.slug })) continue;
+      await Post.create({ ...p, content: cleanHtml(p.content), contentHi: cleanHtml(p.contentHi), status: 'draft', allCountries: true });
+      added++;
+    }
+    await SeedState.create({ key });
+    console.log(`[seed] added ${added} blog drafts (${key})`);
+  }
+
+  // Existing country pages get the extra FAQs once (skipping any question already there).
+  for (const [slug, list] of Object.entries(EXTRA_FAQS)) {
+    const c = await Country.findOne({ slug, contentVersion: { $lt: COUNTRY_CONTENT_VERSION } });
+    if (!c) continue;
+    const have = new Set(c.faqs.map((f) => f.q?.en));
+    list.filter(([q]) => !have.has(q.en)).forEach(([q, a]) => c.faqs.push({ q, a }));
+    c.contentVersion = COUNTRY_CONTENT_VERSION;
+    await c.save();
+    console.log(`[seed] added FAQs to country page "${slug}"`);
+  }
+
+  // Starter drafts that still hold the placeholder text get the written article.
+  // Posts that were already edited in /admin/blog are never touched; status stays as it is.
+  for (const [slug, a] of Object.entries(blogArticles)) {
+    const post = await Post.findOne({ slug }).select('content contentHi seoTitle metaDescription');
+    if (!post || !isPlaceholder(post.content)) continue;
+    post.content = cleanHtml(a.content);
+    if (!post.contentHi) post.contentHi = cleanHtml(a.contentHi);
+    if (!post.seoTitle) post.seoTitle = a.seoTitle;
+    if (!post.metaDescription) post.metaDescription = a.metaDescription;
+    await post.save();
+    console.log(`[seed] filled article text for blog draft "${slug}"`);
   }
 
   await ensureAdmin();

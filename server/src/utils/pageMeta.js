@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import Post, { liveFilter } from '../models/Post.js';
 import Country from '../models/Country.js';
 import Yantra from '../models/Yantra.js';
+import { yantraContent } from '../data/yantraContent.js';
 
 // Title / description per page, put into the HTML before it is sent, so Google and
 // WhatsApp / Facebook link previews see the right text without running the React app.
@@ -20,9 +21,9 @@ const STATIC = {
   '/yantra-shop': ['Energized Yantra Shop — Pran-Pratishtha by Pt. Rajneesh Sharma', '15 energized yantras with size, metal, installation guide and video. Shipping across India and worldwide.'],
   '/videos': ['Astrology & Vastu Videos', 'Videos by Pt. Rajneesh Sharma on Nadi, Vedic, KP astrology, Vastu and yantras.'],
   '/gallery': ['Photo Gallery — Consultations, Nadi Leaves, Vastu, Pooja', 'Photos of Pt. Rajneesh Sharma’s work: consultations at the Jaipur office, clients from abroad, Nadi palm leaves, Vastu site visits, pooja-havan and pilgrimages.'],
-  '/about': ['About Pt. Rajneesh Sharma', null],
-  '/contact': ['Contact', 'Contact Pt. Rajneesh Sharma: Jaipur office, WhatsApp, email. Online consultations worldwide.'],
-  '/faq': ['Frequently Asked Questions', 'Common questions about consultations, Nadi readings, Vastu and yantras.'],
+  '/about': ['About — Vedic, KP & Nadi Astrologer in Jaipur', 'Pt. Rajneesh Sharma: Vedic, KP and Nadi astrologer and Astro-Vastu consultant in Jaipur with 12 years of experience and 4000+ office-visit clients.'],
+  '/contact': ['Contact Astrologer in Jaipur — Office, WhatsApp & Email', 'Contact Pt. Rajneesh Sharma, astrologer and Vastu consultant in Jaipur: office address, map, WhatsApp, email and timings. Online consultations worldwide.'],
+  '/faq': ['FAQ — Nadi Reading, Astrology Consultation, Vastu & Yantra', 'Answers to common questions: how a Nadi palm leaf reading works, online astrology consultation, birth time, Vastu without demolition, yantra shipping and payment.'],
   '/blog': ['Blog — Nadi, Vedic, KP & Vastu', 'Articles and updates by Pt. Rajneesh Sharma on Nadi, Vedic, KP astrology and Vastu.'],
   '/book': ['Book Consultation', 'Book a Vedic, KP, Nadi or Vastu consultation — choose a service, pick a slot in your time zone, add your details and pay.'],
   '/privacy-policy': ['Privacy Policy', null],
@@ -50,8 +51,8 @@ async function lookup(p) {
   }
   m = p.match(/^\/yantra-shop\/([a-z0-9-]+)$/);
   if (m) {
-    const y = await Yantra.findOne({ slug: m[1], active: true }).select('name').lean();
-    return y && [`${y.name}, Energized`, `${y.name} — energized by Pt. Rajneesh Sharma. Size, metal, installation guide and video. Shipping in India and worldwide.`];
+    const y = await Yantra.findOne({ slug: m[1], active: true }).select('name slug description').lean();
+    return y && [`${y.name}, Energized`, y.description || yantraContent[y.slug]?.description?.en || `${y.name} — energized by Pt. Rajneesh Sharma. Size, metal, installation guide and video. Shipping in India and worldwide.`];
   }
   return null;
 }

@@ -5,12 +5,14 @@ import { Breadcrumb, PlayBox } from '../components/ui.jsx';
 import { YantraArt } from '../components/Yantra.jsx';
 import { PlayIcon, PlusIcon } from '../components/Icons.jsx';
 import { getYantra } from '../api/index.js';
+import { faqSchema, setJsonLd } from '../components/seo.js';
 import { useApp, usePrice, useT } from '../context/AppContext.jsx';
 import { catLabel, yName, SIZE_HI } from '../data/yantraI18n.js';
 import { SITE, waLink } from '../data/site.js';
 import NotFound from './NotFound.jsx';
 
 const L = (en, hi) => ({ en, hi });
+const clip160 = (x) => (x.length > 160 ? `${x.slice(0, 159).replace(/\s+\S*$/, '')}…` : x);
 const VIEWS = [L('Front', 'सामने'), L('Back', 'पीछे'), L('Size in hand', 'हाथ में साइज़'), L('Packaging', 'पैकिंग'), L('Video', 'वीडियो')];
 const DEFAULT_BOX = L('Yantra, installation guide (PDF), mantra card, certificate', 'यंत्र, स्थापना विधि PDF, मंत्र कार्ड, सर्टिफ़िकेट');
 
@@ -32,10 +34,26 @@ export default function YantraDetail() {
     getYantra(slug).then(setData).catch(() => setMissing(true));
   }, [slug]);
 
-  if (missing) return <NotFound />;
   const y = data?.item;
   const sizes = y?.sizes?.length ? y.sizes : ['2 x 2 inch', '3 x 3 inch', '6 x 6 inch'];
   const s = y?.sthapana || {};
+  // Written content from the server (data/yantraContent.js); admin values win.
+  const c = data?.content || null;
+  const ct = (v) => (v ? t(v) : '');
+  const cs = c?.sthapana || {};
+  const descText = y?.description || ct(c?.description);
+  const faqs = [
+    ...(c?.faqs || []),
+    [L('How do I know the yantra is genuine and energised?', 'कैसे पता चले कि यंत्र असली और प्राण-प्रतिष्ठित है?'), L('Every order comes with a video of the pran-pratishtha and a metal certificate.', 'हर ऑर्डर के साथ प्राण-प्रतिष्ठा का वीडियो और धातु का सर्टिफ़िकेट आता है।')],
+    [L('Can women install the yantra?', 'क्या महिलाएँ स्थापना कर सकती हैं?'), L('Yes. Women can install the yantra and do its daily pooja. Some families pause pooja on certain days by their own custom — you can follow your family’s tradition.', 'हाँ। महिलाएँ यंत्र की स्थापना और रोज़ की पूजा कर सकती हैं। कुछ परिवार अपनी परंपरा से कुछ दिनों पूजा रोकते हैं — आप अपने परिवार की परंपरा मान सकते हैं।')],
+    [L('What is the return policy?', 'रिटर्न नीति क्या है?'), L('Broken or wrong yantra: free replacement. [Other conditions]', 'टूटा या गलत यंत्र: मुफ़्त रिप्लेसमेंट। [बाकी शर्तें]')],
+  ];
+  const faqKey = `${y?.slug}|${faqs.length}|${t('a', 'b')}`;
+  useEffect(() => {
+    if (!y) return undefined;
+    setJsonLd('faq', faqSchema(faqs.map(([q, a]) => [t(q), t(a)]).filter(([, a]) => !a.includes('['))));
+    return () => setJsonLd('faq', null);
+  }, [faqKey]); // eslint-disable-line react-hooks/exhaustive-deps
   const img = y?.images?.[view]?.url;
   const name = y ? t(yName(y)) : '…';
   const energized = t('Energized', 'प्राण-प्रतिष्ठित');
@@ -43,14 +61,15 @@ export default function YantraDetail() {
 
   const schema = y ? {
     '@context': 'https://schema.org', '@type': 'Product', name: `${y.name}, Energized`, category: y.category,
-    description: y.description || undefined, image: y.images?.map((i) => i.url),
+    description: y.description || c?.description?.en || undefined, image: y.images?.map((i) => i.url),
     brand: { '@type': 'Person', name: 'Pt. Rajneesh Sharma' },
     offers: y.priceINR != null ? { '@type': 'Offer', priceCurrency: 'INR', price: y.priceINR, availability: y.stock === 'out_of_stock' ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock' } : undefined,
   } : null;
+  if (missing) return <NotFound />;
   const add = () => y && addToCart({ slug: y.slug, name: y.name, nameHi: yName(y).hi, size: sizes[size], sankalp, priceINR: y.priceINR, priceUSD: y.priceUSD, sankalpPriceINR: y.sankalpPriceINR, sankalpPriceUSD: y.sankalpPriceUSD });
 
   return (
-    <PageShell title={y ? `${name}, ${energized}` : L('Yantra', 'यंत्र')} description={y ? t(`${y.name} — energized by Pt. Rajneesh Sharma. Size, metal, installation guide and video. Shipping in India and worldwide.`, `${name} — पं. रजनीश शर्मा द्वारा प्राण-प्रतिष्ठित। साइज़, धातु, स्थापना विधि और वीडियो। भारत और विदेश में शिपिंग।`) : undefined} schema={schema} disclaimer={DISCLAIMER.yantra} seed={61} mobileCta={{ to: '/cart', label: L('Cart · Checkout', 'कार्ट · चेकआउट') }} revealKey={y?.slug}>
+    <PageShell title={y ? `${name}, ${energized}` : L('Yantra', 'यंत्र')} description={y ? (descText ? { en: clip160(descText), hi: clip160(descText) } : undefined) || t(`${y.name} — energized by Pt. Rajneesh Sharma. Size, metal, installation guide and video. Shipping in India and worldwide.`, `${name} — पं. रजनीश शर्मा द्वारा प्राण-प्रतिष्ठित। साइज़, धातु, स्थापना विधि और वीडियो। भारत और विदेश में शिपिंग।`) : undefined} schema={schema} disclaimer={DISCLAIMER.yantra} seed={61} mobileCta={{ to: '/cart', label: L('Cart · Checkout', 'कार्ट · चेकआउट') }} revealKey={y?.slug}>
       <section className="hero" style={{ paddingBottom: 100 }}>
         <div className="wrap-wide stack" style={{ '--gap': '32px' }}>
           <Breadcrumb items={[{ label: L('Yantra Shop', 'यंत्र शॉप'), to: '/yantra-shop' }, { label: y ? catLabel(y.category) : '…', to: y ? `/yantra-shop?category=${encodeURIComponent(y.category)}` : undefined }, { label: name }]} />
@@ -89,7 +108,7 @@ export default function YantraDetail() {
             <div className="stack" style={{ flex: '1 1 420px', '--gap': '22px' }}>
               <div className="eyebrow-lg">{y ? t(catLabel(y.category)).toUpperCase() : ''}</div>
               <h1 className="h1" style={{ fontSize: 'clamp(38px,4.4vw,58px)' }}>{name}, <em>{energized}</em></h1>
-              <p className="lead" style={{ fontSize: 16 }}>{y?.description || t('[2–3 lines: which deity/planet the yantra is linked to and what it is traditionally installed for. No guarantee language.]', '[2–3 पंक्ति: यंत्र किस देवता/ग्रह से जुड़ा है, पारंपरिक रूप से किस काम के लिए स्थापित किया जाता है। गारंटी की भाषा नहीं।]')}</p>
+              <p className="lead" style={{ fontSize: 16 }}>{descText || t('[2–3 lines: which deity/planet the yantra is linked to and what it is traditionally installed for. No guarantee language.]', '[2–3 पंक्ति: यंत्र किस देवता/ग्रह से जुड़ा है, पारंपरिक रूप से किस काम के लिए स्थापित किया जाता है। गारंटी की भाषा नहीं।]')}</p>
               <div className="row" style={{ '--gap': '14px', alignItems: 'baseline' }}>
                 <span className="serif" style={{ fontSize: 44, color: 'var(--gold-2)', lineHeight: 1 }}>{price(y?.priceINR, y?.priceUSD)}</span>
                 <span className="small">{currency === 'USD' ? t('International · PayPal', 'विदेश · PayPal') : `${y?.priceUSD != null ? `$${y.priceUSD}` : '[$ PRICE]'} ${t('international', 'विदेश')}`}</span>
@@ -125,6 +144,15 @@ export default function YantraDetail() {
         </div>
       </section>
 
+      {c?.about && (
+        <section className="section-tight">
+          <div className="wrap stack" style={{ '--gap': '20px', maxWidth: 900 }}>
+            <h2 className="h2 reveal" style={{ fontSize: 'clamp(32px,3.6vw,46px)' }}>{t('About the', 'जानिए')} <em>{name}</em></h2>
+            <div className="prose reveal"><p>{t(c.about)}</p></div>
+          </div>
+        </section>
+      )}
+
       <section className="band">
         <div className="wrap section row" style={{ '--gap': '56px' }}>
           <div className="stack reveal" style={{ flex: '1.2 1 440px', '--gap': '24px' }}>
@@ -135,9 +163,9 @@ export default function YantraDetail() {
                 [t('Metal / material', 'धातु / सामग्री'), y?.material || t('[Copper, gold plated / Ashtadhatu / Bhojpatra]', '[तांबा, गोल्ड प्लेटेड / अष्टधातु / भोजपत्र]')],
                 [t('Weight', 'वज़न'), y?.weightGrams ? `${y.weightGrams} ${t('g', 'ग्राम')}` : t('[__ g]', '[__ ग्राम]')],
                 [t('Pran-pratishtha', 'प्राण-प्रतिष्ठा'), y?.pranPratishtha || t('[On which day, by which ritual — by Pt. Rajneesh Sharma]', '[किस दिन, किस विधि से, पं. रजनीश शर्मा द्वारा]')],
-                [t('Deity / planet', 'देवता / ग्रह'), y?.deity || '[__]'],
-                [t('Used for', 'किसके लिए'), y?.purpose || t('[In plain words, without guarantees]', '[सीधी भाषा में, बिना गारंटी]')],
-                [t('Care', 'देखभाल'), y?.care || t('[Cleaning, where to keep it, what to avoid]', '[सफ़ाई, कहाँ रखें, क्या न करें]')],
+                [t('Deity / planet', 'देवता / ग्रह'), y?.deity || ct(c?.deity) || '[__]'],
+                [t('Used for', 'किसके लिए'), y?.purpose || ct(c?.purpose) || t('[In plain words, without guarantees]', '[सीधी भाषा में, बिना गारंटी]')],
+                [t('Care', 'देखभाल'), y?.care || ct(c?.care) || t('[Cleaning, where to keep it, what to avoid]', '[सफ़ाई, कहाँ रखें, क्या न करें]')],
                 [t('Stock', 'स्टॉक'), y?.stock === 'made_to_order' ? t('Made to order', 'ऑर्डर पर बनता है') : y?.stock === 'out_of_stock' ? t('Currently unavailable', 'अभी उपलब्ध नहीं') : t('Available', 'उपलब्ध')],
                 [t('In the box', 'बॉक्स में'), y?.boxContents && y.boxContents !== DEFAULT_BOX.en ? y.boxContents : t(DEFAULT_BOX)],
                 [t('Shipping', 'शिपिंग'), t('India [__] days · International [__] days', 'भारत [__] दिन · विदेश [__] दिन')],
@@ -151,7 +179,7 @@ export default function YantraDetail() {
           <div className="stack reveal" style={{ flex: '1 1 380px', '--gap': '24px' }}>
             <h2 className="h2" style={{ fontSize: 'clamp(32px,3.6vw,46px)' }}>{t('How to install', 'स्थापना विधि')}</h2>
             <div className="stack" style={{ '--gap': '14px', fontSize: 15 }}>
-              {[[t('Day', 'दिन'), s.day || t('[auspicious day and time]', '[शुभ दिन और समय]')], [t('Direction', 'दिशा'), s.direction || t('[which direction, which place]', '[किस दिशा में, किस जगह]')], [t('Purification', 'शुद्धि'), s.shuddhi || t('[Ganga jal / raw milk]', '[गंगाजल / कच्चा दूध]')], [t('Mantra', 'मंत्र'), s.mantra || t('[mantra, how many times]', '[मंत्र, कितनी बार]')], [t('Daily', 'रोज़'), s.daily || t('[lamp, incense, upkeep]', '[दीपक, धूप, देखभाल]')]].map(([k, v], i) => (
+              {[[t('Day', 'दिन'), s.day || ct(cs.day) || t('[auspicious day and time]', '[शुभ दिन और समय]')], [t('Direction', 'दिशा'), s.direction || ct(cs.direction) || t('[which direction, which place]', '[किस दिशा में, किस जगह]')], [t('Purification', 'शुद्धि'), s.shuddhi || ct(cs.shuddhi) || t('[Ganga jal / raw milk]', '[गंगाजल / कच्चा दूध]')], [t('Mantra', 'मंत्र'), s.mantra || ct(cs.mantra) || t('[mantra, how many times]', '[मंत्र, कितनी बार]')], [t('Daily', 'रोज़'), s.daily || ct(cs.daily) || t('[lamp, incense, upkeep]', '[दीपक, धूप, देखभाल]')]].map(([k, v], i) => (
                 <div key={k} style={{ display: 'flex', gap: 14 }}>
                   <span className="serif gold" style={{ fontSize: 20, width: 24 }}>{i + 1}</span>
                   <span><span className="muted">{k}:</span> {v}</span>
@@ -181,11 +209,7 @@ export default function YantraDetail() {
         <div className="wrap row" style={{ '--gap': '56px' }}>
           <div className="faq reveal" style={{ flex: '1.6 1 480px' }}>
             <h2 className="h2" style={{ fontSize: 'clamp(32px,3.6vw,46px)', marginBottom: 12 }}>{t('Questions & answers', 'प्रश्न-उत्तर')}</h2>
-            {[
-              [L('How do I know the yantra is genuine and energised?', 'कैसे पता चले कि यंत्र असली और प्राण-प्रतिष्ठित है?'), L('Every order comes with a video of the pran-pratishtha and a metal certificate.', 'हर ऑर्डर के साथ प्राण-प्रतिष्ठा का वीडियो और धातु का सर्टिफ़िकेट।')],
-              [L('Can women install the yantra?', 'क्या महिलाएँ स्थापना कर सकती हैं?'), L('[Pandit ji’s answer]', '[पंडित जी का उत्तर]')],
-              [L('What is the return policy?', 'रिटर्न नीति क्या है?'), L('Broken or wrong yantra: free replacement. [Other conditions]', 'टूटा या गलत यंत्र: मुफ़्त रिप्लेसमेंट। [बाकी शर्तें]')],
-            ].map(([q, a]) => (
+            {faqs.map(([q, a]) => (
               <details key={q.en}><summary>{t(q)}<PlusIcon /></summary><p>{t(a)}</p></details>
             ))}
           </div>

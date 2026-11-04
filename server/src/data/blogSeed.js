@@ -1,4 +1,7 @@
-// The 4 planned blog topics — added as DRAFTS on first start. Write the article in /admin/blog, then publish.
+import { blogArticles } from './blogArticles.js';
+
+// The 4 planned blog topics — added as DRAFTS on first start, with the article text from
+// blogArticles.js. Check them in /admin/blog, then publish.
 export const blogSeed = [
   { title: 'What is Nadi astrology and how is your leaf found?', titleHi: 'नाड़ी ज्योतिष क्या है और पट्टा कैसे मिलता है', slug: 'what-is-nadi-astrology', category: 'Nadi',
     excerpt: 'Leaf search from your thumb impression, the kandams, and Pandit ji’s Vedic/KP interpretation — the whole process in plain words.',
@@ -9,4 +12,4 @@ export const blogSeed = [
     excerpt: 'Which remedies are considered before any structural change.', excerptHi: 'निर्माण में बदलाव से पहले कौन-से उपाय देखे जाते हैं।' },
   { title: 'KP Prashna: answering a question with a number from 1–249', titleHi: 'केपी प्रश्न: 1–249 नंबर से सवाल का जवाब', slug: 'kp-prashna-number-1-249', category: 'KP',
     excerpt: 'How a specific question can be answered even without a birth time.', excerptHi: 'जन्म समय न हो तब भी एक विशेष प्रश्न का उत्तर कैसे मिलता है।' },
-].map((p) => ({ ...p, status: 'draft', allCountries: true, content: '<h2>[Write the article here]</h2><p>[Rewrite in fresh words — do not copy from the old site.]</p>' }));
+].map((p) => ({ ...p, status: 'draft', allCountries: true, ...blogArticles[p.slug] }));

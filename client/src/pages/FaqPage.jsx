@@ -11,7 +11,7 @@ export default function FaqPage() {
   const t = useT();
   const schema = useMemo(() => faqSchema(FAQ_GROUPS.flatMap((g) => g.items).map(([q, a]) => [t(q), t(a)])), [t]);
   return (
-    <PageShell title={{ en: 'Frequently Asked Questions', hi: 'अक्सर पूछे जाने वाले प्रश्न' }} description={{ en: 'Common questions about consultations, Nadi readings, Vastu and yantras.', hi: 'परामर्श, नाड़ी, वास्तु और यंत्र के बारे में अक्सर पूछे जाने वाले प्रश्न।' }} schema={schema} seed={131}>
+    <PageShell title={{ en: 'FAQ — Nadi Reading, Astrology Consultation, Vastu & Yantra', hi: 'प्रश्न-उत्तर — नाड़ी रीडिंग, ज्योतिष परामर्श, वास्तु और यंत्र' }} description={{ en: 'Answers to common questions: how a Nadi palm leaf reading works, online astrology consultation, birth time, Vastu without demolition, yantra shipping and payment.', hi: 'आम सवालों के जवाब: नाड़ी ताड़-पत्र रीडिंग कैसे होती है, ऑनलाइन ज्योतिष परामर्श, जन्म समय, बिना तोड़-फोड़ वास्तु, यंत्र शिपिंग और भुगतान।' }} schema={schema} seed={131}>
       <section className="hero">
         <div className="wrap stack" style={{ maxWidth: 900, '--gap': '36px' }}>
           <Breadcrumb items={[{ label: { en: 'FAQ', hi: 'प्रश्न-उत्तर' } }]} />
