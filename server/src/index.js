@@ -15,6 +15,7 @@ import { cleanHtml } from './utils/sanitize.js';
 import { BLOG_BATCH, blogPosts2 } from './data/blogArticles2.js';
 import { BLOG_BATCH3, blogPosts3 } from './data/blogArticles3.js';
 import SeedState from './models/SeedState.js';
+import { BLOG_SCHEDULE_KEY, BLOG_SCHEDULE_ORDER, publishSlots } from './utils/blogSchedule.js';
 
 const PORT = Number(process.env.PORT) || 5000;
 const HOST = process.env.HOST || '0.0.0.0';
@@ -87,6 +88,21 @@ async function start() {
     if (!post.metaDescription) post.metaDescription = a.metaDescription;
     await post.save();
     console.log(`[seed] filled article text for blog draft "${slug}"`);
+  }
+
+  // Once: schedule the starter articles that are still drafts — 3 a week (Mon/Wed/Fri 10:00 IST).
+  // Posts already published, scheduled or edited back to the placeholder are left alone.
+  if (!(await SeedState.exists({ key: BLOG_SCHEDULE_KEY }))) {
+    const drafts = await Post.find({ slug: { $in: BLOG_SCHEDULE_ORDER }, status: 'draft' }).select('slug content');
+    const ready = BLOG_SCHEDULE_ORDER.map((slug) => drafts.find((d) => d.slug === slug)).filter((d) => d && !isPlaceholder(d.content));
+    const slots = publishSlots(new Date(), ready.length);
+    for (const [i, post] of ready.entries()) {
+      post.status = 'scheduled';
+      post.publishAt = slots[i];
+      await post.save();
+    }
+    await SeedState.create({ key: BLOG_SCHEDULE_KEY });
+    console.log(`[seed] scheduled ${ready.length} blog posts${ready.length ? ` (${slots[0].toISOString()} … ${slots.at(-1).toISOString()})` : ''}`);
   }
 
   await ensureAdmin();
