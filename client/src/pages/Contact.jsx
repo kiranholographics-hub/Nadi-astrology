@@ -6,6 +6,8 @@ import { createLead } from '../api/index.js';
 import { SITE, show, waLink } from '../data/site.js';
 import { useT } from '../context/AppContext.jsx';
 
+const L = (en, hi) => ({ en, hi });
+
 export default function Contact() {
   const t = useT();
   const [state, setState] = useState({ status: 'idle', msg: '' });
@@ -30,7 +32,8 @@ export default function Contact() {
       <section className="hero">
         <div className="wrap stack" style={{ '--gap': '36px' }}>
           <Breadcrumb items={[{ label: { en: 'Contact', hi: 'संपर्क' } }]} />
-          <h1 className="h1 rise">{t('Contact', 'संपर्क')} <em>{t('Us', 'करें')}</em></h1>
+          <h1 className="h1 rise">{t('Contact', 'पं. रजनीश शर्मा')} <em>{t('Pt. Rajneesh Sharma', 'से संपर्क')}</em></h1>
+          <p className="lead rise" style={{ maxWidth: 760 }}>{t('Vedic, KP & Nadi astrologer and Vastu consultant in Jaipur. Visit the office near Shyam Nagar metro station, or consult from anywhere by video call — in English or Hindi.', 'जयपुर के वैदिक, केपी और नाड़ी ज्योतिषी तथा वास्तु सलाहकार। श्याम नगर मेट्रो स्टेशन के पास ऑफिस आएँ, या कहीं से भी वीडियो कॉल पर परामर्श लें — हिंदी या अंग्रेज़ी में।')}</p>
           <div className="row" style={{ '--gap': '48px', alignItems: 'flex-start' }}>
             <div className="stack" style={{ flex: '1 1 360px', '--gap': '22px' }}>
               {[
@@ -76,6 +79,25 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <section className="band">
+        <div className="wrap section stack" style={{ '--gap': '32px' }}>
+          <h2 className="h2 reveal">{t('How to reach', 'ऑफिस')} <em>{t('the office', 'कैसे पहुँचें')}</em></h2>
+          <div className="grid reveal" style={{ '--min': '240px', '--gap': '16px' }}>
+            {[
+              [L('By metro', 'मेट्रो से'), L('Get off at Shyam Nagar station on the Jaipur Metro Pink Line. The office is opposite pillar no. 118 on New Sanganer Road.', 'जयपुर मेट्रो पिंक लाइन के श्याम नगर स्टेशन पर उतरें। ऑफिस न्यू सांगानेर रोड पर पिलर नंबर 118 के सामने है।')],
+              [L('By road', 'सड़क से'), L('On New Sanganer Road in Sodala, between Sodala and Shyam Nagar — use the Directions button for Google Maps.', 'सोडाला में न्यू सांगानेर रोड पर, सोडाला और श्याम नगर के बीच — Google Maps के लिए “रास्ता देखें” बटन दबाएँ।')],
+              [L('From outside Jaipur', 'जयपुर के बाहर से'), L('Jaipur Junction railway station and Jaipur Airport are both a short drive away. Book your slot before you travel.', 'जयपुर जंक्शन रेलवे स्टेशन और जयपुर एयरपोर्ट दोनों थोड़ी दूरी पर हैं। यात्रा से पहले अपना स्लॉट बुक करें।')],
+              [L('Online', 'ऑनलाइन'), L('Every service is also available on Zoom or WhatsApp video, with slots in your own time zone.', 'हर सेवा Zoom या WhatsApp वीडियो पर भी उपलब्ध है, स्लॉट आपके टाइम ज़ोन में।')],
+            ].map(([h, d]) => (
+              <div key={h.en} className="card" style={{ padding: 24, gap: 8 }}>
+                <h3 className="serif" style={{ fontSize: 22, margin: 0, fontWeight: 500 }}>{t(h)}</h3>
+                <p className="body">{t(d)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <div style={{ height: 80 }} />
     </PageShell>
   );
 }

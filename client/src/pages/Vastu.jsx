@@ -163,6 +163,16 @@ export default function Vastu() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="wrap stack" style={{ '--gap': '28px', maxWidth: 900 }}>
+          <h2 className="h2 reveal">{t('Vastu consultant', 'जयपुर में')} <em>{t('in Jaipur', 'वास्तु सलाहकार')}</em></h2>
+          <div className="prose reveal">
+            <p>{t('Pt. Rajneesh Sharma’s office is on New Sanganer Road, Sodala, near Shyam Nagar metro station, and site visits are done across Jaipur — homes and flats in Mansarovar, Malviya Nagar, Vaishali Nagar, Jagatpura, C-Scheme, Raja Park and along Tonk Road and Ajmer Road, and shops, offices and factories in areas such as Sitapura and VKI. Site visits elsewhere in Rajasthan and outstation are arranged on request.', 'पं. रजनीश शर्मा का ऑफिस न्यू सांगानेर रोड, सोडाला में श्याम नगर मेट्रो स्टेशन के पास है, और पूरे जयपुर में साइट विज़िट होती है — मानसरोवर, मालवीय नगर, वैशाली नगर, जगतपुरा, सी-स्कीम, राजा पार्क और टोंक रोड व अजमेर रोड पर घर और फ्लैट, तथा सीतापुरा और वीकेआई जैसे इलाक़ों में दुकान, ऑफिस और फैक्ट्री। राजस्थान में और बाहर साइट विज़िट अनुरोध पर तय की जाती है।')}</p>
+            <p>{t('In a site visit the true North is measured with a compass on site, each zone of the building is checked, and the birth charts of the family are read alongside the plan. You receive a written report with a priority list — what to change first — and remedies without demolition wherever possible. For flats, homes abroad or a quick check before buying, the online Astro-Vastu report is often enough.', 'साइट विज़िट में असली उत्तर दिशा साइट पर कंपास से नापी जाती है, भवन का हर ज़ोन जाँचा जाता है, और नक्शे के साथ परिवार की कुंडलियाँ पढ़ी जाती हैं। आपको प्राथमिकता सूची के साथ लिखित रिपोर्ट मिलती है — पहले क्या बदलें — और जहाँ संभव हो बिना तोड़-फोड़ के उपाय। फ्लैट, विदेश में घर या ख़रीदने से पहले जल्दी जाँच के लिए ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट अक्सर काफ़ी होती है।')}</p>
+          </div>
+        </div>
+      </section>
+
       <section id="form" className="band">
         <div className="wrap section row" style={{ '--gap': '48px' }}>
           <BookingForm
@@ -208,8 +218,14 @@ export default function Vastu() {
       <Faq title={L('Vastu FAQ', 'वास्तु — प्रश्न-उत्तर')} items={[
         [L('Will I need to demolish anything?', 'क्या तोड़-फोड़ करनी पड़ेगी?'), L('Remedies without demolition come first; structural changes only if truly needed.', 'पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।')],
         [L('How does online Vastu work?', 'ऑनलाइन वास्तु कैसे होता है?'), L('A report is prepared from your floor plan, North direction and family details, followed by a call.', 'फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।')],
-        [L('Is a south-facing home bad?', 'क्या दक्षिणमुखी घर बुरा होता है?'), L('[Pandit ji’s answer]', '[पंडित जी का उत्तर]')],
+        [L('Is a south-facing home bad?', 'क्या दक्षिणमुखी घर बुरा होता है?'), L('No. A south-facing home is not bad by itself. What matters is the pada (segment) of the south wall where the entrance sits, the layout inside, and the birth charts of the family. Many south-facing homes do very well; where there is a dosha, it can usually be corrected without demolition.', 'नहीं। दक्षिणमुखी घर अपने-आप में बुरा नहीं होता। असली बात यह है कि मुख्य द्वार दक्षिण दीवार के किस पद में है, अंदर का नक्शा कैसा है, और परिवार की कुंडलियाँ क्या कहती हैं। बहुत से दक्षिणमुखी घर बहुत अच्छे रहते हैं; जहाँ दोष हो, वहाँ आमतौर पर बिना तोड़-फोड़ ठीक किया जा सकता है।')],
+        [L('Do you do site visits outside Jaipur?', 'क्या जयपुर से बाहर साइट विज़िट करते हैं?'), L('Yes, across Rajasthan and outstation on request; travel is charged separately. For a home or flat far away, the online Astro-Vastu report is often the simpler choice.', 'हाँ, अनुरोध पर पूरे राजस्थान और बाहर भी; यात्रा का ख़र्च अलग होता है। दूर के घर या फ्लैट के लिए ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट अक्सर आसान विकल्प है।')],
+        [L('Should I check Vastu before buying a flat?', 'क्या फ्लैट ख़रीदने से पहले वास्तु देखना चाहिए?'), L('Yes — it is the cheapest time. A quick call with the builder’s floor plan shows the entrance pada, kitchen and toilet positions and whether the flat suits your family’s charts.', 'हाँ — यही सबसे सस्ता समय है। बिल्डर के फ्लोर प्लान के साथ क्विक कॉल से मुख्य द्वार का पद, रसोई और शौचालय की जगह, और फ्लैट आपके परिवार की कुंडलियों के अनुकूल है या नहीं, पता चल जाता है।')],
+        [L('Does Vastu work for offices and factories?', 'क्या ऑफिस और फैक्ट्री के लिए वास्तु काम करता है?'), L('Yes. In a workplace the owner’s seat, cash and accounts, the entrance, machinery, raw material and finished goods each have their own zone. A site visit is recommended for factories.', 'हाँ। कार्यस्थल में मालिक की सीट, कैश और अकाउंट, प्रवेश द्वार, मशीनें, कच्चा माल और तैयार माल — हर एक का अपना ज़ोन होता है। फैक्ट्री के लिए साइट विज़िट की सलाह दी जाती है।')],
       ]} />
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+        {t('Related:', 'संबंधित:')} <Link to="/online-vastu-consultation">{t('Online Vastu consultation', 'ऑनलाइन वास्तु परामर्श')}</Link><Link to="/blog/vastu-remedies-without-demolition">{t('Vastu remedies without demolition', 'बिना तोड़-फोड़ वास्तु उपाय')}</Link><Link to="/blog/main-door-vastu-direction-remedies">{t('Main door Vastu', 'मुख्य द्वार का वास्तु')}</Link><Link to="/yantra-shop/vastu-dosh-nivaran-yantra">{t('Vastu Dosh Nivaran Yantra', 'वास्तु दोष निवारण यंत्र')}</Link>
+      </div>
     </PageShell>
   );
 }
