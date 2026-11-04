@@ -68,7 +68,8 @@ async function start() {
 
   // Existing country pages get the extra FAQs once (skipping any question already there).
   for (const [slug, list] of Object.entries(EXTRA_FAQS)) {
-    const c = await Country.findOne({ slug, contentVersion: { $lt: COUNTRY_CONTENT_VERSION } });
+    // $not/$gte also matches pages saved before the field existed (no contentVersion at all).
+    const c = await Country.findOne({ slug, contentVersion: { $not: { $gte: COUNTRY_CONTENT_VERSION } } });
     if (!c) continue;
     const have = new Set(c.faqs.map((f) => f.q?.en));
     list.filter(([q]) => !have.has(q.en)).forEach(([q, a]) => c.faqs.push({ q, a }));
