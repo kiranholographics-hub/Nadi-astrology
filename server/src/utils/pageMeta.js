@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import Post, { liveFilter } from '../models/Post.js';
 import Country from '../models/Country.js';
 import Yantra from '../models/Yantra.js';
+import { yantraContent } from '../data/yantraContent.js';
 
 // Title / description per page, put into the HTML before it is sent, so Google and
 // WhatsApp / Facebook link previews see the right text without running the React app.
@@ -50,8 +51,8 @@ async function lookup(p) {
   }
   m = p.match(/^\/yantra-shop\/([a-z0-9-]+)$/);
   if (m) {
-    const y = await Yantra.findOne({ slug: m[1], active: true }).select('name').lean();
-    return y && [`${y.name}, Energized`, `${y.name} — energized by Pt. Rajneesh Sharma. Size, metal, installation guide and video. Shipping in India and worldwide.`];
+    const y = await Yantra.findOne({ slug: m[1], active: true }).select('name slug description').lean();
+    return y && [`${y.name}, Energized`, y.description || yantraContent[y.slug]?.description?.en || `${y.name} — energized by Pt. Rajneesh Sharma. Size, metal, installation guide and video. Shipping in India and worldwide.`];
   }
   return null;
 }
