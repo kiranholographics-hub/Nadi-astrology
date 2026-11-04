@@ -13,6 +13,7 @@ export const SITE = {
   mapsLink: 'https://www.google.com/maps/search/?api=1&query=Shyam%20Nagar%20Metro%20Station%2C%20New%20Sanganer%20Road%2C%20Sodala%2C%20Jaipur%20302019', // Google Maps share link (Directions button)
   grievanceName: '', // DPDP grievance officer name
   grievanceEmail: '',
+  googleRating: '', // e.g. '4.9 ★ on Google (250+ reviews)' — shown on Home once filled in
   freeShippingAbove: null, // e.g. 999 (₹) — brief suggests a free-shipping threshold
 };
 

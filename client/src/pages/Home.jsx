@@ -5,7 +5,8 @@ import { Faq, Marquee, SectionHead, Stats, Steps } from '../components/ui.jsx';
 import { YantraCard } from '../components/Yantra.jsx';
 import { CameraIcon, ChevronLeft, ChevronRight, PlayIcon } from '../components/Icons.jsx';
 import { useApp, usePrice, useT } from '../context/AppContext.jsx';
-import { getYantras } from '../api/index.js';
+import { getPosts, getYantras } from '../api/index.js';
+import { PostCard } from './Blog.jsx';
 import { SITE, show } from '../data/site.js';
 import { YT_VIDEOS, ytEmbed } from '../data/videos.js';
 import { HOME_FAQ } from '../data/faqs.js';
@@ -126,13 +127,15 @@ export default function Home() {
   const price = usePrice();
   const t = useT();
   const [yantras, setYantras] = useState([]);
+  const [posts, setPosts] = useState([]);
   useEffect(() => {
     getYantras({ bestseller: true }).then((d) => setYantras(d.items.slice(0, 4)));
+    getPosts().then((list) => setPosts(list.slice(0, 3)));
   }, []);
   const hi = lang === 'hi';
 
   return (
-    <PageShell seed={7} revealKey={yantras.length}>
+    <PageShell seed={7} revealKey={`${yantras.length}-${posts.length}`}>
       {/* hero */}
       <section className="hero" style={{ paddingTop: 64 }}>
         <div className="wrap-wide hero-row">
@@ -156,7 +159,7 @@ export default function Home() {
       <section className="section-tight" style={{ paddingBottom: 100 }}>
         <div className="wrap">
           <Stats items={[['12+', L('years of experience', 'साल का अनुभव')], ['4000+', L('office-visit clients', 'ऑफिस विज़िट क्लाइंट')], ['60+', L('international office visits', 'विदेशी क्लाइंट ऑफिस आए')], ['10+', L('years of Vedic & KP practice', 'साल वैदिक और केपी अभ्यास')]]} />
-          <div className="small" style={{ marginTop: 16 }}>{t('[Google rating — once available]', '[Google रेटिंग — उपलब्ध होने पर]')}</div>
+          {SITE.googleRating && <div className="small" style={{ marginTop: 16 }}>{SITE.googleRating}</div>}
         </div>
       </section>
 
@@ -185,6 +188,42 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* what do you need help with */}
+      <section className="section">
+        <div className="wrap stack" style={{ '--gap': '40px' }}>
+          <SectionHead eyebrow={t('Guidance for', 'किस बात में')} title={<>{t('What do you need', 'आपको किस बात में')} <em>{t('guidance on?', 'मार्गदर्शन चाहिए?')}</em></>} />
+          <div className="grid reveal" style={{ '--min': '320px', '--gap': '16px' }}>
+            {[
+              ['/vedic-astrology', L('Career & business', 'करियर और व्यापार'), L('Job or business? Which field, and when to make the change — read from your birth chart and dasha.', 'नौकरी या व्यापार? कौन-सा क्षेत्र, और बदलाव कब करें — कुंडली और दशा से।'), L('Vedic birth chart consultation', 'वैदिक कुंडली परामर्श')],
+              ['/kundli-milan', L('Marriage & matching', 'विवाह और मिलान'), L('Guna milan, Manglik check and the right time for the wedding — before you say yes.', 'गुण मिलान, मांगलिक जाँच और शादी का सही समय — हाँ कहने से पहले।'), L('Kundli matching', 'कुंडली मिलान')],
+              ['/kp-prashna', L('One urgent question', 'एक ज़रूरी सवाल'), L('Will I get the job, the visa, the property? A yes/no answer with timing — no birth time needed.', 'नौकरी, वीज़ा, प्रॉपर्टी मिलेगी? समय के साथ हाँ/ना उत्तर — जन्म समय की ज़रूरत नहीं।'), L('KP Prashna', 'केपी प्रश्न')],
+              ['/nadi-astrology', L('Your Nadi leaf', 'आपका नाड़ी पट्टा'), L('Find your palm leaf from your thumb impression — at the Jaipur office or online from abroad.', 'अंगूठे के निशान से अपना ताड़-पत्र खोजें — जयपुर ऑफिस में या विदेश से ऑनलाइन।'), L('Nadi palm leaf reading', 'नाड़ी ताड़-पत्र रीडिंग')],
+              ['/online-vastu-consultation', L('Home, office & new property', 'घर, ऑफिस और नई प्रॉपर्टी'), L('Send your floor plan for an Astro-Vastu report — remedies without demolition first.', 'एस्ट्रो-वास्तु रिपोर्ट के लिए फ्लोर प्लान भेजें — पहले बिना तोड़-फोड़ उपाय।'), L('Online Vastu consultation', 'ऑनलाइन वास्तु परामर्श')],
+              ['/yantra-shop', L('Remedies & yantras', 'उपाय और यंत्र'), L('Energized yantras for wealth, business, planetary peace and protection, shipped worldwide.', 'धन, व्यापार, ग्रह शांति और रक्षा के लिए प्राण-प्रतिष्ठित यंत्र, दुनिया भर में शिपिंग।'), L('Energized yantra shop', 'प्राण-प्रतिष्ठित यंत्र शॉप')],
+            ].map(([to, h, d, a]) => (
+              <Link key={to} to={to} className="card" style={{ padding: 26, gap: 10 }}>
+                <h3 className="serif" style={{ fontSize: 24, margin: 0, fontWeight: 500 }}>{t(h)}</h3>
+                <p className="body" style={{ flex: 1 }}>{t(d)}</p>
+                <span className="link-arrow" style={{ fontSize: 14 }}>{t(a)} →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* about */}
+      <section className="band">
+        <div className="wrap section stack" style={{ '--gap': '24px', maxWidth: 900 }}>
+          <div className="eyebrow reveal">— {t('About Pandit ji', 'पंडित जी के बारे में')}</div>
+          <h2 className="h2 reveal">{t('An astrologer in Jaipur', 'जयपुर के ज्योतिषी')} <em>{t('for 12 years', '12 साल से')}</em></h2>
+          <div className="prose reveal">
+            <p>{t('Pt. Rajneesh Sharma is a Vedic and KP astrologer and Astro-Vastu consultant in Jaipur. For 12 years he has consulted from his office on New Sanganer Road, Sodala, near Shyam Nagar metro station — more than 4000 clients have visited in person, over 60 of them from abroad — and many more consult him online by video call from across India and the world.', 'पं. रजनीश शर्मा जयपुर के वैदिक और केपी ज्योतिषी तथा एस्ट्रो-वास्तु सलाहकार हैं। 12 साल से वे न्यू सांगानेर रोड, सोडाला में श्याम नगर मेट्रो स्टेशन के पास अपने ऑफिस से परामर्श दे रहे हैं — 4000 से ज़्यादा क्लाइंट ख़ुद ऑफिस आ चुके हैं, जिनमें 60 से ज़्यादा विदेश से — और बहुत से लोग पूरे भारत और दुनिया भर से वीडियो कॉल पर ऑनलाइन परामर्श लेते हैं।')}</p>
+            <p>{t('His approach is to read your birth chart, your Nadi leaf and the Vastu of your home together, so the advice fits your life as a whole. Consultations are in English or Hindi, you receive the recording and a written summary of the remedies, and the remedies are kept simple and practical — no fear, and no unnecessary expense.', 'उनका तरीका है आपकी कुंडली, नाड़ी पट्टा और घर के वास्तु को साथ मिलाकर देखना, ताकि सलाह आपके पूरे जीवन के अनुकूल हो। परामर्श हिंदी या अंग्रेज़ी में होता है, आपको रिकॉर्डिंग और उपायों का लिखित सारांश मिलता है, और उपाय सरल व व्यावहारिक रखे जाते हैं — न डर, न बेवजह ख़र्च।')}</p>
+          </div>
+          <Link to="/about" className="link-arrow reveal">{t('More about Pt. Rajneesh Sharma', 'पं. रजनीश शर्मा के बारे में और जानें')} →</Link>
         </div>
       </section>
 
@@ -232,6 +271,18 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* blog */}
+      {posts.length > 0 && (
+        <section className="section">
+          <div className="wrap stack" style={{ '--gap': '40px' }}>
+            <SectionHead eyebrow={t('Blog', 'ब्लॉग')} title={<>{t('Articles on', 'लेख —')} <em>{t('Nadi, Vedic, KP & Vastu', 'नाड़ी, वैदिक, केपी और वास्तु')}</em></>} right={<Link to="/blog" className="link-arrow">{t('All articles', 'सभी लेख')} →</Link>} />
+            <div className="grid" style={{ '--min': '280px' }}>
+              {posts.map((p) => <PostCard key={p.slug} p={p} />)}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* international + office */}
       <section className="section-tight">
