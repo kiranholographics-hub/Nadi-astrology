@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
-import { Breadcrumb } from '../components/ui.jsx';
+import { Breadcrumb, Faq } from '../components/ui.jsx';
 import { YantraArt, YantraCard } from '../components/Yantra.jsx';
 import { getYantras } from '../api/index.js';
 import { SITE, waLink } from '../data/site.js';
@@ -59,7 +59,7 @@ export default function YantraShop() {
         </div>
       </section>
 
-      <section className="section-tight" style={{ paddingBottom: 100 }}>
+      <section id="yantras" className="section-tight" style={{ paddingBottom: 100 }}>
         <div className="wrap-wide row" style={{ '--gap': '36px', alignItems: 'flex-start' }}>
           <aside className="stack" style={{ flex: '1 1 220px', maxWidth: '100%', '--gap': '28px' }}>
             <div className="stack" style={{ '--gap': '6px' }} role="group" aria-label={t('Category', 'श्रेणी')}>
@@ -100,6 +100,33 @@ export default function YantraShop() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="wrap stack" style={{ '--gap': '28px', maxWidth: 900 }}>
+          <h2 className="h2 reveal">{t('What is an', 'प्राण-प्रतिष्ठित')} <em>{t('energized yantra?', 'यंत्र क्या है?')}</em></h2>
+          <div className="prose reveal">
+            <p>{t('A yantra is a sacred geometric diagram — of a deity or a planet — engraved on metal. In the Vedic tradition it becomes a living tool for worship only after pran-pratishtha: the ritual of invoking the deity into the yantra with mantras, done on an auspicious muhurta. A yantra bought off a shelf is only a design; an energized yantra has had this ritual done for it.', 'यंत्र किसी देवता या ग्रह का पवित्र ज्यामितीय रूप है, जो धातु पर उकेरा जाता है। वैदिक परंपरा में यह पूजा का जीवंत साधन तभी बनता है जब इसकी प्राण-प्रतिष्ठा होती है: शुभ मुहूर्त में मंत्रों द्वारा देवता का यंत्र में आवाहन। दुकान की शेल्फ़ से लिया यंत्र सिर्फ़ एक डिज़ाइन है; प्राण-प्रतिष्ठित यंत्र वह है जिसके लिए यह अनुष्ठान किया गया हो।')}</p>
+            <p>{t('Every yantra here is energized by Pt. Rajneesh Sharma, and you receive a video of its pran-pratishtha along with a simple installation guide — the direction, the day, and the mantra to recite. A yantra works best as part of a remedy that fits your birth chart, so if you are unsure which one you need, ask before you buy.', 'यहाँ का हर यंत्र पं. रजनीश शर्मा द्वारा प्राण-प्रतिष्ठित है, और आपको उसकी प्राण-प्रतिष्ठा का वीडियो और सरल स्थापना गाइड मिलती है — दिशा, दिन और जपने का मंत्र। यंत्र तब सबसे अच्छा काम करता है जब वह आपकी कुंडली के अनुसार उपाय का हिस्सा हो, इसलिए अगर पक्का न हो कि कौन-सा चाहिए, तो ख़रीदने से पहले पूछ लें।')}</p>
+          </div>
+          <h3 className="h3 reveal" style={{ fontSize: 30 }}>{t('Which yantra for which purpose?', 'किस काम के लिए कौन-सा यंत्र?')}</h3>
+          <div className="grid reveal" style={{ '--min': '190px', '--gap': '14px' }}>
+            {[
+              ['Dhan', L('Wealth & prosperity', 'धन और समृद्धि'), L('Shree Yantra, Kuber and Mahalaxmi yantra — kept in the north or in the locker, for steady income and savings.', 'श्री यंत्र, कुबेर और महालक्ष्मी यंत्र — उत्तर दिशा या तिजोरी में, स्थिर आय और बचत के लिए।')],
+              ['Vyapar', L('Business & success', 'व्यापार और सफलता'), L('Vyapar Vriddhi and Sarva Karya Siddhi yantra — at the shop, office or cash counter.', 'व्यापार वृद्धि और सर्व कार्य सिद्धि यंत्र — दुकान, ऑफिस या कैश काउंटर पर।')],
+              ['Grah shanti', L('Planetary peace', 'ग्रह शांति'), L('Navgrah, Shani and Kaal Sarp yantra — when a planet or dosha is troubling your chart, ideally after a consultation.', 'नवग्रह, शनि और काल सर्प यंत्र — जब कोई ग्रह या दोष कुंडली में परेशान कर रहा हो, बेहतर है परामर्श के बाद।')],
+              ['Raksha', L('Protection & health', 'रक्षा और स्वास्थ्य'), L('Mahamrityunjay, Hanuman and Baglamukhi yantra — for protection, courage and victory over obstacles.', 'महामृत्युंजय, हनुमान और बगलामुखी यंत्र — रक्षा, साहस और बाधाओं पर विजय के लिए।')],
+              ['Vastu', L('Vastu dosh', 'वास्तु दोष'), L('Vastu Dosh Nivaran yantra — for a dosha that cannot be corrected without demolition.', 'वास्तु दोष निवारण यंत्र — ऐसे दोष के लिए जो बिना तोड़-फोड़ ठीक न हो सके।')],
+              ['Shiksha', L('Education', 'शिक्षा'), L('Saraswati yantra — in the study room, in the north-east or east, for focus and learning.', 'सरस्वती यंत्र — पढ़ाई के कमरे में, उत्तर-पूर्व या पूर्व में, एकाग्रता और विद्या के लिए।')],
+              ['Vivah', L('Marriage', 'विवाह'), L('Mangal yantra — for Manglik dosha and delays in marriage, as advised after kundli matching.', 'मंगल यंत्र — मांगलिक दोष और विवाह में देरी के लिए, कुंडली मिलान के बाद सलाह अनुसार।')],
+            ].map(([c, h, d]) => (
+              <button key={c} type="button" onClick={() => { pick(c); document.getElementById('yantras')?.scrollIntoView({ behavior: 'smooth' }); }} className="card" style={{ padding: 22, gap: 8, textAlign: 'left', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>
+                <span className="serif" style={{ fontSize: 22 }}>{t(h)}</span>
+                <span className="body">{t(d)}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="band">
         <div className="wrap grid" style={{ padding: '80px 24px', '--min': '260px', '--gap': '40px' }}>
           {[[L('Shipping', 'शिपिंग'), L(`India: [__] days (Shiprocket, COD available) · International: [__] days (India Post / DHL / FedEx); customs duty is paid by the buyer. Free shipping on orders above ${SITE.freeShippingAbove ? `₹${SITE.freeShippingAbove}` : '[₹___]'}.`, `भारत: [__] दिन (Shiprocket, COD विकल्प) · विदेश: [__] दिन (India Post / DHL / FedEx), कस्टम ड्यूटी खरीदार देगा। ${SITE.freeShippingAbove ? `₹${SITE.freeShippingAbove}` : '[₹___]'} से ऊपर फ़्री शिपिंग।`)], [L('Payment', 'भुगतान'), L('India: Razorpay (UPI, card, netbanking) · International: PayPal.', 'भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग) · विदेश: PayPal।')], [L('Personal sankalp', 'व्यक्तिगत संकल्प'), L('Pran-pratishtha in your name and gotra, with video (premium).', 'आपके नाम और गोत्र से प्राण-प्रतिष्ठा, वीडियो के साथ (प्रीमियम)।')]].map(([head, d]) => (
@@ -110,6 +137,17 @@ export default function YantraShop() {
           ))}
         </div>
       </section>
+      <Faq title={L('Yantra FAQ', 'यंत्र — प्रश्न-उत्तर')} items={[
+        [L('What is pran-pratishtha of a yantra?', 'यंत्र की प्राण-प्रतिष्ठा क्या है?'), L('It is the Vedic ritual of invoking the deity into the yantra with mantras on an auspicious muhurta. Every yantra here is energized this way, and you receive a video of the ritual.', 'यह शुभ मुहूर्त में मंत्रों द्वारा यंत्र में देवता का आवाहन करने का वैदिक अनुष्ठान है। यहाँ का हर यंत्र इसी तरह प्राण-प्रतिष्ठित है, और आपको अनुष्ठान का वीडियो मिलता है।')],
+        [L('How do I choose the right yantra?', 'सही यंत्र कैसे चुनें?'), L('Choose by purpose — wealth, business, planetary peace, protection, Vastu, education or marriage. For a dosha in your chart, it is best to ask first: there is free 10-minute advice on WhatsApp.', 'उद्देश्य से चुनें — धन, व्यापार, ग्रह शांति, रक्षा, वास्तु, शिक्षा या विवाह। कुंडली के किसी दोष के लिए पहले पूछ लेना अच्छा है: WhatsApp पर 10 मिनट की मुफ़्त सलाह मिलती है।')],
+        [L('Where and how should a yantra be installed?', 'यंत्र कहाँ और कैसे स्थापित करें?'), L('Each yantra comes with its own guide. Generally it is placed in a clean spot in the pooja room or the zone it belongs to (for example, wealth yantras in the north), on an auspicious day, facing east or north, after a short pooja.', 'हर यंत्र के साथ उसकी अपनी गाइड आती है। सामान्यतः इसे पूजा कक्ष या उससे जुड़े ज़ोन (जैसे धन यंत्र उत्तर में) में साफ़ जगह पर, शुभ दिन, पूर्व या उत्तर की ओर मुख करके, छोटी पूजा के बाद रखा जाता है।')],
+        [L('Do I need to worship the yantra every day?', 'क्या रोज़ यंत्र की पूजा करनी होगी?'), L('A few minutes daily — lighting a diya or incense and reciting its mantra — is ideal. If you miss days, the yantra does not become harmful; simply continue.', 'रोज़ कुछ मिनट — दीया या अगरबत्ती जलाना और उसका मंत्र जपना — सबसे अच्छा है। कुछ दिन छूट जाएँ तो यंत्र हानिकारक नहीं होता; बस फिर से जारी रखें।')],
+        [L('How do I clean a yantra?', 'यंत्र को कैसे साफ़ करें?'), L('Wipe it gently with a soft dry cloth. Copper and brass darken naturally over time; they can be cleaned with a little lemon water or tamarind and dried well.', 'मुलायम सूखे कपड़े से हल्के से पोंछें। ताँबा और पीतल समय के साथ स्वाभाविक रूप से काले पड़ते हैं; इन्हें थोड़े नींबू पानी या इमली से साफ़ करके अच्छी तरह सुखा लें।')],
+        [L('Do you ship yantras outside India?', 'क्या विदेश में यंत्र भेजते हैं?'), L('Yes, yantras ship worldwide from Jaipur by international courier. Any customs duty or import tax in your country is paid by the buyer.', 'हाँ, यंत्र जयपुर से इंटरनेशनल कूरियर द्वारा दुनिया भर में भेजे जाते हैं। आपके देश की कस्टम ड्यूटी या इम्पोर्ट टैक्स खरीदार देता है।')],
+      ]} />
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+        {t('Related:', 'संबंधित:')} <Link to="/vedic-astrology">{t('Find the right remedy — birth chart consultation', 'सही उपाय जानें — कुंडली परामर्श')}</Link><Link to="/online-vastu-consultation">{t('Online Vastu consultation', 'ऑनलाइन वास्तु परामर्श')}</Link><Link to="/nadi-astrology">{t('Nadi Shanti kandam remedies', 'नाड़ी शांति कांडम उपाय')}</Link><Link to="/kundli-milan">{t('Kundli matching', 'कुंडली मिलान')}</Link>
+      </div>
     </PageShell>
   );
 }
