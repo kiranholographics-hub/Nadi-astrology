@@ -13,6 +13,7 @@ import { blogArticles, isPlaceholder } from './data/blogArticles.js';
 import { EXTRA_FAQS, COUNTRY_CONTENT_VERSION } from './data/countries.js';
 import { cleanHtml } from './utils/sanitize.js';
 import { BLOG_BATCH, blogPosts2 } from './data/blogArticles2.js';
+import { BLOG_BATCH3, blogPosts3 } from './data/blogArticles3.js';
 import SeedState from './models/SeedState.js';
 
 const PORT = Number(process.env.PORT) || 5000;
@@ -51,16 +52,17 @@ async function start() {
     console.log(`[seed] added ${blogSeed.length} blog drafts`);
   }
 
-  // Second batch of blog articles: added once as drafts (slugs that already exist are skipped).
-  if (!(await SeedState.exists({ key: BLOG_BATCH }))) {
+  // Later batches of blog articles: each added once as drafts (slugs that already exist are skipped).
+  for (const [key, posts] of [[BLOG_BATCH, blogPosts2], [BLOG_BATCH3, blogPosts3]]) {
+    if (await SeedState.exists({ key })) continue;
     let added = 0;
-    for (const p of blogPosts2) {
+    for (const p of posts) {
       if (await Post.exists({ slug: p.slug })) continue;
       await Post.create({ ...p, content: cleanHtml(p.content), contentHi: cleanHtml(p.contentHi), status: 'draft', allCountries: true });
       added++;
     }
-    await SeedState.create({ key: BLOG_BATCH });
-    console.log(`[seed] added ${added} blog drafts (${BLOG_BATCH})`);
+    await SeedState.create({ key });
+    console.log(`[seed] added ${added} blog drafts (${key})`);
   }
 
   // Existing country pages get the extra FAQs once (skipping any question already there).

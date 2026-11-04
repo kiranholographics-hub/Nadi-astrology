@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { PageShell } from '../components/Layout.jsx';
 import { Breadcrumb } from '../components/ui.jsx';
@@ -94,6 +95,9 @@ export default function Videos() {
           </div>
         </div>
       </section>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+        {t('Related:', 'संबंधित:')} <Link to="/blog/shani-sade-sati-meaning-remedies">{t('Shani Sade Sati — meaning and remedies', 'शनि साढ़ेसाती — अर्थ और उपाय')}</Link><Link to="/vedic-astrology">{t('Vedic birth chart consultation', 'वैदिक कुंडली परामर्श')}</Link><Link to="/nadi-astrology">{t('Nadi palm leaf reading', 'नाड़ी ताड़-पत्र रीडिंग')}</Link><Link to="/yantra-shop">{t('Energized yantras', 'प्राण-प्रतिष्ठित यंत्र')}</Link>
+      </div>
     </PageShell>
   );
 }
