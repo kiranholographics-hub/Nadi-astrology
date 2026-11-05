@@ -11,9 +11,11 @@ import Post from './models/Post.js';
 import { blogSeed } from './data/blogSeed.js';
 import { blogArticles, isPlaceholder } from './data/blogArticles.js';
 import { EXTRA_FAQS, COUNTRY_CONTENT_VERSION } from './data/countries.js';
+import { COUNTRY_BATCH2, countries2 } from './data/countries2.js';
 import { cleanHtml } from './utils/sanitize.js';
 import { BLOG_BATCH, blogPosts2 } from './data/blogArticles2.js';
 import { BLOG_BATCH3, blogPosts3 } from './data/blogArticles3.js';
+import { BLOG_BATCH4, blogPosts4 } from './data/blogArticles4.js';
 import SeedState from './models/SeedState.js';
 import { BLOG_SCHEDULE_KEY, BLOG_SCHEDULE_ORDER, publishSlots } from './utils/blogSchedule.js';
 
@@ -54,7 +56,7 @@ async function start() {
   }
 
   // Later batches of blog articles: each added once as drafts (slugs that already exist are skipped).
-  for (const [key, posts] of [[BLOG_BATCH, blogPosts2], [BLOG_BATCH3, blogPosts3]]) {
+  for (const [key, posts] of [[BLOG_BATCH, blogPosts2], [BLOG_BATCH3, blogPosts3], [BLOG_BATCH4, blogPosts4]]) {
     if (await SeedState.exists({ key })) continue;
     let added = 0;
     for (const p of posts) {
@@ -64,6 +66,18 @@ async function start() {
     }
     await SeedState.create({ key });
     console.log(`[seed] added ${added} blog drafts (${key})`);
+  }
+
+  // Second batch of country pages: added once (slugs that already exist are skipped).
+  if (!(await SeedState.exists({ key: COUNTRY_BATCH2 }))) {
+    let added = 0;
+    for (const c of countries2) {
+      if (await Country.exists({ slug: c.slug })) continue;
+      await Country.create(c);
+      added++;
+    }
+    await SeedState.create({ key: COUNTRY_BATCH2 });
+    console.log(`[seed] added ${added} country pages (${COUNTRY_BATCH2})`);
   }
 
   // Existing country pages get the extra FAQs once (skipping any question already there).
@@ -91,19 +105,25 @@ async function start() {
     console.log(`[seed] filled article text for blog draft "${slug}"`);
   }
 
-  // Once: schedule the starter articles that are still drafts — 3 a week (Mon/Wed/Fri 10:00 IST).
-  // Posts already published, scheduled or edited back to the placeholder are left alone.
-  if (!(await SeedState.exists({ key: BLOG_SCHEDULE_KEY }))) {
-    const drafts = await Post.find({ slug: { $in: BLOG_SCHEDULE_ORDER }, status: 'draft' }).select('slug content');
-    const ready = BLOG_SCHEDULE_ORDER.map((slug) => drafts.find((d) => d.slug === slug)).filter((d) => d && !isPlaceholder(d.content));
-    const slots = publishSlots(new Date(), ready.length);
+  // Once per list: schedule its articles that are still drafts — 3 a week (Mon/Wed/Fri 10:00 IST),
+  // following any posts already scheduled. Published, scheduled or placeholder posts are left alone.
+  const schedules = [
+    [BLOG_SCHEDULE_KEY, BLOG_SCHEDULE_ORDER],
+    ['blog-schedule-2', blogPosts4.map((p) => p.slug)],
+  ];
+  for (const [key, order] of schedules) {
+    if (await SeedState.exists({ key })) continue;
+    const drafts = await Post.find({ slug: { $in: order }, status: 'draft' }).select('slug content');
+    const ready = order.map((slug) => drafts.find((d) => d.slug === slug)).filter((d) => d && !isPlaceholder(d.content));
+    const last = await Post.findOne({ status: 'scheduled', publishAt: { $gt: new Date() } }).sort({ publishAt: -1 }).select('publishAt');
+    const slots = publishSlots(last ? last.publishAt : new Date(), ready.length);
     for (const [i, post] of ready.entries()) {
       post.status = 'scheduled';
       post.publishAt = slots[i];
       await post.save();
     }
-    await SeedState.create({ key: BLOG_SCHEDULE_KEY });
-    console.log(`[seed] scheduled ${ready.length} blog posts${ready.length ? ` (${slots[0].toISOString()} … ${slots.at(-1).toISOString()})` : ''}`);
+    await SeedState.create({ key });
+    console.log(`[seed] scheduled ${ready.length} blog posts (${key})${ready.length ? ` ${slots[0].toISOString()} … ${slots.at(-1).toISOString()}` : ''}`);
   }
 
   await ensureAdmin();
