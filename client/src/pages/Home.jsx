@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../components/LangLink.jsx';
 import { PageShell } from '../components/Layout.jsx';
 import { Faq, Marquee, SectionHead, Stats, Steps } from '../components/ui.jsx';
 import { YantraCard } from '../components/Yantra.jsx';

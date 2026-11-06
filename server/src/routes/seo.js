@@ -18,13 +18,21 @@ router.get('/sitemap.xml', async (_req, res, next) => {
     const yantras = await Yantra.find({ active: true }).select('slug updatedAt').lean();
     const countries = await Country.find({ status: 'active' }).select('slug updatedAt').lean();
     const posts = await Post.find(liveFilter()).select('slug updatedAt').lean();
+    // Every page twice: English at /…, Hindi at /hi/… (hreflang alternates in each <url>).
+    const entry = (p, extra) => {
+      const en = `${base()}${p}`;
+      const hi = `${base()}/hi${p === '/' ? '' : p}`;
+      const alt = `<xhtml:link rel="alternate" hreflang="en" href="${en}"/><xhtml:link rel="alternate" hreflang="hi" href="${hi}"/>`;
+      return [`<url><loc>${en}</loc>${extra}${alt}</url>`, `<url><loc>${hi}</loc>${extra}${alt}</url>`];
+    };
+    const lastmod = (d) => (d ? `<lastmod>${new Date(d).toISOString().slice(0, 10)}</lastmod>` : '');
     const urls = [
-      ...STATIC_PAGES.map(([p, pr]) => `<url><loc>${base()}${p}</loc><priority>${pr}</priority></url>`),
-      ...posts.map((p) => `<url><loc>${base()}/blog/${p.slug}</loc><lastmod>${new Date(p.updatedAt).toISOString().slice(0, 10)}</lastmod><priority>0.6</priority></url>`),
-      ...countries.map((c) => `<url><loc>${base()}/nadi-astrology/${c.slug}</loc>${c.updatedAt ? `<lastmod>${new Date(c.updatedAt).toISOString().slice(0, 10)}</lastmod>` : ''}<priority>0.8</priority></url>`),
-      ...yantras.map((y) => `<url><loc>${base()}/yantra-shop/${y.slug}</loc>${y.updatedAt ? `<lastmod>${new Date(y.updatedAt).toISOString().slice(0, 10)}</lastmod>` : ''}<priority>0.7</priority></url>`),
+      ...STATIC_PAGES.flatMap(([p, pr]) => entry(p, `<priority>${pr}</priority>`)),
+      ...posts.flatMap((p) => entry(`/blog/${p.slug}`, `${lastmod(p.updatedAt)}<priority>0.6</priority>`)),
+      ...countries.flatMap((c) => entry(`/nadi-astrology/${c.slug}`, `${lastmod(c.updatedAt)}<priority>0.8</priority>`)),
+      ...yantras.flatMap((y) => entry(`/yantra-shop/${y.slug}`, `${lastmod(y.updatedAt)}<priority>0.7</priority>`)),
     ];
-    res.type('application/xml').send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
+    res.type('application/xml').send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.join('\n')}\n</urlset>\n`);
   } catch (err) {
     next(err);
   }

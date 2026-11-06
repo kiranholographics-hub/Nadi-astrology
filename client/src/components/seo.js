@@ -1,4 +1,5 @@
 import { SITE } from '../data/site.js';
+import { stripLang, withLang } from './lang.js';
 
 const ORIGIN = (import.meta.env.VITE_SITE_URL || (typeof window !== 'undefined' ? window.location.origin : '')).replace(/\/$/, '');
 
@@ -17,6 +18,18 @@ function setLink(rel, href) {
   if (!el) {
     el = document.createElement('link');
     el.setAttribute('rel', rel);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('href', href);
+}
+
+// <link rel="alternate" hreflang="…"> — tells Google the English and Hindi URLs are the same page.
+function setAlternate(hreflang, href) {
+  let el = document.head.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
+  if (!el) {
+    el = document.createElement('link');
+    el.setAttribute('rel', 'alternate');
+    el.setAttribute('hreflang', hreflang);
     document.head.appendChild(el);
   }
   el.setAttribute('href', href);
@@ -81,6 +94,10 @@ export function applySeo({ title, description, path, image, lang = 'en' }) {
   if (image) setMeta('property', 'og:image', image.startsWith('http') ? image : `${ORIGIN}${image}`);
   setMeta('name', 'twitter:card', 'summary_large_image');
   setLink('canonical', `${ORIGIN}${path}`);
+  const en = stripLang(path);
+  setAlternate('en', `${ORIGIN}${en}`);
+  setAlternate('hi', `${ORIGIN}${withLang(en, 'hi')}`);
+  setAlternate('x-default', `${ORIGIN}${en}`);
 }
 
 export const faqSchema = (items) => ({

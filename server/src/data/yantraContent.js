@@ -22,6 +22,25 @@ const CARE = t(
   'मुलायम सूखे कपड़े से पोंछें। साफ़ जगह पर रखें, कभी ज़मीन पर या शौचालय के पास नहीं। ताँबा और पीतल समय के साथ काले पड़ते हैं, इन्हें थोड़े नींबू पानी से साफ़ कर सकते हैं।'
 );
 
+// Hindi names (same as client/src/data/yantraI18n.js), for the /hi page titles.
+export const yantraNameHi = {
+  'shree-yantra': 'श्री यंत्र',
+  'meru-shree-yantra': 'मेरु श्री यंत्र',
+  'kuber-yantra': 'कुबेर यंत्र',
+  'mahalaxmi-yantra': 'महालक्ष्मी यंत्र',
+  'vyapar-vriddhi-yantra': 'व्यापार वृद्धि यंत्र',
+  'navgrah-yantra': 'नवग्रह यंत्र',
+  'shani-yantra': 'शनि यंत्र',
+  'mahamrityunjay-yantra': 'महामृत्युंजय यंत्र',
+  'baglamukhi-yantra': 'बगलामुखी यंत्र',
+  'kaal-sarp-yantra': 'काल सर्प यंत्र',
+  'vastu-dosh-nivaran-yantra': 'वास्तु दोष निवारण यंत्र',
+  'saraswati-yantra': 'सरस्वती यंत्र',
+  'mangal-yantra': 'मंगल यंत्र',
+  'hanuman-yantra': 'हनुमान यंत्र',
+  'sarva-karya-siddhi-yantra': 'सर्व कार्य सिद्धि यंत्र',
+};
+
 export const yantraContent = {
   'shree-yantra': {
     description: t(

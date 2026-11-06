@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../components/LangLink.jsx';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
 import { Breadcrumb } from '../components/ui.jsx';
 import { useApp, usePrice, useT } from '../context/AppContext.jsx';

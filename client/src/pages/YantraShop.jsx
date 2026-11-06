@@ -5,7 +5,7 @@ import { Breadcrumb, Faq } from '../components/ui.jsx';
 import { YantraArt, YantraCard } from '../components/Yantra.jsx';
 import { getYantras } from '../api/index.js';
 import { SITE, waLink } from '../data/site.js';
-import { Link } from 'react-router-dom';
+import { Link } from '../components/LangLink.jsx';
 import { useT } from '../context/AppContext.jsx';
 import { catLabel } from '../data/yantraI18n.js';
 

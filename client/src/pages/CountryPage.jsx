@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { Link } from '../components/LangLink.jsx';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
 import { Breadcrumb, Faq, PriceCard, Steps } from '../components/ui.jsx';
 import { useApp, usePrice, useT } from '../context/AppContext.jsx';

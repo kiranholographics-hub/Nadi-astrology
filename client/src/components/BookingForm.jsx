@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from './LangLink.jsx';
 import { createBooking } from '../api/index.js';
 import { useApp, useT } from '../context/AppContext.jsx';
 import { ThumbIcon, UploadIcon } from './Icons.jsx';

@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+import { Link } from '../components/LangLink.jsx';
 import { PageShell } from '../components/Layout.jsx';
 import { Breadcrumb } from '../components/ui.jsx';
 import { ThumbIcon, UploadIcon } from '../components/Icons.jsx';
