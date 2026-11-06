@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from '../components/LangLink.jsx';
 import { useState } from 'react';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
 import { Breadcrumb, Faq, Steps } from '../components/ui.jsx';

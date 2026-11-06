@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { Link } from '../components/LangLink.jsx';
+import { localizeHtml } from '../components/lang.js';
 import { PageShell } from '../components/Layout.jsx';
 import { Breadcrumb } from '../components/ui.jsx';
 import { getPost, getPosts } from '../api/index.js';
@@ -69,7 +71,7 @@ export function BlogPost() {
 
   if (data === null) return <NotFound />;
   const p = data?.item;
-  const html = p ? t(p.content, p.contentHi || null) : '';
+  const html = p ? localizeHtml(t(p.content, p.contentHi || null), lang) : '';
   const schema = p ? {
     '@context': 'https://schema.org', '@type': 'Article', headline: p.title, description: p.excerpt || undefined,
     image: p.cover ? new URL(p.cover, window.location.origin).href : undefined,

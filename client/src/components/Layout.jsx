@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
+import { stripLang } from './lang.js';
 import useCountries from './useCountries.js';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { Link, NavLink } from './LangLink.jsx';
 import { useApp, useT } from '../context/AppContext.jsx';
 import { SITE, show, waLink } from '../data/site.js';
 import { BurgerIcon, CartIcon, ChatIcon, LogoMark } from './Icons.jsx';
@@ -78,7 +80,8 @@ function Navbar({ cta }) {
   const t = useT();
   const { pathname } = useLocation();
   useEffect(() => setOpen(false), [pathname]);
-  const isShop = pathname.startsWith('/yantra-shop') || pathname === '/cart';
+  const bare = stripLang(pathname);
+  const isShop = bare.startsWith('/yantra-shop') || bare === '/cart';
   return (
     <header className={`nav${open ? ' open' : ''}`}>
       <div className="wrap-wide">

@@ -52,7 +52,12 @@ export function refreshKnownPaths() {
 }
 
 async function isKnownPath(pathname) {
-  const clean = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;
+  let clean = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;
+  // /hi/… is the Hindi version of the same public page (the admin has no Hindi URL).
+  if (clean === '/hi' || clean.startsWith('/hi/')) {
+    clean = clean.slice(3) || '/';
+    if (clean === '/admin' || clean.startsWith('/admin/')) return false;
+  }
   if (KNOWN.has(clean) || clean === '/admin' || clean.startsWith('/admin/')) return true;
   const y = clean.match(/^\/yantra-shop\/([a-z0-9-]+)$/);
   const c = clean.match(/^\/nadi-astrology\/([a-z0-9-]+)$/);

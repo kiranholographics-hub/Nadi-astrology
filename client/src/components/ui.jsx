@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from './LangLink.jsx';
 import { faqSchema, setJsonLd } from './seo.js';
 import { PlayIcon, PlusIcon } from './Icons.jsx';
 import { useT } from '../context/AppContext.jsx';

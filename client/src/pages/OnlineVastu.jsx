@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from '../components/LangLink.jsx';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
 import { Breadcrumb, Faq, Steps } from '../components/ui.jsx';
 import BookingForm from '../components/BookingForm.jsx';

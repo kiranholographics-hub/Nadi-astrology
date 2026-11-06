@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from './LangLink.jsx';
 import { useApp, usePrice, useT } from '../context/AppContext.jsx';
 import { PlayIcon } from './Icons.jsx';
 import { catLabel, NAME_HI, yName } from '../data/yantraI18n.js';

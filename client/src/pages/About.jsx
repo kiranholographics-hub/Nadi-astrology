@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from '../components/LangLink.jsx';
 import { PageShell } from '../components/Layout.jsx';
 import { Breadcrumb, Faq, Stats } from '../components/ui.jsx';
 import { CameraIcon } from '../components/Icons.jsx';
