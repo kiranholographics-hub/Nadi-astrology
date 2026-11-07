@@ -159,7 +159,12 @@ export default function Home() {
       <section className="section-tight" style={{ paddingBottom: 100 }}>
         <div className="wrap">
           <Stats items={[['12+', L('years of experience', 'साल का अनुभव')], ['4000+', L('office-visit clients', 'ऑफिस विज़िट क्लाइंट')], ['60+', L('international office visits', 'विदेशी क्लाइंट ऑफिस आए')], ['10+', L('years of Vedic & KP practice', 'साल वैदिक और केपी अभ्यास')]]} />
-          {SITE.googleRating && <div className="small" style={{ marginTop: 16 }}>{SITE.googleRating}</div>}
+          {(SITE.googleRating || SITE.googleReviewUrl) && (
+            <div className="small row" style={{ marginTop: 16, '--gap': '8px 18px' }}>
+              {SITE.googleRating && <span>{SITE.googleRating}</span>}
+              {SITE.googleReviewUrl && <a href={SITE.googleReviewUrl} target="_blank" rel="noopener" className="link-arrow">{t('Consulted Pandit ji? Leave a Google review', 'पंडित जी से परामर्श लिया? Google पर रिव्यू दें')} →</a>}
+            </div>
+          )}
         </div>
       </section>
 

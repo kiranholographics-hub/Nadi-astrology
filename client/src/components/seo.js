@@ -51,6 +51,13 @@ export function setJsonLd(id, data) {
 }
 
 // Site-wide structured data: Person + LocalBusiness (brief: schema markup)
+// The business's other official pages (YouTube, Google Business Profile, social) — helps Google
+// connect them to this site.
+const SAME_AS = () => {
+  const links = [SITE.youtube, SITE.googleBusinessUrl, SITE.instagram, SITE.facebook].filter((u) => u && u !== '#');
+  return links.length ? links : undefined;
+};
+
 export const BASE_SCHEMA = () => ({
   '@context': 'https://schema.org',
   '@graph': [
@@ -60,6 +67,7 @@ export const BASE_SCHEMA = () => ({
       name: SITE.name,
       jobTitle: 'Vedic, KP & Vastu Consultant',
       knowsAbout: ['Vedic astrology', 'KP astrology', 'Nadi astrology', 'Vastu Shastra'],
+      sameAs: SAME_AS(),
       address: { '@type': 'PostalAddress', addressLocality: 'Jaipur', addressRegion: 'Rajasthan', addressCountry: 'IN' },
       url: ORIGIN,
     },
@@ -73,6 +81,10 @@ export const BASE_SCHEMA = () => ({
       email: SITE.email || undefined,
       url: ORIGIN,
       areaServed: 'Worldwide',
+      hasMap: SITE.mapsLink || undefined,
+      openingHoursSpecification: SITE.hours ? [{ '@type': 'OpeningHoursSpecification', dayOfWeek: SITE.hours.days, opens: SITE.hours.opens, closes: SITE.hours.closes }] : undefined,
+      sameAs: SAME_AS(),
+      knowsLanguage: ['en', 'hi'],
     },
   ],
 });
