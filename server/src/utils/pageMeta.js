@@ -118,6 +118,9 @@ export async function renderIndex(indexHtml, pathname, origin) {
     `<link rel="alternate" hreflang="en" href="${esc(enUrl)}" />`,
     `<link rel="alternate" hreflang="hi" href="${esc(hiUrl)}" />`,
     `<link rel="alternate" hreflang="x-default" href="${esc(enUrl)}" />`,
+    // Search Console / Bing ownership check — set the code in the server's environment variables.
+    ...(process.env.GOOGLE_SITE_VERIFICATION ? [`<meta name="google-site-verification" content="${esc(process.env.GOOGLE_SITE_VERIFICATION)}" />`] : []),
+    ...(process.env.BING_SITE_VERIFICATION ? [`<meta name="msvalidate.01" content="${esc(process.env.BING_SITE_VERIFICATION)}" />`] : []),
     `<meta property="og:type" content="website" />`,
     `<meta property="og:locale" content="${hi ? 'hi_IN' : 'en_US'}" />`,
     `<meta property="og:site_name" content="${esc(hi ? NAME_HI : NAME)}" />`,

@@ -6,6 +6,8 @@ export const SITE = {
   email: 'astrologygovind@gmail.com', // e.g. 'contact@your-domain.com'
   address: 'Shyam Nagar Metro Station, opp. Pillar No. 118, New Sanganer Road, Sodala, Jaipur 302019',
   timings: 'Mon–Sat, 10am–7pm', // e.g. 'Mon–Sat, 10am–7pm'
+  // Same hours for Google (structured data). Keep in step with `timings` above.
+  hours: { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '10:00', closes: '19:00' },
   youtube: 'https://www.youtube.com/@PtRajneeshSharma',
   instagram: '#',
   facebook: '#',
@@ -14,6 +16,9 @@ export const SITE = {
   grievanceName: '', // DPDP grievance officer name
   grievanceEmail: '',
   googleRating: '', // e.g. '4.9 ★ on Google (250+ reviews)' — shown on Home once filled in
+  // Google Business Profile: paste the profile link and the "Ask for reviews" link once it exists.
+  googleBusinessUrl: '', // e.g. 'https://maps.app.goo.gl/…' or 'https://g.page/…'
+  googleReviewUrl: '', // e.g. 'https://g.page/r/…/review' — shows a "Review us on Google" button
   freeShippingAbove: null, // e.g. 999 (₹) — brief suggests a free-shipping threshold
 };
 

@@ -51,6 +51,7 @@ export default function Contact() {
                 <a href={waLink(t('Hello Pandit ji', 'नमस्ते पंडित जी'))} className="btn">{t('Message on WhatsApp', 'WhatsApp करें')}</a>
                 {SITE.mapsLink && <a href={SITE.mapsLink} className="btn-ghost">{t('Directions', 'रास्ता देखें')}</a>}
                 <Link to="/book" className="btn-ghost">{t('Book Consultation', 'परामर्श बुक करें')}</Link>
+                {SITE.googleReviewUrl && <a href={SITE.googleReviewUrl} className="btn-ghost" target="_blank" rel="noopener">{t('Review us on Google', 'Google पर रिव्यू दें')}</a>}
               </div>
               {SITE.mapEmbedUrl
                 ? <iframe title={t('Office map', 'ऑफिस का नक्शा')} src={SITE.mapEmbedUrl} loading="lazy" style={{ width: '100%', aspectRatio: '16/10', border: 0, borderRadius: 4 }} />
