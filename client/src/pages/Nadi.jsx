@@ -197,7 +197,7 @@ export default function Nadi() {
         [L('In which language is the leaf read?', 'पट्टा किस भाषा में पढ़ा जाता है?'), L('The leaves are written in old Tamil. The reader reads them in Tamil and it is translated into Hindi or English for you during the session.', 'पत्र पुरानी तमिल में लिखे होते हैं। रीडर तमिल में पढ़ते हैं और सत्र के दौरान आपके लिए हिंदी या अंग्रेज़ी में अनुवाद किया जाता है।')],
         [L('What is the Shanti kandam?', 'शांति कांडम क्या है?'), L('Kandam 13 describes karma from past lives that is said to cause present problems, and the traditional remedies for it — pooja, mantra, temple visits and charity.', 'कांडम 13 में पूर्व जन्म के उन कर्मों का वर्णन होता है जिन्हें वर्तमान समस्याओं का कारण माना जाता है, और उनके पारंपरिक उपाय — पूजा, मंत्र, मंदिर दर्शन और दान।')],
       ]} />
-      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 'var(--sp-section)', maxWidth: 860 }}>
         {t('Related:', 'संबंधित:')} <Link to="/book?service=nadi-general-2-kandam">{t('Book an Online Nadi Reading', 'ऑनलाइन नाड़ी रीडिंग बुक करें')}</Link><Link to="/contact">{t('Nadi Astrology office in Jaipur', 'जयपुर में नाड़ी ज्योतिष ऑफिस')}</Link><Link to="/blog/what-is-nadi-astrology">{t('What is Nadi astrology?', 'नाड़ी ज्योतिष क्या है?')}</Link><Link to="/vedic-astrology">{t('Vedic birth chart reading', 'वैदिक कुंडली विश्लेषण')}</Link><Link to="/blog/vaitheeswaran-koil-nadi-tradition">{t('Vaitheeswaran Koil history', 'वैथीश्वरन कोइल का इतिहास')}</Link><Link to="/yantra-shop">{t('Shanti yantras', 'शांति यंत्र')}</Link>
       </div>
     </PageShell>

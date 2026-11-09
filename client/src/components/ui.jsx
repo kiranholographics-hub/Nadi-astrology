@@ -76,7 +76,7 @@ export function PlayBox({ label, ratio = '16 / 9', src, poster, style }) {
 export function Stats({ items }) {
   const t = useT();
   return (
-    <div className="hairline reveal">
+    <div className="hairline stats reveal">
       {items.map(([n, l], i) => (
         <div key={i}>
           <div className="big-num">{n}</div>
@@ -93,7 +93,7 @@ export function Steps({ items, min = 240 }) {
     <div className="hairline reveal" style={{ '--min': `${min}px` }}>
       {items.map(([title, d], i) => (
         <div key={i}>
-          <div className="big-num" style={{ fontSize: 60 }}>{String(i + 1).padStart(2, '0')}</div>
+          <div className="big-num step-num">{String(i + 1).padStart(2, '0')}</div>
           <h3 style={{ margin: 0, fontSize: 19, fontWeight: 600 }}>{t(title)}</h3>
           <p className="body">{t(d)}</p>
         </div>

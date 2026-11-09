@@ -117,7 +117,7 @@ export default function OnlineVastu() {
         </div>
       </section>
 
-      <section style={{ paddingTop: 110 }}>
+      <section style={{ paddingTop: 'var(--sp-section)' }}>
         <Faq title={L('Online Vastu FAQ', 'ऑनलाइन वास्तु — प्रश्न-उत्तर')} items={[
           [L('How does online Vastu work?', 'ऑनलाइन वास्तु कैसे होता है?'), L('A report is prepared from your floor plan, North direction and family details, followed by a call.', 'फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।')],
           [L('Will I need to demolish anything?', 'क्या तोड़-फोड़ करनी पड़ेगी?'), L('Remedies without demolition come first; structural changes only if truly needed.', 'पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।')],
@@ -129,7 +129,7 @@ export default function OnlineVastu() {
         [L('Do you check a property before I buy it?', 'क्या ख़रीदने से पहले प्रॉपर्टी की जाँच करते हैं?'), L('Yes. Send the builder’s plan or brochure layout and the direction of the main road; you get a clear view of the strengths and doshas before you commit.', 'हाँ। बिल्डर का प्लान या ब्रोशर का नक्शा और मुख्य सड़क की दिशा भेजें; पैसा लगाने से पहले आपको उसकी अच्छाइयाँ और दोष साफ़ पता चल जाते हैं।')],
         ]} />
       </section>
-      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 'var(--sp-section)', maxWidth: 860 }}>
         {t('Related:', 'संबंधित:')} <Link to="/vastu-consultant-jaipur">{t('Vastu consultant in Jaipur — site visit', 'जयपुर में वास्तु सलाहकार — साइट विज़िट')}</Link><Link to="/blog/vastu-remedies-without-demolition">{t('Vastu remedies without demolition', 'बिना तोड़-फोड़ वास्तु उपाय')}</Link><Link to="/yantra-shop?category=Vastu">{t('Vastu yantras', 'वास्तु यंत्र')}</Link><Link to="/vedic-astrology">{t('Vedic birth chart reading', 'वैदिक कुंडली विश्लेषण')}</Link>
       </div>
     </PageShell>

@@ -243,7 +243,7 @@ export default function CountryPage() {
           <Faq title={L(`Nadi astrology in ${c.inName || c.name} — FAQ`, `${c.nameHi || c.name} में नाड़ी ज्योतिष — प्रश्न-उत्तर`)} items={faqs} />
 
           {data.others?.length > 0 && (
-            <div className="wrap z" style={{ maxWidth: 860, paddingBottom: 100 }}>
+            <div className="wrap z" style={{ maxWidth: 860, paddingBottom: 'var(--sp-section)' }}>
               <div className="row" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)' }}>
                 {t('Nadi readings for other countries:', 'दूसरे देशों के लिए नाड़ी रीडिंग:')}
                 {data.others.map((o) => <Link key={o.slug} to={`/nadi-astrology/${o.slug}`}>{t(o.name, o.nameHi || null)}</Link>)}

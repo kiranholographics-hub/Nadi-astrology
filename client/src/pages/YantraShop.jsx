@@ -59,7 +59,7 @@ export default function YantraShop() {
         </div>
       </section>
 
-      <section id="yantras" className="section-tight" style={{ paddingBottom: 100 }}>
+      <section id="yantras" className="section-tight" style={{ paddingBottom: 'var(--sp-section)' }}>
         <div className="wrap-wide row" style={{ '--gap': '36px', alignItems: 'flex-start' }}>
           <aside className="stack" style={{ flex: '1 1 220px', maxWidth: '100%', '--gap': '28px' }}>
             <div className="stack" style={{ '--gap': '6px' }} role="group" aria-label={t('Category', 'श्रेणी')}>
@@ -128,7 +128,7 @@ export default function YantraShop() {
       </section>
 
       <section className="band">
-        <div className="wrap grid" style={{ padding: '80px 24px', '--min': '260px', '--gap': '40px' }}>
+        <div className="wrap grid" style={{ paddingBlock: 'var(--sp-band)', '--min': '260px', '--gap': '40px' }}>
           {[[L('Shipping', 'शिपिंग'), L(`India: [__] days (Shiprocket, COD available) · International: [__] days (India Post / DHL / FedEx); customs duty is paid by the buyer. Free shipping on orders above ${SITE.freeShippingAbove ? `₹${SITE.freeShippingAbove}` : '[₹___]'}.`, `भारत: [__] दिन (Shiprocket, COD विकल्प) · विदेश: [__] दिन (India Post / DHL / FedEx), कस्टम ड्यूटी खरीदार देगा। ${SITE.freeShippingAbove ? `₹${SITE.freeShippingAbove}` : '[₹___]'} से ऊपर फ़्री शिपिंग।`)], [L('Payment', 'भुगतान'), L('India: Razorpay (UPI, card, netbanking) · International: PayPal.', 'भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग) · विदेश: PayPal।')], [L('Personal sankalp', 'व्यक्तिगत संकल्प'), L('Pran-pratishtha in your name and gotra, with video (premium).', 'आपके नाम और गोत्र से प्राण-प्रतिष्ठा, वीडियो के साथ (प्रीमियम)।')]].map(([head, d]) => (
             <div key={head.en} className="stack reveal" style={{ '--gap': '12px' }}>
               <span className="serif" style={{ fontSize: 28 }}>{t(head)}</span>
@@ -145,7 +145,7 @@ export default function YantraShop() {
         [L('How do I clean a yantra?', 'यंत्र को कैसे साफ़ करें?'), L('Wipe it gently with a soft dry cloth. Copper and brass darken naturally over time; they can be cleaned with a little lemon water or tamarind and dried well.', 'मुलायम सूखे कपड़े से हल्के से पोंछें। ताँबा और पीतल समय के साथ स्वाभाविक रूप से काले पड़ते हैं; इन्हें थोड़े नींबू पानी या इमली से साफ़ करके अच्छी तरह सुखा लें।')],
         [L('Do you ship yantras outside India?', 'क्या विदेश में यंत्र भेजते हैं?'), L('Yes, yantras ship worldwide from Jaipur by international courier. Any customs duty or import tax in your country is paid by the buyer.', 'हाँ, यंत्र जयपुर से इंटरनेशनल कूरियर द्वारा दुनिया भर में भेजे जाते हैं। आपके देश की कस्टम ड्यूटी या इम्पोर्ट टैक्स खरीदार देता है।')],
       ]} />
-      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 'var(--sp-section)', maxWidth: 860 }}>
         {t('Related:', 'संबंधित:')} <Link to="/vedic-astrology">{t('Find the right remedy — birth chart consultation', 'सही उपाय जानें — कुंडली परामर्श')}</Link><Link to="/online-vastu-consultation">{t('Online Vastu consultation', 'ऑनलाइन वास्तु परामर्श')}</Link><Link to="/nadi-astrology">{t('Nadi Shanti kandam remedies', 'नाड़ी शांति कांडम उपाय')}</Link><Link to="/kundli-milan">{t('Kundli matching', 'कुंडली मिलान')}</Link>
       </div>
     </PageShell>

@@ -108,7 +108,7 @@ export default function Book() {
           </ol>
 
           {done ? (
-            <div className="card featured fade-in" style={{ padding: 44, maxWidth: 760 }}>
+            <div className="card featured fade-in" style={{ padding: 'var(--sp-box)', maxWidth: 760 }}>
               <span className="eyebrow">— {t('Booking received', 'बुकिंग मिल गई')}</span>
               <h2 className="h2">{t('Thank you!', 'धन्यवाद!')} <em>{t('Ref', 'रेफ़')} {String(done.id).slice(-6).toUpperCase()}</em></h2>
               <p className="lead">{t(service.label)}{needsSlot ? ` · ${lt(date, slot)}` : ''}. {t(`You will receive the payment link (${done.next === 'paypal' ? 'PayPal' : 'Razorpay'}) and the Zoom/Meet link by email and WhatsApp.`, `भुगतान लिंक (${done.next === 'paypal' ? 'PayPal' : 'Razorpay'}) और Zoom/Meet लिंक आपको ईमेल और WhatsApp पर मिलेगा।`)}</p>

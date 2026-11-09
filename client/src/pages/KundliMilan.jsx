@@ -51,7 +51,7 @@ export default function KundliMilan() {
               <span className="tick">{t('Written summary on WhatsApp', 'लिखित सारांश WhatsApp पर')}</span>
             </div>
           </div>
-          <div className="card featured reveal" style={{ flex: '1 1 320px', padding: 40, alignSelf: 'flex-start' }}>
+          <div className="card featured reveal" style={{ flex: '1 1 320px', padding: 'var(--sp-box)', alignSelf: 'flex-start' }}>
             <span className="eyebrow" style={{ letterSpacing: '.25em', fontSize: 12 }}>{t('KUNDLI MATCHING', 'कुंडली मिलान')}</span>
             <div className="card-price" style={{ fontSize: 48 }}>{price(null, null)}</div>
             <div className="small">{t('India: Razorpay · International: PayPal', 'भारत: Razorpay · विदेश: PayPal')}</div>
@@ -125,7 +125,7 @@ export default function KundliMilan() {
         </div>
       </section>
 
-      <section style={{ paddingTop: 110 }}>
+      <section style={{ paddingTop: 'var(--sp-section)' }}>
         <Faq title={L('Kundli Matching FAQ', 'कुंडली मिलान — प्रश्न-उत्तर')} items={[
           [L('How long does it take?', 'कितना समय लगता है?'), L('Report + 20-minute call. The report takes [__] days to prepare.', 'रिपोर्ट + 20 मिनट कॉल। रिपोर्ट तैयार होने का समय: [__] दिन।')],
           [L('What if a birth time is unknown?', 'जन्म समय पता न हो तो?'), L('Speak with Pandit ji — he can advise on alternatives such as KP Prashna.', 'पंडित जी से बात करें — केपी प्रश्न जैसे विकल्प पर सलाह मिल सकती है।')],
@@ -136,7 +136,7 @@ export default function KundliMilan() {
         [L('Is kundli matching useful for love marriage?', 'क्या लव मैरिज में कुंडली मिलान उपयोगी है?'), L('Yes. In a love marriage the question is rarely “yes or no” — the matching shows the areas that need care and the right time for the wedding, with remedies where needed.', 'हाँ। लव मैरिज में सवाल अक्सर “हाँ या ना” का नहीं होता — मिलान से पता चलता है कि किन बातों का ध्यान रखना है और शादी का सही समय क्या है, ज़रूरत हो तो उपायों के साथ।')],
         ]} />
       </section>
-      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 'var(--sp-section)', maxWidth: 860 }}>
         {t('Related:', 'संबंधित:')} <Link to="/vedic-astrology">{t('Vedic birth chart consultation', 'वैदिक कुंडली परामर्श')}</Link><Link to="/kp-prashna">{t('KP Prashna: “When will I get married?”', 'केपी प्रश्न: “शादी कब होगी?”')}</Link><Link to="/nadi-astrology">{t('Nadi reading — Kandam 7 (marriage)', 'नाड़ी रीडिंग — कांडम 7 (विवाह)')}</Link><Link to="/yantra-shop">{t('Yantras for marriage', 'विवाह के लिए यंत्र')}</Link>
       </div>
     </PageShell>

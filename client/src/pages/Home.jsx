@@ -49,7 +49,7 @@ function HeroMedia() {
 
   return (
     <div style={{ flex: '1 1 520px', display: 'flex', flexDirection: 'column', gap: 22, alignItems: 'center' }}>
-      <div className="hero-art">
+      <div className="hero-art" style={{ flex: 'none' }}>
         <svg viewBox="0 0 600 600" aria-hidden="true">
           <g className="spin" fill="none" stroke="#D9B26F" strokeOpacity=".35">
             <circle cx="300" cy="300" r="290" />
@@ -156,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* trust */}
-      <section className="section-tight" style={{ paddingBottom: 100 }}>
+      <section className="section-tight" style={{ paddingBottom: 'var(--sp-section)' }}>
         <div className="wrap">
           <Stats items={[['12+', L('years of experience', 'साल का अनुभव')], ['4000+', L('office-visit clients', 'ऑफिस विज़िट क्लाइंट')], ['60+', L('international office visits', 'विदेशी क्लाइंट ऑफिस आए')], ['10+', L('years of Vedic & KP practice', 'साल वैदिक और केपी अभ्यास')]]} />
           {(SITE.googleRating || SITE.googleReviewUrl) && (
@@ -292,7 +292,7 @@ export default function Home() {
       {/* international + office */}
       <section className="section-tight">
         <div className="wrap row" style={{ '--gap': '20px' }}>
-          <div className="reveal" style={{ flex: '1 1 440px', border: '1px solid var(--line)', borderRadius: 4, padding: 44, background: 'var(--bg-2)', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', gap: 20 }}>
+          <div className="reveal" style={{ flex: '1 1 440px', border: '1px solid var(--line)', borderRadius: 4, padding: 'var(--sp-box)', background: 'var(--bg-2)', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', gap: 20 }}>
             <svg viewBox="0 0 200 200" style={{ position: 'absolute', right: -60, top: -60, width: 260, opacity: 0.25 }} fill="none" stroke="#D9B26F" aria-hidden="true"><g className="spin"><circle cx="100" cy="100" r="90" /><ellipse cx="100" cy="100" rx="40" ry="90" /><ellipse cx="100" cy="100" rx="90" ry="34" /><path d="M10 100 H190 M100 10 V190" /></g></svg>
             <div className="eyebrow">— {t('Worldwide', 'दुनिया भर में')}</div>
             <h2 className="h2" style={{ fontSize: 'clamp(30px,3.4vw,44px)' }}>{t('Consult from the USA, UK, Dubai & worldwide', 'USA, UK, दुबई और दुनिया भर से परामर्श')}</h2>
@@ -303,7 +303,7 @@ export default function Home() {
               <span className="tick">{t('Upload your thumb impression online for Nadi', 'नाड़ी के लिए अंगूठे का निशान ऑनलाइन अपलोड')}</span>
             </div>
           </div>
-          <div className="reveal" style={{ flex: '1 1 440px', border: '1px solid var(--line)', borderRadius: 4, padding: 44, display: 'flex', flexDirection: 'column', gap: 20 }}>
+          <div className="reveal" style={{ flex: '1 1 440px', border: '1px solid var(--line)', borderRadius: 4, padding: 'var(--sp-box)', display: 'flex', flexDirection: 'column', gap: 20 }}>
             <div className="eyebrow">— {t('Jaipur', 'जयपुर')}</div>
             <h2 className="h2" style={{ fontSize: 'clamp(30px,3.4vw,44px)' }}>{t('Visit Our Jaipur Office', 'हमारे जयपुर ऑफिस आएँ')}</h2>
             <p className="body">{SITE.address} · {show(SITE.timings, t('[Timings]', '[समय]'))}</p>
@@ -316,7 +316,7 @@ export default function Home() {
       </section>
 
       <Faq id="faq" title={L('Frequently Asked Questions', 'अक्सर पूछे जाने वाले प्रश्न')} items={HOME_FAQ} />
-      <div className="wrap z" style={{ maxWidth: 860, paddingBottom: 100, textAlign: 'center' }}><Link to="/faq" className="link-arrow">{t('See all questions', 'सभी प्रश्न-उत्तर देखें')} →</Link></div>
+      <div className="wrap z" style={{ maxWidth: 860, paddingBottom: 'var(--sp-section)', textAlign: 'center' }}><Link to="/faq" className="link-arrow">{t('See all questions', 'सभी प्रश्न-उत्तर देखें')} →</Link></div>
     </PageShell>
   );
 }
