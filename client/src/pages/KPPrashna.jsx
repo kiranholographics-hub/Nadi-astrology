@@ -117,7 +117,7 @@ export default function KPPrashna() {
 
       <section id="form" className="band">
         <div className="wrap section row" style={{ '--gap': '48px' }}>
-          <div className="card featured reveal" style={{ flex: '1 1 320px', alignSelf: 'flex-start', padding: 40 }}>
+          <div className="card featured reveal" style={{ flex: '1 1 320px', alignSelf: 'flex-start', padding: 'var(--sp-box)' }}>
             <span className="eyebrow" style={{ letterSpacing: '.25em', fontSize: 12 }}>{t('20–30 MIN CALL', '20–30 मिनट कॉल')}</span>
             <h3 className="h3" style={{ fontSize: 34 }}>{t('KP Prashna', 'केपी प्रश्न')}</h3>
             <div className="card-price" style={{ fontSize: 48 }}>{price(null, null)}</div>
@@ -141,7 +141,7 @@ export default function KPPrashna() {
         </div>
       </section>
 
-      <section style={{ paddingTop: 110 }}>
+      <section style={{ paddingTop: 'var(--sp-section)' }}>
         <Faq title={L('KP Prashna FAQ', 'केपी प्रश्न — प्रश्न-उत्तर')} items={[
           [L('I don’t know my birth time — will it still work?', 'जन्म समय नहीं पता — फिर भी चलेगा?'), L('Yes. KP Prashna does not need a birth time; the chart is cast from the number you choose and the time of your question.', 'हाँ। केपी प्रश्न में जन्म समय की ज़रूरत नहीं होती; कुंडली आपके चुने नंबर और प्रश्न के समय से बनती है।')],
           [L('How many questions per number?', 'एक नंबर पर कितने प्रश्न?'), L('One number, one question. A second question needs a separate prashna.', 'एक नंबर, एक प्रश्न। दूसरे प्रश्न के लिए अलग प्रश्न।')],
@@ -151,7 +151,7 @@ export default function KPPrashna() {
         [L('Can I ask on behalf of someone else?', 'क्या किसी और के लिए प्रश्न पूछ सकते हैं?'), L('Yes — for example a parent asking about a child’s job or marriage. The chart is then read from the house of that relative.', 'हाँ — जैसे माता-पिता बच्चे की नौकरी या शादी के बारे में। तब कुंडली उस रिश्तेदार के भाव से पढ़ी जाती है।')],
         ]} />
       </section>
-      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 'var(--sp-section)', maxWidth: 860 }}>
         {t('Related:', 'संबंधित:')} <Link to="/blog/kp-prashna-number-1-249">{t('KP Prashna 1–249 explained', 'केपी प्रश्न 1–249 विस्तार से')}</Link><Link to="/vedic-astrology">{t('Vedic birth chart reading', 'वैदिक कुंडली विश्लेषण')}</Link><Link to="/kundli-milan">{t('Kundli matching', 'कुंडली मिलान')}</Link><Link to="/nadi-astrology">{t('Nadi astrology', 'नाड़ी ज्योतिष')}</Link>
       </div>
     </PageShell>

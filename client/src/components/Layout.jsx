@@ -226,7 +226,10 @@ export function PageShell({ title, description, image, schema, cta, mobileCta, d
       <main>{children}</main>
       <Footer disclaimer={disclaimer} />
       <a href={waLink(t('Namaste Pandit ji, I would like to know about a consultation.', 'नमस्ते पंडित जी, मुझे परामर्श के बारे में जानना है।'))} className="btn wa-float" aria-label={t('Chat on WhatsApp', 'WhatsApp पर बात करें')}><ChatIcon />WhatsApp</a>
-      <div className="mbar"><Link to={mc.to} className="btn btn-block">{t(mc.label)}</Link></div>
+      <div className="mbar">
+        <a href={waLink(t('Namaste Pandit ji, I would like to know about a consultation.', 'नमस्ते पंडित जी, मुझे परामर्श के बारे में जानना है।'))} className="btn-ghost mbar-wa" aria-label={t('Chat on WhatsApp', 'WhatsApp पर बात करें')}><ChatIcon />WhatsApp</a>
+        <Link to={mc.to} className="btn mbar-cta">{t(mc.label)}</Link>
+      </div>
       {toast && <div className="toast" role="status">{toast}</div>}
     </div>
   );

@@ -61,10 +61,13 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .stars { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
 .star { position: absolute; border-radius: 50%; background: #F4E7C8; animation: twinkle 4s ease-in-out infinite; }
 .z { position: relative; z-index: 2; }
-.wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
-.wrap-wide { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 110px 0; position: relative; z-index: 2; }
-.section-tight { padding: 0 0 110px; position: relative; z-index: 2; }
+/* Spacing scale — smaller on phones (see the max-width: 720px block). */
+:root { --sp-section: 110px; --sp-band: 80px; --sp-box: 44px; --gutter: 24px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)) max(var(--gutter), env(safe-area-inset-right, 0px)); }
+.wrap-wide { max-width: 1320px; margin: 0 auto; padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)) max(var(--gutter), env(safe-area-inset-right, 0px)); }
+/* padding-block only, so a ".wrap section" keeps its side gutter */
+.section { padding-block: var(--sp-section); position: relative; z-index: 2; }
+.section-tight { padding-block: 0 var(--sp-section); position: relative; z-index: 2; }
 .band { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; z-index: 2; }
 .stack { display: flex; flex-direction: column; gap: var(--gap, 24px); }
 .row { display: flex; flex-wrap: wrap; gap: var(--gap, 24px); }
@@ -117,6 +120,7 @@ a.chip:hover, button.chip:hover { background: var(--gold); color: var(--bg); bor
 .hairline > * { background: var(--bg); padding: 40px 32px; display: flex; flex-direction: column; gap: 14px; }
 .band .hairline > * { background: var(--bg); }
 .big-num { font-family: var(--serif); font-size: 64px; line-height: 1; color: var(--gold); }
+.step-num { font-size: 60px; }
 
 /* media placeholders */
 .ph { border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--bg-2); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: var(--muted); font-size: 13px; text-align: center; padding: 16px; overflow: hidden; position: relative; }
@@ -198,10 +202,34 @@ textarea.input { resize: vertical; min-height: 110px; }
 .footer-bottom { padding-top: 24px; padding-bottom: 40px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted-2); line-height: 1.7; }
 .wa-float { position: fixed; right: 22px; bottom: 22px; z-index: 40; box-shadow: 0 10px 30px rgba(0,0,0,.5); min-height: 50px; padding: 0 20px; font-size: 14px; }
 .mbar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 39; padding: 12px 16px; background: var(--bg-2); border-top: 1px solid var(--line-2); }
+.mbar-wa { flex: none; min-height: 48px; padding: 0 18px; font-size: 14px; }
+.mbar-cta { flex: 1; min-height: 48px; padding: 0 16px; }
 @media (max-width: 720px) {
-  .mbar { display: flex; }
-  .wa-float { bottom: 84px; }
+  .mbar { display: flex; gap: 10px; padding-bottom: max(12px, env(safe-area-inset-bottom, 0px)); }
+  /* WhatsApp lives in the bottom bar on phones, so the floating button would only cover text */
+  .wa-float { display: none; }
   .footer { padding-bottom: 76px; }
+}
+
+/* ============ phones ============ */
+@media (max-width: 720px) {
+  :root { --sp-section: 56px; --sp-band: 48px; --sp-box: 22px; --gutter: 18px; }
+  .hero { padding-block: 20px 48px; }
+  .hero-row { gap: 28px; }
+  .hero-text { gap: 20px; }
+  .hero-art { max-width: 340px; margin-inline: auto; }
+  .h1 { font-size: clamp(32px, 9vw, 44px); line-height: 1.08; }
+  .h2 { font-size: clamp(27px, 7.4vw, 36px); line-height: 1.12; }
+  .lead { font-size: 16px; }
+  .hairline > * { padding: 22px 20px; gap: 8px; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .big-num { font-size: 42px; }
+  .step-num { font-size: 38px; }
+  .card { padding: 22px; gap: 12px; }
+  .faq details { padding: 16px 0; }
+  .faq summary { font-size: 19px; gap: 14px; }
+  .marquee { font-size: 21px; padding: 14px 0; }
+  .topbar .wrap-wide > span { display: none; }
 }
 .toast { position: fixed; left: 50%; bottom: 36px; transform: translateX(-50%); z-index: 60; background: var(--gold); color: var(--bg); padding: 14px 22px; border-radius: 999px; font-weight: 600; font-size: 14px; animation: toast .4s ease-out both; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
 
@@ -211,7 +239,7 @@ textarea.input { resize: vertical; min-height: 110px; }
 .breadcrumb span:last-child { color: var(--text-2); }
 
 /* hero helpers */
-.hero { position: relative; z-index: 2; padding: 36px 0 96px; }
+.hero { position: relative; z-index: 2; padding-block: 36px 96px; }
 .hero-row { display: flex; flex-wrap: wrap; align-items: center; gap: 48px; }
 .hero-text { flex: 1 1 460px; display: flex; flex-direction: column; gap: 26px; }
 .hero-art { flex: 1 1 520px; position: relative; aspect-ratio: 1 / 1; max-width: 600px; width: 100%; }

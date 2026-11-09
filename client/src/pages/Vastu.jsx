@@ -214,7 +214,7 @@ export default function Vastu() {
         </div>
       </section>
 
-      <div style={{ height: 110 }} />
+      <div style={{ height: 'var(--sp-section)' }} />
       <Faq title={L('Vastu FAQ', 'वास्तु — प्रश्न-उत्तर')} items={[
         [L('Will I need to demolish anything?', 'क्या तोड़-फोड़ करनी पड़ेगी?'), L('Remedies without demolition come first; structural changes only if truly needed.', 'पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।')],
         [L('How does online Vastu work?', 'ऑनलाइन वास्तु कैसे होता है?'), L('A report is prepared from your floor plan, North direction and family details, followed by a call.', 'फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।')],
@@ -223,7 +223,7 @@ export default function Vastu() {
         [L('Should I check Vastu before buying a flat?', 'क्या फ्लैट ख़रीदने से पहले वास्तु देखना चाहिए?'), L('Yes — it is the cheapest time. A quick call with the builder’s floor plan shows the entrance pada, kitchen and toilet positions and whether the flat suits your family’s charts.', 'हाँ — यही सबसे सस्ता समय है। बिल्डर के फ्लोर प्लान के साथ क्विक कॉल से मुख्य द्वार का पद, रसोई और शौचालय की जगह, और फ्लैट आपके परिवार की कुंडलियों के अनुकूल है या नहीं, पता चल जाता है।')],
         [L('Does Vastu work for offices and factories?', 'क्या ऑफिस और फैक्ट्री के लिए वास्तु काम करता है?'), L('Yes. In a workplace the owner’s seat, cash and accounts, the entrance, machinery, raw material and finished goods each have their own zone. A site visit is recommended for factories.', 'हाँ। कार्यस्थल में मालिक की सीट, कैश और अकाउंट, प्रवेश द्वार, मशीनें, कच्चा माल और तैयार माल — हर एक का अपना ज़ोन होता है। फैक्ट्री के लिए साइट विज़िट की सलाह दी जाती है।')],
       ]} />
-      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 'var(--sp-section)', maxWidth: 860 }}>
         {t('Related:', 'संबंधित:')} <Link to="/online-vastu-consultation">{t('Online Vastu consultation', 'ऑनलाइन वास्तु परामर्श')}</Link><Link to="/blog/vastu-remedies-without-demolition">{t('Vastu remedies without demolition', 'बिना तोड़-फोड़ वास्तु उपाय')}</Link><Link to="/blog/main-door-vastu-direction-remedies">{t('Main door Vastu', 'मुख्य द्वार का वास्तु')}</Link><Link to="/yantra-shop/vastu-dosh-nivaran-yantra">{t('Vastu Dosh Nivaran Yantra', 'वास्तु दोष निवारण यंत्र')}</Link>
       </div>
     </PageShell>

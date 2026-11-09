@@ -64,7 +64,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-tight" style={{ paddingBottom: 100 }}>
+      <section className="section-tight" style={{ paddingBottom: 'var(--sp-section)' }}>
         <div className="wrap"><Stats items={[['12+', L('years of experience', 'साल का अनुभव')], ['4000+', L('office-visit clients', 'ऑफिस विज़िट क्लाइंट')], ['60+', L('international office visits', 'विदेशी क्लाइंट ऑफिस आए')], ['10+', L('years of Vedic & KP practice', 'साल वैदिक और केपी अभ्यास')]]} /></div>
       </section>
 
@@ -117,7 +117,7 @@ export default function About() {
 
       <section id="office" className="section-tight">
         <div className="wrap row" style={{ '--gap': '20px' }}>
-          <div className="stack reveal" style={{ flex: '1 1 420px', border: '1px solid var(--line)', borderRadius: 4, padding: 44, background: 'var(--bg-2)', '--gap': '18px' }}>
+          <div className="stack reveal" style={{ flex: '1 1 420px', border: '1px solid var(--line)', borderRadius: 4, padding: 'var(--sp-box)', background: 'var(--bg-2)', '--gap': '18px' }}>
             <div className="eyebrow">— {t('Jaipur office', 'जयपुर ऑफिस')}</div>
             <h2 className="h2" style={{ fontSize: 'clamp(30px,3.4vw,44px)' }}>{t('Visit Our Jaipur Office', 'हमारे जयपुर ऑफिस आएँ')}</h2>
             <p className="lead" style={{ fontSize: 16 }}>{SITE.address}</p>

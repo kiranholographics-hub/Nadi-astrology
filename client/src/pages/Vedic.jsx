@@ -147,7 +147,7 @@ export default function Vedic() {
         [L('Should I book 30 or 60 minutes?', '30 मिनट बुक करूँ या 60 मिनट?'), L('30 minutes suits one or two focused questions. Choose 60 minutes for a full life reading — career, marriage, health and the coming dasha periods.', '30 मिनट एक-दो ख़ास प्रश्नों के लिए ठीक है। पूरे जीवन की रीडिंग — करियर, विवाह, स्वास्थ्य और आने वाली दशाओं — के लिए 60 मिनट चुनें।')],
         [L('Do I have to wear a gemstone?', 'क्या रत्न पहनना ज़रूरी है?'), L('No. A gemstone is suggested only when it clearly suits your chart. Many remedies — mantra, daan, fasting or a yantra — cost little and carry no risk.', 'नहीं। रत्न तभी सुझाया जाता है जब वह कुंडली के अनुसार साफ़ तौर पर उचित हो। कई उपाय — मंत्र, दान, व्रत या यंत्र — कम खर्च के और बिना जोखिम के होते हैं।')],
       ]} />
-      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 'var(--sp-section)', maxWidth: 860 }}>
         {t('Related:', 'संबंधित:')} <Link to="/kundli-milan">{t('Kundli matching for marriage', 'शादी के लिए कुंडली मिलान')}</Link><Link to="/kp-prashna">{t('KP Prashna — one question', 'केपी प्रश्न — एक सवाल')}</Link><Link to="/nadi-astrology">{t('Nadi palm leaf reading', 'नाड़ी ताड़-पत्र रीडिंग')}</Link><Link to="/vastu-consultant-jaipur">{t('Astro-Vastu in Jaipur', 'जयपुर में एस्ट्रो-वास्तु')}</Link>
       </div>
     </PageShell>

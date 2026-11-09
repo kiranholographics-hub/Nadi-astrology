@@ -71,7 +71,7 @@ export default function YantraDetail() {
 
   return (
     <PageShell title={y ? `${name}, ${energized}` : L('Yantra', 'यंत्र')} description={y ? (descText ? { en: clip160(descText), hi: clip160(descText) } : undefined) || t(`${y.name} — energized by Pt. Rajneesh Sharma. Size, metal, installation guide and video. Shipping in India and worldwide.`, `${name} — पं. रजनीश शर्मा द्वारा प्राण-प्रतिष्ठित। साइज़, धातु, स्थापना विधि और वीडियो। भारत और विदेश में शिपिंग।`) : undefined} schema={schema} disclaimer={DISCLAIMER.yantra} seed={61} mobileCta={{ to: '/cart', label: L('Cart · Checkout', 'कार्ट · चेकआउट') }} revealKey={y?.slug}>
-      <section className="hero" style={{ paddingBottom: 100 }}>
+      <section className="hero" style={{ paddingBottom: 'var(--sp-section)' }}>
         <div className="wrap-wide stack" style={{ '--gap': '32px' }}>
           <Breadcrumb items={[{ label: L('Yantra Shop', 'यंत्र शॉप'), to: '/yantra-shop' }, { label: y ? catLabel(y.category) : '…', to: y ? `/yantra-shop?category=${encodeURIComponent(y.category)}` : undefined }, { label: name }]} />
           <div className="row" style={{ '--gap': '56px', alignItems: 'flex-start' }}>

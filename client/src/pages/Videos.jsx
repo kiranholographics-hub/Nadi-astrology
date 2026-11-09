@@ -61,7 +61,7 @@ export default function Videos() {
         </div>
       </section>
 
-      <section className="section-tight" style={{ paddingBottom: 100 }}>
+      <section className="section-tight" style={{ paddingBottom: 'var(--sp-section)' }}>
         <div className="wrap-wide stack" style={{ '--gap': '28px' }}>
           {TABS.length > 2 && (
             <div className="row" style={{ '--gap': '10px' }} role="group" aria-label={t('Video category', 'वीडियो श्रेणी')}>
@@ -95,7 +95,7 @@ export default function Videos() {
           </div>
         </div>
       </section>
-      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 100, maxWidth: 860 }}>
+      <div className="wrap row z" style={{ '--gap': '10px 20px', fontSize: 14, color: 'var(--muted)', paddingBottom: 'var(--sp-section)', maxWidth: 860 }}>
         {t('Related:', 'संबंधित:')} <Link to="/blog/shani-sade-sati-meaning-remedies">{t('Shani Sade Sati — meaning and remedies', 'शनि साढ़ेसाती — अर्थ और उपाय')}</Link><Link to="/vedic-astrology">{t('Vedic birth chart consultation', 'वैदिक कुंडली परामर्श')}</Link><Link to="/nadi-astrology">{t('Nadi palm leaf reading', 'नाड़ी ताड़-पत्र रीडिंग')}</Link><Link to="/yantra-shop">{t('Energized yantras', 'प्राण-प्रतिष्ठित यंत्र')}</Link>
       </div>
     </PageShell>
