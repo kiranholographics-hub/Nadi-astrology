@@ -8,6 +8,7 @@ import { getPost, getPosts } from '../api/index.js';
 import { BLOG_CATEGORY, CATEGORY_PAGE, postDate } from '../data/blogCategories.js';
 import { useApp, useT } from '../context/AppContext.jsx';
 import NotFound from './NotFound.jsx';
+import { useInitialData } from '../context/InitialData.jsx';
 
 const ALL = 'all';
 
@@ -30,9 +31,10 @@ export function PostCard({ p }) {
 
 export function BlogList() {
   const t = useT();
-  const [posts, setPosts] = useState(null);
+  const initial = useInitialData('posts');
+  const [posts, setPosts] = useState(initial ?? null);
   const [cat, setCat] = useState(ALL);
-  useEffect(() => { getPosts().then(setPosts); }, []);
+  useEffect(() => { if (!initial) getPosts().then(setPosts); }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const cats = useMemo(() => [ALL, ...new Set((posts || []).map((p) => p.category))], [posts]);
   const list = (posts || []).filter((p) => cat === ALL || p.category === cat);
   const catText = (c) => (c === ALL ? t('All', 'सभी') : t(BLOG_CATEGORY[c] || { en: c }));
@@ -63,20 +65,25 @@ export function BlogPost() {
   const t = useT();
   const { lang } = useApp();
   const { slug } = useParams();
-  const [data, setData] = useState(undefined);
+  const initial = useInitialData(`post:${slug}`); // undefined = not loaded by the server
+  const [data, setData] = useState(initial);
   useEffect(() => {
+    if (initial !== undefined) {
+      setData(initial);
+      return;
+    }
     setData(undefined);
     getPost(slug).then(setData).catch(() => setData(null));
-  }, [slug]);
+  }, [slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (data === null) return <NotFound />;
   const p = data?.item;
   const html = p ? localizeHtml(t(p.content, p.contentHi || null), lang) : '';
   const schema = p ? {
     '@context': 'https://schema.org', '@type': 'Article', headline: p.title, description: p.excerpt || undefined,
-    image: p.cover ? new URL(p.cover, window.location.origin).href : undefined,
+    image: p.cover && typeof window !== 'undefined' ? new URL(p.cover, window.location.origin).href : undefined,
     author: { '@type': 'Person', name: 'Pt. Rajneesh Sharma' }, publisher: { '@type': 'Person', name: 'Pt. Rajneesh Sharma' },
-    datePublished: p.publishAt, dateModified: p.updatedAt, mainEntityOfPage: window.location.href,
+    datePublished: p.publishAt, dateModified: p.updatedAt, mainEntityOfPage: typeof window !== 'undefined' ? window.location.href : undefined,
   } : null;
   const cat = p ? t(BLOG_CATEGORY[p.category] || { en: p.category }) : '';
 

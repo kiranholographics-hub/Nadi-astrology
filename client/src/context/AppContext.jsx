@@ -19,9 +19,9 @@ function save(key, value) {
   }
 }
 
-export function AppProvider({ children }) {
+export function AppProvider({ children, initialLang }) {
   // The URL decides first (/hi/… is Hindi), then the visitor's saved choice.
-  const [lang, setLang] = useState(() => (typeof window !== 'undefined' && langOfPath(window.location.pathname) === 'hi' ? 'hi' : load('ptrs.lang', 'en')));
+  const [lang, setLang] = useState(() => initialLang || (typeof window !== 'undefined' && langOfPath(window.location.pathname) === 'hi' ? 'hi' : load('ptrs.lang', 'en')));
   const [currency, setCurrency] = useState(() => load('ptrs.currency', 'INR'));
   const [cart, setCart] = useState(() => load('ptrs.cart', []));
   const [toast, setToast] = useState('');

@@ -11,6 +11,7 @@ import { useApp, usePrice, useT } from '../context/AppContext.jsx';
 import { catLabel, yName, SIZE_HI } from '../data/yantraI18n.js';
 import { SITE, waLink } from '../data/site.js';
 import NotFound from './NotFound.jsx';
+import { useInitialData } from '../context/InitialData.jsx';
 
 const L = (en, hi) => ({ en, hi });
 const clip160 = (x) => (x.length > 160 ? `${x.slice(0, 159).replace(/\s+\S*$/, '')}…` : x);
@@ -23,17 +24,24 @@ export default function YantraDetail() {
   const navigate = useNavigate();
   const { addToCart, currency } = useApp();
   const price = usePrice();
-  const [data, setData] = useState(null);
-  const [missing, setMissing] = useState(false);
+  const initial = useInitialData(`yantra:${slug}`); // undefined = not loaded by the server, null = not found
+  const [data, setData] = useState(initial || null);
+  const [missing, setMissing] = useState(initial === null);
   const [view, setView] = useState(0);
   const [size, setSize] = useState(1);
   const [sankalp, setSankalp] = useState(false);
 
   useEffect(() => {
-    setData(null);
     setView(0);
+    if (initial !== undefined) {
+      setData(initial);
+      setMissing(initial === null);
+      return;
+    }
+    setData(null);
+    setMissing(false);
     getYantra(slug).then(setData).catch(() => setMissing(true));
-  }, [slug]);
+  }, [slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const y = data?.item;
   const sizes = y?.sizes?.length ? y.sizes : ['2 x 2 inch', '3 x 3 inch', '6 x 6 inch'];

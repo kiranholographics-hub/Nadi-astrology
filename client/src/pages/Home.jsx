@@ -12,6 +12,7 @@ import { YT_VIDEOS, ytEmbed } from '../data/videos.js';
 import { HOME_FAQ } from '../data/faqs.js';
 import { GALLERY } from '../data/gallery.js';
 import PhotoRows from '../components/PhotoRows.jsx';
+import { useInitialData } from '../context/InitialData.jsx';
 
 const RASHI = ['MESHA', 'VRISHABHA', 'MITHUNA', 'KARKA', 'SIMHA', 'KANYA', 'TULA', 'VRISHCHIKA', 'DHANU', 'MAKARA', 'KUMBHA', 'MEENA'];
 const RASHI_HI = ['मेष', 'वृषभ', 'मिथुन', 'कर्क', 'सिंह', 'कन्या', 'तुला', 'वृश्चिक', 'धनु', 'मकर', 'कुंभ', 'मीन'];
@@ -126,12 +127,14 @@ export default function Home() {
   const { lang } = useApp();
   const price = usePrice();
   const t = useT();
-  const [yantras, setYantras] = useState([]);
-  const [posts, setPosts] = useState([]);
+  const initialYantras = useInitialData('yantras');
+  const initialPosts = useInitialData('posts');
+  const [yantras, setYantras] = useState(() => (initialYantras?.items || []).filter((y) => y.bestseller).slice(0, 4));
+  const [posts, setPosts] = useState(() => (initialPosts || []).slice(0, 3));
   useEffect(() => {
-    getYantras({ bestseller: true }).then((d) => setYantras(d.items.slice(0, 4)));
-    getPosts().then((list) => setPosts(list.slice(0, 3)));
-  }, []);
+    if (!initialYantras) getYantras({ bestseller: true }).then((d) => setYantras(d.items.slice(0, 4)));
+    if (!initialPosts) getPosts().then((list) => setPosts(list.slice(0, 3)));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const hi = lang === 'hi';
 
   return (
