@@ -1,7 +1,10 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import Lightbox from './Lightbox.jsx';
 import { GALLERY, GALLERY_CATEGORIES, imgUrl } from '../data/gallery.js';
 import { useT } from '../context/AppContext.jsx';
+
+// useLayoutEffect warns during server rendering; there is no layout to measure there anyway.
+const useIsoLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 // Motion per row, in order: right→left, left→right, swing from the middle (left ↔ right), …
 const MOTIONS = ['rtl', 'ltr', 'swing'];
@@ -16,7 +19,7 @@ function Row({ label, items, motion, onOpen }) {
   const list = loop ? [...items, ...items] : items; // doubled = seamless loop
 
   // swing: how far the track can travel = track width − visible width
-  useLayoutEffect(() => {
+  useIsoLayoutEffect(() => {
     if (loop) return undefined;
     const measure = () => setDist(Math.max(0, (trackRef.current?.scrollWidth || 0) - (rowRef.current?.clientWidth || 0)));
     measure();

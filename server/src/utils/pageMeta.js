@@ -3,6 +3,7 @@ import Post, { liveFilter } from '../models/Post.js';
 import Country from '../models/Country.js';
 import Yantra from '../models/Yantra.js';
 import { yantraContent, yantraNameHi } from '../data/yantraContent.js';
+import { renderPage } from './ssr.js';
 
 // Title / description per page, put into the HTML before it is sent, so Google and
 // WhatsApp / Facebook link previews see the right text without running the React app.
@@ -128,7 +129,10 @@ export async function renderIndex(indexHtml, pathname, origin) {
     `<meta property="og:description" content="${esc(desc)}" />`,
     `<meta property="og:url" content="${esc(url)}" />`,
   ].join('\n    ');
-  return template
+  const page = await renderPage(raw, p);
+  let out = template;
+  if (page) out = out.replace('<div id="root"></div>', () => `<div id="root">${page.html}</div>\n    ${page.script}`);
+  return out
     .replace(/<html lang="[^"]*"/, `<html lang="${hi ? 'hi' : 'en'}"`)
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`)
     .replace(/<meta name="description" content="[^"]*"\s*\/?>/, `<meta name="description" content="${esc(desc)}" />\n    ${tags}`);

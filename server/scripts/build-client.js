@@ -20,3 +20,11 @@ run('npm run build');
 fs.rmSync(out, { recursive: true, force: true });
 fs.cpSync(path.join(client, 'dist'), out, { recursive: true });
 console.log(`[build] website copied to ${path.relative(process.cwd(), out)}`);
+
+// Server-side render bundle (page HTML for search engines) → server/ssr
+run('npx vite build --ssr src/entry-server.jsx --outDir dist-ssr');
+const ssrOut = path.join(root, 'ssr');
+fs.rmSync(ssrOut, { recursive: true, force: true });
+fs.cpSync(path.join(client, 'dist-ssr'), ssrOut, { recursive: true });
+fs.writeFileSync(path.join(ssrOut, 'package.json'), '{ "type": "module" }\n');
+console.log(`[build] server-side render bundle copied to ${path.relative(process.cwd(), ssrOut)}`);

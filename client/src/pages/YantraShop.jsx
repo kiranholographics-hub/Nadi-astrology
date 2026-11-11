@@ -8,6 +8,7 @@ import { SITE, waLink } from '../data/site.js';
 import { Link } from '../components/LangLink.jsx';
 import { useT } from '../context/AppContext.jsx';
 import { catLabel } from '../data/yantraI18n.js';
+import { useInitialData } from '../context/InitialData.jsx';
 
 const L = (en, hi) => ({ en, hi });
 
@@ -16,17 +17,19 @@ export default function YantraShop() {
   const [params, setParams] = useSearchParams();
   const active = params.get('category') || 'Sabhi';
   const [sort, setSort] = useState('popular');
-  const [all, setAll] = useState([]);
-  const [cats, setCats] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const initial = useInitialData('yantras');
+  const [all, setAll] = useState(initial?.items || []);
+  const [cats, setCats] = useState(initial?.categories || []);
+  const [loading, setLoading] = useState(!initial);
 
   useEffect(() => {
+    if (initial) return;
     getYantras().then((d) => {
       setAll(d.items);
       setCats(d.categories);
       setLoading(false);
     });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const items = useMemo(() => {
     let list = active === 'Sabhi' ? all : all.filter((y) => y.category === active);

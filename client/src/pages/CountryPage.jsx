@@ -10,6 +10,7 @@ import { SLOTS_IST } from '../data/services.js';
 import { GALLERY, imgUrl } from '../data/gallery.js';
 import { waLink } from '../data/site.js';
 import NotFound from './NotFound.jsx';
+import { useInitialData } from '../context/InitialData.jsx';
 
 const L = (en, hi) => ({ en, hi });
 const BOOK = '/book?service=nadi-general-2-kandam';
@@ -32,18 +33,25 @@ export default function CountryPage() {
   const t = useT();
   const { lang, currency, setCurrency } = useApp();
   const price = usePrice();
-  const [data, setData] = useState(undefined); // undefined = loading, null = not found
-  const [posts, setPosts] = useState([]);
+  const initial = useInitialData(`country:${slug}`);
+  const initialPosts = useInitialData(`posts:country:${slug}`);
+  const [data, setData] = useState(initial); // undefined = loading, null = not found
+  const [posts, setPosts] = useState(initialPosts || []);
 
   // { en, hi } from the admin — Hindi falls back to English when not filled in.
   const tt = (o) => t({ en: o?.en || '', hi: o?.hi || null });
 
   useEffect(() => {
+    if (initial !== undefined) {
+      setData(initial);
+      setPosts(initialPosts || []);
+      return;
+    }
     setData(undefined);
     getCountry(slug).then(setData).catch(() => setData(null));
     setPosts([]);
     getPosts({ country: slug, limit: 3 }).then(setPosts);
-  }, [slug]);
+  }, [slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Visitors landing on a country page see fees in USD (once per visit; they can switch back).
   useEffect(() => {

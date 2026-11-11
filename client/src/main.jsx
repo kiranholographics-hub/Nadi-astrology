@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { AppProvider } from './context/AppContext.jsx';
+import { InitialDataProvider } from './context/InitialData.jsx';
 import App from './App.jsx';
 import './styles/global.css';
 import { initAnalytics } from './components/seo.js';
@@ -23,12 +24,16 @@ if (typeof Node === 'function' && Node.prototype) {
   };
 }
 
+// The server already put the page's HTML in #root (for search engines). The browser app renders
+// fresh over it rather than hydrating, because language, currency and cart come from the browser.
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <AppProvider>
-        <App />
-      </AppProvider>
+      <InitialDataProvider>
+        <AppProvider>
+          <App />
+        </AppProvider>
+      </InitialDataProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
