@@ -1,11 +1,12 @@
 import { Link } from '../components/LangLink.jsx';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
-import { Breadcrumb, ClientQuote, Faq, PlayBox, PriceCard, Steps } from '../components/ui.jsx';
+import { Breadcrumb, ClientQuote, Faq, PriceCard, Steps } from '../components/ui.jsx';
 import BookingForm from '../components/BookingForm.jsx';
 import useCountries from '../components/useCountries.js';
 import { useApp, usePrice, useT } from '../context/AppContext.jsx';
 
 const L = (en, hi) => ({ en, hi });
+const NADI_PHOTO = 'https://fpimages.withfloats.com/actual/65a8e4aba3262caf1dc07ffe.jpeg';
 const KANDAMS = [
   [L('Kandam 1 · General', 'कांडम 1 · सामान्य'), L('The essence of your life', 'जीवन का सार')],
   [L('Kandam 2 · Family, wealth', 'कांडम 2 · परिवार, धन'), L('Education and family', 'शिक्षा और कुटुंब')],
@@ -73,7 +74,7 @@ export default function Nadi() {
                 ))}
               </svg>
               <div style={{ position: 'absolute', left: '50%', top: '50%', width: '64%', transform: 'translate(-50%,-50%)', boxShadow: '0 30px 80px rgba(0,0,0,.6)' }}>
-                <PlayBox label={L('Pandit ji’s video: how a Nadi reading works (2–3 min)', 'पंडित जी का वीडियो: नाड़ी रीडिंग कैसे होती है (2–3 मिनट)')} ratio="16 / 10" style={{ borderColor: 'var(--gold)' }} />
+                <img src={NADI_PHOTO} alt={t('Nadi astrology consultation with an international client at the Jaipur office', 'जयपुर ऑफिस में विदेशी क्लाइंट के साथ नाड़ी ज्योतिष परामर्श')} loading="eager" style={{ display: 'block', width: '100%', aspectRatio: '16 / 10', objectFit: 'cover', border: '1px solid var(--gold)', borderRadius: 4 }} />
               </div>
             </div>
           </div>
@@ -108,7 +109,7 @@ export default function Nadi() {
           <h2 className="h2 reveal">{t('Nadi Reading Procedure:', 'नाड़ी रीडिंग की प्रक्रिया:')} <em>{t('4 Steps', '4 चरण')}</em></h2>
           <Steps items={[
             [L('Send your thumb impression', 'अंगूठे का निशान भेजें'), L('Men: right thumb · Women: left thumb. Upload online or give it at the office.', 'पुरुष: दायाँ अंगूठा · महिला: बायाँ। ऑनलाइन अपलोड या ऑफिस में।')],
-            [L('Your leaf is searched for', 'पट्टा खोजा जाता है'), L('The Nadi reader asks questions; you simply answer yes or no. Time: [__] days.', 'नाड़ी रीडर प्रश्न पूछते हैं, आप सिर्फ़ हाँ या ना कहते हैं। समय: [__] दिन।')],
+            [L('Your leaf is searched for', 'पट्टा खोजा जाता है'), L('The Nadi reader asks questions; you simply answer yes or no.', 'नाड़ी रीडर प्रश्न पूछते हैं, आप सिर्फ़ हाँ या ना कहते हैं।')],
             [L('Your leaf is read', 'पट्टा पढ़ा जाता है'), L('On a video call or at the office, with translation. You receive the recording.', 'वीडियो कॉल या ऑफिस में, अनुवाद के साथ। रिकॉर्डिंग मिलती है।')],
             [L('Pandit ji’s analysis', 'पंडित जी का विश्लेषण'), L('Vedic/KP analysis with your birth chart, remedies and yantra advice.', 'कुंडली के साथ वैदिक/केपी विश्लेषण, उपाय और यंत्र सलाह।')],
           ]} />
@@ -143,7 +144,7 @@ export default function Nadi() {
             <PriceCard featured badge={L('RECOMMENDED', 'सुझाया गया')} title={L('General + 2 Kandams + Analysis', 'सामान्य + 2 कांडम + विश्लेषण')} price={price(null, null)} sub={note} points={[L('2 kandams of your choice', 'आपकी पसंद के 2 कांडम'), L('Vedic/KP analysis by Pt. Rajneesh Sharma', 'पं. रजनीश शर्मा का वैदिक/केपी विश्लेषण'), L('Written summary of remedies', 'उपायों का लिखित सारांश')]} />
             <PriceCard title={L('Shanti Kandam (remedies)', 'शांति कांडम (उपाय)')} price={price(null, null)} sub={note} points={[L('Past karma and traditional remedies', 'पूर्व कर्म और पारंपरिक उपाय'), L('Yantra advice', 'यंत्र सलाह')]} />
           </div>
-          <p className="body" style={{ fontSize: 14 }}>{t('If no leaf is found: [refund policy, agreed with the Nadi readers]. India: Razorpay (UPI, card) · International: PayPal.', 'पट्टा न मिले तो: [रिफंड नीति, नाड़ी रीडर्स से तय करके]। भारत: Razorpay (UPI, कार्ड) · विदेश: PayPal।')}</p>
+          <p className="body" style={{ fontSize: 14 }}>{t('If no leaf is found, ask on WhatsApp about the refund terms before you book. India: Razorpay (UPI, card) · International: PayPal.', 'पट्टा न मिले तो क्या होगा, यह बुकिंग से पहले WhatsApp पर पूछ लें। भारत: Razorpay (UPI, कार्ड) · विदेश: PayPal।')}</p>
         </div>
       </section>
 
@@ -189,7 +190,7 @@ export default function Nadi() {
       )}
 
       <Faq title={L('Nadi Astrology FAQ', 'नाड़ी ज्योतिष — प्रश्न-उत्तर')} items={[
-        [L('Is a leaf found for everyone?', 'क्या हर व्यक्ति का पट्टा मिलता है?'), L('No — not everyone has a leaf. If yours is not found: [refund policy].', 'नहीं, हर किसी का पट्टा होना ज़रूरी नहीं। न मिले तो [रिफंड नीति]।')],
+        [L('Is a leaf found for everyone?', 'क्या हर व्यक्ति का पट्टा मिलता है?'), L('Not everyone has a leaf. Please ask on WhatsApp about the refund terms before you book.', 'हर व्यक्ति का पट्टा होना ज़रूरी नहीं। बुकिंग से पहले WhatsApp पर रिफंड की शर्तें पूछ लें।')],
         [L('Is an online reading as accurate as one at the office?', 'क्या ऑनलाइन रीडिंग ऑफिस जितनी ही सही होती है?'), L('Yes. The leaf is searched from your thumb impression, so the process is the same — you answer the reader’s yes/no questions live on the video call, and you receive the recording.', 'हाँ। पट्टा अंगूठे के निशान से खोजा जाता है, इसलिए प्रक्रिया वही रहती है — आप वीडियो कॉल पर लाइव रीडर के हाँ/ना वाले सवालों का जवाब देते हैं, और रिकॉर्डिंग आपको मिलती है।')],
         [L('Who reads the leaf, and what is Pandit ji’s role?', 'पट्टा कौन पढ़ता है और पंडित जी की भूमिका क्या है?'), L('Traditional Nadi readers read the leaf; Pandit ji interprets it alongside your birth chart and suggests remedies.', 'पट्टा पारंपरिक नाड़ी रीडर पढ़ते हैं; पंडित जी कुंडली के साथ विश्लेषण और उपाय बताते हैं।')],
         [L('Do I need my birth time or birth chart for a Nadi reading?', 'क्या नाड़ी रीडिंग के लिए जन्म समय या कुंडली चाहिए?'), L('No. The leaf is found from the thumb impression alone. If you know your birth details, Pandit ji also uses them for the Vedic/KP analysis.', 'नहीं। पट्टा सिर्फ़ अंगूठे के निशान से मिलता है। जन्म विवरण पता हो तो पंडित जी उसे वैदिक/केपी विश्लेषण में भी इस्तेमाल करते हैं।')],

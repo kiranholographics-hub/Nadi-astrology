@@ -160,7 +160,7 @@ function Footer({ disclaimer = DISCLAIMER.default }) {
       </div>
       <div className="wrap footer-bottom">
         {t(disclaimer)}
-        <br />{t('Grievance contact (DPDP)', 'शिकायत संपर्क (DPDP)')}: {show(SITE.grievanceName, t('[Name]', '[नाम]'))} · {show(SITE.grievanceEmail || SITE.email, '[EMAIL]')}
+        <br />{t('Grievance contact (DPDP)', 'शिकायत संपर्क (DPDP)')}: {SITE.grievanceName ? `${SITE.grievanceName} · ` : ''}{SITE.grievanceEmail || SITE.email}
         <br />© {t(SITE.name, 'पं. रजनीश शर्मा')} · {t('Jaipur', 'जयपुर')}
       </div>
     </footer>

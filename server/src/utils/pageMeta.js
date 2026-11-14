@@ -30,10 +30,10 @@ const STATIC = {
   '/faq': ['FAQ — Nadi Reading, Astrology Consultation, Vastu & Yantra', 'Answers to common questions: how a Nadi palm leaf reading works, online astrology consultation, birth time, Vastu without demolition, yantra shipping and payment.'],
   '/blog': ['Blog — Nadi, Vedic, KP & Vastu', 'Articles and updates by Pt. Rajneesh Sharma on Nadi, Vedic, KP astrology and Vastu.'],
   '/book': ['Book Consultation', 'Book a Vedic, KP, Nadi or Vastu consultation — choose a service, pick a slot in your time zone, add your details and pay.'],
-  '/privacy-policy': ['Privacy Policy', null],
-  '/terms': ['Terms of Service', null],
-  '/refund-policy': ['Refund & Cancellation Policy', null],
-  '/shipping-policy': ['Shipping Policy', null],
+  '/privacy-policy': ['Privacy Policy', 'How Pt. Rajneesh Sharma’s website collects, uses and protects your details, thumb impressions and floor plans, and how to view or delete them.'],
+  '/terms': ['Terms of Service', 'Terms for astrology, Nadi and Vastu consultations and yantra orders with Pt. Rajneesh Sharma, Jaipur: nature of the service, booking, payment and testimonials.'],
+  '/refund-policy': ['Refund & Cancellation Policy', 'Refund and cancellation terms for consultations, Nadi readings, Vastu reports and yantra orders with Pt. Rajneesh Sharma.'],
+  '/shipping-policy': ['Shipping Policy', 'How energized yantras are packed and shipped from Jaipur across India and worldwide, and who pays customs duty abroad.'],
 };
 
 // Hindi (/hi/…) — same pages, from the Hindi PageShell title / description.
@@ -52,10 +52,10 @@ const STATIC_HI = {
   '/faq': ['प्रश्न-उत्तर — नाड़ी रीडिंग, ज्योतिष परामर्श, वास्तु और यंत्र', 'आम सवालों के जवाब: नाड़ी ताड़-पत्र रीडिंग कैसे होती है, ऑनलाइन ज्योतिष परामर्श, जन्म समय, बिना तोड़-फोड़ वास्तु, यंत्र शिपिंग और भुगतान।'],
   '/blog': ['ब्लॉग — नाड़ी, वैदिक, केपी और वास्तु', 'नाड़ी, वैदिक, केपी और वास्तु पर पं. रजनीश शर्मा के लेख और अपडेट।'],
   '/book': ['परामर्श बुक करें', 'वैदिक, केपी, नाड़ी या वास्तु परामर्श बुक करें — सेवा चुनें, अपने टाइम ज़ोन में स्लॉट, जानकारी और भुगतान।'],
-  '/privacy-policy': ['गोपनीयता नीति', null],
-  '/terms': ['नियम और शर्तें', null],
-  '/refund-policy': ['रिफंड और कैंसलेशन नीति', null],
-  '/shipping-policy': ['शिपिंग नीति', null],
+  '/privacy-policy': ['गोपनीयता नीति', 'पं. रजनीश शर्मा की वेबसाइट आपकी जानकारी, अंगूठे के निशान और फ्लोर प्लान कैसे लेती, उपयोग और सुरक्षित रखती है, और उन्हें देखने या हटाने का तरीका।'],
+  '/terms': ['नियम और शर्तें', 'पं. रजनीश शर्मा, जयपुर के साथ ज्योतिष, नाड़ी और वास्तु परामर्श तथा यंत्र ऑर्डर की शर्तें: सेवा का स्वरूप, बुकिंग, भुगतान और प्रशंसापत्र।'],
+  '/refund-policy': ['रिफंड और कैंसलेशन नीति', 'पं. रजनीश शर्मा के परामर्श, नाड़ी रीडिंग, वास्तु रिपोर्ट और यंत्र ऑर्डर के रिफंड और कैंसलेशन की शर्तें।'],
+  '/shipping-policy': ['शिपिंग नीति', 'प्राण-प्रतिष्ठित यंत्र जयपुर से पूरे भारत और दुनिया भर में कैसे पैक और भेजे जाते हैं, और विदेश में कस्टम ड्यूटी कौन देता है।'],
 };
 
 const clip = (s, n) => {

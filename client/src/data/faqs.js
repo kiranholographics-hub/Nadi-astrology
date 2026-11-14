@@ -11,7 +11,7 @@ export const FAQ_GROUPS = [
       [L('How does an online consultation work?', 'ऑनलाइन परामर्श कैसे होता है?'), L('Over a Zoom or WhatsApp video call. Slots are shown in your own time zone, and you receive the call recording and a written summary.', 'Zoom या WhatsApp वीडियो कॉल पर। स्लॉट आपके टाइम ज़ोन में दिखते हैं, और कॉल की रिकॉर्डिंग व लिखित सारांश मिलता है।')],
       [L('Which languages do you speak?', 'किस भाषा में बात होती है?'), L('English and Hindi. Nadi readings are translated from Tamil.', 'हिंदी और अंग्रेज़ी। नाड़ी रीडिंग में तमिल से अनुवाद होता है।')],
       [L('How do I pay?', 'भुगतान कैसे करें?'), L('India: Razorpay (UPI, card, netbanking). International: PayPal (USD).', 'भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग)। विदेश: PayPal (USD)।')],
-      [L('Can I cancel or reschedule a booking?', 'क्या बुकिंग कैंसल या री-शेड्यूल कर सकते हैं?'), L('[Cancellation / reschedule policy]', '[कैंसलेशन / री-शेड्यूल नीति]')],
+      [L('Can I cancel or reschedule a booking?', 'क्या बुकिंग कैंसल या री-शेड्यूल कर सकते हैं?'), L('Message us on WhatsApp as early as you can; we will tell you the options for moving or cancelling your slot.', 'जितनी जल्दी हो सके WhatsApp पर बताएँ; स्लॉट बदलने या कैंसल करने के विकल्प बता दिए जाएँगे।')],
     ],
   },
   {
@@ -43,7 +43,7 @@ export const FAQ_GROUPS = [
     title: L('Nadi', 'नाड़ी'),
     items: [
       [L('What is the Nadi reading process?', 'नाड़ी रीडिंग की प्रक्रिया क्या है?'), L('Send your thumb impression → Nadi readers search for your leaf (you answer yes/no) → the leaf is read → Pandit ji adds Vedic/KP analysis and remedies.', 'अंगूठे का निशान भेजें → नाड़ी रीडर पट्टा खोजते हैं (आप हाँ/ना कहते हैं) → पट्टा पढ़ा जाता है → पंडित जी वैदिक/केपी विश्लेषण और उपाय बताते हैं।')],
-      [L('What if my leaf is not found?', 'नाड़ी पट्टा न मिले तो?'), L('[Refund policy]', '[रिफंड नीति]')],
+      [L('What if my leaf is not found?', 'नाड़ी पट्टा न मिले तो?'), L('Not everyone has a leaf. Please ask on WhatsApp about the refund terms before you book.', 'हर व्यक्ति का पट्टा होना ज़रूरी नहीं। बुकिंग से पहले WhatsApp पर रिफंड की शर्तें पूछ लें।')],
       [L('Who reads the leaf, and what is Pandit ji’s role?', 'पट्टा कौन पढ़ता है और पंडित जी की भूमिका क्या है?'), L('Traditional Nadi readers read the leaf; Pandit ji interprets it alongside your birth chart and suggests remedies.', 'पट्टा पारंपरिक नाड़ी रीडर पढ़ते हैं; पंडित जी कुंडली के साथ विश्लेषण और उपाय बताते हैं।')],
       [L('Do I need my birth time for a Nadi reading?', 'क्या नाड़ी रीडिंग के लिए जन्म समय चाहिए?'), L('No. The leaf is found from the thumb impression alone — men give the right thumb, women the left.', 'नहीं। पट्टा सिर्फ़ अंगूठे के निशान से मिलता है — पुरुष दायाँ और महिलाएँ बायाँ अंगूठा देती हैं।')],
       [L('Can I get a Nadi reading from abroad?', 'क्या विदेश से नाड़ी रीडिंग हो सकती है?'), L('Yes. Upload a photo of your thumb impression, and join the reading on a video call with live translation into English or Hindi. You receive the recording.', 'हाँ। अंगूठे के निशान की फोटो अपलोड करें, और अंग्रेज़ी या हिंदी अनुवाद के साथ वीडियो कॉल पर रीडिंग में जुड़ें। रिकॉर्डिंग आपको मिलती है।')],
@@ -61,7 +61,7 @@ export const FAQ_GROUPS = [
   {
     title: L('Yantra', 'यंत्र'),
     items: [
-      [L('How long does a yantra take to arrive?', 'यंत्र कितने दिन में पहुँचेगा?'), L('India: [__] days · International: [__] days', 'भारत: [__] दिन · विदेश: [__] दिन')],
+      [L('How long does a yantra take to arrive?', 'यंत्र कितने दिन में पहुँचेगा?'), L('The delivery time to your city is confirmed on WhatsApp before dispatch. Orders abroad take longer than orders within India.', 'आपके शहर तक डिलीवरी का समय डिस्पैच से पहले WhatsApp पर बताया जाता है। विदेश के ऑर्डर भारत से ज़्यादा समय लेते हैं।')],
       [L('How do I know the yantra is genuine and energised?', 'कैसे पता चले कि यंत्र असली और प्राण-प्रतिष्ठित है?'), L('Every order comes with a video of the pran-pratishtha and a metal certificate.', 'हर ऑर्डर के साथ प्राण-प्रतिष्ठा का वीडियो और धातु का सर्टिफ़िकेट।')],
       [L('What if the yantra arrives broken or wrong?', 'टूटा या गलत यंत्र पहुँचे तो?'), L('Free replacement.', 'मुफ़्त रिप्लेसमेंट।')],
       [L('Who pays customs duty for international orders?', 'विदेश में कस्टम ड्यूटी कौन देगा?'), L('Customs duty is paid by the buyer.', 'कस्टम ड्यूटी खरीदार देगा।')],
