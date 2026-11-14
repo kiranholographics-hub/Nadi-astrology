@@ -1,7 +1,6 @@
 import { Link } from '../components/LangLink.jsx';
 import { PageShell } from '../components/Layout.jsx';
 import { Breadcrumb, Faq, Stats } from '../components/ui.jsx';
-import { CameraIcon } from '../components/Icons.jsx';
 import { SITE, show, waLink } from '../data/site.js';
 import { useT } from '../context/AppContext.jsx';
 
@@ -43,11 +42,7 @@ export default function About() {
                 <g className="spin" fill="none" stroke="#D9B26F" strokeOpacity=".35"><circle cx="300" cy="300" r="290" /><circle cx="300" cy="300" r="262" strokeDasharray="2 8" /></g>
                 <g className="spin-rev" fill="none" stroke="#D9B26F" strokeOpacity=".5"><polygon points="300,40 525,430 75,430" /><polygon points="300,560 75,170 525,170" /></g>
               </svg>
-              <div className="ph" style={{ position: 'absolute', left: '22%', right: '22%', top: '14%', bottom: '10%', borderRadius: '200px 200px 6px 6px', borderColor: 'var(--gold)' }}>
-                {/* Replace with: <img src="/media/pandit-ji.webp" alt="Pt. Rajneesh Sharma" /> */}
-                <CameraIcon />
-                {t('Pandit ji’s professional photo', 'पंडित जी की प्रोफ़ेशनल फोटो')}
-              </div>
+              <img src="https://fpimages.withfloats.com/actual/5bbf2e74e39f9c000154e9fe.jpg" alt={t('Pt. Rajneesh Sharma — Vedic, KP, Nadi and Vastu consultant, Jaipur', 'पं. रजनीश शर्मा — वैदिक, केपी, नाड़ी और वास्तु सलाहकार, जयपुर')} loading="eager" style={{ position: 'absolute', left: '22%', right: '22%', top: '14%', bottom: '10%', width: '56%', height: '76%', objectFit: 'cover', borderRadius: '200px 200px 6px 6px', border: '1px solid var(--gold)' }} />
             </div>
             <div className="hero-text rise">
               <div className="eyebrow-lg">— {t('ABOUT', 'परिचय')}</div>
@@ -94,9 +89,9 @@ export default function About() {
             <p className="body">{t('We speak to experience and process, not guaranteed results — remedies and guidance rooted in the shastras, in English and Hindi.', 'हम अनुभव और प्रक्रिया की बात करते हैं, परिणाम की गारंटी नहीं — शास्त्र-आधारित उपाय और मार्गदर्शन, हिंदी और अंग्रेज़ी में।')}</p>
           </div>
           <div className="reveal" style={{ flex: '1.1 1 460px', display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0,1fr))', gap: 14 }}>
-            <div className="ph dashed" style={{ gridRow: 'span 2', minHeight: 360 }}>{t('Photo: at the office', 'फोटो: ऑफिस में')}</div>
-            <div className="ph dashed" style={{ aspectRatio: '4 / 3' }}>{t('Photo: during a pooja', 'फोटो: पूजा के समय')}</div>
-            <div className="ph dashed" style={{ aspectRatio: '4 / 3' }}>{t('Photo: with a client', 'फोटो: क्लाइंट के साथ')}</div>
+            <img src="https://fpimages.withfloats.com/actual/6239c0b77c2b6200017f0b72.jpeg" alt={t('Pt. Rajneesh Sharma at his Jaipur office', 'जयपुर ऑफिस में पं. रजनीश शर्मा')} loading="lazy" style={{ gridRow: 'span 2', width: '100%', height: '100%', minHeight: 360, objectFit: 'cover', borderRadius: 4 }} />
+            <img src="https://fpimages.withfloats.com/actual/65a8e4aba3262caf1dc07ffc.jpg" alt={t('Havan — shanti ritual', 'हवन — शांति अनुष्ठान')} loading="lazy" style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: 4 }} />
+            <img src="https://fpimages.withfloats.com/actual/65a8e5c682390dd225e76835.jpeg" alt={t('Clients from the USA with Pt. Rajneesh Sharma', 'अमेरिका से आए क्लाइंट पं. रजनीश शर्मा के साथ')} loading="lazy" style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: 4 }} />
           </div>
         </div>
       </section>

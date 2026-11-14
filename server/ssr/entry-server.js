@@ -50158,10 +50158,7 @@ function About() {
               /* @__PURE__ */ jsxRuntimeExports.jsx("polygon", { points: "300,560 75,170 525,170" })
             ] })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "ph", style: { position: "absolute", left: "22%", right: "22%", top: "14%", bottom: "10%", borderRadius: "200px 200px 6px 6px", borderColor: "var(--gold)" }, children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(CameraIcon, {}),
-            t("Pandit ji’s professional photo", "पंडित जी की प्रोफ़ेशनल फोटो")
-          ] })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "https://fpimages.withfloats.com/actual/5bbf2e74e39f9c000154e9fe.jpg", alt: t("Pt. Rajneesh Sharma — Vedic, KP, Nadi and Vastu consultant, Jaipur", "पं. रजनीश शर्मा — वैदिक, केपी, नाड़ी और वास्तु सलाहकार, जयपुर"), loading: "eager", style: { position: "absolute", left: "22%", right: "22%", top: "14%", bottom: "10%", width: "56%", height: "76%", objectFit: "cover", borderRadius: "200px 200px 6px 6px", border: "1px solid var(--gold)" } })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-text rise", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
@@ -50204,9 +50201,9 @@ function About() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", children: t("We speak to experience and process, not guaranteed results — remedies and guidance rooted in the shastras, in English and Hindi.", "हम अनुभव और प्रक्रिया की बात करते हैं, परिणाम की गारंटी नहीं — शास्त्र-आधारित उपाय और मार्गदर्शन, हिंदी और अंग्रेज़ी में।") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "reveal", style: { flex: "1.1 1 460px", display: "grid", gridTemplateColumns: "repeat(2, minmax(0,1fr))", gap: 14 }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "ph dashed", style: { gridRow: "span 2", minHeight: 360 }, children: t("Photo: at the office", "फोटो: ऑफिस में") }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "ph dashed", style: { aspectRatio: "4 / 3" }, children: t("Photo: during a pooja", "फोटो: पूजा के समय") }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "ph dashed", style: { aspectRatio: "4 / 3" }, children: t("Photo: with a client", "फोटो: क्लाइंट के साथ") })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "https://fpimages.withfloats.com/actual/6239c0b77c2b6200017f0b72.jpeg", alt: t("Pt. Rajneesh Sharma at his Jaipur office", "जयपुर ऑफिस में पं. रजनीश शर्मा"), loading: "lazy", style: { gridRow: "span 2", width: "100%", height: "100%", minHeight: 360, objectFit: "cover", borderRadius: 4 } }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "https://fpimages.withfloats.com/actual/65a8e4aba3262caf1dc07ffc.jpg", alt: t("Havan — shanti ritual", "हवन — शांति अनुष्ठान"), loading: "lazy", style: { width: "100%", aspectRatio: "4 / 3", objectFit: "cover", borderRadius: 4 } }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "https://fpimages.withfloats.com/actual/65a8e5c682390dd225e76835.jpeg", alt: t("Clients from the USA with Pt. Rajneesh Sharma", "अमेरिका से आए क्लाइंट पं. रजनीश शर्मा के साथ"), loading: "lazy", style: { width: "100%", aspectRatio: "4 / 3", objectFit: "cover", borderRadius: 4 } })
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "40px" }, children: [
