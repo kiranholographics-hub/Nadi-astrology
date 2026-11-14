@@ -10,7 +10,7 @@ import { PostCard } from './Blog.jsx';
 import { SITE, show } from '../data/site.js';
 import { YT_VIDEOS, ytEmbed } from '../data/videos.js';
 import { HOME_FAQ } from '../data/faqs.js';
-import { GALLERY } from '../data/gallery.js';
+import { GALLERY, imgUrl } from '../data/gallery.js';
 import PhotoRows from '../components/PhotoRows.jsx';
 import { useInitialData } from '../context/InitialData.jsx';
 
@@ -21,13 +21,18 @@ const RASHI_HI = ['मेष', 'वृषभ', 'मिथुन', 'कर्क'
 // Replace `src` with real files (put them in client/public/media/) — videos autoplay muted.
 const L = (en, hi) => ({ en, hi });
 const PHOTO = L('Photo', 'फोटो');
-const SLIDES = [
-  { type: 'video', kind: L('Intro video', 'परिचय वीडियो'), title: L('Pt. Rajneesh Sharma', 'पं. रजनीश शर्मा'), label: L('Pandit ji’s 30-sec intro video (autoplay, muted, at the office)', 'पंडित जी का 30 सेकंड का परिचय वीडियो (ऑटोप्ले, म्यूट, ऑफिस में)'), src: '' },
-  { type: 'photo', kind: PHOTO, title: L('Jaipur office', 'जयपुर ऑफिस'), label: L('Pandit ji — at the office', 'पंडित जी — ऑफिस में'), src: '' },
-  { type: 'photo', kind: PHOTO, title: L('Pran-pratishtha', 'प्राण-प्रतिष्ठा'), label: L('Pandit ji — during a pooja', 'पंडित जी — पूजा के समय'), src: '' },
-  { type: 'video', kind: L('Client video', 'क्लाइंट वीडियो'), title: L('[Client name], [Country]', '[क्लाइंट का नाम], [देश]'), label: L('Client testimonial (60–90 sec)', 'क्लाइंट का अनुभव (60–90 सेकंड)'), src: '' },
-  { type: 'photo', kind: PHOTO, title: L('Consultation', 'परामर्श'), label: L('Pandit ji — with a client', 'पंडित जी — क्लाइंट के साथ'), src: '' },
+// Real photos from the gallery (until Pandit ji's intro video is added).
+const SLIDE_PHOTOS = [
+  ['5bbf2e74e39f9c000154e9fe.jpg', L('Pt. Rajneesh Sharma', 'पं. रजनीश शर्मा')],
+  ['6239c0b77c2b6200017f0b72.jpeg', L('At the Jaipur office', 'जयपुर ऑफिस में')],
+  ['65a8e4aba3262caf1dc07ffe.jpeg', L('Nadi reading for a client from abroad', 'विदेशी क्लाइंट के लिए नाड़ी रीडिंग')],
+  ['65a8e5c782390dd225e76837.jpeg', L('Clients from Switzerland', 'स्विट्ज़रलैंड से आए क्लाइंट')],
+  ['65a8e5c682390dd225e76835.jpeg', L('Clients from the USA', 'अमेरिका से आए क्लाइंट')],
 ];
+const SLIDES = SLIDE_PHOTOS.map(([file, title]) => {
+  const g = GALLERY.find((x) => x.src === file);
+  return { type: 'photo', kind: PHOTO, title, label: g ? L(g.alt, g.altHi) : title, src: g ? imgUrl(g) : '' };
+});
 const BGS = ['#11132A', '#141127', '#0F1624', '#16122A', '#121426'];
 const DURATION = 6000;
 
@@ -78,11 +83,10 @@ function HeroMedia() {
                   {s.src ? (
                     s.type === 'video'
                       ? <video src={s.src} autoPlay muted loop playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                      : <img src={s.src} alt={t(s.label)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      : <img src={s.src} alt={t(s.label)} loading={k === 0 ? 'eager' : 'lazy'} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   ) : (
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, textAlign: 'center', color: 'var(--text-2)', padding: '0 18%' }}>
                       {s.type === 'video' ? <div className="play" style={{ width: 72, height: 72 }}><PlayIcon size={22} /></div> : <CameraIcon />}
-                      <div style={{ fontSize: 12, letterSpacing: '.2em', lineHeight: 1.6 }}>{t(s.label)}</div>
                     </div>
                   )}
                 </div>
@@ -191,7 +195,7 @@ export default function Home() {
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D9B26F" strokeWidth="1.2" aria-hidden="true">{s.icon}</svg>
                 <h3 className="h3" style={{ fontSize: 30 }}>{t(s.title)}</h3>
                 <p className="body" style={{ flex: 1 }}>{t(s.text)}</p>
-                <div style={{ fontSize: 14 }}>{t('From', 'शुरुआत')} {s.inrOnly ? '[₹ PRICE]' : price(null, null)}</div>
+                {/* a 'From ₹…' line can go here once prices are set in services.js */}
                 <Link to={s.to} className="btn-ghost btn-sm">{t('Details & Book', 'विवरण और बुकिंग')}</Link>
               </div>
             ))}

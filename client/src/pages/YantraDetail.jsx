@@ -53,9 +53,6 @@ export default function YantraDetail() {
   const descText = y?.description || ct(c?.description);
   const faqs = [
     ...(c?.faqs || []),
-    [L('How do I know the yantra is genuine and energised?', 'कैसे पता चले कि यंत्र असली और प्राण-प्रतिष्ठित है?'), L('Every order comes with a video of the pran-pratishtha and a metal certificate.', 'हर ऑर्डर के साथ प्राण-प्रतिष्ठा का वीडियो और धातु का सर्टिफ़िकेट आता है।')],
-    [L('Can women install the yantra?', 'क्या महिलाएँ स्थापना कर सकती हैं?'), L('Yes. Women can install the yantra and do its daily pooja. Some families pause pooja on certain days by their own custom — you can follow your family’s tradition.', 'हाँ। महिलाएँ यंत्र की स्थापना और रोज़ की पूजा कर सकती हैं। कुछ परिवार अपनी परंपरा से कुछ दिनों पूजा रोकते हैं — आप अपने परिवार की परंपरा मान सकते हैं।')],
-    [L('What is the return policy?', 'रिटर्न नीति क्या है?'), L('Broken or wrong yantra: free replacement. [Other conditions]', 'टूटा या गलत यंत्र: मुफ़्त रिप्लेसमेंट। [बाकी शर्तें]')],
   ];
   const faqKey = `${y?.slug}|${faqs.length}|${t('a', 'b')}`;
   useEffect(() => {
@@ -102,16 +99,15 @@ export default function YantraDetail() {
                   ) : (
                     <>
                       <div style={{ width: '78%' }}><YantraArt variant={y?.art || 'A'} /></div>
-                      <div className="muted" style={{ fontSize: 13 }}>[{t(`${VIEWS[view].en} photo`, `${VIEWS[view].hi} फोटो`)}]</div>
                     </>
                   )}
                 </div>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0,1fr))', gap: 10 }}>
+              {(y?.images?.length > 0 || y?.videoUrl) && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0,1fr))', gap: 10 }}>
                 {VIEWS.map((v, i) => (
                   <button key={v.en} type="button" aria-pressed={i === view} onClick={() => setView(i)} style={{ minHeight: 56, padding: 6, borderRadius: 4, fontSize: 12, cursor: 'pointer', background: 'var(--bg-2)', color: i === view ? 'var(--gold-2)' : 'var(--muted)', border: `1px solid ${i === view ? 'var(--gold)' : 'var(--line-2)'}` }}>{t(v)}</button>
                 ))}
-              </div>
+              </div>}
             </div>
 
             <div className="stack" style={{ flex: '1 1 420px', '--gap': '22px' }}>
@@ -120,7 +116,7 @@ export default function YantraDetail() {
               <p className="lead" style={{ fontSize: 16 }}>{descText || t('[2–3 lines: which deity/planet the yantra is linked to and what it is traditionally installed for. No guarantee language.]', '[2–3 पंक्ति: यंत्र किस देवता/ग्रह से जुड़ा है, पारंपरिक रूप से किस काम के लिए स्थापित किया जाता है। गारंटी की भाषा नहीं।]')}</p>
               <div className="row" style={{ '--gap': '14px', alignItems: 'baseline' }}>
                 <span className="serif" style={{ fontSize: 44, color: 'var(--gold-2)', lineHeight: 1 }}>{price(y?.priceINR, y?.priceUSD)}</span>
-                <span className="small">{currency === 'USD' ? t('International · PayPal', 'विदेश · PayPal') : `${y?.priceUSD != null ? `$${y.priceUSD}` : '[$ PRICE]'} ${t('international', 'विदेश')}`}</span>
+                <span className="small">{currency === 'USD' ? t('International · PayPal', 'विदेश · PayPal') : y?.priceUSD != null ? `$${y.priceUSD} ${t('international', 'विदेश')}` : ''}</span>
               </div>
               <div className="stack" style={{ '--gap': '10px' }}>
                 <span className="muted" style={{ fontSize: 13 }}>{t('Size', 'साइज़')}</span>
@@ -139,7 +135,7 @@ export default function YantraDetail() {
                 <button type="button" className="btn" style={{ flex: '1 1 180px' }} onClick={add}>{t('Add to cart', 'कार्ट में जोड़ें')}</button>
                 <button type="button" className="btn-ghost" style={{ flex: '1 1 180px', borderColor: 'var(--gold)' }} onClick={() => { add(); navigate('/cart'); }}>{t('Buy now', 'अभी खरीदें')}</button>
               </div>
-              <div className="small">{t(`India: Razorpay (UPI, card) · International: PayPal · Dispatched within [__] days · Free shipping above ${SITE.freeShippingAbove ? `₹${SITE.freeShippingAbove}` : '[₹___]'}`, `भारत: Razorpay (UPI, कार्ड) · विदेश: PayPal · [__] दिन में डिस्पैच · ${SITE.freeShippingAbove ? `₹${SITE.freeShippingAbove}` : '[₹___]'} से ऊपर फ़्री शिपिंग`)}</div>
+              <div className="small">{t('India: Razorpay (UPI, card) · International: PayPal · Delivery time confirmed on WhatsApp before dispatch', 'भारत: Razorpay (UPI, कार्ड) · विदेश: PayPal · डिलीवरी का समय डिस्पैच से पहले WhatsApp पर')}{SITE.freeShippingAbove ? t(` · Free shipping above ₹${SITE.freeShippingAbove}`, ` · ₹${SITE.freeShippingAbove} से ऊपर फ़्री शिपिंग`) : ''}</div>
               <div className="grid" style={{ '--min': '200px', '--gap': '10px 20px', fontSize: 14, color: 'var(--text-2)', paddingTop: 14, borderTop: '1px solid var(--line)' }}>
                 <span className="tick">{t('Genuine metal, or your money back', 'असली धातु, नहीं तो पैसा वापस')}</span>
                 <span className="tick">{t('Video proof of pran-pratishtha', 'प्राण-प्रतिष्ठा का वीडियो प्रमाण')}</span>
@@ -168,17 +164,17 @@ export default function YantraDetail() {
             <h2 className="h2" style={{ fontSize: 'clamp(32px,3.6vw,46px)' }}>{t('Full yantra details', 'यंत्र की पूरी जानकारी')}</h2>
             <div>
               {[
-                [t('Size', 'साइज़'), y ? sizeText(sizes[size]) : t('[3 x 3 inch]', '[3 x 3 इंच]')],
-                [t('Metal / material', 'धातु / सामग्री'), y?.material || t('[Copper, gold plated / Ashtadhatu / Bhojpatra]', '[तांबा, गोल्ड प्लेटेड / अष्टधातु / भोजपत्र]')],
-                [t('Weight', 'वज़न'), y?.weightGrams ? `${y.weightGrams} ${t('g', 'ग्राम')}` : t('[__ g]', '[__ ग्राम]')],
-                [t('Pran-pratishtha', 'प्राण-प्रतिष्ठा'), y?.pranPratishtha || t('[On which day, by which ritual — by Pt. Rajneesh Sharma]', '[किस दिन, किस विधि से, पं. रजनीश शर्मा द्वारा]')],
-                [t('Deity / planet', 'देवता / ग्रह'), y?.deity || ct(c?.deity) || '[__]'],
-                [t('Used for', 'किसके लिए'), y?.purpose || ct(c?.purpose) || t('[In plain words, without guarantees]', '[सीधी भाषा में, बिना गारंटी]')],
-                [t('Care', 'देखभाल'), y?.care || ct(c?.care) || t('[Cleaning, where to keep it, what to avoid]', '[सफ़ाई, कहाँ रखें, क्या न करें]')],
+                [t('Size', 'साइज़'), y ? sizeText(sizes[size]) : ''],
+                [t('Metal / material', 'धातु / सामग्री'), y?.material || ''],
+                [t('Weight', 'वज़न'), y?.weightGrams ? `${y.weightGrams} ${t('g', 'ग्राम')}` : ''],
+                [t('Pran-pratishtha', 'प्राण-प्रतिष्ठा'), y?.pranPratishtha || t('By Pt. Rajneesh Sharma, with its mantras on an auspicious muhurta — you receive the video', 'पं. रजनीश शर्मा द्वारा, शुभ मुहूर्त में मंत्रों के साथ — वीडियो आपको मिलता है')],
+                [t('Deity / planet', 'देवता / ग्रह'), y?.deity || ct(c?.deity) || ''],
+                [t('Used for', 'किसके लिए'), y?.purpose || ct(c?.purpose) || ''],
+                [t('Care', 'देखभाल'), y?.care || ct(c?.care) || ''],
                 [t('Stock', 'स्टॉक'), y?.stock === 'made_to_order' ? t('Made to order', 'ऑर्डर पर बनता है') : y?.stock === 'out_of_stock' ? t('Currently unavailable', 'अभी उपलब्ध नहीं') : t('Available', 'उपलब्ध')],
                 [t('In the box', 'बॉक्स में'), y?.boxContents && y.boxContents !== DEFAULT_BOX.en ? y.boxContents : t(DEFAULT_BOX)],
-                [t('Shipping', 'शिपिंग'), t('India [__] days · International [__] days', 'भारत [__] दिन · विदेश [__] दिन')],
-              ].map(([k, v]) => (
+                [t('Shipping', 'शिपिंग'), t('Across India and worldwide; delivery time is confirmed on WhatsApp before dispatch', 'पूरे भारत और दुनिया भर में; डिलीवरी का समय डिस्पैच से पहले WhatsApp पर बताया जाता है')],
+              ].filter(([, v]) => v).map(([k, v]) => (
                 <div key={k} style={{ display: 'flex', gap: 20, padding: '16px 0', borderBottom: '1px solid var(--line)', fontSize: 15 }}>
                   <span className="muted" style={{ flex: '0 0 160px' }}>{k}</span><span>{v}</span>
                 </div>
@@ -195,24 +191,12 @@ export default function YantraDetail() {
                 </div>
               ))}
             </div>
-            <PlayBox label={L('Installation video (Pandit ji)', 'स्थापना विधि वीडियो (पंडित जी)')} />
+            {y?.videoUrl && <PlayBox label={L('Installation video (Pandit ji)', 'स्थापना विधि वीडियो (पंडित जी)')} src={y.videoUrl} />}
           </div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="wrap stack" style={{ '--gap': '32px' }}>
-          <div className="stack reveal" style={{ '--gap': '12px', maxWidth: 760 }}>
-            <h2 className="h2" style={{ fontSize: 'clamp(32px,3.6vw,48px)' }}>{t('From those who installed this yantra', 'जिन्होंने यह यंत्र स्थापित किया')}</h2>
-            <p className="body">{t('Over 12 years, thousands of families have installed our yantras. Their experiences, in their own words:', '12 साल में हज़ारों परिवारों ने हमारे यंत्र स्थापित किए हैं। उनके अनुभव उनके शब्दों में:')}</p>
-          </div>
-          <div className="grid reveal" style={{ '--min': '240px' }}>
-            {[[1, L('[Name], [City]', '[नाम], [शहर]')], [2, L('[Name], [Country]', '[नाम], [देश]')], [3, L('[Name], [City]', '[नाम], [शहर]')]].map(([n, who]) => (
-              <div key={n} className="stack" style={{ '--gap': '12px' }}><PlayBox label={L(`Client video ${n}`, `क्लाइंट वीडियो ${n}`)} ratio="4 / 5" /><span style={{ fontSize: 14 }}>{t(who)}</span></div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Client videos for this yantra go here once there are real ones (with permission). */}
 
       <section className="section-tight">
         <div className="wrap row" style={{ '--gap': '56px' }}>

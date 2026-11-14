@@ -86,8 +86,8 @@ export default function OnlineVastu() {
         <div className="wrap row" style={{ '--gap': '48px' }}>
           <div className="stack reveal" style={{ flex: '1 1 380px', '--gap': '18px' }}>
             <div className="eyebrow">— {t('Fee', 'फ़ीस')}</div>
-            <div className="card-price" style={{ fontSize: 56 }}>{usd ? '[$ __ / sq.ft]' : '[₹ __ / sq.ft]'}</div>
-            <p className="body">{t('Minimum', 'न्यूनतम')} {usd ? '[$ PRICE]' : '[₹ PRICE]'} · {t('India + international. International: PayPal (USD) · India: Razorpay.', 'भारत + विदेश। विदेश: PayPal (USD) · भारत: Razorpay।')}</p>
+            <div className="card-price" style={{ fontSize: 44 }}>{t('Quote by area', 'क्षेत्रफल के अनुसार')}</div>
+            <p className="body">{t('The fee depends on the built-up area of the property. Send the area and your floor plan in the form below to see the quote before you pay. India: Razorpay · International: PayPal (USD).', 'फ़ीस प्रॉपर्टी के निर्मित क्षेत्रफल पर निर्भर करती है। नीचे के फ़ॉर्म में क्षेत्रफल और फ्लोर प्लान भेजें, भुगतान से पहले कोटेशन देखें। भारत: Razorpay · विदेश: PayPal (USD)।')}</p>
           </div>
           <div className="stack reveal" style={{ flex: '1 1 420px', '--gap': '14px' }}>
             <div className="eyebrow">— {t('For a new home or plot', 'नए घर / प्लॉट के लिए')}</div>
@@ -121,7 +121,7 @@ export default function OnlineVastu() {
         <Faq title={L('Online Vastu FAQ', 'ऑनलाइन वास्तु — प्रश्न-उत्तर')} items={[
           [L('How does online Vastu work?', 'ऑनलाइन वास्तु कैसे होता है?'), L('A report is prepared from your floor plan, North direction and family details, followed by a call.', 'फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।')],
           [L('Will I need to demolish anything?', 'क्या तोड़-फोड़ करनी पड़ेगी?'), L('Remedies without demolition come first; structural changes only if truly needed.', 'पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।')],
-          [L('How many days does the report take?', 'रिपोर्ट कितने दिन में मिलेगी?'), L('[__] days.', '[__] दिन।')],
+          [L('How many days does the report take?', 'रिपोर्ट कितने दिन में मिलेगी?'), L('The delivery date of the report is confirmed when you send your floor plan.', 'फ्लोर प्लान भेजने पर रिपोर्ट मिलने की तारीख़ बता दी जाती है।')],
         [L('Is online Vastu as accurate as a site visit?', 'क्या ऑनलाइन वास्तु साइट विज़िट जितना सही होता है?'), L('For most homes and flats, yes — provided the floor plan is to scale and North is measured correctly. A site visit is better for factories, large plots and new construction, where the surroundings matter more.', 'ज़्यादातर घरों और फ्लैट के लिए हाँ — बशर्ते फ्लोर प्लान सही नाप का हो और उत्तर दिशा ठीक से नापी गई हो। फैक्ट्री, बड़े प्लॉट और नए निर्माण के लिए साइट विज़िट बेहतर है, जहाँ आसपास का माहौल ज़्यादा मायने रखता है।')],
         [L('I don’t have a floor plan. What can I send?', 'मेरे पास फ्लोर प्लान नहीं है। क्या भेजूँ?'), L('A neat hand-drawn sketch with the room sizes, door and window positions and the North arrow is enough. Photos or a video walk-through of each room help as well.', 'कमरों के नाप, दरवाज़े-खिड़की की जगह और उत्तर के तीर के साथ साफ़ हाथ से बना स्केच काफ़ी है। हर कमरे की फोटो या वीडियो भी मदद करते हैं।')],
         [L('Can Vastu be done for a rented house or flat?', 'क्या किराए के घर या फ्लैट का वास्तु हो सकता है?'), L('Yes. In a rented home the remedies focus on how rooms are used, furniture placement, colours and yantras — nothing that needs the owner’s permission.', 'हाँ। किराए के घर में उपाय कमरों के उपयोग, फर्नीचर की जगह, रंग और यंत्रों पर केंद्रित होते हैं — ऐसा कुछ नहीं जिसके लिए मालिक की अनुमति चाहिए।')],

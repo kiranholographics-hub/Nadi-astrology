@@ -45,6 +45,7 @@ export function BlogList() {
         <div className="wrap stack" style={{ '--gap': '32px' }}>
           <Breadcrumb items={[{ label: { en: 'Blog', hi: 'ब्लॉग' } }]} />
           <h1 className="h1 rise">{t('Articles on astrology', 'ज्योतिष और वास्तु')} <em>{t('and Vastu', 'पर लेख')}</em></h1>
+          <p className="lead" style={{ maxWidth: 680 }}>{t('Plain-language articles by Pt. Rajneesh Sharma, Jaipur: how a Nadi leaf is found, Manglik dosha and guna milan, Shani Sade Sati and dashas, KP Prashna, Vastu for the main door, kitchen and bedroom, and how to choose and install a yantra. New articles are added every week.', 'पं. रजनीश शर्मा, जयपुर के सरल भाषा में लेख: नाड़ी पट्टा कैसे मिलता है, मांगलिक दोष और गुण मिलान, शनि साढ़ेसाती और दशा, केपी प्रश्न, मुख्य द्वार, रसोई और शयनकक्ष का वास्तु, और यंत्र कैसे चुनें व स्थापित करें। हर हफ़्ते नए लेख जुड़ते हैं।')}</p>
           {cats.length > 2 && (
             <div className="row" style={{ '--gap': '10px' }} role="group" aria-label={t('Category', 'श्रेणी')}>
               {cats.map((c) => <button key={c} type="button" className={`chip${cat === c ? ' on' : ''}`} style={{ minHeight: 44 }} aria-pressed={cat === c} onClick={() => setCat(c)}>{catText(c)}</button>)}

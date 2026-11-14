@@ -36,7 +36,7 @@ export default function Videos() {
           <Breadcrumb items={[{ label: { en: 'Videos', hi: 'वीडियो' } }]} />
           <div className="row between rise" style={{ '--gap': '24px' }}>
             <h1 className="h1">{t('Astrology & Vastu', 'ज्योतिष और वास्तु')} <em>{t('Videos', 'वीडियो')}</em></h1>
-            <p className="lead" style={{ maxWidth: 460 }}>{t('Clients’ experiences in their own words, and Pandit ji’s videos on Nadi, Vedic, KP, Vastu and yantra installation.', 'क्लाइंट के अनुभव उनके अपने शब्दों में, और पंडित जी के वीडियो — नाड़ी, वैदिक, केपी, वास्तु और यंत्र स्थापना।')}</p>
+            <p className="lead" style={{ maxWidth: 560 }}>{t('Short talks by Pt. Rajneesh Sharma on what the planets are doing now and what it means for you — Jupiter and Saturn transits, Shani Sade Sati, relationships and marriage — along with Nadi readings, Vastu tips and how to install a yantra. New videos come to the YouTube channel first.', 'पं. रजनीश शर्मा के छोटे वीडियो — ग्रह अभी क्या कर रहे हैं और आपके लिए इसका क्या अर्थ है: गुरु और शनि का गोचर, शनि की साढ़ेसाती, रिश्ते और विवाह — साथ में नाड़ी रीडिंग, वास्तु टिप्स और यंत्र स्थापना। नए वीडियो सबसे पहले YouTube चैनल पर आते हैं।')}</p>
           </div>
           <div style={{ position: 'relative', aspectRatio: '16 / 9', border: '1px solid var(--line-2)', borderRadius: 4, background: 'var(--bg-2)', overflow: 'hidden' }}>
             {f.youtubeId ? (

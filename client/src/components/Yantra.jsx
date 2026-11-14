@@ -57,7 +57,7 @@ export function YantraCard({ y }) {
       <div className="ycard-body">
         <div className="eyebrow" style={{ letterSpacing: '.25em' }}>{t(catLabel(y.category))}</div>
         <Link to={`/yantra-shop/${y.slug}`} className="ycard-name">{name}</Link>
-        <div className="muted" style={{ fontSize: 13 }}>{y.sizes?.[1] || t('[Size]', '[साइज़]')} · {y.material || t('[Metal]', '[धातु]')}</div>
+        <div className="muted" style={{ fontSize: 13 }}>{[y.sizes?.[1] && t(y.sizes[1], y.sizes[1].replace('inch', 'इंच')), y.material, t('Energized', 'प्राण-प्रतिष्ठित')].filter(Boolean).join(' · ')}</div>
         <div style={{ fontSize: 15, flex: 1 }}>{price(y.priceINR, y.priceUSD)}</div>
         <button type="button" className="btn btn-sm" style={{ marginTop: 8 }} onClick={() => addToCart({ slug: y.slug, name: y.name, nameHi: NAME_HI[y.slug], size: y.sizes?.[1] || '', sankalp: false, priceINR: y.priceINR, priceUSD: y.priceUSD })}>
           {t('Add to cart', 'कार्ट में जोड़ें')}

@@ -2,7 +2,7 @@ import { Link } from '../components/LangLink.jsx';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
 import { Breadcrumb, Faq, PriceCard } from '../components/ui.jsx';
 import BookingForm from '../components/BookingForm.jsx';
-import { useApp, useT } from '../context/AppContext.jsx';
+import { useApp, useT, usePrice } from '../context/AppContext.jsx';
 
 const L = (en, hi) => ({ en, hi });
 
@@ -33,6 +33,7 @@ const ROOMS = [
 
 export default function Vastu() {
   const t = useT();
+  const price = usePrice();
   const { currency } = useApp();
   const usd = currency === 'USD';
   const cta = { to: '#form', label: L('Send floor plan', 'फ्लोर प्लान भेजें') };
@@ -87,9 +88,9 @@ export default function Vastu() {
         <div className="wrap section stack" style={{ '--gap': '40px' }}>
           <h2 className="h2 reveal">{t('3 types of', '3 तरह का')} <em>{t('Vastu consultation', 'वास्तु परामर्श')}</em></h2>
           <div className="grid reveal" style={{ '--min': '280px' }}>
-            <PriceCard title={L('Quick call', 'क्विक कॉल')} price="[₹ PRICE]" sub={L('30 min · before buying a flat or plot', '30 मिनट · फ्लैट/प्लॉट लेने से पहले')} points={[L('Verbal guidance on your floor plan', 'फ्लोर प्लान पर मौखिक मार्गदर्शन'), L('WhatsApp summary', 'WhatsApp सारांश')]} cta={L('Book a call', 'कॉल बुक करें')} />
-            <PriceCard featured badge={L('ASTRO-VASTU', 'एस्ट्रो-वास्तु')} title={L('Online Astro-Vastu report', 'ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट')} price={usd ? '[$ __ / sq.ft]' : '[₹ __ / sq.ft]'} sub={L(`Minimum ${usd ? '[$ PRICE]' : '[₹ PRICE]'} · India + international`, `न्यूनतम ${usd ? '[$ PRICE]' : '[₹ PRICE]'} · भारत + विदेश`)} points={[L('PDF report: doshas, zone-wise markings', 'PDF रिपोर्ट: दोष, ज़ोन-वार मार्किंग'), L('Matched with birth charts of up to 5 members', '5 सदस्यों तक कुंडली मिलान'), L('Remedies without demolition, priority list', 'बिना तोड़-फोड़ उपाय, प्राथमिकता सूची'), L('Follow-up call', 'फॉलो-अप कॉल')]} cta={L('Upload your plan', 'प्लान अपलोड करें')} />
-            <PriceCard title={L('Site visit', 'साइट विज़िट')} price={t('[₹ PRICE] + travel', '[₹ PRICE] + यात्रा')} sub={L('Jaipur · Rajasthan · outstation', 'जयपुर · राजस्थान · बाहर')} points={[L('On-site compass reading', 'साइट पर कंपास रीडिंग'), L('Home, office, shop, factory', 'घर, ऑफिस, दुकान, फैक्ट्री'), L('Report + follow-up', 'रिपोर्ट + फॉलो-अप')]} cta={L('Book a visit', 'विज़िट बुक करें')} />
+            <PriceCard title={L('Quick call', 'क्विक कॉल')} price={price(null, null)} sub={L('30 min · before buying a flat or plot', '30 मिनट · फ्लैट/प्लॉट लेने से पहले')} points={[L('Verbal guidance on your floor plan', 'फ्लोर प्लान पर मौखिक मार्गदर्शन'), L('WhatsApp summary', 'WhatsApp सारांश')]} cta={L('Book a call', 'कॉल बुक करें')} />
+            <PriceCard featured badge={L('ASTRO-VASTU', 'एस्ट्रो-वास्तु')} title={L('Online Astro-Vastu report', 'ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट')} price={t('Quote by area', 'क्षेत्रफल के अनुसार')} sub={L('Per sq.ft of built-up area · India + international', 'निर्मित क्षेत्रफल के प्रति वर्ग फ़ुट · भारत + विदेश')} points={[L('PDF report: doshas, zone-wise markings', 'PDF रिपोर्ट: दोष, ज़ोन-वार मार्किंग'), L('Matched with birth charts of up to 5 members', '5 सदस्यों तक कुंडली मिलान'), L('Remedies without demolition, priority list', 'बिना तोड़-फोड़ उपाय, प्राथमिकता सूची'), L('Follow-up call', 'फॉलो-अप कॉल')]} cta={L('Upload your plan', 'प्लान अपलोड करें')} />
+            <PriceCard title={L('Site visit', 'साइट विज़िट')} price={price(null, null)} sub={L('Jaipur · Rajasthan · outstation', 'जयपुर · राजस्थान · बाहर')} points={[L('On-site compass reading', 'साइट पर कंपास रीडिंग'), L('Home, office, shop, factory', 'घर, ऑफिस, दुकान, फैक्ट्री'), L('Report + follow-up', 'रिपोर्ट + फॉलो-अप')]} cta={L('Book a visit', 'विज़िट बुक करें')} />
           </div>
         </div>
       </section>

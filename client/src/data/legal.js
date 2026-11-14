@@ -5,6 +5,7 @@ const L = (en, hi) => ({ en, hi });
 export const LEGAL = {
   'privacy-policy': {
     title: L('Privacy Policy', 'गोपनीयता नीति'),
+    description: L('How Pt. Rajneesh Sharma’s website collects, uses and protects your details, thumb impressions and floor plans, and how to view or delete them.', 'पं. रजनीश शर्मा की वेबसाइट आपकी जानकारी, अंगूठे के निशान और फ्लोर प्लान कैसे लेती, उपयोग और सुरक्षित रखती है, और उन्हें देखने या हटाने का तरीका।'),
     sections: [
       [L('Who we are', 'हम कौन हैं'), L('This website belongs to Pt. Rajneesh Sharma (Vedic, KP, Nadi & Vastu consultant, Jaipur). Address: Shyam Nagar Metro Station, opp. Pillar No. 118, New Sanganer Road, Sodala, Jaipur 302019, India.', 'यह वेबसाइट पं. रजनीश शर्मा (वैदिक, केपी, नाड़ी और वास्तु सलाहकार, जयपुर) की है। पता: श्याम नगर मेट्रो स्टेशन, पिलर नं. 118 के सामने, न्यू सांगानेर रोड, सोडाला, जयपुर 302019।')],
       [L('What data we collect', 'हम कौन-सी जानकारी लेते हैं'), L('Name, phone/WhatsApp, email and country; date, time and place of birth for consultations; thumb impression for Nadi readings; floor plan and family birth details for Vastu; delivery address for yantra orders.', 'नाम, फ़ोन/WhatsApp, ईमेल, देश; परामर्श के लिए जन्म तिथि, समय और स्थान; नाड़ी रीडिंग के लिए अंगूठे का निशान; वास्तु के लिए फ्लोर प्लान और परिवार की जन्म जानकारी; यंत्र ऑर्डर के लिए डिलीवरी पता।')],
@@ -19,6 +20,7 @@ export const LEGAL = {
   },
   terms: {
     title: L('Terms of Service', 'नियम और शर्तें'),
+    description: L('Terms for astrology, Nadi and Vastu consultations and yantra orders with Pt. Rajneesh Sharma, Jaipur: nature of the service, booking, payment and testimonials.', 'पं. रजनीश शर्मा, जयपुर के साथ ज्योतिष, नाड़ी और वास्तु परामर्श तथा यंत्र ऑर्डर की शर्तें: सेवा का स्वरूप, बुकिंग, भुगतान और प्रशंसापत्र।'),
     sections: [
       [L('Nature of the service', 'सेवा का स्वरूप'), L('Astrology and Vastu are offered as guidance. They are not a substitute for medical, legal or financial advice. Outcomes depend on the individual and their circumstances.', 'ज्योतिष और वास्तु मार्गदर्शन के लिए हैं। यह चिकित्सीय, कानूनी या वित्तीय सलाह का विकल्प नहीं हैं। परिणाम व्यक्ति और परिस्थिति पर निर्भर करते हैं।')],
       [L('No guarantees', 'कोई गारंटी नहीं'), L('We speak to our experience and our traditional process — we do not guarantee any outcome.', 'हम अनुभव और शास्त्र-आधारित प्रक्रिया की बात करते हैं, किसी परिणाम की गारंटी नहीं।')],
@@ -30,6 +32,7 @@ export const LEGAL = {
   },
   'refund-policy': {
     title: L('Refund & Cancellation Policy', 'रिफंड और कैंसलेशन नीति'),
+    description: L('Refund and cancellation terms for consultations, Nadi readings, Vastu reports and yantra orders with Pt. Rajneesh Sharma.', 'पं. रजनीश शर्मा के परामर्श, नाड़ी रीडिंग, वास्तु रिपोर्ट और यंत्र ऑर्डर के रिफंड और कैंसलेशन की शर्तें।'),
     sections: [
       [L('Cancelling / rescheduling a consultation', 'परामर्श कैंसल / री-शेड्यूल'), L('[How many hours in advance, how much refund, rescheduling terms]', '[कितने घंटे पहले कैंसल करने पर कितना रिफंड; री-शेड्यूल की शर्तें]')],
       [L('Nadi — if the leaf is not found', 'नाड़ी — पट्टा न मिले तो'), L('[Refund policy, agreed with the Nadi readers — e.g. “No leaf, no payment”]', '[रिफंड नीति, नाड़ी रीडर्स से तय करके — जैसे “पट्टा नहीं, भुगतान नहीं”]')],
@@ -41,6 +44,7 @@ export const LEGAL = {
   },
   'shipping-policy': {
     title: L('Shipping Policy', 'शिपिंग नीति'),
+    description: L('How energized yantras are packed and shipped from Jaipur across India and worldwide, and who pays customs duty abroad.', 'प्राण-प्रतिष्ठित यंत्र जयपुर से पूरे भारत और दुनिया भर में कैसे पैक और भेजे जाते हैं, और विदेश में कस्टम ड्यूटी कौन देता है।'),
     sections: [
       [L('Dispatch', 'डिस्पैच'), L('Each yantra is dispatched within [__] days after its pran-pratishtha.', 'प्राण-प्रतिष्ठा के बाद यंत्र [__] दिन में डिस्पैच होता है।')],
       [L('India', 'भारत'), L('Shipped via Shiprocket (multiple couriers). Delivery: [__] days. Cash on delivery: [yes/no].', 'Shiprocket से कई कूरियर। डिलीवरी: [__] दिन। कैश ऑन डिलीवरी: [हाँ/नहीं]।')],

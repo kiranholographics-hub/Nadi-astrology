@@ -70,10 +70,12 @@ export const useApp = () => useContext(AppContext);
 
 // Formats a price for the active currency, or a placeholder when not set yet.
 export function usePrice() {
-  const { currency } = useApp();
+  const { currency, lang } = useApp();
+  // Until a price is filled in from the admin, say so in words instead of showing a placeholder.
+  const ask = lang === 'hi' ? 'शुल्क पूछें' : 'Fee on request';
   return (inr, usd) => {
-    if (currency === 'USD') return usd != null ? `$${Number(usd).toLocaleString('en-US')}` : '[$ PRICE]';
-    return inr != null ? `₹${Number(inr).toLocaleString('en-IN')}` : '[₹ PRICE]';
+    if (currency === 'USD') return usd != null ? `$${Number(usd).toLocaleString('en-US')}` : ask;
+    return inr != null ? `₹${Number(inr).toLocaleString('en-IN')}` : ask;
   };
 }
 

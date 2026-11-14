@@ -8,12 +8,12 @@ export default function Legal({ page }) {
   const t = useT();
   const doc = LEGAL[page];
   return (
-    <PageShell title={doc.title} seed={149}>
+    <PageShell title={doc.title} description={doc.description} seed={149}>
       <section className="hero">
         <div className="wrap stack" style={{ maxWidth: 860, '--gap': '28px' }}>
           <Breadcrumb items={[{ label: doc.title }]} />
           <h1 className="h1 rise" style={{ fontSize: 'clamp(38px,4.6vw,60px)' }}>{t(doc.title)}</h1>
-          <div className="small">{t('Draft · [Last updated: date]', 'ड्राफ़्ट · [अंतिम अपडेट: तारीख]')}</div>
+          <div className="small">{t('Draft — being reviewed', 'ड्राफ़्ट — समीक्षा जारी')}</div>
           {doc.sections.map(([h, body]) => (
             <div key={h.en} className="stack" style={{ '--gap': '10px', paddingBottom: 22, borderBottom: '1px solid var(--line)' }}>
               <h2 className="h3" style={{ fontSize: 26 }}>{t(h)}</h2>

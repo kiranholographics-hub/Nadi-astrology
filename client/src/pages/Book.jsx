@@ -89,7 +89,7 @@ export default function Book() {
     }
   }
 
-  const priceText = service ? (service.inrOnly ? t('[₹ PRICE] + travel', '[₹ PRICE] + यात्रा') : service.perSqft ? `${currency === 'USD' ? '[$ __' : '[₹ __'} / sq.ft]` : price(service.priceINR, service.priceUSD)) : '';
+  const priceText = service ? `${price(service.priceINR, service.priceUSD)}${service.perSqft && (currency === 'USD' ? service.priceUSD : service.priceINR) != null ? ' / sq.ft' : ''}${service.inrOnly && service.priceINR != null ? t(' + travel', ' + यात्रा') : ''}` : '';
 
   return (
     <PageShell title={L('Book Consultation', 'परामर्श बुक करें')} description={L('Book a Vedic, KP, Nadi or Vastu consultation — choose a service, pick a slot in your time zone, add your details and pay.', 'वैदिक, केपी, नाड़ी या वास्तु परामर्श बुक करें — सेवा चुनें, अपने टाइम ज़ोन में स्लॉट, जानकारी और भुगतान।')} cta={{ to: '/book', label: L('Book Consultation', 'परामर्श बुक करें') }} mobileCta={{ to: '/contact', label: L('Questions? Contact us', 'प्रश्न है? संपर्क करें') }} seed={101}>

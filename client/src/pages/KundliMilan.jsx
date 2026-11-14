@@ -127,7 +127,7 @@ export default function KundliMilan() {
 
       <section style={{ paddingTop: 'var(--sp-section)' }}>
         <Faq title={L('Kundli Matching FAQ', 'कुंडली मिलान — प्रश्न-उत्तर')} items={[
-          [L('How long does it take?', 'कितना समय लगता है?'), L('Report + 20-minute call. The report takes [__] days to prepare.', 'रिपोर्ट + 20 मिनट कॉल। रिपोर्ट तैयार होने का समय: [__] दिन।')],
+          [L('How long does it take?', 'कितना समय लगता है?'), L('Report + 20-minute call. The date of the call is fixed when you book.', 'रिपोर्ट + 20 मिनट कॉल। कॉल की तारीख़ बुकिंग के समय तय होती है।')],
           [L('What if a birth time is unknown?', 'जन्म समय पता न हो तो?'), L('Speak with Pandit ji — he can advise on alternatives such as KP Prashna.', 'पंडित जी से बात करें — केपी प्रश्न जैसे विकल्प पर सलाह मिल सकती है।')],
           [L('Can it be done online?', 'क्या ऑनलाइन हो सकता है?'), L('Yes, by video call. International clients can pay in USD via PayPal.', 'हाँ, वीडियो कॉल पर। विदेश के क्लाइंट PayPal से USD में भुगतान कर सकते हैं।')],
         [L('How many gunas should match for marriage?', 'शादी के लिए कितने गुण मिलने चाहिए?'), L('Out of 36, 18 or more is traditionally acceptable, 24+ is good and 28+ very good. But the final advice also depends on Manglik dosha, Nadi and Bhakoot dosha and the 7th house — not on the score alone.', '36 में से 18 या अधिक परंपरा से स्वीकार्य, 24+ अच्छे और 28+ बहुत अच्छे माने जाते हैं। लेकिन अंतिम सलाह मांगलिक दोष, नाड़ी व भकूट दोष और सप्तम भाव पर भी निर्भर करती है — सिर्फ़ गुणों पर नहीं।')],

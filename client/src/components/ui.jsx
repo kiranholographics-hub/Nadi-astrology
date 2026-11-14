@@ -139,14 +139,16 @@ export function PriceCard({ title, kicker, price, sub, points, cta, to = '#form'
   );
 }
 
-export function ClientQuote({ label = { en: 'Client video testimonial', hi: 'क्लाइंट वीडियो प्रशंसापत्र' }, city }) {
+// Shown only once a real quote (with the client's permission) is passed in.
+export function ClientQuote({ label = { en: 'Client video testimonial', hi: 'क्लाइंट वीडियो प्रशंसापत्र' }, city, quote, src }) {
   const t = useT();
+  if (!quote) return null;
   return (
     <div className="stack" style={{ flex: '1 1 340px', '--gap': '20px' }}>
       <div className="eyebrow">— {t('Client experiences', 'क्लाइंट्स के अनुभव')}</div>
-      <PlayBox label={label} ratio="4 / 5" />
-      <blockquote className="serif" style={{ margin: 0, fontStyle: 'italic', fontSize: 24, lineHeight: 1.35 }}>“{t('[Client’s words, with permission]', '[क्लाइंट के शब्द, अनुमति के साथ]')}”</blockquote>
-      <div className="muted" style={{ fontSize: 14 }}>{city ? t(city) : t('[Name], [Country]', '[नाम], [देश]')}</div>
+      {src && <PlayBox label={label} ratio="4 / 5" src={src} />}
+      <blockquote className="serif" style={{ margin: 0, fontStyle: 'italic', fontSize: 24, lineHeight: 1.35 }}>“{t(quote)}”</blockquote>
+      {city && <div className="muted" style={{ fontSize: 14 }}>{t(city)}</div>}
     </div>
   );
 }

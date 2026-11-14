@@ -11,6 +11,7 @@ import { GALLERY, imgUrl } from '../data/gallery.js';
 import { waLink } from '../data/site.js';
 import NotFound from './NotFound.jsx';
 import { useInitialData } from '../context/InitialData.jsx';
+import { COUNTRY_GUIDES } from '../data/countryGuides.js';
 
 const L = (en, hi) => ({ en, hi });
 const BOOK = '/book?service=nadi-general-2-kandam';
@@ -98,7 +99,7 @@ export default function CountryPage() {
 
   const generalFaq = [
     [L('How do I send my thumb impression from abroad?', 'विदेश से अंगूठे का निशान कैसे भेजें?'), L('Press your thumb on an ink pad (or use a little lipstick), press it on white paper, and upload a clear photo while booking. Men send the right thumb, women the left.', 'अंगूठे को इंक पैड (या थोड़ी लिपस्टिक) पर लगाकर सफ़ेद कागज़ पर छापें, और बुकिंग के समय उसकी साफ़ फोटो अपलोड करें। पुरुष दायाँ अंगूठा, महिलाएँ बायाँ।')],
-    [L('What if my leaf is not found?', 'अगर मेरा पट्टा न मिले तो?'), L('Not every person’s leaf is found. If yours is not found, [refund policy].', 'हर व्यक्ति का पट्टा मिलना ज़रूरी नहीं। न मिले तो [रिफंड नीति]।')],
+    [L('What if my leaf is not found?', 'अगर मेरा पट्टा न मिले तो?'), L('Not everyone has a leaf. Please ask on WhatsApp about the refund terms before you book.', 'हर व्यक्ति का पट्टा होना ज़रूरी नहीं। बुकिंग से पहले WhatsApp पर रिफंड की शर्तें पूछ लें।')],
   ];
   const faqs = c ? [...(c.faqs || []).map((f) => [{ en: f.q?.en, hi: f.q?.hi || null }, { en: f.a?.en, hi: f.a?.hi || null }]), ...generalFaq] : [];
   const shipping = c?.shippingDays
@@ -192,6 +193,26 @@ export default function CountryPage() {
               </div>
             </div>
           </section>
+
+          {COUNTRY_GUIDES[c.slug] && (
+            <section className="section-tight">
+              <div className="wrap stack" style={{ '--gap': '28px' }}>
+                <h2 className="h2 reveal" style={{ fontSize: 'clamp(28px,3.2vw,42px)' }}>{t(`A practical guide for clients in ${c.inName || c.name}`, `${c.nameHi || c.name} के क्लाइंट्स के लिए ज़रूरी बातें`)}</h2>
+                <div className="grid reveal" style={{ '--min': '260px', '--gap': '16px' }}>
+                  {[
+                    [L('Best time to book', 'बुक करने का सही समय'), COUNTRY_GUIDES[c.slug].when],
+                    [L('Getting ready', 'तैयारी'), COUNTRY_GUIDES[c.slug].prep],
+                    [L('Remedies where you live', 'वहीं रहते हुए उपाय'), COUNTRY_GUIDES[c.slug].remedies],
+                  ].map(([h, d]) => (
+                    <div key={h.en} className="card" style={{ padding: 24, gap: 10 }}>
+                      <h3 className="serif" style={{ fontSize: 22, margin: 0, fontWeight: 500 }}>{t(h)}</h3>
+                      <p className="body">{t(d)}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
 
           <section className="band">
             <div className="wrap section stack" style={{ '--gap': '44px' }}>
