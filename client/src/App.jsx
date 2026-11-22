@@ -22,6 +22,7 @@ import { BlogList, BlogPost } from './pages/Blog.jsx';
 import Legal from './pages/Legal.jsx';
 import Gallery from './pages/Gallery.jsx';
 import CountryPage from './pages/CountryPage.jsx';
+import RahuKaal from './pages/RahuKaal.jsx';
 
 // Admin is loaded only when someone opens /admin, so the public site stays light.
 const AdminApp = lazy(() => import('./admin/AdminApp.jsx'));
@@ -47,6 +48,7 @@ function SiteRoutes() {
       <Route path="online-vastu-consultation" element={<OnlineVastu />} />
       <Route path="contact" element={<Contact />} />
       <Route path="faq" element={<FaqPage />} />
+      <Route path="rahu-kaal-jaipur" element={<RahuKaal />} />
       <Route path="blog" element={<BlogList />} />
       <Route path="blog/:slug" element={<BlogPost />} />
       <Route path="privacy-policy" element={<Legal page="privacy-policy" />} />

@@ -153,6 +153,7 @@ function Footer({ disclaimer = DISCLAIMER.default }) {
           <Link to="/book">{t('Book Consultation', 'परामर्श बुक करें')}</Link>
           <Link to="/gallery">{t('Photo Gallery', 'फोटो गैलरी')}</Link>
           <Link to="/blog">{t('Blog', 'ब्लॉग')}</Link>
+          <Link to="/rahu-kaal-jaipur">{t('Rahu Kaal Today', 'आज का राहु काल')}</Link>
           <a href={SITE.youtube}>YouTube</a>
           {SITE.instagram && SITE.instagram !== '#' && <a href={SITE.instagram}>Instagram</a>}
           {SITE.facebook && SITE.facebook !== '#' && <a href={SITE.facebook}>Facebook</a>}
