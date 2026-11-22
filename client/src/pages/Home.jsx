@@ -296,6 +296,18 @@ export default function Home() {
         </section>
       )}
 
+      <section className="section-tight">
+        <div className="wrap">
+          <Link to="/rahu-kaal-jaipur" className="card row between" style={{ padding: '22px 26px', '--gap': '12px', alignItems: 'center' }}>
+            <span className="stack" style={{ '--gap': '4px' }}>
+              <span className="serif" style={{ fontSize: 24 }}>{t('Rahu Kaal & Choghadiya today', 'आज का राहु काल और चौघड़िया')}</span>
+              <span className="muted">{t('Daily timings for Jaipur and other cities, from the actual sunrise and sunset.', 'जयपुर और दूसरे शहरों के रोज़ के समय — असली सूर्योदय-सूर्यास्त से।')}</span>
+            </span>
+            <span className="link-arrow">{t('See today’s timings', 'आज का समय देखें')} →</span>
+          </Link>
+        </div>
+      </section>
+
       {/* international + office */}
       <section className="section-tight">
         <div className="wrap row" style={{ '--gap': '20px' }}>

@@ -18,6 +18,7 @@ const DEFAULT_DESC_HI = 'पं. रजनीश शर्मा — वैद�
 const STATIC = {
   '/nadi-astrology': ['Nadi Astrology: Palm Leaf Reading in Jaipur & Online', 'Nadi palm leaf reading by traditional Nadi readers, with Vedic/KP analysis and remedies by Pt. Rajneesh Sharma. Office visit in Jaipur or online video call.'],
   '/vedic-astrology': ['Vedic Astrologer in Jaipur: Birth Chart Consultation', 'Vedic birth chart consultation with Pt. Rajneesh Sharma, Jaipur — career, marriage, business, dasha periods and remedies. 30 or 60 minutes, office visit or video call.'],
+  '/rahu-kaal-jaipur': ['Rahu Kaal Today Jaipur: Rahu Kaal & Choghadiya Timings', 'Rahu Kaal today in Jaipur with Yamaganda, Gulika Kaal, sunrise, sunset and the day and night Choghadiya — also for Delhi, Mumbai and other cities. Updated daily.'],
   '/kundli-milan': ['Kundli Matching — Guna Milan & Manglik Check Before Marriage', 'Kundli matching by Pt. Rajneesh Sharma, Jaipur: guna milan, Manglik check and guidance. Report + 20-minute call, at the office or by video.'],
   '/kp-prashna': ['KP Prashna — One Question, Answered with Timing', 'KP Prashna (horary astrology) with Pt. Rajneesh Sharma: pick a number from 1–249 and get your specific question answered with timing. No birth time needed.'],
   '/vastu-consultant-jaipur': ['Vastu Consultant in Jaipur: Home, Office & Factory', 'Astro-Vastu by Pt. Rajneesh Sharma, Jaipur: your floor plan read together with the birth charts of up to 5 family members. Remedies without demolition first. Online report, quick call or site visit.'],
@@ -40,6 +41,7 @@ const STATIC = {
 const STATIC_HI = {
   '/nadi-astrology': ['नाड़ी ज्योतिष: जयपुर और ऑनलाइन ताड़-पत्र रीडिंग', 'पारंपरिक नाड़ी रीडर्स द्वारा ताड़-पत्र रीडिंग, साथ में पं. रजनीश शर्मा का वैदिक/केपी विश्लेषण और उपाय। जयपुर ऑफिस या ऑनलाइन वीडियो कॉल।'],
   '/vedic-astrology': ['जयपुर में वैदिक ज्योतिषी: कुंडली परामर्श', 'पं. रजनीश शर्मा, जयपुर से वैदिक कुंडली परामर्श — करियर, शादी, व्यापार, दशा और उपाय। 30 या 60 मिनट, ऑफिस विज़िट या वीडियो कॉल।'],
+  '/rahu-kaal-jaipur': ['आज का राहु काल जयपुर — राहु काल और चौघड़िया समय', 'जयपुर में आज का राहु काल, यमगंड, गुलिक काल, सूर्योदय, सूर्यास्त और दिन-रात का चौघड़िया — दिल्ली, मुंबई और दूसरे शहरों के लिए भी। रोज़ अपडेट।'],
   '/kundli-milan': ['कुंडली मिलान — शादी से पहले गुण मिलान और मांगलिक जाँच', 'पं. रजनीश शर्मा, जयपुर द्वारा कुंडली मिलान: गुण मिलान, मांगलिक जाँच और मार्गदर्शन। रिपोर्ट + 20 मिनट कॉल, ऑफिस या वीडियो।'],
   '/kp-prashna': ['केपी प्रश्न — एक प्रश्न, समय के साथ उत्तर', 'पं. रजनीश शर्मा के साथ केपी प्रश्न: 1–249 में से एक नंबर चुनें और अपने विशेष प्रश्न का समय के साथ उत्तर पाएँ। जन्म समय की ज़रूरत नहीं।'],
   '/vastu-consultant-jaipur': ['जयपुर में वास्तु सलाहकार: घर, ऑफिस और फैक्ट्री', 'पं. रजनीश शर्मा, जयपुर द्वारा एस्ट्रो-वास्तु: घर के प्लान के साथ परिवार के 5 सदस्यों तक की कुंडली। पहले बिना तोड़-फोड़ उपाय। ऑनलाइन रिपोर्ट, क्विक कॉल या साइट विज़िट।'],

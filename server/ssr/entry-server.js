@@ -47615,6 +47615,7 @@ function Footer({ disclaimer = DISCLAIMER.default }) {
         /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/book", children: t("Book Consultation", "परामर्श बुक करें") }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/gallery", children: t("Photo Gallery", "फोटो गैलरी") }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/blog", children: t("Blog", "ब्लॉग") }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/rahu-kaal-jaipur", children: t("Rahu Kaal Today", "आज का राहु काल") }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: SITE.youtube, children: "YouTube" }),
         SITE.instagram !== "#",
         SITE.facebook !== "#"
@@ -48034,80 +48035,80 @@ function BlogPost() {
     }
   );
 }
-const L$j = (en, hi) => ({ en, hi });
+const L$k = (en, hi) => ({ en, hi });
 const YT_VIDEOS = [
-  { youtubeId: "epBUAZBx6zU", cat: "Pandit ji", title: L$j("Pt. Rajneesh Sharma — Astro & Vastu Consultant, Nadi Astrology", "पं. रजनीश शर्मा — एस्ट्रो व वास्तु कंसल्टेंट, नाड़ी ज्योतिष") },
-  { youtubeId: "7jMrmJWPYBg", cat: "Pandit ji", title: L$j("Is your golden period starting? Jupiter transit 2026", "क्या शुरू होने वाला है आपका स्वर्णिम समय? गुरु गोचर 2026") },
-  { youtubeId: "zrz-VDAcWVo", cat: "Pandit ji", title: L$j("Shani Sade Sati: don’t fear it — remedies that help", "शनि साढ़ेसाती से डरें नहीं! ये उपाय करें") },
-  { youtubeId: "9LcwWW0fKGc", cat: "Pandit ji", title: L$j("Why do breakups happen even after love? The astrology reason", "प्यार होने के बाद भी ब्रेकअप क्यों होता है? ज्योतिषीय कारण") }
+  { youtubeId: "epBUAZBx6zU", cat: "Pandit ji", title: L$k("Pt. Rajneesh Sharma — Astro & Vastu Consultant, Nadi Astrology", "पं. रजनीश शर्मा — एस्ट्रो व वास्तु कंसल्टेंट, नाड़ी ज्योतिष") },
+  { youtubeId: "7jMrmJWPYBg", cat: "Pandit ji", title: L$k("Is your golden period starting? Jupiter transit 2026", "क्या शुरू होने वाला है आपका स्वर्णिम समय? गुरु गोचर 2026") },
+  { youtubeId: "zrz-VDAcWVo", cat: "Pandit ji", title: L$k("Shani Sade Sati: don’t fear it — remedies that help", "शनि साढ़ेसाती से डरें नहीं! ये उपाय करें") },
+  { youtubeId: "9LcwWW0fKGc", cat: "Pandit ji", title: L$k("Why do breakups happen even after love? The astrology reason", "प्यार होने के बाद भी ब्रेकअप क्यों होता है? ज्योतिषीय कारण") }
 ];
 const ytThumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 const ytEmbed = (id) => `https://www.youtube-nocookie.com/embed/${id}`;
-const L$i = (en, hi) => ({ en, hi });
+const L$j = (en, hi) => ({ en, hi });
 const FAQ_GROUPS = [
   {
-    title: L$i("Consultation", "परामर्श"),
+    title: L$j("Consultation", "परामर्श"),
     items: [
-      [L$i("How long is a consultation?", "परामर्श कितनी देर का होता है?"), L$i("Vedic birth chart: 30 or 60 minutes. KP Prashna: 20–30 minutes. Kundli Matching: report + 20-minute call.", "वैदिक कुंडली: 30 या 60 मिनट। केपी प्रश्न: 20–30 मिनट। कुंडली मिलान: रिपोर्ट + 20 मिनट कॉल।")],
-      [L$i("What if I don’t know my birth time?", "जन्म समय नहीं पता तो क्या करें?"), L$i("KP Prashna does not need a birth time.", "केपी प्रश्न में जन्म समय की ज़रूरत नहीं होती।")],
-      [L$i("How does an online consultation work?", "ऑनलाइन परामर्श कैसे होता है?"), L$i("Over a Zoom or WhatsApp video call. Slots are shown in your own time zone, and you receive the call recording and a written summary.", "Zoom या WhatsApp वीडियो कॉल पर। स्लॉट आपके टाइम ज़ोन में दिखते हैं, और कॉल की रिकॉर्डिंग व लिखित सारांश मिलता है।")],
-      [L$i("Which languages do you speak?", "किस भाषा में बात होती है?"), L$i("English and Hindi. Nadi readings are translated from Tamil.", "हिंदी और अंग्रेज़ी। नाड़ी रीडिंग में तमिल से अनुवाद होता है।")],
-      [L$i("How do I pay?", "भुगतान कैसे करें?"), L$i("India: Razorpay (UPI, card, netbanking). International: PayPal (USD).", "भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग)। विदेश: PayPal (USD)।")],
-      [L$i("Can I cancel or reschedule a booking?", "क्या बुकिंग कैंसल या री-शेड्यूल कर सकते हैं?"), L$i("Message us on WhatsApp as early as you can; we will tell you the options for moving or cancelling your slot.", "जितनी जल्दी हो सके WhatsApp पर बताएँ; स्लॉट बदलने या कैंसल करने के विकल्प बता दिए जाएँगे।")]
+      [L$j("How long is a consultation?", "परामर्श कितनी देर का होता है?"), L$j("Vedic birth chart: 30 or 60 minutes. KP Prashna: 20–30 minutes. Kundli Matching: report + 20-minute call.", "वैदिक कुंडली: 30 या 60 मिनट। केपी प्रश्न: 20–30 मिनट। कुंडली मिलान: रिपोर्ट + 20 मिनट कॉल।")],
+      [L$j("What if I don’t know my birth time?", "जन्म समय नहीं पता तो क्या करें?"), L$j("KP Prashna does not need a birth time.", "केपी प्रश्न में जन्म समय की ज़रूरत नहीं होती।")],
+      [L$j("How does an online consultation work?", "ऑनलाइन परामर्श कैसे होता है?"), L$j("Over a Zoom or WhatsApp video call. Slots are shown in your own time zone, and you receive the call recording and a written summary.", "Zoom या WhatsApp वीडियो कॉल पर। स्लॉट आपके टाइम ज़ोन में दिखते हैं, और कॉल की रिकॉर्डिंग व लिखित सारांश मिलता है।")],
+      [L$j("Which languages do you speak?", "किस भाषा में बात होती है?"), L$j("English and Hindi. Nadi readings are translated from Tamil.", "हिंदी और अंग्रेज़ी। नाड़ी रीडिंग में तमिल से अनुवाद होता है।")],
+      [L$j("How do I pay?", "भुगतान कैसे करें?"), L$j("India: Razorpay (UPI, card, netbanking). International: PayPal (USD).", "भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग)। विदेश: PayPal (USD)।")],
+      [L$j("Can I cancel or reschedule a booking?", "क्या बुकिंग कैंसल या री-शेड्यूल कर सकते हैं?"), L$j("Message us on WhatsApp as early as you can; we will tell you the options for moving or cancelling your slot.", "जितनी जल्दी हो सके WhatsApp पर बताएँ; स्लॉट बदलने या कैंसल करने के विकल्प बता दिए जाएँगे।")]
     ]
   },
   {
-    title: L$i("Vedic astrology & birth chart", "वैदिक ज्योतिष और कुंडली"),
+    title: L$j("Vedic astrology & birth chart", "वैदिक ज्योतिष और कुंडली"),
     items: [
-      [L$i("What details do I need for a birth chart reading?", "कुंडली परामर्श के लिए क्या जानकारी चाहिए?"), L$i("Date of birth, exact time of birth and place of birth. The time from a birth certificate or hospital record is best.", "जन्म तिथि, जन्म का सही समय और जन्म स्थान। जन्म प्रमाण-पत्र या अस्पताल के रिकॉर्ड वाला समय सबसे अच्छा है।")],
-      [L$i("What is a dasha?", "दशा क्या होती है?"), L$i("In the Vimshottari dasha system your life is divided into periods ruled by the nine planets. The running dasha shows which areas of life are active now and when events are likely.", "विंशोत्तरी दशा पद्धति में जीवन को नौ ग्रहों की अवधियों में बाँटा जाता है। चल रही दशा बताती है कि अभी जीवन के कौन-से क्षेत्र सक्रिय हैं और घटनाएँ कब संभव हैं।")],
-      [L$i("What is Shani Sade Sati?", "शनि साढ़ेसाती क्या है?"), L$i("The roughly seven and a half years when Saturn moves through the sign before your Moon sign, the Moon sign and the sign after it. How hard it is depends on your own chart — it is not the same for everyone.", "लगभग साढ़े सात साल की वह अवधि जब शनि आपकी चंद्र राशि से पहली, चंद्र राशि और उसके बाद की राशि से गुज़रते हैं। यह कितनी कठिन होगी, यह आपकी अपनी कुंडली पर निर्भर है — सबके लिए एक जैसी नहीं।")],
-      [L$i("Do I have to wear a gemstone?", "क्या रत्न पहनना ज़रूरी है?"), L$i("No. A gemstone is suggested only when it clearly suits your chart. Mantra, daan, fasting or a yantra are simpler remedies with no risk.", "नहीं। रत्न तभी सुझाया जाता है जब वह कुंडली के अनुसार साफ़ तौर पर उचित हो। मंत्र, दान, व्रत या यंत्र बिना जोखिम के सरल उपाय हैं।")]
+      [L$j("What details do I need for a birth chart reading?", "कुंडली परामर्श के लिए क्या जानकारी चाहिए?"), L$j("Date of birth, exact time of birth and place of birth. The time from a birth certificate or hospital record is best.", "जन्म तिथि, जन्म का सही समय और जन्म स्थान। जन्म प्रमाण-पत्र या अस्पताल के रिकॉर्ड वाला समय सबसे अच्छा है।")],
+      [L$j("What is a dasha?", "दशा क्या होती है?"), L$j("In the Vimshottari dasha system your life is divided into periods ruled by the nine planets. The running dasha shows which areas of life are active now and when events are likely.", "विंशोत्तरी दशा पद्धति में जीवन को नौ ग्रहों की अवधियों में बाँटा जाता है। चल रही दशा बताती है कि अभी जीवन के कौन-से क्षेत्र सक्रिय हैं और घटनाएँ कब संभव हैं।")],
+      [L$j("What is Shani Sade Sati?", "शनि साढ़ेसाती क्या है?"), L$j("The roughly seven and a half years when Saturn moves through the sign before your Moon sign, the Moon sign and the sign after it. How hard it is depends on your own chart — it is not the same for everyone.", "लगभग साढ़े सात साल की वह अवधि जब शनि आपकी चंद्र राशि से पहली, चंद्र राशि और उसके बाद की राशि से गुज़रते हैं। यह कितनी कठिन होगी, यह आपकी अपनी कुंडली पर निर्भर है — सबके लिए एक जैसी नहीं।")],
+      [L$j("Do I have to wear a gemstone?", "क्या रत्न पहनना ज़रूरी है?"), L$j("No. A gemstone is suggested only when it clearly suits your chart. Mantra, daan, fasting or a yantra are simpler remedies with no risk.", "नहीं। रत्न तभी सुझाया जाता है जब वह कुंडली के अनुसार साफ़ तौर पर उचित हो। मंत्र, दान, व्रत या यंत्र बिना जोखिम के सरल उपाय हैं।")]
     ]
   },
   {
-    title: L$i("KP Prashna", "केपी प्रश्न"),
+    title: L$j("KP Prashna", "केपी प्रश्न"),
     items: [
-      [L$i("What is KP Prashna?", "केपी प्रश्न क्या है?"), L$i("Horary astrology in the Krishnamurti Paddhati system. You choose a number from 1 to 249 while thinking of one question, and a chart cast from that number and the moment gives a yes/no answer with timing.", "कृष्णमूर्ति पद्धति का प्रश्न ज्योतिष। आप एक प्रश्न मन में रखकर 1 से 249 के बीच नंबर चुनते हैं, और उस नंबर व पल से बनी कुंडली समय के साथ हाँ/ना उत्तर देती है।")],
-      [L$i("Which questions suit KP Prashna?", "केपी प्रश्न किन सवालों के लिए ठीक है?"), L$i("One clear question at a time: a job, promotion, visa, marriage proposal, property deal, court case or a lost item.", "एक बार में एक साफ़ सवाल: नौकरी, प्रमोशन, वीज़ा, शादी का रिश्ता, प्रॉपर्टी का सौदा, कोर्ट केस या खोई वस्तु।")],
-      [L$i("What is the difference between KP and Vedic astrology?", "केपी और वैदिक ज्योतिष में क्या अंतर है?"), L$i("KP is built on Vedic astrology but adds the sub-lord, which makes it sharper for yes/no questions and timing. Vedic astrology is better for a full picture of life.", "केपी वैदिक ज्योतिष पर ही आधारित है, लेकिन इसमें सब-लॉर्ड जुड़ता है, जिससे हाँ/ना और समय बताने में यह ज़्यादा सटीक होती है। जीवन की पूरी तस्वीर के लिए वैदिक ज्योतिष बेहतर है।")]
+      [L$j("What is KP Prashna?", "केपी प्रश्न क्या है?"), L$j("Horary astrology in the Krishnamurti Paddhati system. You choose a number from 1 to 249 while thinking of one question, and a chart cast from that number and the moment gives a yes/no answer with timing.", "कृष्णमूर्ति पद्धति का प्रश्न ज्योतिष। आप एक प्रश्न मन में रखकर 1 से 249 के बीच नंबर चुनते हैं, और उस नंबर व पल से बनी कुंडली समय के साथ हाँ/ना उत्तर देती है।")],
+      [L$j("Which questions suit KP Prashna?", "केपी प्रश्न किन सवालों के लिए ठीक है?"), L$j("One clear question at a time: a job, promotion, visa, marriage proposal, property deal, court case or a lost item.", "एक बार में एक साफ़ सवाल: नौकरी, प्रमोशन, वीज़ा, शादी का रिश्ता, प्रॉपर्टी का सौदा, कोर्ट केस या खोई वस्तु।")],
+      [L$j("What is the difference between KP and Vedic astrology?", "केपी और वैदिक ज्योतिष में क्या अंतर है?"), L$j("KP is built on Vedic astrology but adds the sub-lord, which makes it sharper for yes/no questions and timing. Vedic astrology is better for a full picture of life.", "केपी वैदिक ज्योतिष पर ही आधारित है, लेकिन इसमें सब-लॉर्ड जुड़ता है, जिससे हाँ/ना और समय बताने में यह ज़्यादा सटीक होती है। जीवन की पूरी तस्वीर के लिए वैदिक ज्योतिष बेहतर है।")]
     ]
   },
   {
-    title: L$i("Kundli matching", "कुंडली मिलान"),
+    title: L$j("Kundli matching", "कुंडली मिलान"),
     items: [
-      [L$i("How many gunas should match for marriage?", "शादी के लिए कितने गुण मिलने चाहिए?"), L$i("Out of 36, 18 or more is traditionally acceptable, 24+ good and 28+ very good — but Manglik dosha, Nadi and Bhakoot dosha and the 7th house also decide the final advice.", "36 में से 18 या अधिक परंपरा से स्वीकार्य, 24+ अच्छे और 28+ बहुत अच्छे माने जाते हैं — लेकिन अंतिम सलाह मांगलिक दोष, नाड़ी व भकूट दोष और सप्तम भाव से भी तय होती है।")],
-      [L$i("Can a Manglik marry a non-Manglik?", "क्या मांगलिक की शादी गैर-मांगलिक से हो सकती है?"), L$i("Often, yes. In many charts Manglik dosha is cancelled by other factors. Where it is active, matching with another Manglik or remedies are considered.", "अक्सर हाँ। कई कुंडलियों में दूसरे कारणों से मांगलिक दोष का परिहार हो जाता है। जहाँ सक्रिय हो, वहाँ दूसरे मांगलिक से मिलान या उपाय देखे जाते हैं।")],
-      [L$i("What is Nadi dosha?", "नाड़ी दोष क्या है?"), L$i("When both partners have the same Nadi (Aadi, Madhya or Antya), the Nadi koota scores 0 of 8. It has recognised exceptions, so it should be checked in the full charts.", "जब दोनों की नाड़ी (आदि, मध्य या अंत्य) एक हो, तो नाड़ी कूट में 8 में से 0 गुण मिलते हैं। इसके मान्य अपवाद हैं, इसलिए इसे पूरी कुंडलियों में देखना चाहिए।")]
+      [L$j("How many gunas should match for marriage?", "शादी के लिए कितने गुण मिलने चाहिए?"), L$j("Out of 36, 18 or more is traditionally acceptable, 24+ good and 28+ very good — but Manglik dosha, Nadi and Bhakoot dosha and the 7th house also decide the final advice.", "36 में से 18 या अधिक परंपरा से स्वीकार्य, 24+ अच्छे और 28+ बहुत अच्छे माने जाते हैं — लेकिन अंतिम सलाह मांगलिक दोष, नाड़ी व भकूट दोष और सप्तम भाव से भी तय होती है।")],
+      [L$j("Can a Manglik marry a non-Manglik?", "क्या मांगलिक की शादी गैर-मांगलिक से हो सकती है?"), L$j("Often, yes. In many charts Manglik dosha is cancelled by other factors. Where it is active, matching with another Manglik or remedies are considered.", "अक्सर हाँ। कई कुंडलियों में दूसरे कारणों से मांगलिक दोष का परिहार हो जाता है। जहाँ सक्रिय हो, वहाँ दूसरे मांगलिक से मिलान या उपाय देखे जाते हैं।")],
+      [L$j("What is Nadi dosha?", "नाड़ी दोष क्या है?"), L$j("When both partners have the same Nadi (Aadi, Madhya or Antya), the Nadi koota scores 0 of 8. It has recognised exceptions, so it should be checked in the full charts.", "जब दोनों की नाड़ी (आदि, मध्य या अंत्य) एक हो, तो नाड़ी कूट में 8 में से 0 गुण मिलते हैं। इसके मान्य अपवाद हैं, इसलिए इसे पूरी कुंडलियों में देखना चाहिए।")]
     ]
   },
   {
-    title: L$i("Nadi", "नाड़ी"),
+    title: L$j("Nadi", "नाड़ी"),
     items: [
-      [L$i("What is the Nadi reading process?", "नाड़ी रीडिंग की प्रक्रिया क्या है?"), L$i("Send your thumb impression → Nadi readers search for your leaf (you answer yes/no) → the leaf is read → Pandit ji adds Vedic/KP analysis and remedies.", "अंगूठे का निशान भेजें → नाड़ी रीडर पट्टा खोजते हैं (आप हाँ/ना कहते हैं) → पट्टा पढ़ा जाता है → पंडित जी वैदिक/केपी विश्लेषण और उपाय बताते हैं।")],
-      [L$i("What if my leaf is not found?", "नाड़ी पट्टा न मिले तो?"), L$i("Not everyone has a leaf. Please ask on WhatsApp about the refund terms before you book.", "हर व्यक्ति का पट्टा होना ज़रूरी नहीं। बुकिंग से पहले WhatsApp पर रिफंड की शर्तें पूछ लें।")],
-      [L$i("Who reads the leaf, and what is Pandit ji’s role?", "पट्टा कौन पढ़ता है और पंडित जी की भूमिका क्या है?"), L$i("Traditional Nadi readers read the leaf; Pandit ji interprets it alongside your birth chart and suggests remedies.", "पट्टा पारंपरिक नाड़ी रीडर पढ़ते हैं; पंडित जी कुंडली के साथ विश्लेषण और उपाय बताते हैं।")],
-      [L$i("Do I need my birth time for a Nadi reading?", "क्या नाड़ी रीडिंग के लिए जन्म समय चाहिए?"), L$i("No. The leaf is found from the thumb impression alone — men give the right thumb, women the left.", "नहीं। पट्टा सिर्फ़ अंगूठे के निशान से मिलता है — पुरुष दायाँ और महिलाएँ बायाँ अंगूठा देती हैं।")],
-      [L$i("Can I get a Nadi reading from abroad?", "क्या विदेश से नाड़ी रीडिंग हो सकती है?"), L$i("Yes. Upload a photo of your thumb impression, and join the reading on a video call with live translation into English or Hindi. You receive the recording.", "हाँ। अंगूठे के निशान की फोटो अपलोड करें, और अंग्रेज़ी या हिंदी अनुवाद के साथ वीडियो कॉल पर रीडिंग में जुड़ें। रिकॉर्डिंग आपको मिलती है।")]
+      [L$j("What is the Nadi reading process?", "नाड़ी रीडिंग की प्रक्रिया क्या है?"), L$j("Send your thumb impression → Nadi readers search for your leaf (you answer yes/no) → the leaf is read → Pandit ji adds Vedic/KP analysis and remedies.", "अंगूठे का निशान भेजें → नाड़ी रीडर पट्टा खोजते हैं (आप हाँ/ना कहते हैं) → पट्टा पढ़ा जाता है → पंडित जी वैदिक/केपी विश्लेषण और उपाय बताते हैं।")],
+      [L$j("What if my leaf is not found?", "नाड़ी पट्टा न मिले तो?"), L$j("Not everyone has a leaf. Please ask on WhatsApp about the refund terms before you book.", "हर व्यक्ति का पट्टा होना ज़रूरी नहीं। बुकिंग से पहले WhatsApp पर रिफंड की शर्तें पूछ लें।")],
+      [L$j("Who reads the leaf, and what is Pandit ji’s role?", "पट्टा कौन पढ़ता है और पंडित जी की भूमिका क्या है?"), L$j("Traditional Nadi readers read the leaf; Pandit ji interprets it alongside your birth chart and suggests remedies.", "पट्टा पारंपरिक नाड़ी रीडर पढ़ते हैं; पंडित जी कुंडली के साथ विश्लेषण और उपाय बताते हैं।")],
+      [L$j("Do I need my birth time for a Nadi reading?", "क्या नाड़ी रीडिंग के लिए जन्म समय चाहिए?"), L$j("No. The leaf is found from the thumb impression alone — men give the right thumb, women the left.", "नहीं। पट्टा सिर्फ़ अंगूठे के निशान से मिलता है — पुरुष दायाँ और महिलाएँ बायाँ अंगूठा देती हैं।")],
+      [L$j("Can I get a Nadi reading from abroad?", "क्या विदेश से नाड़ी रीडिंग हो सकती है?"), L$j("Yes. Upload a photo of your thumb impression, and join the reading on a video call with live translation into English or Hindi. You receive the recording.", "हाँ। अंगूठे के निशान की फोटो अपलोड करें, और अंग्रेज़ी या हिंदी अनुवाद के साथ वीडियो कॉल पर रीडिंग में जुड़ें। रिकॉर्डिंग आपको मिलती है।")]
     ]
   },
   {
-    title: L$i("Vastu", "वास्तु"),
+    title: L$j("Vastu", "वास्तु"),
     items: [
-      [L$i("Will I need to demolish anything?", "क्या तोड़-फोड़ करनी पड़ेगी?"), L$i("Remedies without demolition come first; structural changes only if truly needed.", "पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।")],
-      [L$i("How does online Vastu work?", "ऑनलाइन वास्तु कैसे होता है?"), L$i("A report is prepared from your floor plan, North direction and family details, followed by a call.", "फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।")],
-      [L$i("Is a south-facing home bad?", "क्या दक्षिणमुखी घर बुरा होता है?"), L$i("No. What matters is the pada of the south wall where the entrance sits, the layout and the family’s birth charts. Most doshas can be corrected without demolition.", "नहीं। असली बात यह है कि मुख्य द्वार दक्षिण दीवार के किस पद में है, नक्शा कैसा है और परिवार की कुंडलियाँ क्या कहती हैं। ज़्यादातर दोष बिना तोड़-फोड़ ठीक हो जाते हैं।")],
-      [L$i("Can Vastu be done for a rented home or a flat?", "क्या किराए के घर या फ्लैट का वास्तु हो सकता है?"), L$i("Yes. The remedies then focus on how rooms are used, furniture placement, colours and yantras.", "हाँ। तब उपाय कमरों के उपयोग, फर्नीचर की जगह, रंग और यंत्रों पर केंद्रित होते हैं।")]
+      [L$j("Will I need to demolish anything?", "क्या तोड़-फोड़ करनी पड़ेगी?"), L$j("Remedies without demolition come first; structural changes only if truly needed.", "पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।")],
+      [L$j("How does online Vastu work?", "ऑनलाइन वास्तु कैसे होता है?"), L$j("A report is prepared from your floor plan, North direction and family details, followed by a call.", "फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।")],
+      [L$j("Is a south-facing home bad?", "क्या दक्षिणमुखी घर बुरा होता है?"), L$j("No. What matters is the pada of the south wall where the entrance sits, the layout and the family’s birth charts. Most doshas can be corrected without demolition.", "नहीं। असली बात यह है कि मुख्य द्वार दक्षिण दीवार के किस पद में है, नक्शा कैसा है और परिवार की कुंडलियाँ क्या कहती हैं। ज़्यादातर दोष बिना तोड़-फोड़ ठीक हो जाते हैं।")],
+      [L$j("Can Vastu be done for a rented home or a flat?", "क्या किराए के घर या फ्लैट का वास्तु हो सकता है?"), L$j("Yes. The remedies then focus on how rooms are used, furniture placement, colours and yantras.", "हाँ। तब उपाय कमरों के उपयोग, फर्नीचर की जगह, रंग और यंत्रों पर केंद्रित होते हैं।")]
     ]
   },
   {
-    title: L$i("Yantra", "यंत्र"),
+    title: L$j("Yantra", "यंत्र"),
     items: [
-      [L$i("How long does a yantra take to arrive?", "यंत्र कितने दिन में पहुँचेगा?"), L$i("The delivery time to your city is confirmed on WhatsApp before dispatch. Orders abroad take longer than orders within India.", "आपके शहर तक डिलीवरी का समय डिस्पैच से पहले WhatsApp पर बताया जाता है। विदेश के ऑर्डर भारत से ज़्यादा समय लेते हैं।")],
-      [L$i("How do I know the yantra is genuine and energised?", "कैसे पता चले कि यंत्र असली और प्राण-प्रतिष्ठित है?"), L$i("Every order comes with a video of the pran-pratishtha and a metal certificate.", "हर ऑर्डर के साथ प्राण-प्रतिष्ठा का वीडियो और धातु का सर्टिफ़िकेट।")],
-      [L$i("What if the yantra arrives broken or wrong?", "टूटा या गलत यंत्र पहुँचे तो?"), L$i("Free replacement.", "मुफ़्त रिप्लेसमेंट।")],
-      [L$i("Who pays customs duty for international orders?", "विदेश में कस्टम ड्यूटी कौन देगा?"), L$i("Customs duty is paid by the buyer.", "कस्टम ड्यूटी खरीदार देगा।")],
-      [L$i("How do I choose the right yantra?", "सही यंत्र कैसे चुनें?"), L$i("Choose by purpose — wealth, business, planetary peace, protection, Vastu, education or marriage. For a dosha in your chart, ask first: there is free 10-minute advice on WhatsApp.", "उद्देश्य से चुनें — धन, व्यापार, ग्रह शांति, रक्षा, वास्तु, शिक्षा या विवाह। कुंडली के किसी दोष के लिए पहले पूछ लें: WhatsApp पर 10 मिनट की मुफ़्त सलाह मिलती है।")]
+      [L$j("How long does a yantra take to arrive?", "यंत्र कितने दिन में पहुँचेगा?"), L$j("The delivery time to your city is confirmed on WhatsApp before dispatch. Orders abroad take longer than orders within India.", "आपके शहर तक डिलीवरी का समय डिस्पैच से पहले WhatsApp पर बताया जाता है। विदेश के ऑर्डर भारत से ज़्यादा समय लेते हैं।")],
+      [L$j("How do I know the yantra is genuine and energised?", "कैसे पता चले कि यंत्र असली और प्राण-प्रतिष्ठित है?"), L$j("Every order comes with a video of the pran-pratishtha and a metal certificate.", "हर ऑर्डर के साथ प्राण-प्रतिष्ठा का वीडियो और धातु का सर्टिफ़िकेट।")],
+      [L$j("What if the yantra arrives broken or wrong?", "टूटा या गलत यंत्र पहुँचे तो?"), L$j("Free replacement.", "मुफ़्त रिप्लेसमेंट।")],
+      [L$j("Who pays customs duty for international orders?", "विदेश में कस्टम ड्यूटी कौन देगा?"), L$j("Customs duty is paid by the buyer.", "कस्टम ड्यूटी खरीदार देगा।")],
+      [L$j("How do I choose the right yantra?", "सही यंत्र कैसे चुनें?"), L$j("Choose by purpose — wealth, business, planetary peace, protection, Vastu, education or marriage. For a dosha in your chart, ask first: there is free 10-minute advice on WhatsApp.", "उद्देश्य से चुनें — धन, व्यापार, ग्रह शांति, रक्षा, वास्तु, शिक्षा या विवाह। कुंडली के किसी दोष के लिए पहले पूछ लें: WhatsApp पर 10 मिनट की मुफ़्त सलाह मिलती है।")]
     ]
   }
 ];
@@ -48590,18 +48591,18 @@ function PhotoRows({ categories: categories2 }) {
 }
 const RASHI = ["MESHA", "VRISHABHA", "MITHUNA", "KARKA", "SIMHA", "KANYA", "TULA", "VRISHCHIKA", "DHANU", "MAKARA", "KUMBHA", "MEENA"];
 const RASHI_HI = ["मेष", "वृषभ", "मिथुन", "कर्क", "सिंह", "कन्या", "तुला", "वृश्चिक", "धनु", "मकर", "कुंभ", "मीन"];
-const L$h = (en, hi) => ({ en, hi });
-const PHOTO = L$h("Photo", "फोटो");
+const L$i = (en, hi) => ({ en, hi });
+const PHOTO = L$i("Photo", "फोटो");
 const SLIDE_PHOTOS = [
-  ["5bbf2e74e39f9c000154e9fe.jpg", L$h("Pt. Rajneesh Sharma", "पं. रजनीश शर्मा")],
-  ["6239c0b77c2b6200017f0b72.jpeg", L$h("At the Jaipur office", "जयपुर ऑफिस में")],
-  ["65a8e4aba3262caf1dc07ffe.jpeg", L$h("Nadi reading for a client from abroad", "विदेशी क्लाइंट के लिए नाड़ी रीडिंग")],
-  ["65a8e5c782390dd225e76837.jpeg", L$h("Clients from Switzerland", "स्विट्ज़रलैंड से आए क्लाइंट")],
-  ["65a8e5c682390dd225e76835.jpeg", L$h("Clients from the USA", "अमेरिका से आए क्लाइंट")]
+  ["5bbf2e74e39f9c000154e9fe.jpg", L$i("Pt. Rajneesh Sharma", "पं. रजनीश शर्मा")],
+  ["6239c0b77c2b6200017f0b72.jpeg", L$i("At the Jaipur office", "जयपुर ऑफिस में")],
+  ["65a8e4aba3262caf1dc07ffe.jpeg", L$i("Nadi reading for a client from abroad", "विदेशी क्लाइंट के लिए नाड़ी रीडिंग")],
+  ["65a8e5c782390dd225e76837.jpeg", L$i("Clients from Switzerland", "स्विट्ज़रलैंड से आए क्लाइंट")],
+  ["65a8e5c682390dd225e76835.jpeg", L$i("Clients from the USA", "अमेरिका से आए क्लाइंट")]
 ];
 const SLIDES = SLIDE_PHOTOS.map(([file, title]) => {
   const g = GALLERY.find((x) => x.src === file);
-  return { type: "photo", kind: PHOTO, title, label: g ? L$h(g.alt, g.altHi) : title, src: g ? imgUrl(g) : "" };
+  return { type: "photo", kind: PHOTO, title, label: g ? L$i(g.alt, g.altHi) : title, src: g ? imgUrl(g) : "" };
 });
 const BGS = ["#11132A", "#141127", "#0F1624", "#16122A", "#121426"];
 const DURATION = 6e3;
@@ -48663,16 +48664,16 @@ function HeroMedia() {
   ] });
 }
 const SERVICES$1 = [
-  { to: "/nadi-astrology", title: L$h("Nadi Reading", "नाड़ी रीडिंग"), text: L$h("Your leaf is searched for from your thumb impression, followed by Pandit ji’s Vedic/KP analysis.", "अंगूठे के निशान से पट्टा खोजा जाता है, फिर पंडित जी का वैदिक/केपी विश्लेषण।"), icon: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M6 34 C10 18 22 8 34 6 C32 18 22 30 6 34Z M10 30 L28 12" }) },
-  { to: "/vedic-astrology", title: L$h("Vedic Birth Chart", "वैदिक कुंडली"), text: L$h("A complete analysis of career, marriage, business and dasha periods — 30 or 60 minutes.", "करियर, शादी, व्यापार और दशा का पूरा विश्लेषण, 30 या 60 मिनट।"), icon: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+  { to: "/nadi-astrology", title: L$i("Nadi Reading", "नाड़ी रीडिंग"), text: L$i("Your leaf is searched for from your thumb impression, followed by Pandit ji’s Vedic/KP analysis.", "अंगूठे के निशान से पट्टा खोजा जाता है, फिर पंडित जी का वैदिक/केपी विश्लेषण।"), icon: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M6 34 C10 18 22 8 34 6 C32 18 22 30 6 34Z M10 30 L28 12" }) },
+  { to: "/vedic-astrology", title: L$i("Vedic Birth Chart", "वैदिक कुंडली"), text: L$i("A complete analysis of career, marriage, business and dasha periods — 30 or 60 minutes.", "करियर, शादी, व्यापार और दशा का पूरा विश्लेषण, 30 या 60 मिनट।"), icon: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "6", y: "6", width: "28", height: "28" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M6 6 L34 34 M34 6 L6 34 M20 6 L34 20 L20 34 L6 20Z" })
   ] }) },
-  { to: "/kp-prashna", title: L$h("KP Prashna", "केपी प्रश्न"), text: L$h("One question, answered with timing. No birth time needed.", "एक प्रश्न, समय के साथ उत्तर। जन्म समय की ज़रूरत नहीं।"), icon: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+  { to: "/kp-prashna", title: L$i("KP Prashna", "केपी प्रश्न"), text: L$i("One question, answered with timing. No birth time needed.", "एक प्रश्न, समय के साथ उत्तर। जन्म समय की ज़रूरत नहीं।"), icon: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "20", cy: "20", r: "14" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M20 10 L20 20 L27 24" })
   ] }) },
-  { to: "/vastu-consultant-jaipur", title: L$h("Vastu Consultation", "वास्तु परामर्श"), text: L$h("Home, office, factory. Online from your floor plan or by site visit — remedies without demolition.", "घर, ऑफिस, फैक्ट्री। फ्लोर प्लान से ऑनलाइन या साइट विज़िट, बिना तोड़-फोड़ उपाय।"), icon: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+  { to: "/vastu-consultant-jaipur", title: L$i("Vastu Consultation", "वास्तु परामर्श"), text: L$i("Home, office, factory. Online from your floor plan or by site visit — remedies without demolition.", "घर, ऑफिस, फैक्ट्री। फ्लोर प्लान से ऑनलाइन या साइट विज़िट, बिना तोड़-फोड़ उपाय।"), icon: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M6 18 L20 6 L34 18 V34 H6Z" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M16 34 V24 H24 V34" })
   ] }), inrOnly: true }
@@ -48708,10 +48709,10 @@ function Home() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(HeroMedia, {})
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section-tight", style: { paddingBottom: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Stats, { items: [["12+", L$h("years of experience", "साल का अनुभव")], ["4000+", L$h("office-visit clients", "ऑफिस विज़िट क्लाइंट")], ["60+", L$h("international office visits", "विदेशी क्लाइंट ऑफिस आए")], ["10+", L$h("years of Vedic & KP practice", "साल वैदिक और केपी अभ्यास")]] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Stats, { items: [["12+", L$i("years of experience", "साल का अनुभव")], ["4000+", L$i("office-visit clients", "ऑफिस विज़िट क्लाइंट")], ["60+", L$i("international office visits", "विदेशी क्लाइंट ऑफिस आए")], ["10+", L$i("years of Vedic & KP practice", "साल वैदिक और केपी अभ्यास")]] }),
       SITE.googleReviewUrl
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Marquee, { words: [L$h("Vedic Birth Chart", "वैदिक कुंडली"), L$h("KP Prashna", "केपी प्रश्न"), L$h("Nadi Leaf Reading", "नाड़ी पट्टा"), L$h("Astro-Vastu", "एस्ट्रो-वास्तु"), L$h("Kundli Matching", "कुंडली मिलान"), L$h("Energized Yantras", "प्राण-प्रतिष्ठित यंत्र")] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Marquee, { words: [L$i("Vedic Birth Chart", "वैदिक कुंडली"), L$i("KP Prashna", "केपी प्रश्न"), L$i("Nadi Leaf Reading", "नाड़ी पट्टा"), L$i("Astro-Vastu", "एस्ट्रो-वास्तु"), L$i("Kundli Matching", "कुंडली मिलान"), L$i("Energized Yantras", "प्राण-प्रतिष्ठित यंत्र")] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "40px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(SectionHead, { eyebrow: t("Gallery", "गैलरी"), title: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
         t("Our work,", "हमारा काम,"),
@@ -48747,12 +48748,12 @@ function Home() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t("guidance on?", "मार्गदर्शन चाहिए?") })
       ] }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid reveal", style: { "--min": "320px", "--gap": "16px" }, children: [
-        ["/vedic-astrology", L$h("Career & business", "करियर और व्यापार"), L$h("Job or business? Which field, and when to make the change — read from your birth chart and dasha.", "नौकरी या व्यापार? कौन-सा क्षेत्र, और बदलाव कब करें — कुंडली और दशा से।"), L$h("Vedic birth chart consultation", "वैदिक कुंडली परामर्श")],
-        ["/kundli-milan", L$h("Marriage & matching", "विवाह और मिलान"), L$h("Guna milan, Manglik check and the right time for the wedding — before you say yes.", "गुण मिलान, मांगलिक जाँच और शादी का सही समय — हाँ कहने से पहले।"), L$h("Kundli matching", "कुंडली मिलान")],
-        ["/kp-prashna", L$h("One urgent question", "एक ज़रूरी सवाल"), L$h("Will I get the job, the visa, the property? A yes/no answer with timing — no birth time needed.", "नौकरी, वीज़ा, प्रॉपर्टी मिलेगी? समय के साथ हाँ/ना उत्तर — जन्म समय की ज़रूरत नहीं।"), L$h("KP Prashna", "केपी प्रश्न")],
-        ["/nadi-astrology", L$h("Your Nadi leaf", "आपका नाड़ी पट्टा"), L$h("Find your palm leaf from your thumb impression — at the Jaipur office or online from abroad.", "अंगूठे के निशान से अपना ताड़-पत्र खोजें — जयपुर ऑफिस में या विदेश से ऑनलाइन।"), L$h("Nadi palm leaf reading", "नाड़ी ताड़-पत्र रीडिंग")],
-        ["/online-vastu-consultation", L$h("Home, office & new property", "घर, ऑफिस और नई प्रॉपर्टी"), L$h("Send your floor plan for an Astro-Vastu report — remedies without demolition first.", "एस्ट्रो-वास्तु रिपोर्ट के लिए फ्लोर प्लान भेजें — पहले बिना तोड़-फोड़ उपाय।"), L$h("Online Vastu consultation", "ऑनलाइन वास्तु परामर्श")],
-        ["/yantra-shop", L$h("Remedies & yantras", "उपाय और यंत्र"), L$h("Energized yantras for wealth, business, planetary peace and protection, shipped worldwide.", "धन, व्यापार, ग्रह शांति और रक्षा के लिए प्राण-प्रतिष्ठित यंत्र, दुनिया भर में शिपिंग।"), L$h("Energized yantra shop", "प्राण-प्रतिष्ठित यंत्र शॉप")]
+        ["/vedic-astrology", L$i("Career & business", "करियर और व्यापार"), L$i("Job or business? Which field, and when to make the change — read from your birth chart and dasha.", "नौकरी या व्यापार? कौन-सा क्षेत्र, और बदलाव कब करें — कुंडली और दशा से।"), L$i("Vedic birth chart consultation", "वैदिक कुंडली परामर्श")],
+        ["/kundli-milan", L$i("Marriage & matching", "विवाह और मिलान"), L$i("Guna milan, Manglik check and the right time for the wedding — before you say yes.", "गुण मिलान, मांगलिक जाँच और शादी का सही समय — हाँ कहने से पहले।"), L$i("Kundli matching", "कुंडली मिलान")],
+        ["/kp-prashna", L$i("One urgent question", "एक ज़रूरी सवाल"), L$i("Will I get the job, the visa, the property? A yes/no answer with timing — no birth time needed.", "नौकरी, वीज़ा, प्रॉपर्टी मिलेगी? समय के साथ हाँ/ना उत्तर — जन्म समय की ज़रूरत नहीं।"), L$i("KP Prashna", "केपी प्रश्न")],
+        ["/nadi-astrology", L$i("Your Nadi leaf", "आपका नाड़ी पट्टा"), L$i("Find your palm leaf from your thumb impression — at the Jaipur office or online from abroad.", "अंगूठे के निशान से अपना ताड़-पत्र खोजें — जयपुर ऑफिस में या विदेश से ऑनलाइन।"), L$i("Nadi palm leaf reading", "नाड़ी ताड़-पत्र रीडिंग")],
+        ["/online-vastu-consultation", L$i("Home, office & new property", "घर, ऑफिस और नई प्रॉपर्टी"), L$i("Send your floor plan for an Astro-Vastu report — remedies without demolition first.", "एस्ट्रो-वास्तु रिपोर्ट के लिए फ्लोर प्लान भेजें — पहले बिना तोड़-फोड़ उपाय।"), L$i("Online Vastu consultation", "ऑनलाइन वास्तु परामर्श")],
+        ["/yantra-shop", L$i("Remedies & yantras", "उपाय और यंत्र"), L$i("Energized yantras for wealth, business, planetary peace and protection, shipped worldwide.", "धन, व्यापार, ग्रह शांति और रक्षा के लिए प्राण-प्रतिष्ठित यंत्र, दुनिया भर में शिपिंग।"), L$i("Energized yantra shop", "प्राण-प्रतिष्ठित यंत्र शॉप")]
       ].map(([to, h, d, a]) => /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to, className: "card", style: { padding: 26, gap: 10 }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "serif", style: { fontSize: 24, margin: 0, fontWeight: 500 }, children: t(h) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", style: { flex: 1 }, children: t(d) }),
@@ -48784,9 +48785,9 @@ function Home() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "44px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2 reveal", children: t("How it works", "कैसे काम करता है") }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Steps, { min: 260, items: [
-        [L$h("Choose a service and slot", "सेवा और स्लॉट चुनें"), L$h("A calendar in your own time zone. Office visit or video call.", "आपके टाइम ज़ोन में कैलेंडर। ऑफिस विज़िट या वीडियो कॉल।")],
-        [L$h("Send your details and pay", "जानकारी भेजें और भुगतान करें"), L$h("Birth details, thumb impression or floor plan. India: Razorpay · International: PayPal.", "जन्म विवरण, अंगूठे का निशान या फ्लोर प्लान। भारत: Razorpay · विदेश: PayPal।")],
-        [L$h("Consultation and recording", "परामर्श और रिकॉर्डिंग"), L$h("Speak directly with Pandit ji; a written summary of remedies follows on WhatsApp.", "पंडित जी से सीधी बात, उपायों का लिखित सारांश WhatsApp पर।")]
+        [L$i("Choose a service and slot", "सेवा और स्लॉट चुनें"), L$i("A calendar in your own time zone. Office visit or video call.", "आपके टाइम ज़ोन में कैलेंडर। ऑफिस विज़िट या वीडियो कॉल।")],
+        [L$i("Send your details and pay", "जानकारी भेजें और भुगतान करें"), L$i("Birth details, thumb impression or floor plan. India: Razorpay · International: PayPal.", "जन्म विवरण, अंगूठे का निशान या फ्लोर प्लान। भारत: Razorpay · विदेश: PayPal।")],
+        [L$i("Consultation and recording", "परामर्श और रिकॉर्डिंग"), L$i("Speak directly with Pandit ji; a written summary of remedies follows on WhatsApp.", "पंडित जी से सीधी बात, उपायों का लिखित सारांश WhatsApp पर।")]
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "40px" }, children: [
@@ -48831,6 +48832,16 @@ function Home() {
       ] }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid", style: { "--min": "280px" }, children: posts.map((p) => /* @__PURE__ */ jsxRuntimeExports.jsx(PostCard, { p }, p.slug)) })
     ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section-tight", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/rahu-kaal-jaipur", className: "card row between", style: { padding: "22px 26px", "--gap": "12px", alignItems: "center" }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "stack", style: { "--gap": "4px" }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "serif", style: { fontSize: 24 }, children: t("Rahu Kaal & Choghadiya today", "आज का राहु काल और चौघड़िया") }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "muted", children: t("Daily timings for Jaipur and other cities, from the actual sunrise and sunset.", "जयपुर और दूसरे शहरों के रोज़ के समय — असली सूर्योदय-सूर्यास्त से।") })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "link-arrow", children: [
+        t("See today’s timings", "आज का समय देखें"),
+        " →"
+      ] })
+    ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section-tight", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row", style: { "--gap": "20px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "reveal", style: { flex: "1 1 440px", border: "1px solid var(--line)", borderRadius: 4, padding: "var(--sp-box)", background: "var(--bg-2)", position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", gap: 20 }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { viewBox: "0 0 200 200", style: { position: "absolute", right: -60, top: -60, width: 260, opacity: 0.25 }, fill: "none", stroke: "#D9B26F", "aria-hidden": "true", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { className: "spin", children: [
@@ -48866,7 +48877,7 @@ function Home() {
         /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/book?service=vedic-60", className: "btn", style: { alignSelf: "flex-start" }, children: t("Book an office visit", "ऑफिस विज़िट बुक करें") })
       ] })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { id: "faq", title: L$h("Frequently Asked Questions", "अक्सर पूछे जाने वाले प्रश्न"), items: HOME_FAQ }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { id: "faq", title: L$i("Frequently Asked Questions", "अक्सर पूछे जाने वाले प्रश्न"), items: HOME_FAQ }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap z", style: { maxWidth: 860, paddingBottom: "var(--sp-section)", textAlign: "center" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/faq", className: "link-arrow", children: [
       t("See all questions", "सभी प्रश्न-उत्तर देखें"),
       " →"
@@ -48958,44 +48969,44 @@ function Field({ f, t }) {
     /* @__PURE__ */ jsxRuntimeExports.jsx("input", { name: f.name, type: f.type || "text", className: "input", required: f.required, min: f.min, max: f.max, defaultValue: f.defaultValue, onChange: f.onChange, value: f.value })
   ] });
 }
-const L$g = (en, hi) => ({ en, hi });
+const L$h = (en, hi) => ({ en, hi });
 const NADI_PHOTO = "https://fpimages.withfloats.com/actual/65a8e4aba3262caf1dc07ffe.jpeg";
 const KANDAMS = [
-  [L$g("Kandam 1 · General", "कांडम 1 · सामान्य"), L$g("The essence of your life", "जीवन का सार")],
-  [L$g("Kandam 2 · Family, wealth", "कांडम 2 · परिवार, धन"), L$g("Education and family", "शिक्षा और कुटुंब")],
-  [L$g("Kandam 7 · Marriage", "कांडम 7 · विवाह"), L$g("Marriage and life partner", "शादी और जीवनसाथी")],
-  [L$g("Kandam 10 · Career", "कांडम 10 · करियर"), L$g("Job and business", "नौकरी और व्यापार")],
-  [L$g("Kandam 12 · Foreign lands", "कांडम 12 · विदेश"), L$g("Expenses, travel, moksha", "खर्च, यात्रा, मोक्ष")],
-  [L$g("Kandam 13 · Shanti", "कांडम 13 · शांति"), L$g("Past karma and remedies", "पूर्व कर्म और उपाय")]
+  [L$h("Kandam 1 · General", "कांडम 1 · सामान्य"), L$h("The essence of your life", "जीवन का सार")],
+  [L$h("Kandam 2 · Family, wealth", "कांडम 2 · परिवार, धन"), L$h("Education and family", "शिक्षा और कुटुंब")],
+  [L$h("Kandam 7 · Marriage", "कांडम 7 · विवाह"), L$h("Marriage and life partner", "शादी और जीवनसाथी")],
+  [L$h("Kandam 10 · Career", "कांडम 10 · करियर"), L$h("Job and business", "नौकरी और व्यापार")],
+  [L$h("Kandam 12 · Foreign lands", "कांडम 12 · विदेश"), L$h("Expenses, travel, moksha", "खर्च, यात्रा, मोक्ष")],
+  [L$h("Kandam 13 · Shanti", "कांडम 13 · शांति"), L$h("Past karma and remedies", "पूर्व कर्म और उपाय")]
 ];
 const ALL_KANDAMS = [
-  L$g("1 · General — a summary of your whole life, with your name and family details", "1 · सामान्य — पूरे जीवन का सार, आपके नाम और परिवार के विवरण के साथ"),
-  L$g("2 · Family, wealth, education and speech", "2 · परिवार, धन, शिक्षा और वाणी"),
-  L$g("3 · Siblings, courage and effort", "3 · भाई-बहन, साहस और पराक्रम"),
-  L$g("4 · Mother, home, land, vehicles and comforts", "4 · माता, घर, ज़मीन, वाहन और सुख"),
-  L$g("5 · Children and their future", "5 · संतान और उनका भविष्य"),
-  L$g("6 · Health problems, debts, enemies and court cases", "6 · रोग, कर्ज़, शत्रु और कोर्ट-केस"),
-  L$g("7 · Marriage and life partner", "7 · विवाह और जीवनसाथी"),
-  L$g("8 · Longevity and accidents", "8 · आयु और दुर्घटनाएँ"),
-  L$g("9 · Father, fortune, spirituality and pilgrimages", "9 · पिता, भाग्य, आध्यात्म और तीर्थ"),
-  L$g("10 · Career, job and business", "10 · करियर, नौकरी और व्यापार"),
-  L$g("11 · Gains, profits and second marriage", "11 · लाभ, आय और दूसरा विवाह"),
-  L$g("12 · Expenses, foreign travel and settlement abroad, moksha", "12 · खर्च, विदेश यात्रा और विदेश में बसना, मोक्ष"),
-  L$g("13 · Shanti — past-life karma and the remedies for it", "13 · शांति — पूर्व जन्म के कर्म और उनके उपाय"),
-  L$g("14 · Deeksha — mantra and protection (raksha)", "14 · दीक्षा — मंत्र और रक्षा"),
-  L$g("15 · Aushadha — traditional medicine for illnesses", "15 · औषध — रोगों के लिए पारंपरिक औषधि"),
-  L$g("16 · Dasa-Bhukti — predictions period by period (planetary dashas)", "16 · दशा-भुक्ति — ग्रहों की दशा के अनुसार समय-समय की भविष्यवाणी")
+  L$h("1 · General — a summary of your whole life, with your name and family details", "1 · सामान्य — पूरे जीवन का सार, आपके नाम और परिवार के विवरण के साथ"),
+  L$h("2 · Family, wealth, education and speech", "2 · परिवार, धन, शिक्षा और वाणी"),
+  L$h("3 · Siblings, courage and effort", "3 · भाई-बहन, साहस और पराक्रम"),
+  L$h("4 · Mother, home, land, vehicles and comforts", "4 · माता, घर, ज़मीन, वाहन और सुख"),
+  L$h("5 · Children and their future", "5 · संतान और उनका भविष्य"),
+  L$h("6 · Health problems, debts, enemies and court cases", "6 · रोग, कर्ज़, शत्रु और कोर्ट-केस"),
+  L$h("7 · Marriage and life partner", "7 · विवाह और जीवनसाथी"),
+  L$h("8 · Longevity and accidents", "8 · आयु और दुर्घटनाएँ"),
+  L$h("9 · Father, fortune, spirituality and pilgrimages", "9 · पिता, भाग्य, आध्यात्म और तीर्थ"),
+  L$h("10 · Career, job and business", "10 · करियर, नौकरी और व्यापार"),
+  L$h("11 · Gains, profits and second marriage", "11 · लाभ, आय और दूसरा विवाह"),
+  L$h("12 · Expenses, foreign travel and settlement abroad, moksha", "12 · खर्च, विदेश यात्रा और विदेश में बसना, मोक्ष"),
+  L$h("13 · Shanti — past-life karma and the remedies for it", "13 · शांति — पूर्व जन्म के कर्म और उनके उपाय"),
+  L$h("14 · Deeksha — mantra and protection (raksha)", "14 · दीक्षा — मंत्र और रक्षा"),
+  L$h("15 · Aushadha — traditional medicine for illnesses", "15 · औषध — रोगों के लिए पारंपरिक औषधि"),
+  L$h("16 · Dasa-Bhukti — predictions period by period (planetary dashas)", "16 · दशा-भुक्ति — ग्रहों की दशा के अनुसार समय-समय की भविष्यवाणी")
 ];
 function Nadi() {
   const t = useT();
   const countries = useCountries();
   const price = usePrice();
   const { currency } = useApp();
-  const note = currency === "USD" ? L$g("for international clients · PayPal", "विदेशी क्लाइंट के लिए · PayPal") : L$g("India · Razorpay (UPI, card)", "भारत · Razorpay (UPI, कार्ड)");
-  const cta = { to: "#form", label: L$g("Book Nadi Reading", "नाड़ी रीडिंग बुक करें") };
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$g("Nadi Astrology: Palm Leaf Reading in Jaipur & Online", "नाड़ी ज्योतिष: जयपुर और ऑनलाइन ताड़-पत्र रीडिंग"), description: L$g("Nadi palm leaf reading by traditional Nadi readers, with Vedic/KP analysis and remedies by Pt. Rajneesh Sharma. Office visit in Jaipur or online video call.", "पारंपरिक नाड़ी रीडर्स द्वारा ताड़-पत्र रीडिंग, साथ में पं. रजनीश शर्मा का वैदिक/केपी विश्लेषण और उपाय। जयपुर ऑफिस या ऑनलाइन वीडियो कॉल।"), cta, disclaimer: DISCLAIMER.jyotish, seed: 11, children: [
+  const note = currency === "USD" ? L$h("for international clients · PayPal", "विदेशी क्लाइंट के लिए · PayPal") : L$h("India · Razorpay (UPI, card)", "भारत · Razorpay (UPI, कार्ड)");
+  const cta = { to: "#form", label: L$h("Book Nadi Reading", "नाड़ी रीडिंग बुक करें") };
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$h("Nadi Astrology: Palm Leaf Reading in Jaipur & Online", "नाड़ी ज्योतिष: जयपुर और ऑनलाइन ताड़-पत्र रीडिंग"), description: L$h("Nadi palm leaf reading by traditional Nadi readers, with Vedic/KP analysis and remedies by Pt. Rajneesh Sharma. Office visit in Jaipur or online video call.", "पारंपरिक नाड़ी रीडर्स द्वारा ताड़-पत्र रीडिंग, साथ में पं. रजनीश शर्मा का वैदिक/केपी विश्लेषण और उपाय। जयपुर ऑफिस या ऑनलाइन वीडियो कॉल।"), cta, disclaimer: DISCLAIMER.jyotish, seed: 11, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide stack", style: { "--gap": "36px" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$g("Nadi Astrology", "नाड़ी ज्योतिष") }] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$h("Nadi Astrology", "नाड़ी ज्योतिष") }] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-row", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-text rise", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
@@ -49042,9 +49053,9 @@ function Nadi() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t("Once the leaf is found, it is read chapter by chapter (kandam) — general life, career, marriage, health, foreign travel, and the Shanti kandam with remedies for past karma. Pt. Rajneesh Sharma, a Vedic and KP astrologer in Jaipur, then checks what the leaf says against your birth chart and current dasha, so you get both: the Nadi reading and a clear, practical plan with remedies and timing.", "पट्टा मिलने के बाद उसे अध्याय (कांडम) के अनुसार पढ़ा जाता है — सामान्य जीवन, करियर, विवाह, स्वास्थ्य, विदेश यात्रा, और शांति कांडम जिसमें पूर्व कर्मों के उपाय होते हैं। इसके बाद जयपुर के वैदिक और केपी ज्योतिषी पं. रजनीश शर्मा पट्टे की बातों को आपकी कुंडली और चल रही दशा से मिलाकर देखते हैं, ताकि आपको दोनों मिलें: नाड़ी रीडिंग और उपाय व समय के साथ एक साफ़, व्यावहारिक योजना।") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid reveal", style: { "--min": "240px", "--gap": "16px" }, children: [
-        [L$g("Nadi reading in Jaipur", "जयपुर में नाड़ी रीडिंग"), L$g("Come to the office in Jaipur, give your thumb impression and sit through the reading with a translator.", "जयपुर ऑफिस आएँ, अंगूठे का निशान दें और अनुवादक के साथ रीडिंग में बैठें।")],
-        [L$g("Online Nadi reading", "ऑनलाइन नाड़ी रीडिंग"), L$g("From anywhere in India or abroad: upload a thumb photo and join the reading on a video call.", "भारत या विदेश में कहीं से भी: अंगूठे की फोटो अपलोड करें और वीडियो कॉल पर रीडिंग में जुड़ें।")],
-        [L$g("Reading + astrology", "रीडिंग + ज्योतिष"), L$g("The leaf reading is cross-checked with Vedic/KP astrology, so remedies and timing are practical.", "पट्टे की रीडिंग को वैदिक/केपी ज्योतिष से मिलाया जाता है, ताकि उपाय और समय व्यावहारिक हों।")]
+        [L$h("Nadi reading in Jaipur", "जयपुर में नाड़ी रीडिंग"), L$h("Come to the office in Jaipur, give your thumb impression and sit through the reading with a translator.", "जयपुर ऑफिस आएँ, अंगूठे का निशान दें और अनुवादक के साथ रीडिंग में बैठें।")],
+        [L$h("Online Nadi reading", "ऑनलाइन नाड़ी रीडिंग"), L$h("From anywhere in India or abroad: upload a thumb photo and join the reading on a video call.", "भारत या विदेश में कहीं से भी: अंगूठे की फोटो अपलोड करें और वीडियो कॉल पर रीडिंग में जुड़ें।")],
+        [L$h("Reading + astrology", "रीडिंग + ज्योतिष"), L$h("The leaf reading is cross-checked with Vedic/KP astrology, so remedies and timing are practical.", "पट्टे की रीडिंग को वैदिक/केपी ज्योतिष से मिलाया जाता है, ताकि उपाय और समय व्यावहारिक हों।")]
       ].map(([h, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card", style: { padding: 26, gap: 8 }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "serif", style: { fontSize: 24, margin: 0, fontWeight: 500 }, children: t(h) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", children: t(d) })
@@ -49057,10 +49068,10 @@ function Nadi() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t("4 Steps", "4 चरण") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Steps, { items: [
-        [L$g("Send your thumb impression", "अंगूठे का निशान भेजें"), L$g("Men: right thumb · Women: left thumb. Upload online or give it at the office.", "पुरुष: दायाँ अंगूठा · महिला: बायाँ। ऑनलाइन अपलोड या ऑफिस में।")],
-        [L$g("Your leaf is searched for", "पट्टा खोजा जाता है"), L$g("The Nadi reader asks questions; you simply answer yes or no.", "नाड़ी रीडर प्रश्न पूछते हैं, आप सिर्फ़ हाँ या ना कहते हैं।")],
-        [L$g("Your leaf is read", "पट्टा पढ़ा जाता है"), L$g("On a video call or at the office, with translation. You receive the recording.", "वीडियो कॉल या ऑफिस में, अनुवाद के साथ। रिकॉर्डिंग मिलती है।")],
-        [L$g("Pandit ji’s analysis", "पंडित जी का विश्लेषण"), L$g("Vedic/KP analysis with your birth chart, remedies and yantra advice.", "कुंडली के साथ वैदिक/केपी विश्लेषण, उपाय और यंत्र सलाह।")]
+        [L$h("Send your thumb impression", "अंगूठे का निशान भेजें"), L$h("Men: right thumb · Women: left thumb. Upload online or give it at the office.", "पुरुष: दायाँ अंगूठा · महिला: बायाँ। ऑनलाइन अपलोड या ऑफिस में।")],
+        [L$h("Your leaf is searched for", "पट्टा खोजा जाता है"), L$h("The Nadi reader asks questions; you simply answer yes or no.", "नाड़ी रीडर प्रश्न पूछते हैं, आप सिर्फ़ हाँ या ना कहते हैं।")],
+        [L$h("Your leaf is read", "पट्टा पढ़ा जाता है"), L$h("On a video call or at the office, with translation. You receive the recording.", "वीडियो कॉल या ऑफिस में, अनुवाद के साथ। रिकॉर्डिंग मिलती है।")],
+        [L$h("Pandit ji’s analysis", "पंडित जी का विश्लेषण"), L$h("Vedic/KP analysis with your birth chart, remedies and yantra advice.", "कुंडली के साथ वैदिक/केपी विश्लेषण, उपाय और यंत्र सलाह।")]
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "36px" }, children: [
@@ -49084,9 +49095,9 @@ function Nadi() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "40px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2 reveal", children: t("Packages & Fees", "पैकेज और फ़ीस") }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid reveal", style: { "--min": "280px" }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$g("General (Kandam 1)", "सामान्य (कांडम 1)"), price: price(null, null), sub: note, points: [L$g("Leaf search + general reading", "पट्टा खोज + सामान्य रीडिंग"), L$g("Recording", "रिकॉर्डिंग")] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { featured: true, badge: L$g("RECOMMENDED", "सुझाया गया"), title: L$g("General + 2 Kandams + Analysis", "सामान्य + 2 कांडम + विश्लेषण"), price: price(null, null), sub: note, points: [L$g("2 kandams of your choice", "आपकी पसंद के 2 कांडम"), L$g("Vedic/KP analysis by Pt. Rajneesh Sharma", "पं. रजनीश शर्मा का वैदिक/केपी विश्लेषण"), L$g("Written summary of remedies", "उपायों का लिखित सारांश")] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$g("Shanti Kandam (remedies)", "शांति कांडम (उपाय)"), price: price(null, null), sub: note, points: [L$g("Past karma and traditional remedies", "पूर्व कर्म और पारंपरिक उपाय"), L$g("Yantra advice", "यंत्र सलाह")] })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$h("General (Kandam 1)", "सामान्य (कांडम 1)"), price: price(null, null), sub: note, points: [L$h("Leaf search + general reading", "पट्टा खोज + सामान्य रीडिंग"), L$h("Recording", "रिकॉर्डिंग")] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { featured: true, badge: L$h("RECOMMENDED", "सुझाया गया"), title: L$h("General + 2 Kandams + Analysis", "सामान्य + 2 कांडम + विश्लेषण"), price: price(null, null), sub: note, points: [L$h("2 kandams of your choice", "आपकी पसंद के 2 कांडम"), L$h("Vedic/KP analysis by Pt. Rajneesh Sharma", "पं. रजनीश शर्मा का वैदिक/केपी विश्लेषण"), L$h("Written summary of remedies", "उपायों का लिखित सारांश")] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$h("Shanti Kandam (remedies)", "शांति कांडम (उपाय)"), price: price(null, null), sub: note, points: [L$h("Past karma and traditional remedies", "पूर्व कर्म और पारंपरिक उपाय"), L$h("Yantra advice", "यंत्र सलाह")] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", style: { fontSize: 14 }, children: t("If no leaf is found, ask on WhatsApp about the refund terms before you book. India: Razorpay (UPI, card) · International: PayPal.", "पट्टा न मिले तो क्या होगा, यह बुकिंग से पहले WhatsApp पर पूछ लें। भारत: Razorpay (UPI, कार्ड) · विदेश: PayPal।") })
     ] }) }),
@@ -49094,22 +49105,22 @@ function Nadi() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         BookingForm,
         {
-          title: L$g("Send your thumb impression and details", "अंगूठे का निशान और जानकारी भेजें"),
+          title: L$h("Send your thumb impression and details", "अंगूठे का निशान और जानकारी भेजें"),
           services: [
-            { value: "nadi-general-2-kandam", label: L$g("General + 2 Kandams + Analysis", "सामान्य + 2 कांडम + विश्लेषण") },
-            { value: "nadi-general", label: L$g("General (Kandam 1)", "सामान्य (कांडम 1)") },
-            { value: "nadi-shanti", label: L$g("Shanti Kandam (remedies)", "शांति कांडम (उपाय)") }
+            { value: "nadi-general-2-kandam", label: L$h("General + 2 Kandams + Analysis", "सामान्य + 2 कांडम + विश्लेषण") },
+            { value: "nadi-general", label: L$h("General (Kandam 1)", "सामान्य (कांडम 1)") },
+            { value: "nadi-shanti", label: L$h("Shanti Kandam (remedies)", "शांति कांडम (उपाय)") }
           ],
           fields: [
-            { name: "name", label: L$g("Full name", "पूरा नाम"), required: true },
-            { name: "phone", label: L$g("WhatsApp number", "WhatsApp नंबर"), type: "tel", required: true },
-            { name: "gender", label: L$g("Gender", "लिंग"), type: "select", options: [{ value: "purush", label: L$g("Male", "पुरुष") }, { value: "mahila", label: L$g("Female", "महिला") }] },
-            { name: "country", label: L$g("Country", "देश") },
-            { name: "thumbImpression", label: L$g("Thumb impression photo", "अंगूठे के निशान की फोटो"), type: "file", full: true, icon: "thumb", accept: "image/*", hint: L$g("Upload a photo (Men: right thumb · Women: left thumb)", "फोटो अपलोड करें (पुरुष: दायाँ · महिला: बायाँ)") }
+            { name: "name", label: L$h("Full name", "पूरा नाम"), required: true },
+            { name: "phone", label: L$h("WhatsApp number", "WhatsApp नंबर"), type: "tel", required: true },
+            { name: "gender", label: L$h("Gender", "लिंग"), type: "select", options: [{ value: "purush", label: L$h("Male", "पुरुष") }, { value: "mahila", label: L$h("Female", "महिला") }] },
+            { name: "country", label: L$h("Country", "देश") },
+            { name: "thumbImpression", label: L$h("Thumb impression photo", "अंगूठे के निशान की फोटो"), type: "file", full: true, icon: "thumb", accept: "image/*", hint: L$h("Upload a photo (Men: right thumb · Women: left thumb)", "फोटो अपलोड करें (पुरुष: दायाँ · महिला: बायाँ)") }
           ]
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(ClientQuote, { label: L$g("Nadi client video testimonial", "नाड़ी क्लाइंट का वीडियो अनुभव") })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(ClientQuote, { label: L$h("Nadi client video testimonial", "नाड़ी क्लाइंट का वीडियो अनुभव") })
     ] }) }),
     countries.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section-tight", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "24px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "stack reveal", style: { "--gap": "10px" }, children: [
@@ -49129,14 +49140,14 @@ function Nadi() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "serif", style: { fontSize: 24 }, children: t(c.name, c.nameHi || null) })
       ] }, c.slug)) })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$g("Nadi Astrology FAQ", "नाड़ी ज्योतिष — प्रश्न-उत्तर"), items: [
-      [L$g("Is a leaf found for everyone?", "क्या हर व्यक्ति का पट्टा मिलता है?"), L$g("Not everyone has a leaf. Please ask on WhatsApp about the refund terms before you book.", "हर व्यक्ति का पट्टा होना ज़रूरी नहीं। बुकिंग से पहले WhatsApp पर रिफंड की शर्तें पूछ लें।")],
-      [L$g("Is an online reading as accurate as one at the office?", "क्या ऑनलाइन रीडिंग ऑफिस जितनी ही सही होती है?"), L$g("Yes. The leaf is searched from your thumb impression, so the process is the same — you answer the reader’s yes/no questions live on the video call, and you receive the recording.", "हाँ। पट्टा अंगूठे के निशान से खोजा जाता है, इसलिए प्रक्रिया वही रहती है — आप वीडियो कॉल पर लाइव रीडर के हाँ/ना वाले सवालों का जवाब देते हैं, और रिकॉर्डिंग आपको मिलती है।")],
-      [L$g("Who reads the leaf, and what is Pandit ji’s role?", "पट्टा कौन पढ़ता है और पंडित जी की भूमिका क्या है?"), L$g("Traditional Nadi readers read the leaf; Pandit ji interprets it alongside your birth chart and suggests remedies.", "पट्टा पारंपरिक नाड़ी रीडर पढ़ते हैं; पंडित जी कुंडली के साथ विश्लेषण और उपाय बताते हैं।")],
-      [L$g("Do I need my birth time or birth chart for a Nadi reading?", "क्या नाड़ी रीडिंग के लिए जन्म समय या कुंडली चाहिए?"), L$g("No. The leaf is found from the thumb impression alone. If you know your birth details, Pandit ji also uses them for the Vedic/KP analysis.", "नहीं। पट्टा सिर्फ़ अंगूठे के निशान से मिलता है। जन्म विवरण पता हो तो पंडित जी उसे वैदिक/केपी विश्लेषण में भी इस्तेमाल करते हैं।")],
-      [L$g("Which thumb impression should I send?", "किस अंगूठे का निशान भेजें?"), L$g("Men send the right thumb and women the left thumb. Press the thumb on an ink pad, roll it gently on white paper, and send a clear, well-lit photo.", "पुरुष दाएँ और महिलाएँ बाएँ अंगूठे का निशान भेजें। अंगूठे को स्याही पैड पर लगाकर सफ़ेद कागज़ पर हल्का घुमाएँ, और साफ़, अच्छी रोशनी में फोटो भेजें।")],
-      [L$g("In which language is the leaf read?", "पट्टा किस भाषा में पढ़ा जाता है?"), L$g("The leaves are written in old Tamil. The reader reads them in Tamil and it is translated into Hindi or English for you during the session.", "पत्र पुरानी तमिल में लिखे होते हैं। रीडर तमिल में पढ़ते हैं और सत्र के दौरान आपके लिए हिंदी या अंग्रेज़ी में अनुवाद किया जाता है।")],
-      [L$g("What is the Shanti kandam?", "शांति कांडम क्या है?"), L$g("Kandam 13 describes karma from past lives that is said to cause present problems, and the traditional remedies for it — pooja, mantra, temple visits and charity.", "कांडम 13 में पूर्व जन्म के उन कर्मों का वर्णन होता है जिन्हें वर्तमान समस्याओं का कारण माना जाता है, और उनके पारंपरिक उपाय — पूजा, मंत्र, मंदिर दर्शन और दान।")]
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$h("Nadi Astrology FAQ", "नाड़ी ज्योतिष — प्रश्न-उत्तर"), items: [
+      [L$h("Is a leaf found for everyone?", "क्या हर व्यक्ति का पट्टा मिलता है?"), L$h("Not everyone has a leaf. Please ask on WhatsApp about the refund terms before you book.", "हर व्यक्ति का पट्टा होना ज़रूरी नहीं। बुकिंग से पहले WhatsApp पर रिफंड की शर्तें पूछ लें।")],
+      [L$h("Is an online reading as accurate as one at the office?", "क्या ऑनलाइन रीडिंग ऑफिस जितनी ही सही होती है?"), L$h("Yes. The leaf is searched from your thumb impression, so the process is the same — you answer the reader’s yes/no questions live on the video call, and you receive the recording.", "हाँ। पट्टा अंगूठे के निशान से खोजा जाता है, इसलिए प्रक्रिया वही रहती है — आप वीडियो कॉल पर लाइव रीडर के हाँ/ना वाले सवालों का जवाब देते हैं, और रिकॉर्डिंग आपको मिलती है।")],
+      [L$h("Who reads the leaf, and what is Pandit ji’s role?", "पट्टा कौन पढ़ता है और पंडित जी की भूमिका क्या है?"), L$h("Traditional Nadi readers read the leaf; Pandit ji interprets it alongside your birth chart and suggests remedies.", "पट्टा पारंपरिक नाड़ी रीडर पढ़ते हैं; पंडित जी कुंडली के साथ विश्लेषण और उपाय बताते हैं।")],
+      [L$h("Do I need my birth time or birth chart for a Nadi reading?", "क्या नाड़ी रीडिंग के लिए जन्म समय या कुंडली चाहिए?"), L$h("No. The leaf is found from the thumb impression alone. If you know your birth details, Pandit ji also uses them for the Vedic/KP analysis.", "नहीं। पट्टा सिर्फ़ अंगूठे के निशान से मिलता है। जन्म विवरण पता हो तो पंडित जी उसे वैदिक/केपी विश्लेषण में भी इस्तेमाल करते हैं।")],
+      [L$h("Which thumb impression should I send?", "किस अंगूठे का निशान भेजें?"), L$h("Men send the right thumb and women the left thumb. Press the thumb on an ink pad, roll it gently on white paper, and send a clear, well-lit photo.", "पुरुष दाएँ और महिलाएँ बाएँ अंगूठे का निशान भेजें। अंगूठे को स्याही पैड पर लगाकर सफ़ेद कागज़ पर हल्का घुमाएँ, और साफ़, अच्छी रोशनी में फोटो भेजें।")],
+      [L$h("In which language is the leaf read?", "पट्टा किस भाषा में पढ़ा जाता है?"), L$h("The leaves are written in old Tamil. The reader reads them in Tamil and it is translated into Hindi or English for you during the session.", "पत्र पुरानी तमिल में लिखे होते हैं। रीडर तमिल में पढ़ते हैं और सत्र के दौरान आपके लिए हिंदी या अंग्रेज़ी में अनुवाद किया जाता है।")],
+      [L$h("What is the Shanti kandam?", "शांति कांडम क्या है?"), L$h("Kandam 13 describes karma from past lives that is said to cause present problems, and the traditional remedies for it — pooja, mantra, temple visits and charity.", "कांडम 13 में पूर्व जन्म के उन कर्मों का वर्णन होता है जिन्हें वर्तमान समस्याओं का कारण माना जाता है, और उनके पारंपरिक उपाय — पूजा, मंत्र, मंदिर दर्शन और दान।")]
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row z", style: { "--gap": "10px 20px", fontSize: 14, color: "var(--muted)", paddingBottom: "var(--sp-section)", maxWidth: 860 }, children: [
       t("Related:", "संबंधित:"),
@@ -49150,15 +49161,15 @@ function Nadi() {
     ] })
   ] });
 }
-const L$f = (en, hi) => ({ en, hi });
+const L$g = (en, hi) => ({ en, hi });
 const PLANETS = [["Su · Bu", 300, 220], ["Ma", 215, 165], ["Gu", 385, 165], ["Sa", 170, 305], ["Ra", 430, 305], ["Ch · Sh", 300, 395], ["Ke", 215, 445]];
 function Vedic() {
   const t = useT();
   const price = usePrice();
-  const cta = { to: "#form", label: L$f("Book Birth Chart Consultation", "कुंडली परामर्श बुक करें") };
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$f("Vedic Astrologer in Jaipur: Birth Chart Consultation", "जयपुर में वैदिक ज्योतिषी: कुंडली परामर्श"), description: L$f("Vedic birth chart consultation with Pt. Rajneesh Sharma, Jaipur — career, marriage, business, dasha periods and remedies. 30 or 60 minutes, office visit or video call.", "पं. रजनीश शर्मा, जयपुर से वैदिक कुंडली परामर्श — करियर, शादी, व्यापार, दशा और उपाय। 30 या 60 मिनट, ऑफिस विज़िट या वीडियो कॉल।"), cta, disclaimer: DISCLAIMER.default, seed: 23, children: [
+  const cta = { to: "#form", label: L$g("Book Birth Chart Consultation", "कुंडली परामर्श बुक करें") };
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$g("Vedic Astrologer in Jaipur: Birth Chart Consultation", "जयपुर में वैदिक ज्योतिषी: कुंडली परामर्श"), description: L$g("Vedic birth chart consultation with Pt. Rajneesh Sharma, Jaipur — career, marriage, business, dasha periods and remedies. 30 or 60 minutes, office visit or video call.", "पं. रजनीश शर्मा, जयपुर से वैदिक कुंडली परामर्श — करियर, शादी, व्यापार, दशा और उपाय। 30 या 60 मिनट, ऑफिस विज़िट या वीडियो कॉल।"), cta, disclaimer: DISCLAIMER.default, seed: 23, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide stack", style: { "--gap": "36px" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$f("Vedic Astrology", "वैदिक ज्योतिष") }] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$g("Vedic Astrology", "वैदिक ज्योतिष") }] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-row", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-text rise", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
@@ -49199,9 +49210,9 @@ function Vedic() {
           t("Who it’s for", "किसके लिए")
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2", style: { fontSize: "clamp(32px,3.6vw,48px)" }, children: t("When the decision is a big one.", "जब फ़ैसला बड़ा हो।") }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "row", style: { "--gap": "10px" }, children: [L$f("Career", "करियर"), L$f("Marriage", "शादी"), L$f("Business", "व्यापार"), L$f("Life direction", "जीवन की दिशा")].map((c) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chip", style: { fontSize: 15, padding: "12px 20px" }, children: t(c) }, c.en)) })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "row", style: { "--gap": "10px" }, children: [L$g("Career", "करियर"), L$g("Marriage", "शादी"), L$g("Business", "व्यापार"), L$g("Life direction", "जीवन की दिशा")].map((c) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chip", style: { fontSize: 15, padding: "12px 20px" }, children: t(c) }, c.en)) })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hairline reveal", style: { flex: "1.3 1 480px", "--min": "200px" }, children: [["I", L$f("Chart analysis", "कुंडली विश्लेषण"), L$f("Analysis of the ascendant, planets and houses", "लग्न, ग्रह और भाव का विश्लेषण")], ["II", L$f("Dasha", "दशा"), L$f("Which period you are in now, and what comes next", "अभी कौन-सा समय चल रहा है, आगे क्या")], ["III", L$f("Remedies", "उपाय"), L$f("Remedies and guidance rooted in the shastras", "शास्त्र-आधारित उपाय और मार्गदर्शन")], ["IV", L$f("Recording", "रिकॉर्डिंग"), L$f("Call recording and a written summary on WhatsApp", "कॉल की रिकॉर्डिंग और लिखित सारांश WhatsApp पर")]].map(([n, head, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { padding: "30px 26px", gap: 10 }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hairline reveal", style: { flex: "1.3 1 480px", "--min": "200px" }, children: [["I", L$g("Chart analysis", "कुंडली विश्लेषण"), L$g("Analysis of the ascendant, planets and houses", "लग्न, ग्रह और भाव का विश्लेषण")], ["II", L$g("Dasha", "दशा"), L$g("Which period you are in now, and what comes next", "अभी कौन-सा समय चल रहा है, आगे क्या")], ["III", L$g("Remedies", "उपाय"), L$g("Remedies and guidance rooted in the shastras", "शास्त्र-आधारित उपाय और मार्गदर्शन")], ["IV", L$g("Recording", "रिकॉर्डिंग"), L$g("Call recording and a written summary on WhatsApp", "कॉल की रिकॉर्डिंग और लिखित सारांश WhatsApp पर")]].map(([n, head, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { padding: "30px 26px", gap: 10 }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "big-num", style: { fontSize: 40 }, children: n }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { fontSize: 18, fontWeight: 600 }, children: t(head) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "muted", style: { fontSize: 14, lineHeight: 1.6 }, children: t(d) })
@@ -49219,10 +49230,10 @@ function Vedic() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t("In a consultation with Pt. Rajneesh Sharma, the birth chart (D-1) is read together with divisional charts such as the Navamsha (D-9) for marriage and the Dashamsha (D-10) for career, the current dasha and the transits of Saturn and Jupiter. You get clear answers to your questions and simple remedies — mantra, daan, gemstone guidance or a yantra — only where they are really needed.", "पं. रजनीश शर्मा के साथ परामर्श में जन्म कुंडली (D-1) को विभागीय कुंडलियों के साथ पढ़ा जाता है — विवाह के लिए नवांश (D-9) और करियर के लिए दशमांश (D-10) — साथ में चल रही दशा और शनि व गुरु का गोचर। आपको अपने प्रश्नों के साफ़ उत्तर और सरल उपाय मिलते हैं — मंत्र, दान, रत्न सलाह या यंत्र — केवल वहीं जहाँ सच में ज़रूरत हो।") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid reveal", style: { "--min": "190px", "--gap": "16px" }, children: [
-        [L$f("Career & business", "करियर और व्यापार"), L$f("Job or business, the right field, promotion and job-change timing from the 10th house and D-10.", "नौकरी या व्यापार, सही क्षेत्र, प्रमोशन और नौकरी बदलने का समय — दशम भाव और D-10 से।")],
-        [L$f("Marriage & relationships", "विवाह और संबंध"), L$f("When marriage is likely, the nature of the partner, Manglik dosha and delays — from the 7th house and Navamsha.", "विवाह कब संभव, जीवनसाथी का स्वभाव, मांगलिक दोष और देरी — सप्तम भाव और नवांश से।")],
-        [L$f("Health & family", "स्वास्थ्य और परिवार"), L$f("Sensitive periods for health, children, parents and property.", "स्वास्थ्य, संतान, माता-पिता और संपत्ति के लिए संवेदनशील समय।")],
-        [L$f("Sade Sati & doshas", "साढ़ेसाती और दोष"), L$f("Shani Sade Sati, Kaal Sarp, Pitra dosha — what they really mean in your chart, without fear.", "शनि साढ़ेसाती, कालसर्प, पितृ दोष — आपकी कुंडली में इनका असली अर्थ, बिना डर के।")]
+        [L$g("Career & business", "करियर और व्यापार"), L$g("Job or business, the right field, promotion and job-change timing from the 10th house and D-10.", "नौकरी या व्यापार, सही क्षेत्र, प्रमोशन और नौकरी बदलने का समय — दशम भाव और D-10 से।")],
+        [L$g("Marriage & relationships", "विवाह और संबंध"), L$g("When marriage is likely, the nature of the partner, Manglik dosha and delays — from the 7th house and Navamsha.", "विवाह कब संभव, जीवनसाथी का स्वभाव, मांगलिक दोष और देरी — सप्तम भाव और नवांश से।")],
+        [L$g("Health & family", "स्वास्थ्य और परिवार"), L$g("Sensitive periods for health, children, parents and property.", "स्वास्थ्य, संतान, माता-पिता और संपत्ति के लिए संवेदनशील समय।")],
+        [L$g("Sade Sati & doshas", "साढ़ेसाती और दोष"), L$g("Shani Sade Sati, Kaal Sarp, Pitra dosha — what they really mean in your chart, without fear.", "शनि साढ़ेसाती, कालसर्प, पितृ दोष — आपकी कुंडली में इनका असली अर्थ, बिना डर के।")]
       ].map(([h, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card", style: { padding: 24, gap: 8 }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "serif", style: { fontSize: 22, margin: 0, fontWeight: 500 }, children: t(h) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", children: t(d) })
@@ -49231,47 +49242,47 @@ function Vedic() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "packages", className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "40px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2 reveal", children: t("Packages & Fees", "पैकेज और फ़ीस") }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid reveal", style: { "--min": "280px" }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { kicker: L$f("30 MIN · OFFICE OR VIDEO CALL", "30 मिनट · ऑफिस या वीडियो कॉल"), title: L$f("Vedic Birth Chart — 30 min", "वैदिक कुंडली — 30 मिनट"), price: price(null, null), points: [L$f("1–2 main questions", "1–2 मुख्य प्रश्न"), L$f("Dasha and remedies", "दशा और उपाय"), L$f("Recording", "रिकॉर्डिंग")] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { featured: true, kicker: L$f("60 MIN · OFFICE OR VIDEO CALL", "60 मिनट · ऑफिस या वीडियो कॉल"), title: L$f("Vedic Birth Chart — 60 min", "वैदिक कुंडली — 60 मिनट"), price: price(null, null), points: [L$f("Full birth chart analysis", "पूरी कुंडली का विश्लेषण"), L$f("Career, marriage, business, dasha", "करियर, शादी, व्यापार, दशा"), L$f("Remedies + recording + written summary", "उपाय + रिकॉर्डिंग + लिखित सारांश")] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { kicker: L$f("BEFORE MARRIAGE", "शादी से पहले"), title: L$f("Kundli Matching", "कुंडली मिलान"), price: price(null, null), points: [L$f("Report + 20 min call", "रिपोर्ट + 20 मिनट कॉल"), L$f("Guna milan, Manglik check", "गुण मिलान, मांगलिक जाँच"), L$f("Guidance", "मार्गदर्शन")], to: "/kundli-milan", cta: L$f("View Kundli Matching", "कुंडली मिलान देखें") })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { kicker: L$g("30 MIN · OFFICE OR VIDEO CALL", "30 मिनट · ऑफिस या वीडियो कॉल"), title: L$g("Vedic Birth Chart — 30 min", "वैदिक कुंडली — 30 मिनट"), price: price(null, null), points: [L$g("1–2 main questions", "1–2 मुख्य प्रश्न"), L$g("Dasha and remedies", "दशा और उपाय"), L$g("Recording", "रिकॉर्डिंग")] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { featured: true, kicker: L$g("60 MIN · OFFICE OR VIDEO CALL", "60 मिनट · ऑफिस या वीडियो कॉल"), title: L$g("Vedic Birth Chart — 60 min", "वैदिक कुंडली — 60 मिनट"), price: price(null, null), points: [L$g("Full birth chart analysis", "पूरी कुंडली का विश्लेषण"), L$g("Career, marriage, business, dasha", "करियर, शादी, व्यापार, दशा"), L$g("Remedies + recording + written summary", "उपाय + रिकॉर्डिंग + लिखित सारांश")] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { kicker: L$g("BEFORE MARRIAGE", "शादी से पहले"), title: L$g("Kundli Matching", "कुंडली मिलान"), price: price(null, null), points: [L$g("Report + 20 min call", "रिपोर्ट + 20 मिनट कॉल"), L$g("Guna milan, Manglik check", "गुण मिलान, मांगलिक जाँच"), L$g("Guidance", "मार्गदर्शन")], to: "/kundli-milan", cta: L$g("View Kundli Matching", "कुंडली मिलान देखें") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", style: { fontSize: 14 }, children: t("India: Razorpay (UPI, card, netbanking) · International: PayPal (USD).", "भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग) · विदेश: PayPal (USD)।") })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "44px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2 reveal", children: t("How it works", "कैसे काम करता है") }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Steps, { min: 260, items: [
-        [L$f("Choose a service and slot", "सेवा और स्लॉट चुनें"), L$f("A calendar in your own time zone. Office visit or video call.", "आपके टाइम ज़ोन में कैलेंडर। ऑफिस विज़िट या वीडियो कॉल।")],
-        [L$f("Birth details and payment", "जन्म विवरण और भुगतान"), L$f("Date, time and place of birth, and your question. India: Razorpay · International: PayPal.", "जन्म तिथि, समय, स्थान और आपका प्रश्न। भारत: Razorpay · विदेश: PayPal।")],
-        [L$f("Consultation and recording", "परामर्श और रिकॉर्डिंग"), L$f("Speak directly with Pandit ji; a written summary of remedies follows on WhatsApp.", "पंडित जी से सीधी बात, उपायों का लिखित सारांश WhatsApp पर।")]
+        [L$g("Choose a service and slot", "सेवा और स्लॉट चुनें"), L$g("A calendar in your own time zone. Office visit or video call.", "आपके टाइम ज़ोन में कैलेंडर। ऑफिस विज़िट या वीडियो कॉल।")],
+        [L$g("Birth details and payment", "जन्म विवरण और भुगतान"), L$g("Date, time and place of birth, and your question. India: Razorpay · International: PayPal.", "जन्म तिथि, समय, स्थान और आपका प्रश्न। भारत: Razorpay · विदेश: PayPal।")],
+        [L$g("Consultation and recording", "परामर्श और रिकॉर्डिंग"), L$g("Speak directly with Pandit ji; a written summary of remedies follows on WhatsApp.", "पंडित जी से सीधी बात, उपायों का लिखित सारांश WhatsApp पर।")]
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "form", className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row", style: { "--gap": "48px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         BookingForm,
         {
-          title: L$f("Send your birth details", "जन्म विवरण भेजें"),
-          submitLabel: L$f("Choose a slot and pay", "स्लॉट चुनें और भुगतान करें"),
+          title: L$g("Send your birth details", "जन्म विवरण भेजें"),
+          submitLabel: L$g("Choose a slot and pay", "स्लॉट चुनें और भुगतान करें"),
           services: [
-            { value: "vedic-60", label: L$f("Vedic Birth Chart — 60 min", "वैदिक कुंडली — 60 मिनट") },
-            { value: "vedic-30", label: L$f("Vedic Birth Chart — 30 min", "वैदिक कुंडली — 30 मिनट") },
-            { value: "kundli-milan", label: L$f("Kundli Matching", "कुंडली मिलान") }
+            { value: "vedic-60", label: L$g("Vedic Birth Chart — 60 min", "वैदिक कुंडली — 60 मिनट") },
+            { value: "vedic-30", label: L$g("Vedic Birth Chart — 30 min", "वैदिक कुंडली — 30 मिनट") },
+            { value: "kundli-milan", label: L$g("Kundli Matching", "कुंडली मिलान") }
           ],
           fields: [
-            { name: "name", label: L$f("Full name", "पूरा नाम"), required: true },
-            { name: "phone", label: L$f("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
-            { name: "dob", label: L$f("Date of birth", "जन्म तिथि"), type: "date" },
-            { name: "tob", label: L$f("Time of birth", "जन्म समय"), type: "time" },
-            { name: "pob", label: L$f("Place of birth", "जन्म स्थान") },
-            { name: "mode", label: L$f("How would you like to meet?", "कैसे मिलना है"), type: "select", options: [{ value: "video", label: L$f("Video call", "वीडियो कॉल") }, { value: "office", label: L$f("Office visit (Jaipur)", "ऑफिस विज़िट (जयपुर)") }] },
-            { name: "question", label: L$f("Your question", "आपका प्रश्न"), type: "textarea", full: true }
+            { name: "name", label: L$g("Full name", "पूरा नाम"), required: true },
+            { name: "phone", label: L$g("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
+            { name: "dob", label: L$g("Date of birth", "जन्म तिथि"), type: "date" },
+            { name: "tob", label: L$g("Time of birth", "जन्म समय"), type: "time" },
+            { name: "pob", label: L$g("Place of birth", "जन्म स्थान") },
+            { name: "mode", label: L$g("How would you like to meet?", "कैसे मिलना है"), type: "select", options: [{ value: "video", label: L$g("Video call", "वीडियो कॉल") }, { value: "office", label: L$g("Office visit (Jaipur)", "ऑफिस विज़िट (जयपुर)") }] },
+            { name: "question", label: L$g("Your question", "आपका प्रश्न"), type: "textarea", full: true }
           ]
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(ClientQuote, { label: L$f("Birth chart client video testimonial", "कुंडली क्लाइंट का वीडियो अनुभव"), city: L$f("[Name], [City]", "[नाम], [शहर]") })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(ClientQuote, { label: L$g("Birth chart client video testimonial", "कुंडली क्लाइंट का वीडियो अनुभव"), city: L$g("[Name], [City]", "[नाम], [शहर]") })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$f("Vedic Astrology FAQ", "वैदिक ज्योतिष — प्रश्न-उत्तर"), items: [
-      [L$f("How long is a consultation?", "परामर्श कितनी देर का होता है?"), L$f("30 or 60 minutes. Kundli Matching is a report + 20-minute call.", "30 या 60 मिनट। कुंडली मिलान में रिपोर्ट + 20 मिनट कॉल।")],
-      [L$f("What if I don’t know my birth time?", "जन्म समय नहीं पता तो क्या करें?"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$g("Vedic Astrology FAQ", "वैदिक ज्योतिष — प्रश्न-उत्तर"), items: [
+      [L$g("How long is a consultation?", "परामर्श कितनी देर का होता है?"), L$g("30 or 60 minutes. Kundli Matching is a report + 20-minute call.", "30 या 60 मिनट। कुंडली मिलान में रिपोर्ट + 20 मिनट कॉल।")],
+      [L$g("What if I don’t know my birth time?", "जन्म समय नहीं पता तो क्या करें?"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
         t("KP Prashna does not need a birth time.", "केपी प्रश्न में जन्म समय की ज़रूरत नहीं होती।"),
         " ",
         /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/kp-prashna", children: [
@@ -49279,7 +49290,7 @@ function Vedic() {
           " →"
         ] })
       ] })],
-      [L$f("Do you also suggest yantras?", "क्या यंत्र भी सुझाया जाता है?"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+      [L$g("Do you also suggest yantras?", "क्या यंत्र भी सुझाया जाता है?"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
         t("If needed, a yantra is suggested during the consultation and the direct link is sent to you on WhatsApp.", "ज़रूरत हो तो परामर्श में यंत्र सुझाया जाता है, और उसका सीधा लिंक WhatsApp पर भेजा जाता है।"),
         " ",
         /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/yantra-shop", children: [
@@ -49287,10 +49298,10 @@ function Vedic() {
           " →"
         ] })
       ] })],
-      [L$f("What details do I need for a birth chart reading?", "कुंडली परामर्श के लिए क्या जानकारी चाहिए?"), L$f("Your date of birth, exact time of birth and place of birth. The birth time from a birth certificate or hospital record is best; even a 10–15 minute difference can change some divisional charts.", "जन्म तिथि, जन्म का सही समय और जन्म स्थान। जन्म प्रमाण-पत्र या अस्पताल के रिकॉर्ड वाला समय सबसे अच्छा है; 10–15 मिनट का अंतर भी कुछ विभागीय कुंडलियाँ बदल सकता है।")],
-      [L$f("What is the difference between Vedic and Western astrology?", "वैदिक और पश्चिमी ज्योतिष में क्या अंतर है?"), L$f("Vedic astrology uses the sidereal zodiac (aligned with the stars), the 27 nakshatras and the dasha system for timing. Western astrology uses the tropical zodiac, so your sign can differ by one.", "वैदिक ज्योतिष निरयन राशिचक्र (तारों के अनुसार), 27 नक्षत्र और समय बताने के लिए दशा पद्धति का उपयोग करता है। पश्चिमी ज्योतिष सायन राशिचक्र लेता है, इसलिए आपकी राशि एक आगे-पीछे हो सकती है।")],
-      [L$f("Should I book 30 or 60 minutes?", "30 मिनट बुक करूँ या 60 मिनट?"), L$f("30 minutes suits one or two focused questions. Choose 60 minutes for a full life reading — career, marriage, health and the coming dasha periods.", "30 मिनट एक-दो ख़ास प्रश्नों के लिए ठीक है। पूरे जीवन की रीडिंग — करियर, विवाह, स्वास्थ्य और आने वाली दशाओं — के लिए 60 मिनट चुनें।")],
-      [L$f("Do I have to wear a gemstone?", "क्या रत्न पहनना ज़रूरी है?"), L$f("No. A gemstone is suggested only when it clearly suits your chart. Many remedies — mantra, daan, fasting or a yantra — cost little and carry no risk.", "नहीं। रत्न तभी सुझाया जाता है जब वह कुंडली के अनुसार साफ़ तौर पर उचित हो। कई उपाय — मंत्र, दान, व्रत या यंत्र — कम खर्च के और बिना जोखिम के होते हैं।")]
+      [L$g("What details do I need for a birth chart reading?", "कुंडली परामर्श के लिए क्या जानकारी चाहिए?"), L$g("Your date of birth, exact time of birth and place of birth. The birth time from a birth certificate or hospital record is best; even a 10–15 minute difference can change some divisional charts.", "जन्म तिथि, जन्म का सही समय और जन्म स्थान। जन्म प्रमाण-पत्र या अस्पताल के रिकॉर्ड वाला समय सबसे अच्छा है; 10–15 मिनट का अंतर भी कुछ विभागीय कुंडलियाँ बदल सकता है।")],
+      [L$g("What is the difference between Vedic and Western astrology?", "वैदिक और पश्चिमी ज्योतिष में क्या अंतर है?"), L$g("Vedic astrology uses the sidereal zodiac (aligned with the stars), the 27 nakshatras and the dasha system for timing. Western astrology uses the tropical zodiac, so your sign can differ by one.", "वैदिक ज्योतिष निरयन राशिचक्र (तारों के अनुसार), 27 नक्षत्र और समय बताने के लिए दशा पद्धति का उपयोग करता है। पश्चिमी ज्योतिष सायन राशिचक्र लेता है, इसलिए आपकी राशि एक आगे-पीछे हो सकती है।")],
+      [L$g("Should I book 30 or 60 minutes?", "30 मिनट बुक करूँ या 60 मिनट?"), L$g("30 minutes suits one or two focused questions. Choose 60 minutes for a full life reading — career, marriage, health and the coming dasha periods.", "30 मिनट एक-दो ख़ास प्रश्नों के लिए ठीक है। पूरे जीवन की रीडिंग — करियर, विवाह, स्वास्थ्य और आने वाली दशाओं — के लिए 60 मिनट चुनें।")],
+      [L$g("Do I have to wear a gemstone?", "क्या रत्न पहनना ज़रूरी है?"), L$g("No. A gemstone is suggested only when it clearly suits your chart. Many remedies — mantra, daan, fasting or a yantra — cost little and carry no risk.", "नहीं। रत्न तभी सुझाया जाता है जब वह कुंडली के अनुसार साफ़ तौर पर उचित हो। कई उपाय — मंत्र, दान, व्रत या यंत्र — कम खर्च के और बिना जोखिम के होते हैं।")]
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row z", style: { "--gap": "10px 20px", fontSize: 14, color: "var(--muted)", paddingBottom: "var(--sp-section)", maxWidth: 860 }, children: [
       t("Related:", "संबंधित:"),
@@ -49302,14 +49313,14 @@ function Vedic() {
     ] })
   ] });
 }
-const L$e = (en, hi) => ({ en, hi });
+const L$f = (en, hi) => ({ en, hi });
 const QUESTIONS = [
-  L$e("When will I get married?", "शादी कब होगी?"),
-  L$e("When will I get a job?", "नौकरी कब मिलेगी?"),
-  L$e("Will this property deal go through?", "यह प्रॉपर्टी डील होगी या नहीं?"),
-  L$e("Will I move abroad?", "विदेश जाना होगा?"),
-  L$e("When will I be promoted?", "प्रमोशन कब होगा?"),
-  L$e("Is this business partnership right?", "क्या यह बिज़नेस पार्टनरशिप सही है?")
+  L$f("When will I get married?", "शादी कब होगी?"),
+  L$f("When will I get a job?", "नौकरी कब मिलेगी?"),
+  L$f("Will this property deal go through?", "यह प्रॉपर्टी डील होगी या नहीं?"),
+  L$f("Will I move abroad?", "विदेश जाना होगा?"),
+  L$f("When will I be promoted?", "प्रमोशन कब होगा?"),
+  L$f("Is this business partnership right?", "क्या यह बिज़नेस पार्टनरशिप सही है?")
 ];
 function KPPrashna() {
   const t = useT();
@@ -49321,10 +49332,10 @@ function KPPrashna() {
     const n = parseInt(v, 10);
     if (!Number.isNaN(n)) setNum(String(Math.max(1, Math.min(249, n))));
   };
-  const cta = { to: "#form", label: L$e("Ask your question", "अपना प्रश्न पूछें") };
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$e("KP Prashna — One Question, Answered with Timing", "केपी प्रश्न — एक प्रश्न, समय के साथ उत्तर"), description: L$e("KP Prashna (horary astrology) with Pt. Rajneesh Sharma: pick a number from 1–249 and get your specific question answered with timing. No birth time needed.", "पं. रजनीश शर्मा के साथ केपी प्रश्न: 1–249 में से एक नंबर चुनें और अपने विशेष प्रश्न का समय के साथ उत्तर पाएँ। जन्म समय की ज़रूरत नहीं।"), cta, disclaimer: DISCLAIMER.default, seed: 31, children: [
+  const cta = { to: "#form", label: L$f("Ask your question", "अपना प्रश्न पूछें") };
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$f("KP Prashna — One Question, Answered with Timing", "केपी प्रश्न — एक प्रश्न, समय के साथ उत्तर"), description: L$f("KP Prashna (horary astrology) with Pt. Rajneesh Sharma: pick a number from 1–249 and get your specific question answered with timing. No birth time needed.", "पं. रजनीश शर्मा के साथ केपी प्रश्न: 1–249 में से एक नंबर चुनें और अपने विशेष प्रश्न का समय के साथ उत्तर पाएँ। जन्म समय की ज़रूरत नहीं।"), cta, disclaimer: DISCLAIMER.default, seed: 31, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide stack", style: { "--gap": "36px" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$e("KP Prashna", "केपी प्रश्न") }] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$f("KP Prashna", "केपी प्रश्न") }] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-row", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-text rise", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
@@ -49401,10 +49412,10 @@ function KPPrashna() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t("Because the chart comes from the number and the moment, KP Prashna works even if you do not know your birth time — and it is often the fastest way to an answer when you face one urgent decision.", "चूँकि कुंडली नंबर और उस पल से बनती है, इसलिए जन्म समय न पता हो तब भी केपी प्रश्न काम करता है — और जब सामने एक ज़रूरी फ़ैसला हो, तो यह अक्सर उत्तर पाने का सबसे तेज़ तरीका है।") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid reveal", style: { "--min": "190px", "--gap": "16px" }, children: [
-        [L$e("Job & career", "नौकरी और करियर"), L$e("Will I get this job? When will the promotion or transfer come?", "यह नौकरी मिलेगी? प्रमोशन या ट्रांसफ़र कब होगा?")],
-        [L$e("Visa & abroad", "वीज़ा और विदेश"), L$e("Will my visa be approved? When can I travel or settle abroad?", "वीज़ा मिलेगा? विदेश जाना या बसना कब होगा?")],
-        [L$e("Marriage", "विवाह"), L$e("Will this proposal work out? When will I get married?", "यह रिश्ता होगा? मेरी शादी कब होगी?")],
-        [L$e("Property & money", "संपत्ति और धन"), L$e("Will the property deal go through? Will I recover my money? Will I win the case?", "प्रॉपर्टी का सौदा होगा? पैसा वापस मिलेगा? केस जीतूँगा?")]
+        [L$f("Job & career", "नौकरी और करियर"), L$f("Will I get this job? When will the promotion or transfer come?", "यह नौकरी मिलेगी? प्रमोशन या ट्रांसफ़र कब होगा?")],
+        [L$f("Visa & abroad", "वीज़ा और विदेश"), L$f("Will my visa be approved? When can I travel or settle abroad?", "वीज़ा मिलेगा? विदेश जाना या बसना कब होगा?")],
+        [L$f("Marriage", "विवाह"), L$f("Will this proposal work out? When will I get married?", "यह रिश्ता होगा? मेरी शादी कब होगी?")],
+        [L$f("Property & money", "संपत्ति और धन"), L$f("Will the property deal go through? Will I recover my money? Will I win the case?", "प्रॉपर्टी का सौदा होगा? पैसा वापस मिलेगा? केस जीतूँगा?")]
       ].map(([h, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card", style: { padding: 24, gap: 8 }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "serif", style: { fontSize: 22, margin: 0, fontWeight: 500 }, children: t(h) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", children: t(d) })
@@ -49413,10 +49424,10 @@ function KPPrashna() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "how", className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "44px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2 reveal", children: t("How it works", "कैसे काम करता है") }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Steps, { items: [
-        [L$e("One clear question", "एक साफ़ प्रश्न"), L$e("Only one specific question at a time.", "एक बार में एक ही विशेष प्रश्न।")],
-        [L$e("A number from 1–249", "1–249 नंबर"), L$e("Hold your question in mind and choose a number.", "प्रश्न मन में रखकर एक नंबर चुनें।")],
-        [L$e("Horary chart", "प्रश्न कुंडली"), L$e("A KP horary chart is cast from that number and the time.", "उस नंबर और समय से केपी प्रश्न कुंडली बनती है।")],
-        [L$e("Answer with timing", "समय के साथ उत्तर"), L$e("The answer and likely timing on a 20–30 minute call.", "20–30 मिनट की कॉल पर उत्तर और संभावित समय।")]
+        [L$f("One clear question", "एक साफ़ प्रश्न"), L$f("Only one specific question at a time.", "एक बार में एक ही विशेष प्रश्न।")],
+        [L$f("A number from 1–249", "1–249 नंबर"), L$f("Hold your question in mind and choose a number.", "प्रश्न मन में रखकर एक नंबर चुनें।")],
+        [L$f("Horary chart", "प्रश्न कुंडली"), L$f("A KP horary chart is cast from that number and the time.", "उस नंबर और समय से केपी प्रश्न कुंडली बनती है।")],
+        [L$f("Answer with timing", "समय के साथ उत्तर"), L$f("The answer and likely timing on a 20–30 minute call.", "20–30 मिनट की कॉल पर उत्तर और संभावित समय।")]
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "form", className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section row", style: { "--gap": "48px" }, children: [
@@ -49424,32 +49435,32 @@ function KPPrashna() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "eyebrow", style: { letterSpacing: ".25em", fontSize: 12 }, children: t("20–30 MIN CALL", "20–30 मिनट कॉल") }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "h3", style: { fontSize: 34 }, children: t("KP Prashna", "केपी प्रश्न") }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "card-price", style: { fontSize: 48 }, children: price(null, null) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "card-list", children: [L$e("Horary chart from a number 1–249", "1–249 नंबर से प्रश्न कुंडली"), L$e("Answer with timing", "समय के साथ उत्तर"), L$e("No birth time needed", "जन्म समय की ज़रूरत नहीं"), L$e("Recording + WhatsApp summary", "रिकॉर्डिंग + WhatsApp सारांश")].map((p) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "tick", children: t(p) }, p.en)) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "card-list", children: [L$f("Horary chart from a number 1–249", "1–249 नंबर से प्रश्न कुंडली"), L$f("Answer with timing", "समय के साथ उत्तर"), L$f("No birth time needed", "जन्म समय की ज़रूरत नहीं"), L$f("Recording + WhatsApp summary", "रिकॉर्डिंग + WhatsApp सारांश")].map((p) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "tick", children: t(p) }, p.en)) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "small", children: t("India: Razorpay · International: PayPal", "भारत: Razorpay · विदेश: PayPal") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         BookingForm,
         {
-          title: L$e("Send your question", "अपना प्रश्न भेजें"),
-          submitLabel: L$e("Choose a slot and pay", "स्लॉट चुनें और भुगतान करें"),
-          services: [{ value: "kp-prashna", label: L$e("KP Prashna", "केपी प्रश्न") }],
+          title: L$f("Send your question", "अपना प्रश्न भेजें"),
+          submitLabel: L$f("Choose a slot and pay", "स्लॉट चुनें और भुगतान करें"),
+          services: [{ value: "kp-prashna", label: L$f("KP Prashna", "केपी प्रश्न") }],
           fields: [
-            { name: "name", label: L$e("Full name", "पूरा नाम"), required: true },
-            { name: "phone", label: L$e("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
-            { name: "kpNumber", label: L$e("Your number (1–249)", "आपका नंबर (1–249)"), type: "number", min: 1, max: 249, value: num, onChange: onNum },
-            { name: "city", label: L$e("Which city are you in right now?", "अभी आप किस शहर में हैं") },
-            { name: "question", label: L$e("Your one question", "आपका एक प्रश्न"), type: "textarea", full: true, rows: 3 }
+            { name: "name", label: L$f("Full name", "पूरा नाम"), required: true },
+            { name: "phone", label: L$f("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
+            { name: "kpNumber", label: L$f("Your number (1–249)", "आपका नंबर (1–249)"), type: "number", min: 1, max: 249, value: num, onChange: onNum },
+            { name: "city", label: L$f("Which city are you in right now?", "अभी आप किस शहर में हैं") },
+            { name: "question", label: L$f("Your one question", "आपका एक प्रश्न"), type: "textarea", full: true, rows: 3 }
           ]
         }
       )
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { style: { paddingTop: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$e("KP Prashna FAQ", "केपी प्रश्न — प्रश्न-उत्तर"), items: [
-      [L$e("I don’t know my birth time — will it still work?", "जन्म समय नहीं पता — फिर भी चलेगा?"), L$e("Yes. KP Prashna does not need a birth time; the chart is cast from the number you choose and the time of your question.", "हाँ। केपी प्रश्न में जन्म समय की ज़रूरत नहीं होती; कुंडली आपके चुने नंबर और प्रश्न के समय से बनती है।")],
-      [L$e("How many questions per number?", "एक नंबर पर कितने प्रश्न?"), L$e("One number, one question. A second question needs a separate prashna.", "एक नंबर, एक प्रश्न। दूसरे प्रश्न के लिए अलग प्रश्न।")],
-      [L$e("What is the difference between KP and Vedic astrology?", "केपी और वैदिक में क्या फ़र्क है?"), L$e("KP is built on Vedic astrology but adds the sub-lord and uses the Placidus house system, which makes it sharper for yes/no questions and timing. Vedic astrology is better for a full picture of life, nature and long-term planning. Pandit ji uses both.", "केपी वैदिक ज्योतिष पर ही आधारित है, लेकिन इसमें सब-लॉर्ड जुड़ता है और प्लेसिडस भाव पद्धति ली जाती है, जिससे हाँ/ना और समय बताने में यह ज़्यादा सटीक होती है। जीवन की पूरी तस्वीर, स्वभाव और लंबी योजना के लिए वैदिक ज्योतिष बेहतर है। पंडित जी दोनों का उपयोग करते हैं।")],
-      [L$e("How do I choose the number?", "नंबर कैसे चुनें?"), L$e("Sit quietly, think about your question, and say the first number between 1 and 249 that comes to mind. Do not calculate or pick a “lucky” number.", "शांत बैठकर अपने प्रश्न के बारे में सोचें, और 1 से 249 के बीच जो पहला नंबर मन में आए वह बोलें। गिनती न करें और “लकी” नंबर न चुनें।")],
-      [L$e("Can I ask the same question again?", "क्या वही प्रश्न दोबारा पूछ सकते हैं?"), L$e("Not soon after. Asking again with a new number because you did not like the answer does not give a reliable result. Ask again only when the situation has really changed.", "तुरंत नहीं। जवाब पसंद न आने पर नए नंबर से दोबारा पूछने से भरोसेमंद नतीजा नहीं मिलता। स्थिति सच में बदलने पर ही दोबारा पूछें।")],
-      [L$e("Can I ask on behalf of someone else?", "क्या किसी और के लिए प्रश्न पूछ सकते हैं?"), L$e("Yes — for example a parent asking about a child’s job or marriage. The chart is then read from the house of that relative.", "हाँ — जैसे माता-पिता बच्चे की नौकरी या शादी के बारे में। तब कुंडली उस रिश्तेदार के भाव से पढ़ी जाती है।")]
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { style: { paddingTop: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$f("KP Prashna FAQ", "केपी प्रश्न — प्रश्न-उत्तर"), items: [
+      [L$f("I don’t know my birth time — will it still work?", "जन्म समय नहीं पता — फिर भी चलेगा?"), L$f("Yes. KP Prashna does not need a birth time; the chart is cast from the number you choose and the time of your question.", "हाँ। केपी प्रश्न में जन्म समय की ज़रूरत नहीं होती; कुंडली आपके चुने नंबर और प्रश्न के समय से बनती है।")],
+      [L$f("How many questions per number?", "एक नंबर पर कितने प्रश्न?"), L$f("One number, one question. A second question needs a separate prashna.", "एक नंबर, एक प्रश्न। दूसरे प्रश्न के लिए अलग प्रश्न।")],
+      [L$f("What is the difference between KP and Vedic astrology?", "केपी और वैदिक में क्या फ़र्क है?"), L$f("KP is built on Vedic astrology but adds the sub-lord and uses the Placidus house system, which makes it sharper for yes/no questions and timing. Vedic astrology is better for a full picture of life, nature and long-term planning. Pandit ji uses both.", "केपी वैदिक ज्योतिष पर ही आधारित है, लेकिन इसमें सब-लॉर्ड जुड़ता है और प्लेसिडस भाव पद्धति ली जाती है, जिससे हाँ/ना और समय बताने में यह ज़्यादा सटीक होती है। जीवन की पूरी तस्वीर, स्वभाव और लंबी योजना के लिए वैदिक ज्योतिष बेहतर है। पंडित जी दोनों का उपयोग करते हैं।")],
+      [L$f("How do I choose the number?", "नंबर कैसे चुनें?"), L$f("Sit quietly, think about your question, and say the first number between 1 and 249 that comes to mind. Do not calculate or pick a “lucky” number.", "शांत बैठकर अपने प्रश्न के बारे में सोचें, और 1 से 249 के बीच जो पहला नंबर मन में आए वह बोलें। गिनती न करें और “लकी” नंबर न चुनें।")],
+      [L$f("Can I ask the same question again?", "क्या वही प्रश्न दोबारा पूछ सकते हैं?"), L$f("Not soon after. Asking again with a new number because you did not like the answer does not give a reliable result. Ask again only when the situation has really changed.", "तुरंत नहीं। जवाब पसंद न आने पर नए नंबर से दोबारा पूछने से भरोसेमंद नतीजा नहीं मिलता। स्थिति सच में बदलने पर ही दोबारा पूछें।")],
+      [L$f("Can I ask on behalf of someone else?", "क्या किसी और के लिए प्रश्न पूछ सकते हैं?"), L$f("Yes — for example a parent asking about a child’s job or marriage. The chart is then read from the house of that relative.", "हाँ — जैसे माता-पिता बच्चे की नौकरी या शादी के बारे में। तब कुंडली उस रिश्तेदार के भाव से पढ़ी जाती है।")]
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row z", style: { "--gap": "10px 20px", fontSize: 14, color: "var(--muted)", paddingBottom: "var(--sp-section)", maxWidth: 860 }, children: [
       t("Related:", "संबंधित:"),
@@ -49461,52 +49472,52 @@ function KPPrashna() {
     ] })
   ] });
 }
-const L$d = (en, hi) => ({ en, hi });
+const L$e = (en, hi) => ({ en, hi });
 const ZONES = [[300, 40], [400, 60], [484, 116], [540, 200], [560, 300], [540, 400], [484, 484], [400, 540], [300, 560], [200, 540], [116, 484], [60, 400], [40, 300], [60, 200], [116, 116], [200, 60]];
 const DIRS = [["N", 300, 30], ["NE", 500, 105], ["E", 575, 304], ["SE", 500, 508], ["S", 300, 582], ["SW", 100, 508], ["W", 25, 304], ["NW", 100, 105]];
 const PROPERTIES = [
-  [L$d("Vastu for Home", "घर का वास्तु"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+  [L$e("Vastu for Home", "घर का वास्तु"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M6 18 L20 6 L34 18 V34 H6Z" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M16 34 V24 H24 V34" })
   ] })],
-  [L$d("Flat / Apartment", "फ्लैट / अपार्टमेंट"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+  [L$e("Flat / Apartment", "फ्लैट / अपार्टमेंट"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "10", y: "4", width: "20", height: "32" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M15 10 H18 M22 10 H25 M15 16 H18 M22 16 H25 M15 22 H18 M22 22 H25 M18 36 V30 H22 V36" })
   ] })],
-  [L$d("Plot & new home", "प्लॉट और नया घर"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+  [L$e("Plot & new home", "प्लॉट और नया घर"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "6", y: "10", width: "28", height: "22", strokeDasharray: "3 3" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M20 4 V10" })
   ] })],
-  [L$d("Office", "ऑफिस"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+  [L$e("Office", "ऑफिस"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "6", y: "12", width: "28", height: "20", rx: "2" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M15 12 V8 H25 V12 M6 20 H34" })
   ] })],
-  [L$d("Shop", "दुकान"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+  [L$e("Shop", "दुकान"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M6 14 L9 6 H31 L34 14 Z M8 14 V34 H32 V14" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M16 34 V24 H24 V34" })
   ] })],
-  [L$d("Factory", "फैक्ट्री"), /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M4 34 V18 L14 24 V18 L24 24 V8 H32 V34 Z" })]
+  [L$e("Factory", "फैक्ट्री"), /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M4 34 V18 L14 24 V18 L24 24 V8 H32 V34 Z" })]
 ];
 const ROOMS = [
-  [L$d("East facing house", "पूर्वमुखी घर"), L$d("Linked with the Sun, health and recognition. Keep the east side open and light; avoid heavy storage or a toilet in the north-east corner.", "सूर्य, स्वास्थ्य और मान-सम्मान से जुड़ा। पूर्व दिशा खुली और हल्की रखें; उत्तर-पूर्व कोने में भारी सामान या शौचालय से बचें।")],
-  [L$d("West facing house", "पश्चिममुखी घर"), L$d("Often good for business and gains when the entrance is in the right pada (segment) of the west wall. The south-west should stay heavy and closed.", "मुख्य द्वार पश्चिम दीवार के सही पद में हो तो अक्सर व्यापार और लाभ के लिए अच्छा। दक्षिण-पश्चिम भारी और बंद रहना चाहिए।")],
-  [L$d("North facing house", "उत्तरमुखी घर"), L$d("The north is the zone of Kuber — money and opportunities. Keep it clutter-free, with water or green elements rather than heavy furniture.", "उत्तर कुबेर का क्षेत्र है — धन और अवसर। इसे साफ़-सुथरा रखें, भारी फर्नीचर की बजाय पानी या हरियाली रखें।")],
-  [L$d("South facing house", "दक्षिणमुखी घर"), L$d("Not bad by itself, as many fear. What matters is the entrance pada and the birth charts of the family — this is where Astro-Vastu helps most.", "जैसा लोग डरते हैं, अपने आप में बुरा नहीं। असली बात मुख्य द्वार का पद और परिवार की कुंडलियाँ हैं — यहीं एस्ट्रो-वास्तु सबसे ज़्यादा मदद करता है।")],
-  [L$d("Main door", "मुख्य द्वार"), L$d("The door decides much of the energy coming in. Each wall has 8 padas; the right one depends on the direction and on the owner’s chart.", "घर में आने वाली ऊर्जा का बड़ा हिस्सा मुख्य द्वार तय करता है। हर दीवार के 8 पद होते हैं; सही पद दिशा और मालिक की कुंडली पर निर्भर है।")],
-  [L$d("Kitchen", "रसोई"), L$d("Best in the south-east (Agni zone), with the cook facing east. North-east and directly opposite the main door are avoided.", "सबसे अच्छी दक्षिण-पूर्व (अग्नि कोण) में, खाना बनाते समय मुख पूर्व की ओर। उत्तर-पूर्व और मुख्य द्वार के ठीक सामने रसोई से बचें।")],
-  [L$d("Master bedroom", "मुख्य शयनकक्ष"), L$d("South-west gives stability to the head of the family. Sleep with the head to the south or east; avoid mirrors facing the bed.", "दक्षिण-पश्चिम परिवार के मुखिया को स्थिरता देता है। सिर दक्षिण या पूर्व की ओर रखकर सोएँ; बेड के सामने शीशा न रखें।")],
-  [L$d("Pooja room", "पूजा कक्ष"), L$d("North-east (Ishaan) is ideal, facing east or north while praying. Not under a staircase or next to a toilet wall.", "उत्तर-पूर्व (ईशान) सबसे अच्छा, पूजा करते समय मुख पूर्व या उत्तर की ओर। सीढ़ी के नीचे या शौचालय की दीवार से सटा न हो।")],
-  [L$d("Toilet", "शौचालय"), L$d("Preferred in the west or north-west; never in the north-east or the centre (Brahmasthan). Many toilet doshas can be corrected without demolition.", "पश्चिम या उत्तर-पश्चिम बेहतर; उत्तर-पूर्व या घर के बीच (ब्रह्मस्थान) में कभी नहीं। कई शौचालय दोष बिना तोड़-फोड़ ठीक किए जा सकते हैं।")],
-  [L$d("Wealth zone", "धन क्षेत्र"), L$d("The north (and south-west for savings). Keep the locker in the south-west, opening towards the north.", "उत्तर (और बचत के लिए दक्षिण-पश्चिम)। तिजोरी दक्षिण-पश्चिम में रखें, जिसका दरवाज़ा उत्तर की ओर खुले।")]
+  [L$e("East facing house", "पूर्वमुखी घर"), L$e("Linked with the Sun, health and recognition. Keep the east side open and light; avoid heavy storage or a toilet in the north-east corner.", "सूर्य, स्वास्थ्य और मान-सम्मान से जुड़ा। पूर्व दिशा खुली और हल्की रखें; उत्तर-पूर्व कोने में भारी सामान या शौचालय से बचें।")],
+  [L$e("West facing house", "पश्चिममुखी घर"), L$e("Often good for business and gains when the entrance is in the right pada (segment) of the west wall. The south-west should stay heavy and closed.", "मुख्य द्वार पश्चिम दीवार के सही पद में हो तो अक्सर व्यापार और लाभ के लिए अच्छा। दक्षिण-पश्चिम भारी और बंद रहना चाहिए।")],
+  [L$e("North facing house", "उत्तरमुखी घर"), L$e("The north is the zone of Kuber — money and opportunities. Keep it clutter-free, with water or green elements rather than heavy furniture.", "उत्तर कुबेर का क्षेत्र है — धन और अवसर। इसे साफ़-सुथरा रखें, भारी फर्नीचर की बजाय पानी या हरियाली रखें।")],
+  [L$e("South facing house", "दक्षिणमुखी घर"), L$e("Not bad by itself, as many fear. What matters is the entrance pada and the birth charts of the family — this is where Astro-Vastu helps most.", "जैसा लोग डरते हैं, अपने आप में बुरा नहीं। असली बात मुख्य द्वार का पद और परिवार की कुंडलियाँ हैं — यहीं एस्ट्रो-वास्तु सबसे ज़्यादा मदद करता है।")],
+  [L$e("Main door", "मुख्य द्वार"), L$e("The door decides much of the energy coming in. Each wall has 8 padas; the right one depends on the direction and on the owner’s chart.", "घर में आने वाली ऊर्जा का बड़ा हिस्सा मुख्य द्वार तय करता है। हर दीवार के 8 पद होते हैं; सही पद दिशा और मालिक की कुंडली पर निर्भर है।")],
+  [L$e("Kitchen", "रसोई"), L$e("Best in the south-east (Agni zone), with the cook facing east. North-east and directly opposite the main door are avoided.", "सबसे अच्छी दक्षिण-पूर्व (अग्नि कोण) में, खाना बनाते समय मुख पूर्व की ओर। उत्तर-पूर्व और मुख्य द्वार के ठीक सामने रसोई से बचें।")],
+  [L$e("Master bedroom", "मुख्य शयनकक्ष"), L$e("South-west gives stability to the head of the family. Sleep with the head to the south or east; avoid mirrors facing the bed.", "दक्षिण-पश्चिम परिवार के मुखिया को स्थिरता देता है। सिर दक्षिण या पूर्व की ओर रखकर सोएँ; बेड के सामने शीशा न रखें।")],
+  [L$e("Pooja room", "पूजा कक्ष"), L$e("North-east (Ishaan) is ideal, facing east or north while praying. Not under a staircase or next to a toilet wall.", "उत्तर-पूर्व (ईशान) सबसे अच्छा, पूजा करते समय मुख पूर्व या उत्तर की ओर। सीढ़ी के नीचे या शौचालय की दीवार से सटा न हो।")],
+  [L$e("Toilet", "शौचालय"), L$e("Preferred in the west or north-west; never in the north-east or the centre (Brahmasthan). Many toilet doshas can be corrected without demolition.", "पश्चिम या उत्तर-पश्चिम बेहतर; उत्तर-पूर्व या घर के बीच (ब्रह्मस्थान) में कभी नहीं। कई शौचालय दोष बिना तोड़-फोड़ ठीक किए जा सकते हैं।")],
+  [L$e("Wealth zone", "धन क्षेत्र"), L$e("The north (and south-west for savings). Keep the locker in the south-west, opening towards the north.", "उत्तर (और बचत के लिए दक्षिण-पश्चिम)। तिजोरी दक्षिण-पश्चिम में रखें, जिसका दरवाज़ा उत्तर की ओर खुले।")]
 ];
 function Vastu() {
   const t = useT();
   const price = usePrice();
   const { currency } = useApp();
-  const cta = { to: "#form", label: L$d("Send floor plan", "फ्लोर प्लान भेजें") };
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$d("Vastu Consultant in Jaipur: Home, Office & Factory", "जयपुर में वास्तु सलाहकार: घर, ऑफिस और फैक्ट्री"), description: L$d("Astro-Vastu by Pt. Rajneesh Sharma, Jaipur: your floor plan read together with the birth charts of up to 5 family members. Remedies without demolition first. Online report, quick call or site visit.", "पं. रजनीश शर्मा, जयपुर द्वारा एस्ट्रो-वास्तु: घर के प्लान के साथ परिवार के 5 सदस्यों तक की कुंडली। पहले बिना तोड़-फोड़ उपाय। ऑनलाइन रिपोर्ट, क्विक कॉल या साइट विज़िट।"), cta, disclaimer: DISCLAIMER.vastu, seed: 41, children: [
+  const cta = { to: "#form", label: L$e("Send floor plan", "फ्लोर प्लान भेजें") };
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$e("Vastu Consultant in Jaipur: Home, Office & Factory", "जयपुर में वास्तु सलाहकार: घर, ऑफिस और फैक्ट्री"), description: L$e("Astro-Vastu by Pt. Rajneesh Sharma, Jaipur: your floor plan read together with the birth charts of up to 5 family members. Remedies without demolition first. Online report, quick call or site visit.", "पं. रजनीश शर्मा, जयपुर द्वारा एस्ट्रो-वास्तु: घर के प्लान के साथ परिवार के 5 सदस्यों तक की कुंडली। पहले बिना तोड़-फोड़ उपाय। ऑनलाइन रिपोर्ट, क्विक कॉल या साइट विज़िट।"), cta, disclaimer: DISCLAIMER.vastu, seed: 41, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide stack", style: { "--gap": "36px" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$d("Vastu Consultant", "वास्तु सलाहकार") }] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$e("Vastu Consultant", "वास्तु सलाहकार") }] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-row", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-text rise", style: { flexBasis: 440 }, children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
@@ -49563,9 +49574,9 @@ function Vastu() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t("Vastu consultation", "वास्तु परामर्श") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid reveal", style: { "--min": "280px" }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$d("Quick call", "क्विक कॉल"), price: price(null, null), sub: L$d("30 min · before buying a flat or plot", "30 मिनट · फ्लैट/प्लॉट लेने से पहले"), points: [L$d("Verbal guidance on your floor plan", "फ्लोर प्लान पर मौखिक मार्गदर्शन"), L$d("WhatsApp summary", "WhatsApp सारांश")], cta: L$d("Book a call", "कॉल बुक करें") }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { featured: true, badge: L$d("ASTRO-VASTU", "एस्ट्रो-वास्तु"), title: L$d("Online Astro-Vastu report", "ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट"), price: t("Quote by area", "क्षेत्रफल के अनुसार"), sub: L$d("Per sq.ft of built-up area · India + international", "निर्मित क्षेत्रफल के प्रति वर्ग फ़ुट · भारत + विदेश"), points: [L$d("PDF report: doshas, zone-wise markings", "PDF रिपोर्ट: दोष, ज़ोन-वार मार्किंग"), L$d("Matched with birth charts of up to 5 members", "5 सदस्यों तक कुंडली मिलान"), L$d("Remedies without demolition, priority list", "बिना तोड़-फोड़ उपाय, प्राथमिकता सूची"), L$d("Follow-up call", "फॉलो-अप कॉल")], cta: L$d("Upload your plan", "प्लान अपलोड करें") }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$d("Site visit", "साइट विज़िट"), price: price(null, null), sub: L$d("Jaipur · Rajasthan · outstation", "जयपुर · राजस्थान · बाहर"), points: [L$d("On-site compass reading", "साइट पर कंपास रीडिंग"), L$d("Home, office, shop, factory", "घर, ऑफिस, दुकान, फैक्ट्री"), L$d("Report + follow-up", "रिपोर्ट + फॉलो-अप")], cta: L$d("Book a visit", "विज़िट बुक करें") })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$e("Quick call", "क्विक कॉल"), price: price(null, null), sub: L$e("30 min · before buying a flat or plot", "30 मिनट · फ्लैट/प्लॉट लेने से पहले"), points: [L$e("Verbal guidance on your floor plan", "फ्लोर प्लान पर मौखिक मार्गदर्शन"), L$e("WhatsApp summary", "WhatsApp सारांश")], cta: L$e("Book a call", "कॉल बुक करें") }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { featured: true, badge: L$e("ASTRO-VASTU", "एस्ट्रो-वास्तु"), title: L$e("Online Astro-Vastu report", "ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट"), price: t("Quote by area", "क्षेत्रफल के अनुसार"), sub: L$e("Per sq.ft of built-up area · India + international", "निर्मित क्षेत्रफल के प्रति वर्ग फ़ुट · भारत + विदेश"), points: [L$e("PDF report: doshas, zone-wise markings", "PDF रिपोर्ट: दोष, ज़ोन-वार मार्किंग"), L$e("Matched with birth charts of up to 5 members", "5 सदस्यों तक कुंडली मिलान"), L$e("Remedies without demolition, priority list", "बिना तोड़-फोड़ उपाय, प्राथमिकता सूची"), L$e("Follow-up call", "फॉलो-अप कॉल")], cta: L$e("Upload your plan", "प्लान अपलोड करें") }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$e("Site visit", "साइट विज़िट"), price: price(null, null), sub: L$e("Jaipur · Rajasthan · outstation", "जयपुर · राजस्थान · बाहर"), points: [L$e("On-site compass reading", "साइट पर कंपास रीडिंग"), L$e("Home, office, shop, factory", "घर, ऑफिस, दुकान, फैक्ट्री"), L$e("Report + follow-up", "रिपोर्ट + फॉलो-अप")], cta: L$e("Book a visit", "विज़िट बुक करें") })
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "64px" }, children: [
@@ -49595,17 +49606,17 @@ function Vastu() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "lead", style: { fontSize: 16, lineHeight: 1.8 }, children: t("The same home affects each family member differently. So Pandit ji studies the 16 zones of the home together with each member’s birth chart, and suggests remedies accordingly — drawing on 10+ years of Vedic and KP experience.", "एक ही घर अलग-अलग सदस्यों पर अलग असर करता है। इसलिए पंडित जी घर के 16 ज़ोन के साथ हर सदस्य की कुंडली देखते हैं, और उसी हिसाब से उपाय बताते हैं। यह 10+ साल के वैदिक और केपी अनुभव से आता है।") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "row center reveal", style: { flex: "1.2 1 480px", "--gap": "16px", justifyContent: "center" }, children: [
-        [L$d("Floor plan", "फ्लोर प्लान"), L$d("16 zones", "16 ज़ोन"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+        [L$e("Floor plan", "फ्लोर प्लान"), L$e("16 zones", "16 ज़ोन"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "8", y: "8", width: "44", height: "44" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M8 28 H30 V8 M30 28 V52 M30 38 H52" })
         ] })],
         "+",
-        [L$d("Birth charts", "कुंडली"), L$d("up to 5 members", "5 सदस्यों तक"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+        [L$e("Birth charts", "कुंडली"), L$e("up to 5 members", "5 सदस्यों तक"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "8", y: "8", width: "44", height: "44" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M8 8 L52 52 M52 8 L8 52 M30 8 L52 30 L30 52 L8 30Z" })
         ] })],
         "=",
-        [L$d("Remedies per member", "सदस्य-वार उपाय"), L$d("without demolition first", "पहले बिना तोड़-फोड़"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+        [L$e("Remedies per member", "सदस्य-वार उपाय"), L$e("without demolition first", "पहले बिना तोड़-फोड़"), /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "20", cy: "22", r: "7" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "40", cy: "22", r: "7" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M8 50 C8 38 32 38 32 50 M28 50 C28 38 52 38 52 50" })
@@ -49630,7 +49641,7 @@ function Vastu() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", style: { fontSize: 16 }, children: t("If Vastu is checked before buying a plot and while the plan is being drawn, no changes are needed later. If required, Pandit ji coordinates with your architect.", "प्लॉट लेने से पहले और नक्शा बनते समय ही वास्तु देख लिया जाए तो बाद में बदलाव नहीं करने पड़ते। ज़रूरत हो तो पंडित जी आपके आर्किटेक्ट के साथ तालमेल करते हैं।") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "stack reveal", style: { flex: "1 1 340px", "--gap": "12px" }, children: [
-        [L$d("Plot selection — direction and shape", "प्लॉट चयन — दिशा और आकार"), L$d("Floor plan review — with your architect", "नक्शा (फ्लोर प्लान) समीक्षा — आर्किटेक्ट के साथ"), L$d("Placement of main door, kitchen, pooja room, bedroom", "मुख्य द्वार, रसोई, पूजा कक्ष, शयनकक्ष की जगह"), L$d("Site visits during construction", "निर्माण के दौरान साइट विज़िट")].map((x) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "tick", style: { fontSize: 16 }, children: t(x) }, x.en)),
+        [L$e("Plot selection — direction and shape", "प्लॉट चयन — दिशा और आकार"), L$e("Floor plan review — with your architect", "नक्शा (फ्लोर प्लान) समीक्षा — आर्किटेक्ट के साथ"), L$e("Placement of main door, kitchen, pooja room, bedroom", "मुख्य द्वार, रसोई, पूजा कक्ष, शयनकक्ष की जगह"), L$e("Site visits during construction", "निर्माण के दौरान साइट विज़िट")].map((x) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "tick", style: { fontSize: 16 }, children: t(x) }, x.en)),
         /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#form", className: "btn", style: { alignSelf: "flex-start", marginTop: 10 }, children: t("Contact us for planning", "प्लानिंग के लिए संपर्क करें") })
       ] })
     ] }) }),
@@ -49649,21 +49660,21 @@ function Vastu() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         BookingForm,
         {
-          title: L$d("Send your floor plan", "अपना फ्लोर प्लान भेजें"),
-          submitLabel: L$d("See quote and pay", "कोटेशन देखें और भुगतान करें"),
+          title: L$e("Send your floor plan", "अपना फ्लोर प्लान भेजें"),
+          submitLabel: L$e("See quote and pay", "कोटेशन देखें और भुगतान करें"),
           services: [
-            { value: "vastu-online-report", label: L$d("Online Astro-Vastu report", "ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट") },
-            { value: "vastu-quick-call", label: L$d("Quick call (30 min)", "क्विक कॉल (30 मिनट)") },
-            { value: "vastu-site-visit", label: L$d("Site visit", "साइट विज़िट") }
+            { value: "vastu-online-report", label: L$e("Online Astro-Vastu report", "ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट") },
+            { value: "vastu-quick-call", label: L$e("Quick call (30 min)", "क्विक कॉल (30 मिनट)") },
+            { value: "vastu-site-visit", label: L$e("Site visit", "साइट विज़िट") }
           ],
           fields: [
-            { name: "name", label: L$d("Full name", "पूरा नाम"), required: true },
-            { name: "phone", label: L$d("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
-            { name: "propertyType", label: L$d("Property type", "प्रॉपर्टी का प्रकार"), type: "select", options: [{ value: "Home", label: L$d("Home", "घर") }, { value: "Flat / Apartment", label: L$d("Flat / Apartment", "फ्लैट / अपार्टमेंट") }, { value: "Plot", label: L$d("Plot", "प्लॉट") }, { value: "Office", label: L$d("Office", "ऑफिस") }, { value: "Shop", label: L$d("Shop", "दुकान") }, { value: "Factory", label: L$d("Factory", "फैक्ट्री") }] },
-            { name: "areaSqft", label: L$d("Area (sq.ft)", "क्षेत्रफल (वर्ग फ़ुट)"), type: "number", min: 1 },
-            { name: "floorPlan", label: L$d("Floor plan (PDF / photo — please mark North)", "फ्लोर प्लान (PDF / फोटो, उत्तर दिशा मार्क करें)"), type: "file", full: true },
-            { name: "membersText", label: L$d("Date, time and place of birth of family members (up to 5)", "सदस्यों की जन्म तिथि, समय, स्थान (5 तक)"), type: "textarea", full: true },
-            { name: "mainProblem", label: L$d("Main concern", "मुख्य समस्या"), type: "textarea", full: true, rows: 3 }
+            { name: "name", label: L$e("Full name", "पूरा नाम"), required: true },
+            { name: "phone", label: L$e("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
+            { name: "propertyType", label: L$e("Property type", "प्रॉपर्टी का प्रकार"), type: "select", options: [{ value: "Home", label: L$e("Home", "घर") }, { value: "Flat / Apartment", label: L$e("Flat / Apartment", "फ्लैट / अपार्टमेंट") }, { value: "Plot", label: L$e("Plot", "प्लॉट") }, { value: "Office", label: L$e("Office", "ऑफिस") }, { value: "Shop", label: L$e("Shop", "दुकान") }, { value: "Factory", label: L$e("Factory", "फैक्ट्री") }] },
+            { name: "areaSqft", label: L$e("Area (sq.ft)", "क्षेत्रफल (वर्ग फ़ुट)"), type: "number", min: 1 },
+            { name: "floorPlan", label: L$e("Floor plan (PDF / photo — please mark North)", "फ्लोर प्लान (PDF / फोटो, उत्तर दिशा मार्क करें)"), type: "file", full: true },
+            { name: "membersText", label: L$e("Date, time and place of birth of family members (up to 5)", "सदस्यों की जन्म तिथि, समय, स्थान (5 तक)"), type: "textarea", full: true },
+            { name: "mainProblem", label: L$e("Main concern", "मुख्य समस्या"), type: "textarea", full: true, rows: 3 }
           ]
         }
       ),
@@ -49688,13 +49699,13 @@ function Vastu() {
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { height: "var(--sp-section)" } }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$d("Vastu FAQ", "वास्तु — प्रश्न-उत्तर"), items: [
-      [L$d("Will I need to demolish anything?", "क्या तोड़-फोड़ करनी पड़ेगी?"), L$d("Remedies without demolition come first; structural changes only if truly needed.", "पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।")],
-      [L$d("How does online Vastu work?", "ऑनलाइन वास्तु कैसे होता है?"), L$d("A report is prepared from your floor plan, North direction and family details, followed by a call.", "फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।")],
-      [L$d("Is a south-facing home bad?", "क्या दक्षिणमुखी घर बुरा होता है?"), L$d("No. A south-facing home is not bad by itself. What matters is the pada (segment) of the south wall where the entrance sits, the layout inside, and the birth charts of the family. Many south-facing homes do very well; where there is a dosha, it can usually be corrected without demolition.", "नहीं। दक्षिणमुखी घर अपने-आप में बुरा नहीं होता। असली बात यह है कि मुख्य द्वार दक्षिण दीवार के किस पद में है, अंदर का नक्शा कैसा है, और परिवार की कुंडलियाँ क्या कहती हैं। बहुत से दक्षिणमुखी घर बहुत अच्छे रहते हैं; जहाँ दोष हो, वहाँ आमतौर पर बिना तोड़-फोड़ ठीक किया जा सकता है।")],
-      [L$d("Do you do site visits outside Jaipur?", "क्या जयपुर से बाहर साइट विज़िट करते हैं?"), L$d("Yes, across Rajasthan and outstation on request; travel is charged separately. For a home or flat far away, the online Astro-Vastu report is often the simpler choice.", "हाँ, अनुरोध पर पूरे राजस्थान और बाहर भी; यात्रा का ख़र्च अलग होता है। दूर के घर या फ्लैट के लिए ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट अक्सर आसान विकल्प है।")],
-      [L$d("Should I check Vastu before buying a flat?", "क्या फ्लैट ख़रीदने से पहले वास्तु देखना चाहिए?"), L$d("Yes — it is the cheapest time. A quick call with the builder’s floor plan shows the entrance pada, kitchen and toilet positions and whether the flat suits your family’s charts.", "हाँ — यही सबसे सस्ता समय है। बिल्डर के फ्लोर प्लान के साथ क्विक कॉल से मुख्य द्वार का पद, रसोई और शौचालय की जगह, और फ्लैट आपके परिवार की कुंडलियों के अनुकूल है या नहीं, पता चल जाता है।")],
-      [L$d("Does Vastu work for offices and factories?", "क्या ऑफिस और फैक्ट्री के लिए वास्तु काम करता है?"), L$d("Yes. In a workplace the owner’s seat, cash and accounts, the entrance, machinery, raw material and finished goods each have their own zone. A site visit is recommended for factories.", "हाँ। कार्यस्थल में मालिक की सीट, कैश और अकाउंट, प्रवेश द्वार, मशीनें, कच्चा माल और तैयार माल — हर एक का अपना ज़ोन होता है। फैक्ट्री के लिए साइट विज़िट की सलाह दी जाती है।")]
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$e("Vastu FAQ", "वास्तु — प्रश्न-उत्तर"), items: [
+      [L$e("Will I need to demolish anything?", "क्या तोड़-फोड़ करनी पड़ेगी?"), L$e("Remedies without demolition come first; structural changes only if truly needed.", "पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।")],
+      [L$e("How does online Vastu work?", "ऑनलाइन वास्तु कैसे होता है?"), L$e("A report is prepared from your floor plan, North direction and family details, followed by a call.", "फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।")],
+      [L$e("Is a south-facing home bad?", "क्या दक्षिणमुखी घर बुरा होता है?"), L$e("No. A south-facing home is not bad by itself. What matters is the pada (segment) of the south wall where the entrance sits, the layout inside, and the birth charts of the family. Many south-facing homes do very well; where there is a dosha, it can usually be corrected without demolition.", "नहीं। दक्षिणमुखी घर अपने-आप में बुरा नहीं होता। असली बात यह है कि मुख्य द्वार दक्षिण दीवार के किस पद में है, अंदर का नक्शा कैसा है, और परिवार की कुंडलियाँ क्या कहती हैं। बहुत से दक्षिणमुखी घर बहुत अच्छे रहते हैं; जहाँ दोष हो, वहाँ आमतौर पर बिना तोड़-फोड़ ठीक किया जा सकता है।")],
+      [L$e("Do you do site visits outside Jaipur?", "क्या जयपुर से बाहर साइट विज़िट करते हैं?"), L$e("Yes, across Rajasthan and outstation on request; travel is charged separately. For a home or flat far away, the online Astro-Vastu report is often the simpler choice.", "हाँ, अनुरोध पर पूरे राजस्थान और बाहर भी; यात्रा का ख़र्च अलग होता है। दूर के घर या फ्लैट के लिए ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट अक्सर आसान विकल्प है।")],
+      [L$e("Should I check Vastu before buying a flat?", "क्या फ्लैट ख़रीदने से पहले वास्तु देखना चाहिए?"), L$e("Yes — it is the cheapest time. A quick call with the builder’s floor plan shows the entrance pada, kitchen and toilet positions and whether the flat suits your family’s charts.", "हाँ — यही सबसे सस्ता समय है। बिल्डर के फ्लोर प्लान के साथ क्विक कॉल से मुख्य द्वार का पद, रसोई और शौचालय की जगह, और फ्लैट आपके परिवार की कुंडलियों के अनुकूल है या नहीं, पता चल जाता है।")],
+      [L$e("Does Vastu work for offices and factories?", "क्या ऑफिस और फैक्ट्री के लिए वास्तु काम करता है?"), L$e("Yes. In a workplace the owner’s seat, cash and accounts, the entrance, machinery, raw material and finished goods each have their own zone. A site visit is recommended for factories.", "हाँ। कार्यस्थल में मालिक की सीट, कैश और अकाउंट, प्रवेश द्वार, मशीनें, कच्चा माल और तैयार माल — हर एक का अपना ज़ोन होता है। फैक्ट्री के लिए साइट विज़िट की सलाह दी जाती है।")]
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row z", style: { "--gap": "10px 20px", fontSize: 14, color: "var(--muted)", paddingBottom: "var(--sp-section)", maxWidth: 860 }, children: [
       t("Related:", "संबंधित:"),
@@ -49706,7 +49717,7 @@ function Vastu() {
     ] })
   ] });
 }
-const L$c = (en, hi) => ({ en, hi });
+const L$d = (en, hi) => ({ en, hi });
 function YantraShop() {
   const t = useT();
   const [params, setParams] = useSearchParams();
@@ -49733,9 +49744,9 @@ function YantraShop() {
     return list;
   }, [all, active, sort]);
   const pick = (c) => setParams(c === "Sabhi" ? {} : { category: c }, { replace: true });
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$c("Energized Yantra Shop — Pran-Pratishtha by Pt. Rajneesh Sharma", "प्राण-प्रतिष्ठित यंत्र शॉप — पं. रजनीश शर्मा द्वारा प्राण-प्रतिष्ठा"), description: L$c("15 energized yantras with size, metal, installation guide and video. Shipping across India and worldwide.", "15 प्राण-प्रतिष्ठित यंत्र — साइज़, धातु, स्थापना विधि और वीडियो के साथ। भारत और दुनिया भर में शिपिंग।"), disclaimer: DISCLAIMER.yantra, seed: 53, mobileCta: { to: "/cart", label: L$c("Cart · Checkout", "कार्ट · चेकआउट") }, revealKey: `${active}-${items.length}`, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$d("Energized Yantra Shop — Pran-Pratishtha by Pt. Rajneesh Sharma", "प्राण-प्रतिष्ठित यंत्र शॉप — पं. रजनीश शर्मा द्वारा प्राण-प्रतिष्ठा"), description: L$d("15 energized yantras with size, metal, installation guide and video. Shipping across India and worldwide.", "15 प्राण-प्रतिष्ठित यंत्र — साइज़, धातु, स्थापना विधि और वीडियो के साथ। भारत और दुनिया भर में शिपिंग।"), disclaimer: DISCLAIMER.yantra, seed: 53, mobileCta: { to: "/cart", label: L$d("Cart · Checkout", "कार्ट · चेकआउट") }, revealKey: `${active}-${items.length}`, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", style: { paddingBottom: 72 }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide stack", style: { "--gap": "30px" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$c("Yantra Shop", "यंत्र शॉप") }] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$d("Yantra Shop", "यंत्र शॉप") }] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "row between center", style: { "--gap": "40px", alignItems: "center" }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "stack rise", style: { flex: "1 1 560px", "--gap": "22px" }, children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "h1", children: [
@@ -49747,7 +49758,7 @@ function YantraShop() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { flex: "0 1 260px", width: 260, maxWidth: "60%" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(YantraArt, { variant: "A" }) })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hairline", style: { "--min": "230px" }, children: [L$c("Genuine metal, or your money back", "असली धातु, नहीं तो पैसा वापस"), L$c("Video proof of pran-pratishtha", "प्राण-प्रतिष्ठा का वीडियो प्रमाण"), L$c("Free replacement if it arrives broken", "टूटा पहुँचे तो मुफ़्त रिप्लेसमेंट"), L$c("30 days of WhatsApp support", "30 दिन WhatsApp सपोर्ट")].map((x) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { background: "var(--bg-2)", padding: "20px 22px", flexDirection: "row", alignItems: "center", fontSize: 14 }, className: "tick", children: t(x) }, x.en)) })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hairline", style: { "--min": "230px" }, children: [L$d("Genuine metal, or your money back", "असली धातु, नहीं तो पैसा वापस"), L$d("Video proof of pran-pratishtha", "प्राण-प्रतिष्ठा का वीडियो प्रमाण"), L$d("Free replacement if it arrives broken", "टूटा पहुँचे तो मुफ़्त रिप्लेसमेंट"), L$d("30 days of WhatsApp support", "30 दिन WhatsApp सपोर्ट")].map((x) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { background: "var(--bg-2)", padding: "20px 22px", flexDirection: "row", alignItems: "center", fontSize: 14 }, className: "tick", children: t(x) }, x.en)) })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "yantras", className: "section-tight", style: { paddingBottom: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide row", style: { "--gap": "36px", alignItems: "flex-start" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("aside", { className: "stack", style: { flex: "1 1 220px", maxWidth: "100%", "--gap": "28px" }, children: [
@@ -49796,13 +49807,13 @@ function YantraShop() {
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "h3 reveal", style: { fontSize: 30 }, children: t("Which yantra for which purpose?", "किस काम के लिए कौन-सा यंत्र?") }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid reveal", style: { "--min": "190px", "--gap": "14px" }, children: [
-        ["Dhan", L$c("Wealth & prosperity", "धन और समृद्धि"), L$c("Shree Yantra, Kuber and Mahalaxmi yantra — kept in the north or in the locker, for steady income and savings.", "श्री यंत्र, कुबेर और महालक्ष्मी यंत्र — उत्तर दिशा या तिजोरी में, स्थिर आय और बचत के लिए।")],
-        ["Vyapar", L$c("Business & success", "व्यापार और सफलता"), L$c("Vyapar Vriddhi and Sarva Karya Siddhi yantra — at the shop, office or cash counter.", "व्यापार वृद्धि और सर्व कार्य सिद्धि यंत्र — दुकान, ऑफिस या कैश काउंटर पर।")],
-        ["Grah shanti", L$c("Planetary peace", "ग्रह शांति"), L$c("Navgrah, Shani and Kaal Sarp yantra — when a planet or dosha is troubling your chart, ideally after a consultation.", "नवग्रह, शनि और काल सर्प यंत्र — जब कोई ग्रह या दोष कुंडली में परेशान कर रहा हो, बेहतर है परामर्श के बाद।")],
-        ["Raksha", L$c("Protection & health", "रक्षा और स्वास्थ्य"), L$c("Mahamrityunjay, Hanuman and Baglamukhi yantra — for protection, courage and victory over obstacles.", "महामृत्युंजय, हनुमान और बगलामुखी यंत्र — रक्षा, साहस और बाधाओं पर विजय के लिए।")],
-        ["Vastu", L$c("Vastu dosh", "वास्तु दोष"), L$c("Vastu Dosh Nivaran yantra — for a dosha that cannot be corrected without demolition.", "वास्तु दोष निवारण यंत्र — ऐसे दोष के लिए जो बिना तोड़-फोड़ ठीक न हो सके।")],
-        ["Shiksha", L$c("Education", "शिक्षा"), L$c("Saraswati yantra — in the study room, in the north-east or east, for focus and learning.", "सरस्वती यंत्र — पढ़ाई के कमरे में, उत्तर-पूर्व या पूर्व में, एकाग्रता और विद्या के लिए।")],
-        ["Vivah", L$c("Marriage", "विवाह"), L$c("Mangal yantra — for Manglik dosha and delays in marriage, as advised after kundli matching.", "मंगल यंत्र — मांगलिक दोष और विवाह में देरी के लिए, कुंडली मिलान के बाद सलाह अनुसार।")]
+        ["Dhan", L$d("Wealth & prosperity", "धन और समृद्धि"), L$d("Shree Yantra, Kuber and Mahalaxmi yantra — kept in the north or in the locker, for steady income and savings.", "श्री यंत्र, कुबेर और महालक्ष्मी यंत्र — उत्तर दिशा या तिजोरी में, स्थिर आय और बचत के लिए।")],
+        ["Vyapar", L$d("Business & success", "व्यापार और सफलता"), L$d("Vyapar Vriddhi and Sarva Karya Siddhi yantra — at the shop, office or cash counter.", "व्यापार वृद्धि और सर्व कार्य सिद्धि यंत्र — दुकान, ऑफिस या कैश काउंटर पर।")],
+        ["Grah shanti", L$d("Planetary peace", "ग्रह शांति"), L$d("Navgrah, Shani and Kaal Sarp yantra — when a planet or dosha is troubling your chart, ideally after a consultation.", "नवग्रह, शनि और काल सर्प यंत्र — जब कोई ग्रह या दोष कुंडली में परेशान कर रहा हो, बेहतर है परामर्श के बाद।")],
+        ["Raksha", L$d("Protection & health", "रक्षा और स्वास्थ्य"), L$d("Mahamrityunjay, Hanuman and Baglamukhi yantra — for protection, courage and victory over obstacles.", "महामृत्युंजय, हनुमान और बगलामुखी यंत्र — रक्षा, साहस और बाधाओं पर विजय के लिए।")],
+        ["Vastu", L$d("Vastu dosh", "वास्तु दोष"), L$d("Vastu Dosh Nivaran yantra — for a dosha that cannot be corrected without demolition.", "वास्तु दोष निवारण यंत्र — ऐसे दोष के लिए जो बिना तोड़-फोड़ ठीक न हो सके।")],
+        ["Shiksha", L$d("Education", "शिक्षा"), L$d("Saraswati yantra — in the study room, in the north-east or east, for focus and learning.", "सरस्वती यंत्र — पढ़ाई के कमरे में, उत्तर-पूर्व या पूर्व में, एकाग्रता और विद्या के लिए।")],
+        ["Vivah", L$d("Marriage", "विवाह"), L$d("Mangal yantra — for Manglik dosha and delays in marriage, as advised after kundli matching.", "मंगल यंत्र — मांगलिक दोष और विवाह में देरी के लिए, कुंडली मिलान के बाद सलाह अनुसार।")]
       ].map(([c, h, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => {
         var _a;
         pick(c);
@@ -49812,18 +49823,18 @@ function YantraShop() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "body", children: t(d) })
       ] }, c)) })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap grid", style: { paddingBlock: "var(--sp-band)", "--min": "260px", "--gap": "40px" }, children: [[L$c("Shipping", "शिपिंग"), L$c(`Across India by courier and worldwide by international courier; customs duty abroad is paid by the buyer. The delivery time to your city is confirmed on WhatsApp before dispatch.${""}`, `पूरे भारत में कूरियर से और विदेश में इंटरनेशनल कूरियर से; विदेश में कस्टम ड्यूटी खरीदार देता है। आपके शहर तक डिलीवरी का समय डिस्पैच से पहले WhatsApp पर बताया जाता है।${""}`)], [L$c("Payment", "भुगतान"), L$c("India: Razorpay (UPI, card, netbanking) · International: PayPal.", "भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग) · विदेश: PayPal।")], [L$c("Personal sankalp", "व्यक्तिगत संकल्प"), L$c("Pran-pratishtha in your name and gotra, with video (premium).", "आपके नाम और गोत्र से प्राण-प्रतिष्ठा, वीडियो के साथ (प्रीमियम)।")]].map(([head, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "stack reveal", style: { "--gap": "12px" }, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap grid", style: { paddingBlock: "var(--sp-band)", "--min": "260px", "--gap": "40px" }, children: [[L$d("Shipping", "शिपिंग"), L$d(`Across India by courier and worldwide by international courier; customs duty abroad is paid by the buyer. The delivery time to your city is confirmed on WhatsApp before dispatch.${""}`, `पूरे भारत में कूरियर से और विदेश में इंटरनेशनल कूरियर से; विदेश में कस्टम ड्यूटी खरीदार देता है। आपके शहर तक डिलीवरी का समय डिस्पैच से पहले WhatsApp पर बताया जाता है।${""}`)], [L$d("Payment", "भुगतान"), L$d("India: Razorpay (UPI, card, netbanking) · International: PayPal.", "भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग) · विदेश: PayPal।")], [L$d("Personal sankalp", "व्यक्तिगत संकल्प"), L$d("Pran-pratishtha in your name and gotra, with video (premium).", "आपके नाम और गोत्र से प्राण-प्रतिष्ठा, वीडियो के साथ (प्रीमियम)।")]].map(([head, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "stack reveal", style: { "--gap": "12px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "serif", style: { fontSize: 28 }, children: t(head) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "body", children: t(d) })
     ] }, head.en)) }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$c("Yantra FAQ", "यंत्र — प्रश्न-उत्तर"), items: [
-      [L$c("What is pran-pratishtha of a yantra?", "यंत्र की प्राण-प्रतिष्ठा क्या है?"), L$c("It is the Vedic ritual of invoking the deity into the yantra with mantras on an auspicious muhurta. Every yantra here is energized this way, and you receive a video of the ritual.", "यह शुभ मुहूर्त में मंत्रों द्वारा यंत्र में देवता का आवाहन करने का वैदिक अनुष्ठान है। यहाँ का हर यंत्र इसी तरह प्राण-प्रतिष्ठित है, और आपको अनुष्ठान का वीडियो मिलता है।")],
-      [L$c("How do I choose the right yantra?", "सही यंत्र कैसे चुनें?"), L$c("Choose by purpose — wealth, business, planetary peace, protection, Vastu, education or marriage. For a dosha in your chart, it is best to ask first: there is free 10-minute advice on WhatsApp.", "उद्देश्य से चुनें — धन, व्यापार, ग्रह शांति, रक्षा, वास्तु, शिक्षा या विवाह। कुंडली के किसी दोष के लिए पहले पूछ लेना अच्छा है: WhatsApp पर 10 मिनट की मुफ़्त सलाह मिलती है।")],
-      [L$c("Where and how should a yantra be installed?", "यंत्र कहाँ और कैसे स्थापित करें?"), L$c("Each yantra comes with its own guide. Generally it is placed in a clean spot in the pooja room or the zone it belongs to (for example, wealth yantras in the north), on an auspicious day, facing east or north, after a short pooja.", "हर यंत्र के साथ उसकी अपनी गाइड आती है। सामान्यतः इसे पूजा कक्ष या उससे जुड़े ज़ोन (जैसे धन यंत्र उत्तर में) में साफ़ जगह पर, शुभ दिन, पूर्व या उत्तर की ओर मुख करके, छोटी पूजा के बाद रखा जाता है।")],
-      [L$c("Do I need to worship the yantra every day?", "क्या रोज़ यंत्र की पूजा करनी होगी?"), L$c("A few minutes daily — lighting a diya or incense and reciting its mantra — is ideal. If you miss days, the yantra does not become harmful; simply continue.", "रोज़ कुछ मिनट — दीया या अगरबत्ती जलाना और उसका मंत्र जपना — सबसे अच्छा है। कुछ दिन छूट जाएँ तो यंत्र हानिकारक नहीं होता; बस फिर से जारी रखें।")],
-      [L$c("How do I clean a yantra?", "यंत्र को कैसे साफ़ करें?"), L$c("Wipe it gently with a soft dry cloth. Copper and brass darken naturally over time; they can be cleaned with a little lemon water or tamarind and dried well.", "मुलायम सूखे कपड़े से हल्के से पोंछें। ताँबा और पीतल समय के साथ स्वाभाविक रूप से काले पड़ते हैं; इन्हें थोड़े नींबू पानी या इमली से साफ़ करके अच्छी तरह सुखा लें।")],
-      [L$c("Can women install a yantra?", "क्या महिलाएँ यंत्र स्थापित कर सकती हैं?"), L$c("Yes. Women can install a yantra and do its daily pooja. Some families pause pooja on certain days by their own custom — you can follow your family’s tradition.", "हाँ। महिलाएँ यंत्र की स्थापना और रोज़ की पूजा कर सकती हैं। कुछ परिवार अपनी परंपरा से कुछ दिनों पूजा रोकते हैं — आप अपने परिवार की परंपरा मान सकते हैं।")],
-      [L$c("Do you ship yantras outside India?", "क्या विदेश में यंत्र भेजते हैं?"), L$c("Yes, yantras ship worldwide from Jaipur by international courier. Any customs duty or import tax in your country is paid by the buyer.", "हाँ, यंत्र जयपुर से इंटरनेशनल कूरियर द्वारा दुनिया भर में भेजे जाते हैं। आपके देश की कस्टम ड्यूटी या इम्पोर्ट टैक्स खरीदार देता है।")]
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$d("Yantra FAQ", "यंत्र — प्रश्न-उत्तर"), items: [
+      [L$d("What is pran-pratishtha of a yantra?", "यंत्र की प्राण-प्रतिष्ठा क्या है?"), L$d("It is the Vedic ritual of invoking the deity into the yantra with mantras on an auspicious muhurta. Every yantra here is energized this way, and you receive a video of the ritual.", "यह शुभ मुहूर्त में मंत्रों द्वारा यंत्र में देवता का आवाहन करने का वैदिक अनुष्ठान है। यहाँ का हर यंत्र इसी तरह प्राण-प्रतिष्ठित है, और आपको अनुष्ठान का वीडियो मिलता है।")],
+      [L$d("How do I choose the right yantra?", "सही यंत्र कैसे चुनें?"), L$d("Choose by purpose — wealth, business, planetary peace, protection, Vastu, education or marriage. For a dosha in your chart, it is best to ask first: there is free 10-minute advice on WhatsApp.", "उद्देश्य से चुनें — धन, व्यापार, ग्रह शांति, रक्षा, वास्तु, शिक्षा या विवाह। कुंडली के किसी दोष के लिए पहले पूछ लेना अच्छा है: WhatsApp पर 10 मिनट की मुफ़्त सलाह मिलती है।")],
+      [L$d("Where and how should a yantra be installed?", "यंत्र कहाँ और कैसे स्थापित करें?"), L$d("Each yantra comes with its own guide. Generally it is placed in a clean spot in the pooja room or the zone it belongs to (for example, wealth yantras in the north), on an auspicious day, facing east or north, after a short pooja.", "हर यंत्र के साथ उसकी अपनी गाइड आती है। सामान्यतः इसे पूजा कक्ष या उससे जुड़े ज़ोन (जैसे धन यंत्र उत्तर में) में साफ़ जगह पर, शुभ दिन, पूर्व या उत्तर की ओर मुख करके, छोटी पूजा के बाद रखा जाता है।")],
+      [L$d("Do I need to worship the yantra every day?", "क्या रोज़ यंत्र की पूजा करनी होगी?"), L$d("A few minutes daily — lighting a diya or incense and reciting its mantra — is ideal. If you miss days, the yantra does not become harmful; simply continue.", "रोज़ कुछ मिनट — दीया या अगरबत्ती जलाना और उसका मंत्र जपना — सबसे अच्छा है। कुछ दिन छूट जाएँ तो यंत्र हानिकारक नहीं होता; बस फिर से जारी रखें।")],
+      [L$d("How do I clean a yantra?", "यंत्र को कैसे साफ़ करें?"), L$d("Wipe it gently with a soft dry cloth. Copper and brass darken naturally over time; they can be cleaned with a little lemon water or tamarind and dried well.", "मुलायम सूखे कपड़े से हल्के से पोंछें। ताँबा और पीतल समय के साथ स्वाभाविक रूप से काले पड़ते हैं; इन्हें थोड़े नींबू पानी या इमली से साफ़ करके अच्छी तरह सुखा लें।")],
+      [L$d("Can women install a yantra?", "क्या महिलाएँ यंत्र स्थापित कर सकती हैं?"), L$d("Yes. Women can install a yantra and do its daily pooja. Some families pause pooja on certain days by their own custom — you can follow your family’s tradition.", "हाँ। महिलाएँ यंत्र की स्थापना और रोज़ की पूजा कर सकती हैं। कुछ परिवार अपनी परंपरा से कुछ दिनों पूजा रोकते हैं — आप अपने परिवार की परंपरा मान सकते हैं।")],
+      [L$d("Do you ship yantras outside India?", "क्या विदेश में यंत्र भेजते हैं?"), L$d("Yes, yantras ship worldwide from Jaipur by international courier. Any customs duty or import tax in your country is paid by the buyer.", "हाँ, यंत्र जयपुर से इंटरनेशनल कूरियर द्वारा दुनिया भर में भेजे जाते हैं। आपके देश की कस्टम ड्यूटी या इम्पोर्ट टैक्स खरीदार देता है।")]
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row z", style: { "--gap": "10px 20px", fontSize: 14, color: "var(--muted)", paddingBottom: "var(--sp-section)", maxWidth: 860 }, children: [
       t("Related:", "संबंधित:"),
@@ -49835,10 +49846,10 @@ function YantraShop() {
     ] })
   ] });
 }
-const L$b = (en, hi) => ({ en, hi });
+const L$c = (en, hi) => ({ en, hi });
 const clip160 = (x) => x.length > 160 ? `${x.slice(0, 159).replace(/\s+\S*$/, "")}…` : x;
-const VIEWS = [L$b("Front", "सामने"), L$b("Back", "पीछे"), L$b("Size in hand", "हाथ में साइज़"), L$b("Packaging", "पैकिंग"), L$b("Video", "वीडियो")];
-const DEFAULT_BOX = L$b("Yantra, installation guide (PDF), mantra card, certificate", "यंत्र, स्थापना विधि PDF, मंत्र कार्ड, सर्टिफ़िकेट");
+const VIEWS = [L$c("Front", "सामने"), L$c("Back", "पीछे"), L$c("Size in hand", "हाथ में साइज़"), L$c("Packaging", "पैकिंग"), L$c("Video", "वीडियो")];
+const DEFAULT_BOX = L$c("Yantra, installation guide (PDF), mantra card, certificate", "यंत्र, स्थापना विधि PDF, मंत्र कार्ड, सर्टिफ़िकेट");
 function YantraDetail() {
   var _a, _b, _c, _d, _e, _f;
   const t = useT();
@@ -49895,9 +49906,9 @@ function YantraDetail() {
   } : null;
   if (missing) return /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {});
   const add = () => y && addToCart({ slug: y.slug, name: y.name, nameHi: yName(y).hi, size: sizes[size], sankalp, priceINR: y.priceINR, priceUSD: y.priceUSD, sankalpPriceINR: y.sankalpPriceINR, sankalpPriceUSD: y.sankalpPriceUSD });
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: y ? `${name}, ${energized}` : L$b("Yantra", "यंत्र"), description: y ? (descText ? { en: clip160(descText), hi: clip160(descText) } : void 0) || t(`${y.name} — energized by Pt. Rajneesh Sharma. Size, metal, installation guide and video. Shipping in India and worldwide.`, `${name} — पं. रजनीश शर्मा द्वारा प्राण-प्रतिष्ठित। साइज़, धातु, स्थापना विधि और वीडियो। भारत और विदेश में शिपिंग।`) : void 0, schema, disclaimer: DISCLAIMER.yantra, seed: 61, mobileCta: { to: "/cart", label: L$b("Cart · Checkout", "कार्ट · चेकआउट") }, revealKey: y == null ? void 0 : y.slug, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: y ? `${name}, ${energized}` : L$c("Yantra", "यंत्र"), description: y ? (descText ? { en: clip160(descText), hi: clip160(descText) } : void 0) || t(`${y.name} — energized by Pt. Rajneesh Sharma. Size, metal, installation guide and video. Shipping in India and worldwide.`, `${name} — पं. रजनीश शर्मा द्वारा प्राण-प्रतिष्ठित। साइज़, धातु, स्थापना विधि और वीडियो। भारत और विदेश में शिपिंग।`) : void 0, schema, disclaimer: DISCLAIMER.yantra, seed: 61, mobileCta: { to: "/cart", label: L$c("Cart · Checkout", "कार्ट · चेकआउट") }, revealKey: y == null ? void 0 : y.slug, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", style: { paddingBottom: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide stack", style: { "--gap": "32px" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$b("Yantra Shop", "यंत्र शॉप"), to: "/yantra-shop" }, { label: y ? catLabel(y.category) : "…", to: y ? `/yantra-shop?category=${encodeURIComponent(y.category)}` : void 0 }, { label: name }] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$c("Yantra Shop", "यंत्र शॉप"), to: "/yantra-shop" }, { label: y ? catLabel(y.category) : "…", to: y ? `/yantra-shop?category=${encodeURIComponent(y.category)}` : void 0 }, { label: name }] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "row", style: { "--gap": "56px", alignItems: "flex-start" }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "stack", style: { flex: "1.1 1 480px", minWidth: 0, "--gap": "14px" }, children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { position: "relative", aspectRatio: "1 / 1", border: "1px solid var(--line-2)", borderRadius: 4, background: "var(--bg-2)", overflow: "hidden" }, children: [
@@ -50005,7 +50016,7 @@ function YantraDetail() {
             v
           ] })
         ] }, k)) }),
-        (y == null ? void 0 : y.videoUrl) && /* @__PURE__ */ jsxRuntimeExports.jsx(PlayBox, { label: L$b("Installation video (Pandit ji)", "स्थापना विधि वीडियो (पंडित जी)"), src: y.videoUrl })
+        (y == null ? void 0 : y.videoUrl) && /* @__PURE__ */ jsxRuntimeExports.jsx(PlayBox, { label: L$c("Installation video (Pandit ji)", "स्थापना विधि वीडियो (पंडित जी)"), src: y.videoUrl })
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section-tight", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row", style: { "--gap": "56px" }, children: [
@@ -50038,16 +50049,16 @@ function YantraDetail() {
     ] }) })
   ] });
 }
-const L$a = (en, hi) => ({ en, hi });
+const L$b = (en, hi) => ({ en, hi });
 const KIND = {
-  "Pandit ji": L$a("Pandit ji", "पंडित जी"),
-  Client: L$a("Client testimonial", "क्लाइंट का अनुभव"),
-  Yantra: L$a("Yantra", "यंत्र"),
-  Vastu: L$a("Vastu", "वास्तु")
+  "Pandit ji": L$b("Pandit ji", "पंडित जी"),
+  Client: L$b("Client testimonial", "क्लाइंट का अनुभव"),
+  Yantra: L$b("Yantra", "यंत्र"),
+  Vastu: L$b("Vastu", "वास्तु")
 };
-const YT = L$a("YouTube", "YouTube");
+const YT = L$b("YouTube", "YouTube");
 const VIDEOS = YT_VIDEOS.map((v, id) => ({ id, src: "", sub: YT, len: "", kind: KIND[v.cat], ...v }));
-const TABS = [["all", L$a("All", "सभी")], ["Client", L$a("Client testimonials", "क्लाइंट के अनुभव")], ["Pandit ji", L$a("Pandit ji’s videos", "पंडित जी के वीडियो")], ["Yantra", L$a("Yantra videos", "यंत्र वीडियो")], ["Vastu", L$a("Vastu", "वास्तु")]].filter(([k]) => k === "all" || VIDEOS.some((v) => v.cat === k));
+const TABS = [["all", L$b("All", "सभी")], ["Client", L$b("Client testimonials", "क्लाइंट के अनुभव")], ["Pandit ji", L$b("Pandit ji’s videos", "पंडित जी के वीडियो")], ["Yantra", L$b("Yantra videos", "यंत्र वीडियो")], ["Vastu", L$b("Vastu", "वास्तु")]].filter(([k]) => k === "all" || VIDEOS.some((v) => v.cat === k));
 function Videos() {
   const t = useT();
   const [tab, setTab] = reactExports.useState("all");
@@ -50119,12 +50130,12 @@ function Videos() {
     ] })
   ] });
 }
-const L$9 = (en, hi) => ({ en, hi });
+const L$a = (en, hi) => ({ en, hi });
 const WORK = [
-  ["/vedic-astrology", "I · Vedic", L$9("Birth chart consultation", "कुंडली परामर्श"), L$9("Career, marriage, business and dasha analysis. Kundli matching too.", "करियर, शादी, व्यापार और दशा का विश्लेषण। कुंडली मिलान भी।")],
-  ["/kp-prashna", "II · KP", L$9("KP Prashna", "केपी प्रश्न"), L$9("One question, answered with timing. No birth time needed.", "एक प्रश्न, समय के साथ उत्तर। जन्म समय की ज़रूरत नहीं।")],
-  ["/vastu-consultant-jaipur", "III · Vastu", L$9("Astro-Vastu", "एस्ट्रो-वास्तु"), L$9("Your floor plan + your family’s birth charts. Remedies without demolition come first.", "घर का प्लान + परिवार की कुंडली। पहले बिना तोड़-फोड़ के उपाय।")],
-  ["/nadi-astrology", "IV · Nadi", L$9("Nadi reading", "नाड़ी रीडिंग"), L$9("Nadi readers of the Vaitheeswaran Koil tradition read the leaf; Pandit ji adds Vedic/KP analysis and remedies.", "वैथीश्वरन कोइल परंपरा के नाड़ी रीडर पट्टा पढ़ते हैं; पंडित जी वैदिक/केपी विश्लेषण और उपाय बताते हैं।")]
+  ["/vedic-astrology", "I · Vedic", L$a("Birth chart consultation", "कुंडली परामर्श"), L$a("Career, marriage, business and dasha analysis. Kundli matching too.", "करियर, शादी, व्यापार और दशा का विश्लेषण। कुंडली मिलान भी।")],
+  ["/kp-prashna", "II · KP", L$a("KP Prashna", "केपी प्रश्न"), L$a("One question, answered with timing. No birth time needed.", "एक प्रश्न, समय के साथ उत्तर। जन्म समय की ज़रूरत नहीं।")],
+  ["/vastu-consultant-jaipur", "III · Vastu", L$a("Astro-Vastu", "एस्ट्रो-वास्तु"), L$a("Your floor plan + your family’s birth charts. Remedies without demolition come first.", "घर का प्लान + परिवार की कुंडली। पहले बिना तोड़-फोड़ के उपाय।")],
+  ["/nadi-astrology", "IV · Nadi", L$a("Nadi reading", "नाड़ी रीडिंग"), L$a("Nadi readers of the Vaitheeswaran Koil tradition read the leaf; Pandit ji adds Vedic/KP analysis and remedies.", "वैथीश्वरन कोइल परंपरा के नाड़ी रीडर पट्टा पढ़ते हैं; पंडित जी वैदिक/केपी विश्लेषण और उपाय बताते हैं।")]
 ];
 const ORIGIN = (typeof window !== "undefined" ? window.location.origin : "").replace(/\/$/, "");
 const PROFILE_SCHEMA = {
@@ -50134,12 +50145,12 @@ const PROFILE_SCHEMA = {
   mainEntity: { "@id": `${ORIGIN}/#person` }
 };
 const PRINCIPLES = [
-  [L$9("The chart comes first", "पहले कुंडली"), L$9("Every answer is based on your birth chart, dasha and transits — not on your sun sign or a general prediction.", "हर उत्तर आपकी कुंडली, दशा और गोचर पर आधारित होता है — राशिफल या सामान्य भविष्यवाणी पर नहीं।")],
-  [L$9("No fear", "डर नहीं"), L$9("Doshas such as Manglik, Kaal Sarp or Sade Sati are explained calmly, with what they really mean in your chart.", "मांगलिक, कालसर्प या साढ़ेसाती जैसे दोष शांति से समझाए जाते हैं — आपकी कुंडली में उनका असली अर्थ क्या है।")],
-  [L$9("Simple remedies first", "पहले सरल उपाय"), L$9("Mantra, daan and small changes come before costly gemstones or poojas; in Vastu, remedies without demolition come first.", "महँगे रत्न या पूजा से पहले मंत्र, दान और छोटे बदलाव; वास्तु में पहले बिना तोड़-फोड़ के उपाय।")],
-  [L$9("Astrology and Vastu together", "ज्योतिष और वास्तु साथ"), L$9("Your home is read with the birth charts of the family (Astro-Vastu), so the advice fits the people living there.", "घर को परिवार की कुंडलियों के साथ पढ़ा जाता है (एस्ट्रो-वास्तु), ताकि सलाह वहाँ रहने वालों के अनुकूल हो।")],
-  [L$9("Recording and summary", "रिकॉर्डिंग और सारांश"), L$9("You receive the call recording and a written summary of the remedies on WhatsApp, so nothing is forgotten.", "आपको कॉल की रिकॉर्डिंग और उपायों का लिखित सारांश WhatsApp पर मिलता है, ताकि कुछ भूले नहीं।")],
-  [L$9("English or Hindi", "हिंदी या अंग्रेज़ी"), L$9("Consultations in English or Hindi; Nadi readings are translated from Tamil.", "परामर्श हिंदी या अंग्रेज़ी में; नाड़ी रीडिंग तमिल से अनुवाद के साथ।")]
+  [L$a("The chart comes first", "पहले कुंडली"), L$a("Every answer is based on your birth chart, dasha and transits — not on your sun sign or a general prediction.", "हर उत्तर आपकी कुंडली, दशा और गोचर पर आधारित होता है — राशिफल या सामान्य भविष्यवाणी पर नहीं।")],
+  [L$a("No fear", "डर नहीं"), L$a("Doshas such as Manglik, Kaal Sarp or Sade Sati are explained calmly, with what they really mean in your chart.", "मांगलिक, कालसर्प या साढ़ेसाती जैसे दोष शांति से समझाए जाते हैं — आपकी कुंडली में उनका असली अर्थ क्या है।")],
+  [L$a("Simple remedies first", "पहले सरल उपाय"), L$a("Mantra, daan and small changes come before costly gemstones or poojas; in Vastu, remedies without demolition come first.", "महँगे रत्न या पूजा से पहले मंत्र, दान और छोटे बदलाव; वास्तु में पहले बिना तोड़-फोड़ के उपाय।")],
+  [L$a("Astrology and Vastu together", "ज्योतिष और वास्तु साथ"), L$a("Your home is read with the birth charts of the family (Astro-Vastu), so the advice fits the people living there.", "घर को परिवार की कुंडलियों के साथ पढ़ा जाता है (एस्ट्रो-वास्तु), ताकि सलाह वहाँ रहने वालों के अनुकूल हो।")],
+  [L$a("Recording and summary", "रिकॉर्डिंग और सारांश"), L$a("You receive the call recording and a written summary of the remedies on WhatsApp, so nothing is forgotten.", "आपको कॉल की रिकॉर्डिंग और उपायों का लिखित सारांश WhatsApp पर मिलता है, ताकि कुछ भूले नहीं।")],
+  [L$a("English or Hindi", "हिंदी या अंग्रेज़ी"), L$a("Consultations in English or Hindi; Nadi readings are translated from Tamil.", "परामर्श हिंदी या अंग्रेज़ी में; नाड़ी रीडिंग तमिल से अनुवाद के साथ।")]
 ];
 function About() {
   const t = useT();
@@ -50176,7 +50187,7 @@ function About() {
         ] })
       ] })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section-tight", style: { paddingBottom: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Stats, { items: [["12+", L$9("years of experience", "साल का अनुभव")], ["4000+", L$9("office-visit clients", "ऑफिस विज़िट क्लाइंट")], ["60+", L$9("international office visits", "विदेशी क्लाइंट ऑफिस आए")], ["10+", L$9("years of Vedic & KP practice", "साल वैदिक और केपी अभ्यास")]] }) }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section-tight", style: { paddingBottom: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Stats, { items: [["12+", L$a("years of experience", "साल का अनुभव")], ["4000+", L$a("office-visit clients", "ऑफिस विज़िट क्लाइंट")], ["60+", L$a("international office visits", "विदेशी क्लाइंट ऑफिस आए")], ["10+", L$a("years of Vedic & KP practice", "साल वैदिक और केपी अभ्यास")]] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "40px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2 reveal", children: t("Pandit ji’s work", "पंडित जी का काम") }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid reveal", style: { "--min": "260px" }, children: WORK.map(([to, k, title, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to, className: "card", children: [
@@ -50240,16 +50251,16 @@ function About() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("iframe", { title: t("Office map", "ऑफिस का नक्शा"), src: SITE.mapEmbedUrl, loading: "lazy", style: { flex: "1 1 420px", minHeight: 320, border: 0, borderRadius: 4 } })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { height: 40 } }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$9("About Pt. Rajneesh Sharma — FAQ", "पं. रजनीश शर्मा — प्रश्न-उत्तर"), items: [
-      [L$9("Who is Pt. Rajneesh Sharma?", "पं. रजनीश शर्मा कौन हैं?"), L$9("A Vedic and KP astrologer and Astro-Vastu consultant based in Jaipur, consulting for 12 years. More than 4000 clients have visited his office, and he also consults online worldwide.", "जयपुर के वैदिक और केपी ज्योतिषी तथा एस्ट्रो-वास्तु सलाहकार, जो 12 साल से परामर्श दे रहे हैं। 4000 से ज़्यादा क्लाइंट उनके ऑफिस आ चुके हैं, और वे दुनिया भर में ऑनलाइन परामर्श भी देते हैं।")],
-      [L$9("Where is the office in Jaipur?", "जयपुर में ऑफिस कहाँ है?"), L$9("Near Shyam Nagar metro station, opposite pillar no. 118, New Sanganer Road, Sodala, Jaipur 302019. Open Monday to Saturday, 10 am to 7 pm.", "श्याम नगर मेट्रो स्टेशन के पास, पिलर नंबर 118 के सामने, न्यू सांगानेर रोड, सोडाला, जयपुर 302019। सोमवार से शनिवार, सुबह 10 से शाम 7 बजे तक।")],
-      [L$9("Can I consult Pandit ji online?", "क्या पंडित जी से ऑनलाइन परामर्श ले सकते हैं?"), L$9("Yes. Every service is available by Zoom or WhatsApp video call, with slots shown in your own time zone. International clients pay in USD via PayPal.", "हाँ। हर सेवा Zoom या WhatsApp वीडियो कॉल पर उपलब्ध है, और स्लॉट आपके टाइम ज़ोन में दिखते हैं। विदेशी क्लाइंट PayPal से USD में भुगतान करते हैं।")],
-      [L$9("Which services does Pandit ji offer?", "पंडित जी कौन-सी सेवाएँ देते हैं?"), L$9("Vedic birth chart consultation, kundli matching, KP Prashna, Nadi palm leaf reading (with traditional Nadi readers), Vastu consultation for homes, offices and factories, and energized yantras.", "वैदिक कुंडली परामर्श, कुंडली मिलान, केपी प्रश्न, नाड़ी ताड़-पत्र रीडिंग (पारंपरिक नाड़ी रीडर्स के साथ), घर, ऑफिस और फैक्ट्री के लिए वास्तु परामर्श, और प्राण-प्रतिष्ठित यंत्र।")]
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$a("About Pt. Rajneesh Sharma — FAQ", "पं. रजनीश शर्मा — प्रश्न-उत्तर"), items: [
+      [L$a("Who is Pt. Rajneesh Sharma?", "पं. रजनीश शर्मा कौन हैं?"), L$a("A Vedic and KP astrologer and Astro-Vastu consultant based in Jaipur, consulting for 12 years. More than 4000 clients have visited his office, and he also consults online worldwide.", "जयपुर के वैदिक और केपी ज्योतिषी तथा एस्ट्रो-वास्तु सलाहकार, जो 12 साल से परामर्श दे रहे हैं। 4000 से ज़्यादा क्लाइंट उनके ऑफिस आ चुके हैं, और वे दुनिया भर में ऑनलाइन परामर्श भी देते हैं।")],
+      [L$a("Where is the office in Jaipur?", "जयपुर में ऑफिस कहाँ है?"), L$a("Near Shyam Nagar metro station, opposite pillar no. 118, New Sanganer Road, Sodala, Jaipur 302019. Open Monday to Saturday, 10 am to 7 pm.", "श्याम नगर मेट्रो स्टेशन के पास, पिलर नंबर 118 के सामने, न्यू सांगानेर रोड, सोडाला, जयपुर 302019। सोमवार से शनिवार, सुबह 10 से शाम 7 बजे तक।")],
+      [L$a("Can I consult Pandit ji online?", "क्या पंडित जी से ऑनलाइन परामर्श ले सकते हैं?"), L$a("Yes. Every service is available by Zoom or WhatsApp video call, with slots shown in your own time zone. International clients pay in USD via PayPal.", "हाँ। हर सेवा Zoom या WhatsApp वीडियो कॉल पर उपलब्ध है, और स्लॉट आपके टाइम ज़ोन में दिखते हैं। विदेशी क्लाइंट PayPal से USD में भुगतान करते हैं।")],
+      [L$a("Which services does Pandit ji offer?", "पंडित जी कौन-सी सेवाएँ देते हैं?"), L$a("Vedic birth chart consultation, kundli matching, KP Prashna, Nadi palm leaf reading (with traditional Nadi readers), Vastu consultation for homes, offices and factories, and energized yantras.", "वैदिक कुंडली परामर्श, कुंडली मिलान, केपी प्रश्न, नाड़ी ताड़-पत्र रीडिंग (पारंपरिक नाड़ी रीडर्स के साथ), घर, ऑफिस और फैक्ट्री के लिए वास्तु परामर्श, और प्राण-प्रतिष्ठित यंत्र।")]
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { height: 60 } })
   ] });
 }
-const L$8 = (en, hi) => ({ en, hi });
+const L$9 = (en, hi) => ({ en, hi });
 function Cart() {
   const { cart, updateQty, removeFromCart, clearCart, currency } = useApp();
   const price = usePrice();
@@ -50285,8 +50296,8 @@ function Cart() {
       setState({ status: "err", msg: err.message });
     }
   }
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(PageShell, { title: L$8("Cart", "कार्ट"), disclaimer: DISCLAIMER.yantra, seed: 67, mobileCta: { to: "/yantra-shop", label: L$8("Browse more yantras", "और यंत्र देखें") }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "32px" }, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$8("Yantra Shop", "यंत्र शॉप"), to: "/yantra-shop" }, { label: L$8("Cart", "कार्ट") }] }),
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(PageShell, { title: L$9("Cart", "कार्ट"), disclaimer: DISCLAIMER.yantra, seed: 67, mobileCta: { to: "/yantra-shop", label: L$9("Browse more yantras", "और यंत्र देखें") }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "32px" }, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$9("Yantra Shop", "यंत्र शॉप"), to: "/yantra-shop" }, { label: L$9("Cart", "कार्ट") }] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "h1", children: [
       t("Your", "आपका"),
       " ",
@@ -50376,34 +50387,34 @@ function Cart() {
     ] })
   ] }) }) });
 }
-const L$7 = (en, hi) => ({ en, hi });
+const L$8 = (en, hi) => ({ en, hi });
 const GROUP_LABEL = {
-  Vedic: L$7("Vedic", "वैदिक"),
-  KP: L$7("KP", "केपी"),
-  Nadi: L$7("Nadi", "नाड़ी"),
-  Vastu: L$7("Vastu", "वास्तु")
+  Vedic: L$8("Vedic", "वैदिक"),
+  KP: L$8("KP", "केपी"),
+  Nadi: L$8("Nadi", "नाड़ी"),
+  Vastu: L$8("Vastu", "वास्तु")
 };
 const SERVICES = [
-  { value: "vedic-30", group: "Vedic", label: L$7("Vedic Birth Chart — 30 min", "वैदिक कुंडली — 30 मिनट"), kind: "vedic", duration: L$7("30 min", "30 मिनट"), modes: ["video", "office"], forWhom: L$7("Career, marriage, business, life direction", "करियर, शादी, व्यापार, जीवन की दिशा"), gets: L$7("Chart analysis, dasha periods, remedies, recording", "कुंडली विश्लेषण, दशा, उपाय, रिकॉर्डिंग"), page: "/vedic-astrology", priceINR: null, priceUSD: null },
-  { value: "vedic-60", group: "Vedic", label: L$7("Vedic Birth Chart — 60 min", "वैदिक कुंडली — 60 मिनट"), kind: "vedic", duration: L$7("60 min", "60 मिनट"), modes: ["video", "office"], forWhom: L$7("Career, marriage, business, life direction", "करियर, शादी, व्यापार, जीवन की दिशा"), gets: L$7("Chart analysis, dasha periods, remedies, recording", "कुंडली विश्लेषण, दशा, उपाय, रिकॉर्डिंग"), page: "/vedic-astrology", priceINR: null, priceUSD: null },
-  { value: "kundli-milan", group: "Vedic", label: L$7("Kundli Matching", "कुंडली मिलान"), kind: "milan", duration: L$7("Report + 20 min call", "रिपोर्ट + 20 मिनट कॉल"), modes: ["video", "office"], forWhom: L$7("Before marriage", "शादी से पहले"), gets: L$7("Guna milan, Manglik check, guidance", "गुण मिलान, मांगलिक जाँच, मार्गदर्शन"), page: "/kundli-milan", priceINR: null, priceUSD: null },
-  { value: "kp-prashna", group: "KP", label: L$7("KP Prashna", "केपी प्रश्न"), kind: "kp", duration: L$7("20–30 min call", "20–30 मिनट कॉल"), modes: ["video"], forWhom: L$7("One specific question: “When will it happen? Will it happen?”", "एक विशेष प्रश्न: “कब होगा, होगा या नहीं”"), gets: L$7("Horary chart from a number 1–249, answer with timing", "1–249 नंबर से प्रश्न कुंडली, समय के साथ उत्तर"), page: "/kp-prashna", priceINR: null, priceUSD: null },
-  { value: "nadi-general", group: "Nadi", label: L$7("Nadi — General (Kandam 1)", "नाड़ी — सामान्य (कांडम 1)"), kind: "nadi", duration: L$7("Leaf search → video call", "पट्टा खोज → वीडियो कॉल"), modes: ["video", "office"], forWhom: L$7("In-depth past, present and future reading", "भूत, वर्तमान और भविष्य की गहरी रीडिंग"), gets: L$7("Leaf search + general reading, recording", "पट्टा खोज + सामान्य रीडिंग, रिकॉर्डिंग"), page: "/nadi-astrology", priceINR: null, priceUSD: null },
-  { value: "nadi-general-2-kandam", group: "Nadi", label: L$7("Nadi — General + 2 Kandams + Analysis", "नाड़ी — सामान्य + 2 कांडम + विश्लेषण"), kind: "nadi", duration: L$7("Leaf search → video call", "पट्टा खोज → वीडियो कॉल"), modes: ["video", "office"], forWhom: L$7("In-depth past, present and future reading", "भूत, वर्तमान और भविष्य की गहरी रीडिंग"), gets: L$7("Leaf reading (Nadi reader) + Pandit ji’s Vedic/KP interpretation + remedies", "पट्टा रीडिंग (नाड़ी रीडर) + पंडित जी का वैदिक/केपी विश्लेषण + उपाय"), page: "/nadi-astrology", priceINR: null, priceUSD: null },
-  { value: "nadi-shanti", group: "Nadi", label: L$7("Nadi — Shanti Kandam (remedies)", "नाड़ी — शांति कांडम (उपाय)"), kind: "nadi", duration: L$7("Leaf search → video call", "पट्टा खोज → वीडियो कॉल"), modes: ["video", "office"], forWhom: L$7("Past karma and traditional remedies", "पूर्व कर्म और पारंपरिक उपाय"), gets: L$7("Shanti kandam, yantra advice", "शांति कांडम, यंत्र सलाह"), page: "/nadi-astrology", priceINR: null, priceUSD: null },
-  { value: "vastu-quick-call", group: "Vastu", label: L$7("Vastu — Quick Call", "वास्तु — क्विक कॉल"), kind: "vastu", duration: L$7("30 min call + WhatsApp summary", "30 मिनट कॉल + WhatsApp सारांश"), modes: ["video"], forWhom: L$7("Before buying a home or flat, or for a small issue", "घर/फ्लैट लेने से पहले या छोटी समस्या"), gets: L$7("Verbal guidance on your floor plan", "फ्लोर प्लान पर मौखिक मार्गदर्शन"), page: "/vastu-consultant-jaipur", priceINR: null, priceUSD: null },
-  { value: "vastu-online-report", group: "Vastu", label: L$7("Vastu — Online Astro-Vastu Report", "वास्तु — ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट"), kind: "vastu", duration: L$7("PDF report + follow-up call", "PDF रिपोर्ट + फॉलो-अप कॉल"), modes: ["report"], forWhom: L$7("Home, office, shop", "घर, ऑफिस, दुकान"), gets: L$7("PDF report: doshas, remedies without demolition, priority list", "PDF रिपोर्ट: दोष, बिना तोड़-फोड़ उपाय, प्राथमिकता सूची"), page: "/online-vastu-consultation", priceINR: null, priceUSD: null, perSqft: true },
-  { value: "vastu-site-visit", group: "Vastu", label: L$7("Vastu — Site Visit", "वास्तु — साइट विज़िट"), kind: "vastu", duration: L$7("Site visit + report + follow-up call", "साइट विज़िट + रिपोर्ट + फॉलो-अप कॉल"), modes: ["site-visit"], forWhom: L$7("Factory, office, new construction", "फैक्ट्री, ऑफिस, नया निर्माण"), gets: L$7("On-site inspection, compass reading, report, follow-up call", "साइट पर जाँच, कंपास रीडिंग, रिपोर्ट, फॉलो-अप कॉल"), page: "/vastu-consultant-jaipur", priceINR: null, priceUSD: null, inrOnly: true }
+  { value: "vedic-30", group: "Vedic", label: L$8("Vedic Birth Chart — 30 min", "वैदिक कुंडली — 30 मिनट"), kind: "vedic", duration: L$8("30 min", "30 मिनट"), modes: ["video", "office"], forWhom: L$8("Career, marriage, business, life direction", "करियर, शादी, व्यापार, जीवन की दिशा"), gets: L$8("Chart analysis, dasha periods, remedies, recording", "कुंडली विश्लेषण, दशा, उपाय, रिकॉर्डिंग"), page: "/vedic-astrology", priceINR: null, priceUSD: null },
+  { value: "vedic-60", group: "Vedic", label: L$8("Vedic Birth Chart — 60 min", "वैदिक कुंडली — 60 मिनट"), kind: "vedic", duration: L$8("60 min", "60 मिनट"), modes: ["video", "office"], forWhom: L$8("Career, marriage, business, life direction", "करियर, शादी, व्यापार, जीवन की दिशा"), gets: L$8("Chart analysis, dasha periods, remedies, recording", "कुंडली विश्लेषण, दशा, उपाय, रिकॉर्डिंग"), page: "/vedic-astrology", priceINR: null, priceUSD: null },
+  { value: "kundli-milan", group: "Vedic", label: L$8("Kundli Matching", "कुंडली मिलान"), kind: "milan", duration: L$8("Report + 20 min call", "रिपोर्ट + 20 मिनट कॉल"), modes: ["video", "office"], forWhom: L$8("Before marriage", "शादी से पहले"), gets: L$8("Guna milan, Manglik check, guidance", "गुण मिलान, मांगलिक जाँच, मार्गदर्शन"), page: "/kundli-milan", priceINR: null, priceUSD: null },
+  { value: "kp-prashna", group: "KP", label: L$8("KP Prashna", "केपी प्रश्न"), kind: "kp", duration: L$8("20–30 min call", "20–30 मिनट कॉल"), modes: ["video"], forWhom: L$8("One specific question: “When will it happen? Will it happen?”", "एक विशेष प्रश्न: “कब होगा, होगा या नहीं”"), gets: L$8("Horary chart from a number 1–249, answer with timing", "1–249 नंबर से प्रश्न कुंडली, समय के साथ उत्तर"), page: "/kp-prashna", priceINR: null, priceUSD: null },
+  { value: "nadi-general", group: "Nadi", label: L$8("Nadi — General (Kandam 1)", "नाड़ी — सामान्य (कांडम 1)"), kind: "nadi", duration: L$8("Leaf search → video call", "पट्टा खोज → वीडियो कॉल"), modes: ["video", "office"], forWhom: L$8("In-depth past, present and future reading", "भूत, वर्तमान और भविष्य की गहरी रीडिंग"), gets: L$8("Leaf search + general reading, recording", "पट्टा खोज + सामान्य रीडिंग, रिकॉर्डिंग"), page: "/nadi-astrology", priceINR: null, priceUSD: null },
+  { value: "nadi-general-2-kandam", group: "Nadi", label: L$8("Nadi — General + 2 Kandams + Analysis", "नाड़ी — सामान्य + 2 कांडम + विश्लेषण"), kind: "nadi", duration: L$8("Leaf search → video call", "पट्टा खोज → वीडियो कॉल"), modes: ["video", "office"], forWhom: L$8("In-depth past, present and future reading", "भूत, वर्तमान और भविष्य की गहरी रीडिंग"), gets: L$8("Leaf reading (Nadi reader) + Pandit ji’s Vedic/KP interpretation + remedies", "पट्टा रीडिंग (नाड़ी रीडर) + पंडित जी का वैदिक/केपी विश्लेषण + उपाय"), page: "/nadi-astrology", priceINR: null, priceUSD: null },
+  { value: "nadi-shanti", group: "Nadi", label: L$8("Nadi — Shanti Kandam (remedies)", "नाड़ी — शांति कांडम (उपाय)"), kind: "nadi", duration: L$8("Leaf search → video call", "पट्टा खोज → वीडियो कॉल"), modes: ["video", "office"], forWhom: L$8("Past karma and traditional remedies", "पूर्व कर्म और पारंपरिक उपाय"), gets: L$8("Shanti kandam, yantra advice", "शांति कांडम, यंत्र सलाह"), page: "/nadi-astrology", priceINR: null, priceUSD: null },
+  { value: "vastu-quick-call", group: "Vastu", label: L$8("Vastu — Quick Call", "वास्तु — क्विक कॉल"), kind: "vastu", duration: L$8("30 min call + WhatsApp summary", "30 मिनट कॉल + WhatsApp सारांश"), modes: ["video"], forWhom: L$8("Before buying a home or flat, or for a small issue", "घर/फ्लैट लेने से पहले या छोटी समस्या"), gets: L$8("Verbal guidance on your floor plan", "फ्लोर प्लान पर मौखिक मार्गदर्शन"), page: "/vastu-consultant-jaipur", priceINR: null, priceUSD: null },
+  { value: "vastu-online-report", group: "Vastu", label: L$8("Vastu — Online Astro-Vastu Report", "वास्तु — ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट"), kind: "vastu", duration: L$8("PDF report + follow-up call", "PDF रिपोर्ट + फॉलो-अप कॉल"), modes: ["report"], forWhom: L$8("Home, office, shop", "घर, ऑफिस, दुकान"), gets: L$8("PDF report: doshas, remedies without demolition, priority list", "PDF रिपोर्ट: दोष, बिना तोड़-फोड़ उपाय, प्राथमिकता सूची"), page: "/online-vastu-consultation", priceINR: null, priceUSD: null, perSqft: true },
+  { value: "vastu-site-visit", group: "Vastu", label: L$8("Vastu — Site Visit", "वास्तु — साइट विज़िट"), kind: "vastu", duration: L$8("Site visit + report + follow-up call", "साइट विज़िट + रिपोर्ट + फॉलो-अप कॉल"), modes: ["site-visit"], forWhom: L$8("Factory, office, new construction", "फैक्ट्री, ऑफिस, नया निर्माण"), gets: L$8("On-site inspection, compass reading, report, follow-up call", "साइट पर जाँच, कंपास रीडिंग, रिपोर्ट, फॉलो-अप कॉल"), page: "/vastu-consultant-jaipur", priceINR: null, priceUSD: null, inrOnly: true }
 ];
 const MODE_LABEL = {
-  video: L$7("Video call (Zoom / WhatsApp)", "वीडियो कॉल (Zoom / WhatsApp)"),
-  office: L$7("Office visit — Jaipur", "ऑफिस विज़िट — जयपुर"),
-  report: L$7("Online report (from floor plan)", "ऑनलाइन रिपोर्ट (फ्लोर प्लान से)"),
-  "site-visit": L$7("Site visit", "साइट विज़िट")
+  video: L$8("Video call (Zoom / WhatsApp)", "वीडियो कॉल (Zoom / WhatsApp)"),
+  office: L$8("Office visit — Jaipur", "ऑफिस विज़िट — जयपुर"),
+  report: L$8("Online report (from floor plan)", "ऑनलाइन रिपोर्ट (फ्लोर प्लान से)"),
+  "site-visit": L$8("Site visit", "साइट विज़िट")
 };
 const SLOTS_IST = ["10:00", "11:00", "12:00", "13:00", "15:00", "16:00", "17:00", "18:00"];
-const L$6 = (en, hi) => ({ en, hi });
-const STEPS = [L$6("Service", "सेवा"), L$6("Slot", "स्लॉट"), L$6("Details", "जानकारी"), L$6("Payment", "भुगतान")];
+const L$7 = (en, hi) => ({ en, hi });
+const STEPS = [L$7("Service", "सेवा"), L$7("Slot", "स्लॉट"), L$7("Details", "जानकारी"), L$7("Payment", "भुगतान")];
 const userTz = (() => {
   try {
     return Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Kolkata";
@@ -50481,8 +50492,8 @@ function Book() {
     }
   }
   const priceText = service ? `${price(service.priceINR, service.priceUSD)}${service.perSqft && (currency === "USD" ? service.priceUSD : service.priceINR) != null ? " / sq.ft" : ""}${service.inrOnly && service.priceINR != null ? t(" + travel", " + यात्रा") : ""}` : "";
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(PageShell, { title: L$6("Book Consultation", "परामर्श बुक करें"), description: L$6("Book a Vedic, KP, Nadi or Vastu consultation — choose a service, pick a slot in your time zone, add your details and pay.", "वैदिक, केपी, नाड़ी या वास्तु परामर्श बुक करें — सेवा चुनें, अपने टाइम ज़ोन में स्लॉट, जानकारी और भुगतान।"), cta: { to: "/book", label: L$6("Book Consultation", "परामर्श बुक करें") }, mobileCta: { to: "/contact", label: L$6("Questions? Contact us", "प्रश्न है? संपर्क करें") }, seed: 101, children: /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "32px" }, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$6("Book Consultation", "परामर्श बुक करें") }] }),
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(PageShell, { title: L$7("Book Consultation", "परामर्श बुक करें"), description: L$7("Book a Vedic, KP, Nadi or Vastu consultation — choose a service, pick a slot in your time zone, add your details and pay.", "वैदिक, केपी, नाड़ी या वास्तु परामर्श बुक करें — सेवा चुनें, अपने टाइम ज़ोन में स्लॉट, जानकारी और भुगतान।"), cta: { to: "/book", label: L$7("Book Consultation", "परामर्श बुक करें") }, mobileCta: { to: "/contact", label: L$7("Questions? Contact us", "प्रश्न है? संपर्क करें") }, seed: 101, children: /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "32px" }, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$7("Book Consultation", "परामर्श बुक करें") }] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "h1 rise", children: [
       t("Book a", "परामर्श"),
       " ",
@@ -50698,13 +50709,13 @@ function DetailFields({ kind }) {
     ] })
   ] });
 }
-const L$5 = (en, hi) => ({ en, hi });
+const L$6 = (en, hi) => ({ en, hi });
 function KundliMilan() {
   const t = useT();
   const price = usePrice();
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$5("Kundli Matching — Guna Milan & Manglik Check Before Marriage", "कुंडली मिलान — शादी से पहले गुण मिलान और मांगलिक जाँच"), description: L$5("Kundli matching by Pt. Rajneesh Sharma, Jaipur: guna milan, Manglik check and guidance. Report + 20-minute call, at the office or by video.", "पं. रजनीश शर्मा, जयपुर द्वारा कुंडली मिलान: गुण मिलान, मांगलिक जाँच और मार्गदर्शन। रिपोर्ट + 20 मिनट कॉल, ऑफिस या वीडियो।"), cta: { to: "#form", label: L$5("Book Kundli Matching", "कुंडली मिलान बुक करें") }, disclaimer: DISCLAIMER.default, seed: 109, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$6("Kundli Matching — Guna Milan & Manglik Check Before Marriage", "कुंडली मिलान — शादी से पहले गुण मिलान और मांगलिक जाँच"), description: L$6("Kundli matching by Pt. Rajneesh Sharma, Jaipur: guna milan, Manglik check and guidance. Report + 20-minute call, at the office or by video.", "पं. रजनीश शर्मा, जयपुर द्वारा कुंडली मिलान: गुण मिलान, मांगलिक जाँच और मार्गदर्शन। रिपोर्ट + 20 मिनट कॉल, ऑफिस या वीडियो।"), cta: { to: "#form", label: L$6("Book Kundli Matching", "कुंडली मिलान बुक करें") }, disclaimer: DISCLAIMER.default, seed: 109, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide stack", style: { "--gap": "36px" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$5("Vedic", "वैदिक"), to: "/vedic-astrology" }, { label: L$5("Kundli Matching", "कुंडली मिलान") }] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$6("Vedic", "वैदिक"), to: "/vedic-astrology" }, { label: L$6("Kundli Matching", "कुंडली मिलान") }] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-row", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-text rise", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
@@ -50781,14 +50792,14 @@ function KundliMilan() {
         ] }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("tbody", { children: [
           [
-            [L$5("Varna", "वर्ण"), 1, L$5("Spiritual and work temperament", "आध्यात्मिक और कार्य स्वभाव")],
-            [L$5("Vashya", "वश्य"), 2, L$5("Mutual attraction and influence", "आपसी आकर्षण और प्रभाव")],
-            [L$5("Tara", "तारा"), 3, L$5("Destiny, health and well-being", "भाग्य, स्वास्थ्य और कुशलता")],
-            [L$5("Yoni", "योनि"), 4, L$5("Physical and intimate compatibility", "शारीरिक और दांपत्य अनुकूलता")],
-            [L$5("Graha Maitri", "ग्रह मैत्री"), 5, L$5("Mental harmony and friendship", "मानसिक तालमेल और मित्रता")],
-            [L$5("Gana", "गण"), 6, L$5("Nature: Deva, Manushya or Rakshasa", "स्वभाव: देव, मनुष्य या राक्षस")],
-            [L$5("Bhakoot", "भकूट"), 7, L$5("Family welfare, finances, children", "परिवार का कल्याण, धन, संतान")],
-            [L$5("Nadi", "नाड़ी"), 8, L$5("Health and progeny", "स्वास्थ्य और संतान")]
+            [L$6("Varna", "वर्ण"), 1, L$6("Spiritual and work temperament", "आध्यात्मिक और कार्य स्वभाव")],
+            [L$6("Vashya", "वश्य"), 2, L$6("Mutual attraction and influence", "आपसी आकर्षण और प्रभाव")],
+            [L$6("Tara", "तारा"), 3, L$6("Destiny, health and well-being", "भाग्य, स्वास्थ्य और कुशलता")],
+            [L$6("Yoni", "योनि"), 4, L$6("Physical and intimate compatibility", "शारीरिक और दांपत्य अनुकूलता")],
+            [L$6("Graha Maitri", "ग्रह मैत्री"), 5, L$6("Mental harmony and friendship", "मानसिक तालमेल और मित्रता")],
+            [L$6("Gana", "गण"), 6, L$6("Nature: Deva, Manushya or Rakshasa", "स्वभाव: देव, मनुष्य या राक्षस")],
+            [L$6("Bhakoot", "भकूट"), 7, L$6("Family welfare, finances, children", "परिवार का कल्याण, धन, संतान")],
+            [L$6("Nadi", "नाड़ी"), 8, L$6("Health and progeny", "स्वास्थ्य और संतान")]
           ].map(([k, n, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("tr", { style: { borderTop: "1px solid var(--line)" }, children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("td", { style: { padding: "12px 22px" }, children: t(k) }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("td", { style: { padding: "12px 22px" }, children: n }),
@@ -50805,40 +50816,40 @@ function KundliMilan() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "44px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2 reveal", children: t("How it works", "कैसे काम करता है") }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Steps, { min: 260, items: [
-        [L$5("Birth details of both", "दोनों के जन्म विवरण"), L$5("Send the date, time and place of birth of the groom and the bride.", "लड़के और लड़की की जन्म तिथि, समय, स्थान भेजें।")],
-        [L$5("Report prepared", "रिपोर्ट तैयार"), L$5("A report on guna milan and the Manglik check.", "गुण मिलान और मांगलिक जाँच की रिपोर्ट।")],
-        [L$5("20-minute call", "20 मिनट कॉल"), L$5("Discuss the report with Pandit ji, ask questions and get guidance.", "पंडित जी के साथ रिपोर्ट पर बात, प्रश्न और मार्गदर्शन।")]
+        [L$6("Birth details of both", "दोनों के जन्म विवरण"), L$6("Send the date, time and place of birth of the groom and the bride.", "लड़के और लड़की की जन्म तिथि, समय, स्थान भेजें।")],
+        [L$6("Report prepared", "रिपोर्ट तैयार"), L$6("A report on guna milan and the Manglik check.", "गुण मिलान और मांगलिक जाँच की रिपोर्ट।")],
+        [L$6("20-minute call", "20 मिनट कॉल"), L$6("Discuss the report with Pandit ji, ask questions and get guidance.", "पंडित जी के साथ रिपोर्ट पर बात, प्रश्न और मार्गदर्शन।")]
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "form", className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section row", style: { "--gap": "48px" }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         BookingForm,
         {
-          title: L$5("Send the birth details of both", "दोनों के जन्म विवरण भेजें"),
-          submitLabel: L$5("Choose a slot and pay", "स्लॉट चुनें और भुगतान करें"),
-          services: [{ value: "kundli-milan", label: L$5("Kundli Matching", "कुंडली मिलान") }],
+          title: L$6("Send the birth details of both", "दोनों के जन्म विवरण भेजें"),
+          submitLabel: L$6("Choose a slot and pay", "स्लॉट चुनें और भुगतान करें"),
+          services: [{ value: "kundli-milan", label: L$6("Kundli Matching", "कुंडली मिलान") }],
           fields: [
-            { name: "name", label: L$5("Your name", "आपका नाम"), required: true },
-            { name: "phone", label: L$5("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
-            { name: "dob", label: L$5("Groom’s date of birth", "लड़के की जन्म तिथि"), type: "date" },
-            { name: "tob", label: L$5("Groom’s time of birth", "लड़के का जन्म समय"), type: "time" },
-            { name: "pob", label: L$5("Groom’s place of birth", "लड़के का जन्म स्थान") },
-            { name: "mode", label: L$5("How would you like to meet?", "कैसे मिलना है"), type: "select", options: [{ value: "video", label: L$5("Video call", "वीडियो कॉल") }, { value: "office", label: L$5("Office visit (Jaipur)", "ऑफिस विज़िट (जयपुर)") }] },
-            { name: "membersText", label: L$5("Bride’s date, time and place of birth", "लड़की की जन्म तिथि, समय, स्थान"), type: "textarea", full: true, rows: 2 },
-            { name: "question", label: L$5("Any specific question", "कोई खास प्रश्न"), type: "textarea", full: true, rows: 3 }
+            { name: "name", label: L$6("Your name", "आपका नाम"), required: true },
+            { name: "phone", label: L$6("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
+            { name: "dob", label: L$6("Groom’s date of birth", "लड़के की जन्म तिथि"), type: "date" },
+            { name: "tob", label: L$6("Groom’s time of birth", "लड़के का जन्म समय"), type: "time" },
+            { name: "pob", label: L$6("Groom’s place of birth", "लड़के का जन्म स्थान") },
+            { name: "mode", label: L$6("How would you like to meet?", "कैसे मिलना है"), type: "select", options: [{ value: "video", label: L$6("Video call", "वीडियो कॉल") }, { value: "office", label: L$6("Office visit (Jaipur)", "ऑफिस विज़िट (जयपुर)") }] },
+            { name: "membersText", label: L$6("Bride’s date, time and place of birth", "लड़की की जन्म तिथि, समय, स्थान"), type: "textarea", full: true, rows: 2 },
+            { name: "question", label: L$6("Any specific question", "कोई खास प्रश्न"), type: "textarea", full: true, rows: 3 }
           ]
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(ClientQuote, { label: L$5("Kundli Matching client testimonial", "कुंडली मिलान क्लाइंट का अनुभव"), city: L$5("[Name], [City]", "[नाम], [शहर]") })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(ClientQuote, { label: L$6("Kundli Matching client testimonial", "कुंडली मिलान क्लाइंट का अनुभव"), city: L$6("[Name], [City]", "[नाम], [शहर]") })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { style: { paddingTop: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$5("Kundli Matching FAQ", "कुंडली मिलान — प्रश्न-उत्तर"), items: [
-      [L$5("How long does it take?", "कितना समय लगता है?"), L$5("Report + 20-minute call. The date of the call is fixed when you book.", "रिपोर्ट + 20 मिनट कॉल। कॉल की तारीख़ बुकिंग के समय तय होती है।")],
-      [L$5("What if a birth time is unknown?", "जन्म समय पता न हो तो?"), L$5("Speak with Pandit ji — he can advise on alternatives such as KP Prashna.", "पंडित जी से बात करें — केपी प्रश्न जैसे विकल्प पर सलाह मिल सकती है।")],
-      [L$5("Can it be done online?", "क्या ऑनलाइन हो सकता है?"), L$5("Yes, by video call. International clients can pay in USD via PayPal.", "हाँ, वीडियो कॉल पर। विदेश के क्लाइंट PayPal से USD में भुगतान कर सकते हैं।")],
-      [L$5("How many gunas should match for marriage?", "शादी के लिए कितने गुण मिलने चाहिए?"), L$5("Out of 36, 18 or more is traditionally acceptable, 24+ is good and 28+ very good. But the final advice also depends on Manglik dosha, Nadi and Bhakoot dosha and the 7th house — not on the score alone.", "36 में से 18 या अधिक परंपरा से स्वीकार्य, 24+ अच्छे और 28+ बहुत अच्छे माने जाते हैं। लेकिन अंतिम सलाह मांगलिक दोष, नाड़ी व भकूट दोष और सप्तम भाव पर भी निर्भर करती है — सिर्फ़ गुणों पर नहीं।")],
-      [L$5("What is Manglik dosha, and can a Manglik marry a non-Manglik?", "मांगलिक दोष क्या है, और क्या मांगलिक की शादी गैर-मांगलिक से हो सकती है?"), L$5("Manglik dosha is formed when Mars sits in certain houses (1, 2, 4, 7, 8 or 12) of the chart. In many charts it is cancelled by other factors. Where it is not, matching with another Manglik or specific remedies are considered — it should never be a reason for fear.", "मांगलिक दोष तब बनता है जब मंगल कुंडली के कुछ भावों (1, 2, 4, 7, 8 या 12) में हो। कई कुंडलियों में दूसरे कारणों से इसका परिहार हो जाता है। जहाँ नहीं होता, वहाँ दूसरे मांगलिक से मिलान या ख़ास उपाय देखे जाते हैं — यह कभी डर का कारण नहीं होना चाहिए।")],
-      [L$5("What is Nadi dosha in kundli matching?", "कुंडली मिलान में नाड़ी दोष क्या है?"), L$5("When both partners have the same Nadi (Aadi, Madhya or Antya), the Nadi koota scores 0 of 8 — this is Nadi dosha. There are recognised exceptions, for example when the nakshatras or Moon signs differ in certain ways.", "जब दोनों की नाड़ी (आदि, मध्य या अंत्य) एक हो, तो नाड़ी कूट में 8 में से 0 गुण मिलते हैं — यही नाड़ी दोष है। इसके मान्य अपवाद भी हैं, जैसे जब नक्षत्र या चंद्र राशि एक ख़ास तरह से अलग हों।")],
-      [L$5("Is kundli matching useful for love marriage?", "क्या लव मैरिज में कुंडली मिलान उपयोगी है?"), L$5("Yes. In a love marriage the question is rarely “yes or no” — the matching shows the areas that need care and the right time for the wedding, with remedies where needed.", "हाँ। लव मैरिज में सवाल अक्सर “हाँ या ना” का नहीं होता — मिलान से पता चलता है कि किन बातों का ध्यान रखना है और शादी का सही समय क्या है, ज़रूरत हो तो उपायों के साथ।")]
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { style: { paddingTop: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$6("Kundli Matching FAQ", "कुंडली मिलान — प्रश्न-उत्तर"), items: [
+      [L$6("How long does it take?", "कितना समय लगता है?"), L$6("Report + 20-minute call. The date of the call is fixed when you book.", "रिपोर्ट + 20 मिनट कॉल। कॉल की तारीख़ बुकिंग के समय तय होती है।")],
+      [L$6("What if a birth time is unknown?", "जन्म समय पता न हो तो?"), L$6("Speak with Pandit ji — he can advise on alternatives such as KP Prashna.", "पंडित जी से बात करें — केपी प्रश्न जैसे विकल्प पर सलाह मिल सकती है।")],
+      [L$6("Can it be done online?", "क्या ऑनलाइन हो सकता है?"), L$6("Yes, by video call. International clients can pay in USD via PayPal.", "हाँ, वीडियो कॉल पर। विदेश के क्लाइंट PayPal से USD में भुगतान कर सकते हैं।")],
+      [L$6("How many gunas should match for marriage?", "शादी के लिए कितने गुण मिलने चाहिए?"), L$6("Out of 36, 18 or more is traditionally acceptable, 24+ is good and 28+ very good. But the final advice also depends on Manglik dosha, Nadi and Bhakoot dosha and the 7th house — not on the score alone.", "36 में से 18 या अधिक परंपरा से स्वीकार्य, 24+ अच्छे और 28+ बहुत अच्छे माने जाते हैं। लेकिन अंतिम सलाह मांगलिक दोष, नाड़ी व भकूट दोष और सप्तम भाव पर भी निर्भर करती है — सिर्फ़ गुणों पर नहीं।")],
+      [L$6("What is Manglik dosha, and can a Manglik marry a non-Manglik?", "मांगलिक दोष क्या है, और क्या मांगलिक की शादी गैर-मांगलिक से हो सकती है?"), L$6("Manglik dosha is formed when Mars sits in certain houses (1, 2, 4, 7, 8 or 12) of the chart. In many charts it is cancelled by other factors. Where it is not, matching with another Manglik or specific remedies are considered — it should never be a reason for fear.", "मांगलिक दोष तब बनता है जब मंगल कुंडली के कुछ भावों (1, 2, 4, 7, 8 या 12) में हो। कई कुंडलियों में दूसरे कारणों से इसका परिहार हो जाता है। जहाँ नहीं होता, वहाँ दूसरे मांगलिक से मिलान या ख़ास उपाय देखे जाते हैं — यह कभी डर का कारण नहीं होना चाहिए।")],
+      [L$6("What is Nadi dosha in kundli matching?", "कुंडली मिलान में नाड़ी दोष क्या है?"), L$6("When both partners have the same Nadi (Aadi, Madhya or Antya), the Nadi koota scores 0 of 8 — this is Nadi dosha. There are recognised exceptions, for example when the nakshatras or Moon signs differ in certain ways.", "जब दोनों की नाड़ी (आदि, मध्य या अंत्य) एक हो, तो नाड़ी कूट में 8 में से 0 गुण मिलते हैं — यही नाड़ी दोष है। इसके मान्य अपवाद भी हैं, जैसे जब नक्षत्र या चंद्र राशि एक ख़ास तरह से अलग हों।")],
+      [L$6("Is kundli matching useful for love marriage?", "क्या लव मैरिज में कुंडली मिलान उपयोगी है?"), L$6("Yes. In a love marriage the question is rarely “yes or no” — the matching shows the areas that need care and the right time for the wedding, with remedies where needed.", "हाँ। लव मैरिज में सवाल अक्सर “हाँ या ना” का नहीं होता — मिलान से पता चलता है कि किन बातों का ध्यान रखना है और शादी का सही समय क्या है, ज़रूरत हो तो उपायों के साथ।")]
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row z", style: { "--gap": "10px 20px", fontSize: 14, color: "var(--muted)", paddingBottom: "var(--sp-section)", maxWidth: 860 }, children: [
       t("Related:", "संबंधित:"),
@@ -50850,13 +50861,13 @@ function KundliMilan() {
     ] })
   ] });
 }
-const L$4 = (en, hi) => ({ en, hi });
+const L$5 = (en, hi) => ({ en, hi });
 function OnlineVastu() {
   const t = useT();
   const { currency } = useApp();
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$4("Online Vastu Consultation — Astro-Vastu Report from Your Floor Plan", "ऑनलाइन वास्तु परामर्श — फ्लोर प्लान से एस्ट्रो-वास्तु रिपोर्ट"), description: L$4("Online Vastu consultation: a PDF Astro-Vastu report from your floor plan, true North and family birth details, with remedies without demolition. For India and abroad.", "ऑनलाइन वास्तु परामर्श: फ्लोर प्लान, उत्तर दिशा और परिवार के जन्म विवरण से PDF एस्ट्रो-वास्तु रिपोर्ट, बिना तोड़-फोड़ उपाय। भारत और विदेश।"), cta: { to: "#form", label: L$4("Send floor plan", "फ्लोर प्लान भेजें") }, disclaimer: DISCLAIMER.vastu, seed: 113, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title: L$5("Online Vastu Consultation — Astro-Vastu Report from Your Floor Plan", "ऑनलाइन वास्तु परामर्श — फ्लोर प्लान से एस्ट्रो-वास्तु रिपोर्ट"), description: L$5("Online Vastu consultation: a PDF Astro-Vastu report from your floor plan, true North and family birth details, with remedies without demolition. For India and abroad.", "ऑनलाइन वास्तु परामर्श: फ्लोर प्लान, उत्तर दिशा और परिवार के जन्म विवरण से PDF एस्ट्रो-वास्तु रिपोर्ट, बिना तोड़-फोड़ उपाय। भारत और विदेश।"), cta: { to: "#form", label: L$5("Send floor plan", "फ्लोर प्लान भेजें") }, disclaimer: DISCLAIMER.vastu, seed: 113, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide stack", style: { "--gap": "36px" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$4("Vastu", "वास्तु"), to: "/vastu-consultant-jaipur" }, { label: L$4("Online Vastu Consultation", "ऑनलाइन वास्तु परामर्श") }] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$5("Vastu", "वास्तु"), to: "/vastu-consultant-jaipur" }, { label: L$5("Online Vastu Consultation", "ऑनलाइन वास्तु परामर्श") }] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-row", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-text rise", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
@@ -50903,10 +50914,10 @@ function OnlineVastu() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t("An online Vastu consultation works because everything Vastu needs can be measured from a correct floor plan and true North. That is why it suits flats and apartments, rented homes, homes abroad, and anyone who wants a Vastu check before buying a property — without waiting for a site visit.", "ऑनलाइन वास्तु परामर्श इसलिए काम करता है क्योंकि वास्तु के लिए ज़रूरी हर चीज़ सही फ्लोर प्लान और असली उत्तर दिशा से नापी जा सकती है। इसीलिए यह फ्लैट और अपार्टमेंट, किराए के घर, विदेश में घर, और प्रॉपर्टी ख़रीदने से पहले वास्तु जाँच चाहने वालों के लिए उपयुक्त है — बिना साइट विज़िट का इंतज़ार किए।") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid reveal", style: { "--min": "190px", "--gap": "16px" }, children: [
-        [L$4("Home & flat", "घर और फ्लैट"), L$4("Entrance, kitchen, bedrooms, pooja room and toilets — with remedies for health, harmony and finances.", "मुख्य द्वार, रसोई, शयनकक्ष, पूजा कक्ष और शौचालय — स्वास्थ्य, सामंजस्य और धन के लिए उपाय।")],
-        [L$4("Office & shop", "ऑफिस और दुकान"), L$4("Owner’s seat, cash counter, entrance and the flow of customers and staff.", "मालिक की सीट, कैश काउंटर, प्रवेश द्वार और ग्राहकों व स्टाफ़ का आना-जाना।")],
-        [L$4("Plot & new construction", "प्लॉट और नया निर्माण"), L$4("Plot shape, road direction and the layout before the walls go up — the cheapest time to get Vastu right.", "प्लॉट का आकार, सड़क की दिशा और दीवारें उठने से पहले का नक्शा — वास्तु ठीक करने का सबसे सस्ता समय।")],
-        [L$4("Homes abroad", "विदेश में घर"), L$4("Houses and apartments in the USA, UK, Canada, Australia and the Gulf — using the same 16-zone method.", "अमेरिका, UK, कनाडा, ऑस्ट्रेलिया और खाड़ी देशों में घर और अपार्टमेंट — उसी 16-ज़ोन पद्धति से।")]
+        [L$5("Home & flat", "घर और फ्लैट"), L$5("Entrance, kitchen, bedrooms, pooja room and toilets — with remedies for health, harmony and finances.", "मुख्य द्वार, रसोई, शयनकक्ष, पूजा कक्ष और शौचालय — स्वास्थ्य, सामंजस्य और धन के लिए उपाय।")],
+        [L$5("Office & shop", "ऑफिस और दुकान"), L$5("Owner’s seat, cash counter, entrance and the flow of customers and staff.", "मालिक की सीट, कैश काउंटर, प्रवेश द्वार और ग्राहकों व स्टाफ़ का आना-जाना।")],
+        [L$5("Plot & new construction", "प्लॉट और नया निर्माण"), L$5("Plot shape, road direction and the layout before the walls go up — the cheapest time to get Vastu right.", "प्लॉट का आकार, सड़क की दिशा और दीवारें उठने से पहले का नक्शा — वास्तु ठीक करने का सबसे सस्ता समय।")],
+        [L$5("Homes abroad", "विदेश में घर"), L$5("Houses and apartments in the USA, UK, Canada, Australia and the Gulf — using the same 16-zone method.", "अमेरिका, UK, कनाडा, ऑस्ट्रेलिया और खाड़ी देशों में घर और अपार्टमेंट — उसी 16-ज़ोन पद्धति से।")]
       ].map(([h, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card", style: { padding: 24, gap: 8 }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "serif", style: { fontSize: 22, margin: 0, fontWeight: 500 }, children: t(h) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", children: t(d) })
@@ -50928,10 +50939,10 @@ function OnlineVastu() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t("works", "कैसे होता है") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Steps, { items: [
-        [L$4("Upload your plan", "प्लान अपलोड"), L$4("Mark North on your floor plan (PDF/photo).", "फ्लोर प्लान (PDF/फोटो) पर उत्तर दिशा मार्क करें।")],
-        [L$4("Family details", "घर वालों की जानकारी"), L$4("Date, time and place of birth for up to 5 members.", "5 सदस्यों तक की जन्म तिथि, समय, स्थान।")],
-        [L$4("PDF report", "PDF रिपोर्ट"), L$4("Doshas, zone-wise markings, remedies without demolition, priority list.", "दोष, ज़ोन-वार मार्किंग, बिना तोड़-फोड़ उपाय, प्राथमिकता सूची।")],
-        [L$4("Follow-up call", "फॉलो-अप कॉल"), L$4("Discuss the report with Pandit ji and ask your questions.", "रिपोर्ट पर पंडित जी से बात और प्रश्न।")]
+        [L$5("Upload your plan", "प्लान अपलोड"), L$5("Mark North on your floor plan (PDF/photo).", "फ्लोर प्लान (PDF/फोटो) पर उत्तर दिशा मार्क करें।")],
+        [L$5("Family details", "घर वालों की जानकारी"), L$5("Date, time and place of birth for up to 5 members.", "5 सदस्यों तक की जन्म तिथि, समय, स्थान।")],
+        [L$5("PDF report", "PDF रिपोर्ट"), L$5("Doshas, zone-wise markings, remedies without demolition, priority list.", "दोष, ज़ोन-वार मार्किंग, बिना तोड़-फोड़ उपाय, प्राथमिकता सूची।")],
+        [L$5("Follow-up call", "फॉलो-अप कॉल"), L$5("Discuss the report with Pandit ji and ask your questions.", "रिपोर्ट पर पंडित जी से बात और प्रश्न।")]
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row", style: { "--gap": "48px" }, children: [
@@ -50955,30 +50966,30 @@ function OnlineVastu() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "form", className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap section row", style: { "--gap": "48px" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       BookingForm,
       {
-        title: L$4("Send your floor plan", "अपना फ्लोर प्लान भेजें"),
-        submitLabel: L$4("See quote and pay", "कोटेशन देखें और भुगतान करें"),
-        services: [{ value: "vastu-online-report", label: L$4("Online Astro-Vastu report", "ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट") }],
+        title: L$5("Send your floor plan", "अपना फ्लोर प्लान भेजें"),
+        submitLabel: L$5("See quote and pay", "कोटेशन देखें और भुगतान करें"),
+        services: [{ value: "vastu-online-report", label: L$5("Online Astro-Vastu report", "ऑनलाइन एस्ट्रो-वास्तु रिपोर्ट") }],
         fields: [
-          { name: "name", label: L$4("Full name", "पूरा नाम"), required: true },
-          { name: "phone", label: L$4("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
-          { name: "country", label: L$4("Country", "देश") },
-          { name: "propertyType", label: L$4("Property type", "प्रॉपर्टी का प्रकार"), type: "select", options: [{ value: "Home", label: L$4("Home", "घर") }, { value: "Flat / Apartment", label: L$4("Flat / Apartment", "फ्लैट / अपार्टमेंट") }, { value: "Plot", label: L$4("Plot", "प्लॉट") }, { value: "Office", label: L$4("Office", "ऑफिस") }, { value: "Shop", label: L$4("Shop", "दुकान") }, { value: "Factory", label: L$4("Factory", "फैक्ट्री") }] },
-          { name: "areaSqft", label: L$4("Area (sq.ft)", "क्षेत्रफल (वर्ग फ़ुट)"), type: "number", min: 1 },
-          { name: "floorPlan", label: L$4("Floor plan (PDF / photo — please mark North)", "फ्लोर प्लान (PDF / फोटो, उत्तर दिशा मार्क करें)"), type: "file", full: true },
-          { name: "membersText", label: L$4("Date, time and place of birth of family members (up to 5)", "घर वालों की जन्म तिथि, समय, स्थान (5 तक)"), type: "textarea", full: true },
-          { name: "mainProblem", label: L$4("Main concern", "मुख्य समस्या"), type: "textarea", full: true, rows: 3 }
+          { name: "name", label: L$5("Full name", "पूरा नाम"), required: true },
+          { name: "phone", label: L$5("Phone / WhatsApp", "फ़ोन / WhatsApp"), type: "tel", required: true },
+          { name: "country", label: L$5("Country", "देश") },
+          { name: "propertyType", label: L$5("Property type", "प्रॉपर्टी का प्रकार"), type: "select", options: [{ value: "Home", label: L$5("Home", "घर") }, { value: "Flat / Apartment", label: L$5("Flat / Apartment", "फ्लैट / अपार्टमेंट") }, { value: "Plot", label: L$5("Plot", "प्लॉट") }, { value: "Office", label: L$5("Office", "ऑफिस") }, { value: "Shop", label: L$5("Shop", "दुकान") }, { value: "Factory", label: L$5("Factory", "फैक्ट्री") }] },
+          { name: "areaSqft", label: L$5("Area (sq.ft)", "क्षेत्रफल (वर्ग फ़ुट)"), type: "number", min: 1 },
+          { name: "floorPlan", label: L$5("Floor plan (PDF / photo — please mark North)", "फ्लोर प्लान (PDF / फोटो, उत्तर दिशा मार्क करें)"), type: "file", full: true },
+          { name: "membersText", label: L$5("Date, time and place of birth of family members (up to 5)", "घर वालों की जन्म तिथि, समय, स्थान (5 तक)"), type: "textarea", full: true },
+          { name: "mainProblem", label: L$5("Main concern", "मुख्य समस्या"), type: "textarea", full: true, rows: 3 }
         ]
       }
     ) }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { style: { paddingTop: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$4("Online Vastu FAQ", "ऑनलाइन वास्तु — प्रश्न-उत्तर"), items: [
-      [L$4("How does online Vastu work?", "ऑनलाइन वास्तु कैसे होता है?"), L$4("A report is prepared from your floor plan, North direction and family details, followed by a call.", "फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।")],
-      [L$4("Will I need to demolish anything?", "क्या तोड़-फोड़ करनी पड़ेगी?"), L$4("Remedies without demolition come first; structural changes only if truly needed.", "पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।")],
-      [L$4("How many days does the report take?", "रिपोर्ट कितने दिन में मिलेगी?"), L$4("The delivery date of the report is confirmed when you send your floor plan.", "फ्लोर प्लान भेजने पर रिपोर्ट मिलने की तारीख़ बता दी जाती है।")],
-      [L$4("Is online Vastu as accurate as a site visit?", "क्या ऑनलाइन वास्तु साइट विज़िट जितना सही होता है?"), L$4("For most homes and flats, yes — provided the floor plan is to scale and North is measured correctly. A site visit is better for factories, large plots and new construction, where the surroundings matter more.", "ज़्यादातर घरों और फ्लैट के लिए हाँ — बशर्ते फ्लोर प्लान सही नाप का हो और उत्तर दिशा ठीक से नापी गई हो। फैक्ट्री, बड़े प्लॉट और नए निर्माण के लिए साइट विज़िट बेहतर है, जहाँ आसपास का माहौल ज़्यादा मायने रखता है।")],
-      [L$4("I don’t have a floor plan. What can I send?", "मेरे पास फ्लोर प्लान नहीं है। क्या भेजूँ?"), L$4("A neat hand-drawn sketch with the room sizes, door and window positions and the North arrow is enough. Photos or a video walk-through of each room help as well.", "कमरों के नाप, दरवाज़े-खिड़की की जगह और उत्तर के तीर के साथ साफ़ हाथ से बना स्केच काफ़ी है। हर कमरे की फोटो या वीडियो भी मदद करते हैं।")],
-      [L$4("Can Vastu be done for a rented house or flat?", "क्या किराए के घर या फ्लैट का वास्तु हो सकता है?"), L$4("Yes. In a rented home the remedies focus on how rooms are used, furniture placement, colours and yantras — nothing that needs the owner’s permission.", "हाँ। किराए के घर में उपाय कमरों के उपयोग, फर्नीचर की जगह, रंग और यंत्रों पर केंद्रित होते हैं — ऐसा कुछ नहीं जिसके लिए मालिक की अनुमति चाहिए।")],
-      [L$4("Why are birth details of family members needed?", "घर वालों के जन्म विवरण क्यों चाहिए?"), L$4("In Astro-Vastu, the zones of the house are read together with the charts of the people living there, so the remedies suit your family — for example, which zone supports the earning member or a child’s studies.", "एस्ट्रो-वास्तु में घर के ज़ोन को वहाँ रहने वालों की कुंडलियों के साथ पढ़ा जाता है, ताकि उपाय आपके परिवार के अनुकूल हों — जैसे कौन-सा ज़ोन कमाने वाले सदस्य या बच्चे की पढ़ाई में सहायक है।")],
-      [L$4("Do you check a property before I buy it?", "क्या ख़रीदने से पहले प्रॉपर्टी की जाँच करते हैं?"), L$4("Yes. Send the builder’s plan or brochure layout and the direction of the main road; you get a clear view of the strengths and doshas before you commit.", "हाँ। बिल्डर का प्लान या ब्रोशर का नक्शा और मुख्य सड़क की दिशा भेजें; पैसा लगाने से पहले आपको उसकी अच्छाइयाँ और दोष साफ़ पता चल जाते हैं।")]
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { style: { paddingTop: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$5("Online Vastu FAQ", "ऑनलाइन वास्तु — प्रश्न-उत्तर"), items: [
+      [L$5("How does online Vastu work?", "ऑनलाइन वास्तु कैसे होता है?"), L$5("A report is prepared from your floor plan, North direction and family details, followed by a call.", "फ्लोर प्लान, उत्तर दिशा और सदस्यों की जानकारी से रिपोर्ट बनती है, फिर कॉल।")],
+      [L$5("Will I need to demolish anything?", "क्या तोड़-फोड़ करनी पड़ेगी?"), L$5("Remedies without demolition come first; structural changes only if truly needed.", "पहले बिना तोड़-फोड़ के उपाय दिए जाते हैं; बदलाव सिर्फ़ ज़रूरत पर।")],
+      [L$5("How many days does the report take?", "रिपोर्ट कितने दिन में मिलेगी?"), L$5("The delivery date of the report is confirmed when you send your floor plan.", "फ्लोर प्लान भेजने पर रिपोर्ट मिलने की तारीख़ बता दी जाती है।")],
+      [L$5("Is online Vastu as accurate as a site visit?", "क्या ऑनलाइन वास्तु साइट विज़िट जितना सही होता है?"), L$5("For most homes and flats, yes — provided the floor plan is to scale and North is measured correctly. A site visit is better for factories, large plots and new construction, where the surroundings matter more.", "ज़्यादातर घरों और फ्लैट के लिए हाँ — बशर्ते फ्लोर प्लान सही नाप का हो और उत्तर दिशा ठीक से नापी गई हो। फैक्ट्री, बड़े प्लॉट और नए निर्माण के लिए साइट विज़िट बेहतर है, जहाँ आसपास का माहौल ज़्यादा मायने रखता है।")],
+      [L$5("I don’t have a floor plan. What can I send?", "मेरे पास फ्लोर प्लान नहीं है। क्या भेजूँ?"), L$5("A neat hand-drawn sketch with the room sizes, door and window positions and the North arrow is enough. Photos or a video walk-through of each room help as well.", "कमरों के नाप, दरवाज़े-खिड़की की जगह और उत्तर के तीर के साथ साफ़ हाथ से बना स्केच काफ़ी है। हर कमरे की फोटो या वीडियो भी मदद करते हैं।")],
+      [L$5("Can Vastu be done for a rented house or flat?", "क्या किराए के घर या फ्लैट का वास्तु हो सकता है?"), L$5("Yes. In a rented home the remedies focus on how rooms are used, furniture placement, colours and yantras — nothing that needs the owner’s permission.", "हाँ। किराए के घर में उपाय कमरों के उपयोग, फर्नीचर की जगह, रंग और यंत्रों पर केंद्रित होते हैं — ऐसा कुछ नहीं जिसके लिए मालिक की अनुमति चाहिए।")],
+      [L$5("Why are birth details of family members needed?", "घर वालों के जन्म विवरण क्यों चाहिए?"), L$5("In Astro-Vastu, the zones of the house are read together with the charts of the people living there, so the remedies suit your family — for example, which zone supports the earning member or a child’s studies.", "एस्ट्रो-वास्तु में घर के ज़ोन को वहाँ रहने वालों की कुंडलियों के साथ पढ़ा जाता है, ताकि उपाय आपके परिवार के अनुकूल हों — जैसे कौन-सा ज़ोन कमाने वाले सदस्य या बच्चे की पढ़ाई में सहायक है।")],
+      [L$5("Do you check a property before I buy it?", "क्या ख़रीदने से पहले प्रॉपर्टी की जाँच करते हैं?"), L$5("Yes. Send the builder’s plan or brochure layout and the direction of the main road; you get a clear view of the strengths and doshas before you commit.", "हाँ। बिल्डर का प्लान या ब्रोशर का नक्शा और मुख्य सड़क की दिशा भेजें; पैसा लगाने से पहले आपको उसकी अच्छाइयाँ और दोष साफ़ पता चल जाते हैं।")]
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row z", style: { "--gap": "10px 20px", fontSize: 14, color: "var(--muted)", paddingBottom: "var(--sp-section)", maxWidth: 860 }, children: [
       t("Related:", "संबंधित:"),
@@ -50990,7 +51001,7 @@ function OnlineVastu() {
     ] })
   ] });
 }
-const L$3 = (en, hi) => ({ en, hi });
+const L$4 = (en, hi) => ({ en, hi });
 function Contact() {
   const t = useT();
   const [state, setState] = reactExports.useState({ status: "idle", msg: "" });
@@ -51087,10 +51098,10 @@ function Contact() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t("the office", "कैसे पहुँचें") })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid reveal", style: { "--min": "240px", "--gap": "16px" }, children: [
-        [L$3("By metro", "मेट्रो से"), L$3("Get off at Shyam Nagar station on the Jaipur Metro Pink Line. The office is opposite pillar no. 118 on New Sanganer Road.", "जयपुर मेट्रो पिंक लाइन के श्याम नगर स्टेशन पर उतरें। ऑफिस न्यू सांगानेर रोड पर पिलर नंबर 118 के सामने है।")],
-        [L$3("By road", "सड़क से"), L$3("On New Sanganer Road in Sodala, between Sodala and Shyam Nagar — use the Directions button for Google Maps.", "सोडाला में न्यू सांगानेर रोड पर, सोडाला और श्याम नगर के बीच — Google Maps के लिए “रास्ता देखें” बटन दबाएँ।")],
-        [L$3("From outside Jaipur", "जयपुर के बाहर से"), L$3("Jaipur Junction railway station and Jaipur Airport are both a short drive away. Book your slot before you travel.", "जयपुर जंक्शन रेलवे स्टेशन और जयपुर एयरपोर्ट दोनों थोड़ी दूरी पर हैं। यात्रा से पहले अपना स्लॉट बुक करें।")],
-        [L$3("Online", "ऑनलाइन"), L$3("Every service is also available on Zoom or WhatsApp video, with slots in your own time zone.", "हर सेवा Zoom या WhatsApp वीडियो पर भी उपलब्ध है, स्लॉट आपके टाइम ज़ोन में।")]
+        [L$4("By metro", "मेट्रो से"), L$4("Get off at Shyam Nagar station on the Jaipur Metro Pink Line. The office is opposite pillar no. 118 on New Sanganer Road.", "जयपुर मेट्रो पिंक लाइन के श्याम नगर स्टेशन पर उतरें। ऑफिस न्यू सांगानेर रोड पर पिलर नंबर 118 के सामने है।")],
+        [L$4("By road", "सड़क से"), L$4("On New Sanganer Road in Sodala, between Sodala and Shyam Nagar — use the Directions button for Google Maps.", "सोडाला में न्यू सांगानेर रोड पर, सोडाला और श्याम नगर के बीच — Google Maps के लिए “रास्ता देखें” बटन दबाएँ।")],
+        [L$4("From outside Jaipur", "जयपुर के बाहर से"), L$4("Jaipur Junction railway station and Jaipur Airport are both a short drive away. Book your slot before you travel.", "जयपुर जंक्शन रेलवे स्टेशन और जयपुर एयरपोर्ट दोनों थोड़ी दूरी पर हैं। यात्रा से पहले अपना स्लॉट बुक करें।")],
+        [L$4("Online", "ऑनलाइन"), L$4("Every service is also available on Zoom or WhatsApp video, with slots in your own time zone.", "हर सेवा Zoom या WhatsApp वीडियो पर भी उपलब्ध है, स्लॉट आपके टाइम ज़ोन में।")]
       ].map(([h, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card", style: { padding: 24, gap: 8 }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "serif", style: { fontSize: 22, margin: 0, fontWeight: 500 }, children: t(h) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", children: t(d) })
@@ -51128,57 +51139,57 @@ function FaqPage() {
     ] })
   ] }) }) });
 }
-const L$2 = (en, hi) => ({ en, hi });
+const L$3 = (en, hi) => ({ en, hi });
 const LEGAL = {
   "privacy-policy": {
-    title: L$2("Privacy Policy", "गोपनीयता नीति"),
-    description: L$2("How Pt. Rajneesh Sharma’s website collects, uses and protects your details, thumb impressions and floor plans, and how to view or delete them.", "पं. रजनीश शर्मा की वेबसाइट आपकी जानकारी, अंगूठे के निशान और फ्लोर प्लान कैसे लेती, उपयोग और सुरक्षित रखती है, और उन्हें देखने या हटाने का तरीका।"),
+    title: L$3("Privacy Policy", "गोपनीयता नीति"),
+    description: L$3("How Pt. Rajneesh Sharma’s website collects, uses and protects your details, thumb impressions and floor plans, and how to view or delete them.", "पं. रजनीश शर्मा की वेबसाइट आपकी जानकारी, अंगूठे के निशान और फ्लोर प्लान कैसे लेती, उपयोग और सुरक्षित रखती है, और उन्हें देखने या हटाने का तरीका।"),
     sections: [
-      [L$2("Who we are", "हम कौन हैं"), L$2("This website belongs to Pt. Rajneesh Sharma (Vedic, KP, Nadi & Vastu consultant, Jaipur). Address: Shyam Nagar Metro Station, opp. Pillar No. 118, New Sanganer Road, Sodala, Jaipur 302019, India.", "यह वेबसाइट पं. रजनीश शर्मा (वैदिक, केपी, नाड़ी और वास्तु सलाहकार, जयपुर) की है। पता: श्याम नगर मेट्रो स्टेशन, पिलर नं. 118 के सामने, न्यू सांगानेर रोड, सोडाला, जयपुर 302019।")],
-      [L$2("What data we collect", "हम कौन-सी जानकारी लेते हैं"), L$2("Name, phone/WhatsApp, email and country; date, time and place of birth for consultations; thumb impression for Nadi readings; floor plan and family birth details for Vastu; delivery address for yantra orders.", "नाम, फ़ोन/WhatsApp, ईमेल, देश; परामर्श के लिए जन्म तिथि, समय और स्थान; नाड़ी रीडिंग के लिए अंगूठे का निशान; वास्तु के लिए फ्लोर प्लान और परिवार की जन्म जानकारी; यंत्र ऑर्डर के लिए डिलीवरी पता।")],
-      [L$2("Why we collect it", "क्यों लेते हैं"), L$2("Only to deliver your consultation, report or order, and to contact you about your booking or order. We never sell your data.", "सिर्फ़ आपका परामर्श, रिपोर्ट या ऑर्डर पूरा करने और बुकिंग/ऑर्डर के बारे में संपर्क करने के लिए। हम आपका डेटा कभी नहीं बेचते।")],
-      [L$2("How long we keep it", "कितने समय तक रखते हैं"), L$2("[Retention period — e.g. __ months after the consultation]. After that, the data is deleted.", "[अवधि — जैसे परामर्श के बाद __ महीने]। उसके बाद डेटा डिलीट कर दिया जाता है।")],
-      [L$2("Where and how it is stored", "कहाँ और कैसे रखते हैं"), L$2("Thumb impressions and floor plans are kept in secure storage with no public link. Only Pandit ji and the necessary team can access them.", "अंगूठे का निशान और फ्लोर प्लान सुरक्षित स्टोरेज में रखे जाते हैं; इनका कोई पब्लिक लिंक नहीं होता। सिर्फ़ पंडित जी और ज़रूरी टीम इन्हें देख सकती है।")],
-      [L$2("Who it is shared with", "किसके साथ साझा होता है"), L$2("For Nadi readings, the thumb impression is shared only with the Nadi readers to find your leaf. Payments are processed by Razorpay / PayPal; we do not store card details. Your address is shared with the courier partner for shipping.", "नाड़ी रीडिंग के लिए अंगूठे का निशान सिर्फ़ पट्टा खोजने के लिए नाड़ी रीडर्स के साथ। भुगतान Razorpay / PayPal से होता है; कार्ड की जानकारी हम नहीं रखते। शिपिंग के लिए पता कूरियर पार्टनर के साथ।")],
-      [L$2("Your rights", "आपके अधिकार"), L$2("You can write to us at any time to view, correct or delete your data. You may also withdraw your consent.", "आप कभी भी अपना डेटा देखने, सुधारने या डिलीट करवाने के लिए लिख सकते हैं। सहमति वापस लेना भी आपका अधिकार है।")],
-      [L$2("Grievance contact (DPDP Act)", "शिकायत संपर्क (DPDP एक्ट)"), L$2("Name: [Name] · Email: [EMAIL]. We will respond within [__] days.", "नाम: [नाम] · ईमेल: [EMAIL]। हम [__] दिन में जवाब देंगे।")],
-      [L$2("Cookies and analytics", "कुकीज़ और एनालिटिक्स"), L$2("We may use tools such as Google Analytics to improve the website.", "वेबसाइट को बेहतर बनाने के लिए Google Analytics जैसे टूल इस्तेमाल हो सकते हैं।")]
+      [L$3("Who we are", "हम कौन हैं"), L$3("This website belongs to Pt. Rajneesh Sharma (Vedic, KP, Nadi & Vastu consultant, Jaipur). Address: Shyam Nagar Metro Station, opp. Pillar No. 118, New Sanganer Road, Sodala, Jaipur 302019, India.", "यह वेबसाइट पं. रजनीश शर्मा (वैदिक, केपी, नाड़ी और वास्तु सलाहकार, जयपुर) की है। पता: श्याम नगर मेट्रो स्टेशन, पिलर नं. 118 के सामने, न्यू सांगानेर रोड, सोडाला, जयपुर 302019।")],
+      [L$3("What data we collect", "हम कौन-सी जानकारी लेते हैं"), L$3("Name, phone/WhatsApp, email and country; date, time and place of birth for consultations; thumb impression for Nadi readings; floor plan and family birth details for Vastu; delivery address for yantra orders.", "नाम, फ़ोन/WhatsApp, ईमेल, देश; परामर्श के लिए जन्म तिथि, समय और स्थान; नाड़ी रीडिंग के लिए अंगूठे का निशान; वास्तु के लिए फ्लोर प्लान और परिवार की जन्म जानकारी; यंत्र ऑर्डर के लिए डिलीवरी पता।")],
+      [L$3("Why we collect it", "क्यों लेते हैं"), L$3("Only to deliver your consultation, report or order, and to contact you about your booking or order. We never sell your data.", "सिर्फ़ आपका परामर्श, रिपोर्ट या ऑर्डर पूरा करने और बुकिंग/ऑर्डर के बारे में संपर्क करने के लिए। हम आपका डेटा कभी नहीं बेचते।")],
+      [L$3("How long we keep it", "कितने समय तक रखते हैं"), L$3("[Retention period — e.g. __ months after the consultation]. After that, the data is deleted.", "[अवधि — जैसे परामर्श के बाद __ महीने]। उसके बाद डेटा डिलीट कर दिया जाता है।")],
+      [L$3("Where and how it is stored", "कहाँ और कैसे रखते हैं"), L$3("Thumb impressions and floor plans are kept in secure storage with no public link. Only Pandit ji and the necessary team can access them.", "अंगूठे का निशान और फ्लोर प्लान सुरक्षित स्टोरेज में रखे जाते हैं; इनका कोई पब्लिक लिंक नहीं होता। सिर्फ़ पंडित जी और ज़रूरी टीम इन्हें देख सकती है।")],
+      [L$3("Who it is shared with", "किसके साथ साझा होता है"), L$3("For Nadi readings, the thumb impression is shared only with the Nadi readers to find your leaf. Payments are processed by Razorpay / PayPal; we do not store card details. Your address is shared with the courier partner for shipping.", "नाड़ी रीडिंग के लिए अंगूठे का निशान सिर्फ़ पट्टा खोजने के लिए नाड़ी रीडर्स के साथ। भुगतान Razorpay / PayPal से होता है; कार्ड की जानकारी हम नहीं रखते। शिपिंग के लिए पता कूरियर पार्टनर के साथ।")],
+      [L$3("Your rights", "आपके अधिकार"), L$3("You can write to us at any time to view, correct or delete your data. You may also withdraw your consent.", "आप कभी भी अपना डेटा देखने, सुधारने या डिलीट करवाने के लिए लिख सकते हैं। सहमति वापस लेना भी आपका अधिकार है।")],
+      [L$3("Grievance contact (DPDP Act)", "शिकायत संपर्क (DPDP एक्ट)"), L$3("Name: [Name] · Email: [EMAIL]. We will respond within [__] days.", "नाम: [नाम] · ईमेल: [EMAIL]। हम [__] दिन में जवाब देंगे।")],
+      [L$3("Cookies and analytics", "कुकीज़ और एनालिटिक्स"), L$3("We may use tools such as Google Analytics to improve the website.", "वेबसाइट को बेहतर बनाने के लिए Google Analytics जैसे टूल इस्तेमाल हो सकते हैं।")]
     ]
   },
   terms: {
-    title: L$2("Terms of Service", "नियम और शर्तें"),
-    description: L$2("Terms for astrology, Nadi and Vastu consultations and yantra orders with Pt. Rajneesh Sharma, Jaipur: nature of the service, booking, payment and testimonials.", "पं. रजनीश शर्मा, जयपुर के साथ ज्योतिष, नाड़ी और वास्तु परामर्श तथा यंत्र ऑर्डर की शर्तें: सेवा का स्वरूप, बुकिंग, भुगतान और प्रशंसापत्र।"),
+    title: L$3("Terms of Service", "नियम और शर्तें"),
+    description: L$3("Terms for astrology, Nadi and Vastu consultations and yantra orders with Pt. Rajneesh Sharma, Jaipur: nature of the service, booking, payment and testimonials.", "पं. रजनीश शर्मा, जयपुर के साथ ज्योतिष, नाड़ी और वास्तु परामर्श तथा यंत्र ऑर्डर की शर्तें: सेवा का स्वरूप, बुकिंग, भुगतान और प्रशंसापत्र।"),
     sections: [
-      [L$2("Nature of the service", "सेवा का स्वरूप"), L$2("Astrology and Vastu are offered as guidance. They are not a substitute for medical, legal or financial advice. Outcomes depend on the individual and their circumstances.", "ज्योतिष और वास्तु मार्गदर्शन के लिए हैं। यह चिकित्सीय, कानूनी या वित्तीय सलाह का विकल्प नहीं हैं। परिणाम व्यक्ति और परिस्थिति पर निर्भर करते हैं।")],
-      [L$2("No guarantees", "कोई गारंटी नहीं"), L$2("We speak to our experience and our traditional process — we do not guarantee any outcome.", "हम अनुभव और शास्त्र-आधारित प्रक्रिया की बात करते हैं, किसी परिणाम की गारंटी नहीं।")],
-      [L$2("Nadi reading", "नाड़ी रीडिंग"), L$2("Traditional Nadi readers search for and read the leaf; Pt. Rajneesh Sharma interprets it alongside your birth chart (Vedic/KP) and suggests remedies. A leaf is not found for every person.", "पट्टा पारंपरिक नाड़ी रीडर खोजते और पढ़ते हैं; पं. रजनीश शर्मा कुंडली के साथ वैदिक/केपी विश्लेषण और उपाय बताते हैं। हर व्यक्ति का पट्टा मिलना ज़रूरी नहीं।")],
-      [L$2("Booking and payment", "बुकिंग और भुगतान"), L$2("India: Razorpay (UPI, card, netbanking). International: PayPal (USD). A booking is confirmed once payment is received.", "भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग)। विदेश: PayPal (USD)। भुगतान के बाद बुकिंग कन्फ़र्म होती है।")],
-      [L$2("Testimonials", "प्रशंसापत्र"), L$2("Client videos and names appear on the website only with their written permission (WhatsApp is fine).", "वेबसाइट पर क्लाइंट का वीडियो/नाम सिर्फ़ उनकी लिखित (WhatsApp भी चलेगा) अनुमति के बाद।")],
-      [L$2("Changes", "बदलाव"), L$2("These terms may be updated from time to time. [Last updated: date]", "ये शर्तें समय-समय पर अपडेट हो सकती हैं। [अंतिम अपडेट: तारीख]")]
+      [L$3("Nature of the service", "सेवा का स्वरूप"), L$3("Astrology and Vastu are offered as guidance. They are not a substitute for medical, legal or financial advice. Outcomes depend on the individual and their circumstances.", "ज्योतिष और वास्तु मार्गदर्शन के लिए हैं। यह चिकित्सीय, कानूनी या वित्तीय सलाह का विकल्प नहीं हैं। परिणाम व्यक्ति और परिस्थिति पर निर्भर करते हैं।")],
+      [L$3("No guarantees", "कोई गारंटी नहीं"), L$3("We speak to our experience and our traditional process — we do not guarantee any outcome.", "हम अनुभव और शास्त्र-आधारित प्रक्रिया की बात करते हैं, किसी परिणाम की गारंटी नहीं।")],
+      [L$3("Nadi reading", "नाड़ी रीडिंग"), L$3("Traditional Nadi readers search for and read the leaf; Pt. Rajneesh Sharma interprets it alongside your birth chart (Vedic/KP) and suggests remedies. A leaf is not found for every person.", "पट्टा पारंपरिक नाड़ी रीडर खोजते और पढ़ते हैं; पं. रजनीश शर्मा कुंडली के साथ वैदिक/केपी विश्लेषण और उपाय बताते हैं। हर व्यक्ति का पट्टा मिलना ज़रूरी नहीं।")],
+      [L$3("Booking and payment", "बुकिंग और भुगतान"), L$3("India: Razorpay (UPI, card, netbanking). International: PayPal (USD). A booking is confirmed once payment is received.", "भारत: Razorpay (UPI, कार्ड, नेटबैंकिंग)। विदेश: PayPal (USD)। भुगतान के बाद बुकिंग कन्फ़र्म होती है।")],
+      [L$3("Testimonials", "प्रशंसापत्र"), L$3("Client videos and names appear on the website only with their written permission (WhatsApp is fine).", "वेबसाइट पर क्लाइंट का वीडियो/नाम सिर्फ़ उनकी लिखित (WhatsApp भी चलेगा) अनुमति के बाद।")],
+      [L$3("Changes", "बदलाव"), L$3("These terms may be updated from time to time. [Last updated: date]", "ये शर्तें समय-समय पर अपडेट हो सकती हैं। [अंतिम अपडेट: तारीख]")]
     ]
   },
   "refund-policy": {
-    title: L$2("Refund & Cancellation Policy", "रिफंड और कैंसलेशन नीति"),
-    description: L$2("Refund and cancellation terms for consultations, Nadi readings, Vastu reports and yantra orders with Pt. Rajneesh Sharma.", "पं. रजनीश शर्मा के परामर्श, नाड़ी रीडिंग, वास्तु रिपोर्ट और यंत्र ऑर्डर के रिफंड और कैंसलेशन की शर्तें।"),
+    title: L$3("Refund & Cancellation Policy", "रिफंड और कैंसलेशन नीति"),
+    description: L$3("Refund and cancellation terms for consultations, Nadi readings, Vastu reports and yantra orders with Pt. Rajneesh Sharma.", "पं. रजनीश शर्मा के परामर्श, नाड़ी रीडिंग, वास्तु रिपोर्ट और यंत्र ऑर्डर के रिफंड और कैंसलेशन की शर्तें।"),
     sections: [
-      [L$2("Cancelling / rescheduling a consultation", "परामर्श कैंसल / री-शेड्यूल"), L$2("[How many hours in advance, how much refund, rescheduling terms]", "[कितने घंटे पहले कैंसल करने पर कितना रिफंड; री-शेड्यूल की शर्तें]")],
-      [L$2("Nadi — if the leaf is not found", "नाड़ी — पट्टा न मिले तो"), L$2("[Refund policy, agreed with the Nadi readers — e.g. “No leaf, no payment”]", "[रिफंड नीति, नाड़ी रीडर्स से तय करके — जैसे “पट्टा नहीं, भुगतान नहीं”]")],
-      [L$2("Yantra — genuine metal", "यंत्र — असली धातु"), L$2("Pure copper / ashtadhatu, exactly the size stated — or your money back in full.", "शुद्ध तांबा / अष्टधातु, साइज़ जैसा लिखा है वैसा — नहीं तो पूरा पैसा वापस।")],
-      [L$2("Yantra — broken or wrong item", "यंत्र — टूटा या गलत"), L$2("If a yantra arrives broken or wrong, we replace it free. Please send an unboxing video / photo within [__] days.", "टूटा या गलत यंत्र पहुँचे तो मुफ़्त रिप्लेसमेंट। अनबॉक्सिंग वीडियो / फोटो [__] दिन के अंदर भेजें।")],
-      [L$2("How refunds are paid", "रिफंड कैसे मिलेगा"), L$2("To the original payment method (Razorpay / PayPal) within [__] working days.", "उसी भुगतान माध्यम में (Razorpay / PayPal), [__] कार्य-दिवस में।")],
-      [L$2("Other returns", "अन्य रिटर्न"), L$2("[Other conditions]", "[बाकी शर्तें]")]
+      [L$3("Cancelling / rescheduling a consultation", "परामर्श कैंसल / री-शेड्यूल"), L$3("[How many hours in advance, how much refund, rescheduling terms]", "[कितने घंटे पहले कैंसल करने पर कितना रिफंड; री-शेड्यूल की शर्तें]")],
+      [L$3("Nadi — if the leaf is not found", "नाड़ी — पट्टा न मिले तो"), L$3("[Refund policy, agreed with the Nadi readers — e.g. “No leaf, no payment”]", "[रिफंड नीति, नाड़ी रीडर्स से तय करके — जैसे “पट्टा नहीं, भुगतान नहीं”]")],
+      [L$3("Yantra — genuine metal", "यंत्र — असली धातु"), L$3("Pure copper / ashtadhatu, exactly the size stated — or your money back in full.", "शुद्ध तांबा / अष्टधातु, साइज़ जैसा लिखा है वैसा — नहीं तो पूरा पैसा वापस।")],
+      [L$3("Yantra — broken or wrong item", "यंत्र — टूटा या गलत"), L$3("If a yantra arrives broken or wrong, we replace it free. Please send an unboxing video / photo within [__] days.", "टूटा या गलत यंत्र पहुँचे तो मुफ़्त रिप्लेसमेंट। अनबॉक्सिंग वीडियो / फोटो [__] दिन के अंदर भेजें।")],
+      [L$3("How refunds are paid", "रिफंड कैसे मिलेगा"), L$3("To the original payment method (Razorpay / PayPal) within [__] working days.", "उसी भुगतान माध्यम में (Razorpay / PayPal), [__] कार्य-दिवस में।")],
+      [L$3("Other returns", "अन्य रिटर्न"), L$3("[Other conditions]", "[बाकी शर्तें]")]
     ]
   },
   "shipping-policy": {
-    title: L$2("Shipping Policy", "शिपिंग नीति"),
-    description: L$2("How energized yantras are packed and shipped from Jaipur across India and worldwide, and who pays customs duty abroad.", "प्राण-प्रतिष्ठित यंत्र जयपुर से पूरे भारत और दुनिया भर में कैसे पैक और भेजे जाते हैं, और विदेश में कस्टम ड्यूटी कौन देता है।"),
+    title: L$3("Shipping Policy", "शिपिंग नीति"),
+    description: L$3("How energized yantras are packed and shipped from Jaipur across India and worldwide, and who pays customs duty abroad.", "प्राण-प्रतिष्ठित यंत्र जयपुर से पूरे भारत और दुनिया भर में कैसे पैक और भेजे जाते हैं, और विदेश में कस्टम ड्यूटी कौन देता है।"),
     sections: [
-      [L$2("Dispatch", "डिस्पैच"), L$2("Each yantra is dispatched within [__] days after its pran-pratishtha.", "प्राण-प्रतिष्ठा के बाद यंत्र [__] दिन में डिस्पैच होता है।")],
-      [L$2("India", "भारत"), L$2("Shipped via Shiprocket (multiple couriers). Delivery: [__] days. Cash on delivery: [yes/no].", "Shiprocket से कई कूरियर। डिलीवरी: [__] दिन। कैश ऑन डिलीवरी: [हाँ/नहीं]।")],
-      [L$2("International", "विदेश"), L$2("India Post / DHL / FedEx. Delivery: [__] days. Customs duty is paid by the buyer.", "India Post / DHL / FedEx। डिलीवरी: [__] दिन। कस्टम ड्यूटी खरीदार देगा।")],
-      [L$2("Free shipping", "फ़्री शिपिंग"), L$2("Free shipping in India on orders above [₹___].", "[₹___] से ऊपर के ऑर्डर पर भारत में फ़्री शिपिंग।")],
-      [L$2("Tracking", "ट्रैकिंग"), L$2("You receive a tracking link on WhatsApp and email as soon as your order is dispatched.", "डिस्पैच होते ही ट्रैकिंग लिंक WhatsApp और ईमेल पर।")],
-      [L$2("In the box", "बॉक्स में"), L$2("Yantra, installation guide (PDF), mantra card, certificate.", "यंत्र, स्थापना विधि PDF, मंत्र कार्ड, सर्टिफ़िकेट।")]
+      [L$3("Dispatch", "डिस्पैच"), L$3("Each yantra is dispatched within [__] days after its pran-pratishtha.", "प्राण-प्रतिष्ठा के बाद यंत्र [__] दिन में डिस्पैच होता है।")],
+      [L$3("India", "भारत"), L$3("Shipped via Shiprocket (multiple couriers). Delivery: [__] days. Cash on delivery: [yes/no].", "Shiprocket से कई कूरियर। डिलीवरी: [__] दिन। कैश ऑन डिलीवरी: [हाँ/नहीं]।")],
+      [L$3("International", "विदेश"), L$3("India Post / DHL / FedEx. Delivery: [__] days. Customs duty is paid by the buyer.", "India Post / DHL / FedEx। डिलीवरी: [__] दिन। कस्टम ड्यूटी खरीदार देगा।")],
+      [L$3("Free shipping", "फ़्री शिपिंग"), L$3("Free shipping in India on orders above [₹___].", "[₹___] से ऊपर के ऑर्डर पर भारत में फ़्री शिपिंग।")],
+      [L$3("Tracking", "ट्रैकिंग"), L$3("You receive a tracking link on WhatsApp and email as soon as your order is dispatched.", "डिस्पैच होते ही ट्रैकिंग लिंक WhatsApp और ईमेल पर।")],
+      [L$3("In the box", "बॉक्स में"), L$3("Yantra, installation guide (PDF), mantra card, certificate.", "यंत्र, स्थापना विधि PDF, मंत्र कार्ड, सर्टिफ़िकेट।")]
     ]
   }
 };
@@ -51233,75 +51244,75 @@ function Gallery() {
     }
   );
 }
-const L$1 = (en, hi) => ({ en, hi });
+const L$2 = (en, hi) => ({ en, hi });
 const COUNTRY_GUIDES = {
   usa: {
-    when: L$1("On the West Coast the first slots fall around 8:30–11:30 pm, which suits a Friday or Saturday evening. On the East Coast the last slots of the Indian day fall at about 6:30–7:30 am, before work.", "वेस्ट कोस्ट पर पहले स्लॉट रात लगभग 8:30–11:30 बजे पड़ते हैं — शुक्रवार या शनिवार की शाम ठीक रहती है। ईस्ट कोस्ट पर भारत के दिन के आख़िरी स्लॉट सुबह लगभग 6:30–7:30 बजे, काम से पहले पड़ते हैं।"),
-    prep: L$1("Ink pads are sold at any pharmacy or office store. Keep your parents’ and spouse’s names handy, because the reader confirms the leaf with them, and invite family in India to join the same video call.", "इंक पैड किसी भी फ़ार्मेसी या ऑफिस स्टोर पर मिल जाता है। माता-पिता और जीवनसाथी के नाम पास रखें, क्योंकि रीडर इन्हीं से पट्टे की पुष्टि करते हैं, और भारत में परिवार को उसी वीडियो कॉल में जोड़ लें।"),
-    remedies: L$1("Most remedies — mantra, fasting, charity — can be done at home. Temple visits suggested in the Shanti kandam can usually be done at a Hindu temple in your city; a pooja in India can be arranged when you visit.", "ज़्यादातर उपाय — मंत्र, व्रत, दान — घर पर हो जाते हैं। शांति कांडम में बताए मंदिर दर्शन आमतौर पर आपके शहर के किसी हिंदू मंदिर में हो सकते हैं; भारत आने पर पूजा करवाई जा सकती है।")
+    when: L$2("On the West Coast the first slots fall around 8:30–11:30 pm, which suits a Friday or Saturday evening. On the East Coast the last slots of the Indian day fall at about 6:30–7:30 am, before work.", "वेस्ट कोस्ट पर पहले स्लॉट रात लगभग 8:30–11:30 बजे पड़ते हैं — शुक्रवार या शनिवार की शाम ठीक रहती है। ईस्ट कोस्ट पर भारत के दिन के आख़िरी स्लॉट सुबह लगभग 6:30–7:30 बजे, काम से पहले पड़ते हैं।"),
+    prep: L$2("Ink pads are sold at any pharmacy or office store. Keep your parents’ and spouse’s names handy, because the reader confirms the leaf with them, and invite family in India to join the same video call.", "इंक पैड किसी भी फ़ार्मेसी या ऑफिस स्टोर पर मिल जाता है। माता-पिता और जीवनसाथी के नाम पास रखें, क्योंकि रीडर इन्हीं से पट्टे की पुष्टि करते हैं, और भारत में परिवार को उसी वीडियो कॉल में जोड़ लें।"),
+    remedies: L$2("Most remedies — mantra, fasting, charity — can be done at home. Temple visits suggested in the Shanti kandam can usually be done at a Hindu temple in your city; a pooja in India can be arranged when you visit.", "ज़्यादातर उपाय — मंत्र, व्रत, दान — घर पर हो जाते हैं। शांति कांडम में बताए मंदिर दर्शन आमतौर पर आपके शहर के किसी हिंदू मंदिर में हो सकते हैं; भारत आने पर पूजा करवाई जा सकती है।")
   },
   uk: {
-    when: L$1("Slots run from early morning to lunchtime in the UK — roughly 4:30 am to 12:30 pm in winter and an hour later in summer. A Saturday morning slot is the easiest for most working clients.", "UK में स्लॉट सुबह से दोपहर तक पड़ते हैं — सर्दियों में लगभग सुबह 4:30 से दोपहर 12:30, गर्मियों में एक घंटा बाद। ज़्यादातर नौकरीपेशा क्लाइंट्स के लिए शनिवार सुबह का स्लॉट सबसे आसान है।"),
-    prep: L$1("Take the thumb print on plain white paper in daylight by a window; a phone photo is enough. If your parents live in India, they can join the call to help answer the reader’s questions.", "खिड़की के पास दिन की रोशनी में सादे सफ़ेद कागज़ पर अंगूठे का निशान लें; फ़ोन की फ़ोटो काफ़ी है। माता-पिता भारत में हों तो वे कॉल में जुड़कर रीडर के सवालों के जवाब में मदद कर सकते हैं।"),
-    remedies: L$1("The UK has many Hindu temples, including large ones in London, Leicester and Birmingham, so temple remedies from the leaf can usually be done close to home.", "UK में कई हिंदू मंदिर हैं, लंदन, लेस्टर और बर्मिंघम में बड़े मंदिरों सहित, इसलिए पट्टे में बताए मंदिर वाले उपाय आमतौर पर घर के पास हो जाते हैं।")
+    when: L$2("Slots run from early morning to lunchtime in the UK — roughly 4:30 am to 12:30 pm in winter and an hour later in summer. A Saturday morning slot is the easiest for most working clients.", "UK में स्लॉट सुबह से दोपहर तक पड़ते हैं — सर्दियों में लगभग सुबह 4:30 से दोपहर 12:30, गर्मियों में एक घंटा बाद। ज़्यादातर नौकरीपेशा क्लाइंट्स के लिए शनिवार सुबह का स्लॉट सबसे आसान है।"),
+    prep: L$2("Take the thumb print on plain white paper in daylight by a window; a phone photo is enough. If your parents live in India, they can join the call to help answer the reader’s questions.", "खिड़की के पास दिन की रोशनी में सादे सफ़ेद कागज़ पर अंगूठे का निशान लें; फ़ोन की फ़ोटो काफ़ी है। माता-पिता भारत में हों तो वे कॉल में जुड़कर रीडर के सवालों के जवाब में मदद कर सकते हैं।"),
+    remedies: L$2("The UK has many Hindu temples, including large ones in London, Leicester and Birmingham, so temple remedies from the leaf can usually be done close to home.", "UK में कई हिंदू मंदिर हैं, लंदन, लेस्टर और बर्मिंघम में बड़े मंदिरों सहित, इसलिए पट्टे में बताए मंदिर वाले उपाय आमतौर पर घर के पास हो जाते हैं।")
   },
   canada: {
-    when: L$1("From Toronto, the last slots of the Indian day fall at about 6:30–7:30 am Eastern time. From Vancouver, the first slots fall in the evening, around 8:30–11:30 pm Pacific time.", "टोरंटो से भारत के दिन के आख़िरी स्लॉट ईस्टर्न समय में सुबह लगभग 6:30–7:30 बजे पड़ते हैं। वैंकूवर से पहले स्लॉट शाम को, पैसिफ़िक समय में लगभग रात 8:30–11:30 बजे पड़ते हैं।"),
-    prep: L$1("Families in the Greater Toronto Area often prefer the reading in Tamil — mention it when you book. Keep the names of parents and siblings ready for the leaf search.", "ग्रेटर टोरंटो क्षेत्र के परिवार अक्सर तमिल में रीडिंग चाहते हैं — बुकिंग के समय बता दें। पट्टे की खोज के लिए माता-पिता और भाई-बहनों के नाम तैयार रखें।"),
-    remedies: L$1("Toronto, Brampton and Vancouver have well-established Hindu and Tamil temples, so remedies that involve a temple visit or abhishekam can usually be done locally.", "टोरंटो, ब्रैम्पटन और वैंकूवर में पुराने हिंदू और तमिल मंदिर हैं, इसलिए मंदिर दर्शन या अभिषेक वाले उपाय आमतौर पर वहीं हो जाते हैं।")
+    when: L$2("From Toronto, the last slots of the Indian day fall at about 6:30–7:30 am Eastern time. From Vancouver, the first slots fall in the evening, around 8:30–11:30 pm Pacific time.", "टोरंटो से भारत के दिन के आख़िरी स्लॉट ईस्टर्न समय में सुबह लगभग 6:30–7:30 बजे पड़ते हैं। वैंकूवर से पहले स्लॉट शाम को, पैसिफ़िक समय में लगभग रात 8:30–11:30 बजे पड़ते हैं।"),
+    prep: L$2("Families in the Greater Toronto Area often prefer the reading in Tamil — mention it when you book. Keep the names of parents and siblings ready for the leaf search.", "ग्रेटर टोरंटो क्षेत्र के परिवार अक्सर तमिल में रीडिंग चाहते हैं — बुकिंग के समय बता दें। पट्टे की खोज के लिए माता-पिता और भाई-बहनों के नाम तैयार रखें।"),
+    remedies: L$2("Toronto, Brampton and Vancouver have well-established Hindu and Tamil temples, so remedies that involve a temple visit or abhishekam can usually be done locally.", "टोरंटो, ब्रैम्पटन और वैंकूवर में पुराने हिंदू और तमिल मंदिर हैं, इसलिए मंदिर दर्शन या अभिषेक वाले उपाय आमतौर पर वहीं हो जाते हैं।")
   },
   australia: {
-    when: L$1("Australia is ahead of India, so our slots fall in your afternoon and evening — about 3:30–11:30 pm in Sydney and Melbourne during daylight saving, and 12:30–8:30 pm in Perth. After-work slots are easy to find.", "ऑस्ट्रेलिया भारत से आगे है, इसलिए हमारे स्लॉट आपकी दोपहर और शाम में पड़ते हैं — डेलाइट सेविंग में सिडनी और मेलबर्न में लगभग 3:30–11:30 बजे, और पर्थ में 12:30–8:30 बजे। काम के बाद के स्लॉट आसानी से मिल जाते हैं।"),
-    prep: L$1("Officeworks and Kmart sell ink pads. Upload the thumb photo a few days before your slot so the leaf search can begin in time.", "Officeworks और Kmart पर इंक पैड मिलते हैं। स्लॉट से कुछ दिन पहले अंगूठे की फ़ोटो अपलोड करें, ताकि पट्टे की खोज समय पर शुरू हो सके।"),
-    remedies: L$1("Sydney, Melbourne, Brisbane and Perth all have Hindu temples where remedies from the leaf can be done. Because of biosecurity rules, yantras are sent without flowers, seeds or other organic items.", "सिडनी, मेलबर्न, ब्रिस्बेन और पर्थ — सब जगह हिंदू मंदिर हैं जहाँ पट्टे के उपाय हो सकते हैं। बायोसिक्योरिटी नियमों के कारण यंत्र बिना फूल, बीज या दूसरी जैविक चीज़ों के भेजे जाते हैं।")
+    when: L$2("Australia is ahead of India, so our slots fall in your afternoon and evening — about 3:30–11:30 pm in Sydney and Melbourne during daylight saving, and 12:30–8:30 pm in Perth. After-work slots are easy to find.", "ऑस्ट्रेलिया भारत से आगे है, इसलिए हमारे स्लॉट आपकी दोपहर और शाम में पड़ते हैं — डेलाइट सेविंग में सिडनी और मेलबर्न में लगभग 3:30–11:30 बजे, और पर्थ में 12:30–8:30 बजे। काम के बाद के स्लॉट आसानी से मिल जाते हैं।"),
+    prep: L$2("Officeworks and Kmart sell ink pads. Upload the thumb photo a few days before your slot so the leaf search can begin in time.", "Officeworks और Kmart पर इंक पैड मिलते हैं। स्लॉट से कुछ दिन पहले अंगूठे की फ़ोटो अपलोड करें, ताकि पट्टे की खोज समय पर शुरू हो सके।"),
+    remedies: L$2("Sydney, Melbourne, Brisbane and Perth all have Hindu temples where remedies from the leaf can be done. Because of biosecurity rules, yantras are sent without flowers, seeds or other organic items.", "सिडनी, मेलबर्न, ब्रिस्बेन और पर्थ — सब जगह हिंदू मंदिर हैं जहाँ पट्टे के उपाय हो सकते हैं। बायोसिक्योरिटी नियमों के कारण यंत्र बिना फूल, बीज या दूसरी जैविक चीज़ों के भेजे जाते हैं।")
   },
   singapore: {
-    when: L$1("Singapore is 2½ hours ahead of India, so every slot falls between 12:30 and 8:30 pm — a lunch-hour or early-evening slot fits a working day.", "सिंगापुर भारत से 2½ घंटे आगे है, इसलिए हर स्लॉट दोपहर 12:30 से रात 8:30 के बीच पड़ता है — लंच या शाम का स्लॉट काम के दिन में आसानी से आ जाता है।"),
-    prep: L$1("Many Singapore families know Nadi jothidam well and prefer to hear the leaf in Tamil — say so when you book, and Pandit ji’s analysis follows in English or Hindi.", "सिंगापुर के कई परिवार नाड़ी ज्योतिष को अच्छी तरह जानते हैं और पट्टा तमिल में सुनना चाहते हैं — बुकिंग में बता दें; पंडित जी का विश्लेषण अंग्रेज़ी या हिंदी में होता है।"),
-    remedies: L$1("Temple remedies can be done at Singapore’s long-established Hindu temples, such as those around Serangoon Road in Little India.", "मंदिर वाले उपाय सिंगापुर के पुराने हिंदू मंदिरों में हो सकते हैं, जैसे लिटिल इंडिया में सेरंगून रोड के आसपास के मंदिर।")
+    when: L$2("Singapore is 2½ hours ahead of India, so every slot falls between 12:30 and 8:30 pm — a lunch-hour or early-evening slot fits a working day.", "सिंगापुर भारत से 2½ घंटे आगे है, इसलिए हर स्लॉट दोपहर 12:30 से रात 8:30 के बीच पड़ता है — लंच या शाम का स्लॉट काम के दिन में आसानी से आ जाता है।"),
+    prep: L$2("Many Singapore families know Nadi jothidam well and prefer to hear the leaf in Tamil — say so when you book, and Pandit ji’s analysis follows in English or Hindi.", "सिंगापुर के कई परिवार नाड़ी ज्योतिष को अच्छी तरह जानते हैं और पट्टा तमिल में सुनना चाहते हैं — बुकिंग में बता दें; पंडित जी का विश्लेषण अंग्रेज़ी या हिंदी में होता है।"),
+    remedies: L$2("Temple remedies can be done at Singapore’s long-established Hindu temples, such as those around Serangoon Road in Little India.", "मंदिर वाले उपाय सिंगापुर के पुराने हिंदू मंदिरों में हो सकते हैं, जैसे लिटिल इंडिया में सेरंगून रोड के आसपास के मंदिर।")
   },
   malaysia: {
-    when: L$1("Malaysia is 2½ hours ahead of India, so slots fall between 12:30 and 8:30 pm Malaysian time — easy to fit after office hours on a weekday.", "मलेशिया भारत से 2½ घंटे आगे है, इसलिए स्लॉट मलेशिया के समय से दोपहर 12:30 से रात 8:30 के बीच पड़ते हैं — काम के दिन ऑफिस के बाद आसानी से।"),
-    prep: L$1("Most Malaysian clients take the reading in Tamil. Keep the names of your parents and siblings ready; the reader confirms the leaf with them before reading the kandams.", "मलेशिया के ज़्यादातर क्लाइंट रीडिंग तमिल में लेते हैं। माता-पिता और भाई-बहनों के नाम तैयार रखें; कांडम पढ़ने से पहले रीडर इन्हीं से पट्टे की पुष्टि करते हैं।"),
-    remedies: L$1("With temples in every Indian neighbourhood — and Murugan worship at places like Batu Caves — temple remedies from the Shanti kandam are easy to carry out in Malaysia.", "हर भारतीय इलाक़े में मंदिर हैं — और बातू गुफ़ाओं जैसी जगहों पर मुरुगन पूजा — इसलिए शांति कांडम के मंदिर वाले उपाय मलेशिया में आसानी से हो जाते हैं।")
+    when: L$2("Malaysia is 2½ hours ahead of India, so slots fall between 12:30 and 8:30 pm Malaysian time — easy to fit after office hours on a weekday.", "मलेशिया भारत से 2½ घंटे आगे है, इसलिए स्लॉट मलेशिया के समय से दोपहर 12:30 से रात 8:30 के बीच पड़ते हैं — काम के दिन ऑफिस के बाद आसानी से।"),
+    prep: L$2("Most Malaysian clients take the reading in Tamil. Keep the names of your parents and siblings ready; the reader confirms the leaf with them before reading the kandams.", "मलेशिया के ज़्यादातर क्लाइंट रीडिंग तमिल में लेते हैं। माता-पिता और भाई-बहनों के नाम तैयार रखें; कांडम पढ़ने से पहले रीडर इन्हीं से पट्टे की पुष्टि करते हैं।"),
+    remedies: L$2("With temples in every Indian neighbourhood — and Murugan worship at places like Batu Caves — temple remedies from the Shanti kandam are easy to carry out in Malaysia.", "हर भारतीय इलाक़े में मंदिर हैं — और बातू गुफ़ाओं जैसी जगहों पर मुरुगन पूजा — इसलिए शांति कांडम के मंदिर वाले उपाय मलेशिया में आसानी से हो जाते हैं।")
   },
   uae: {
-    when: L$1("The UAE is 1½ hours behind India, so slots run from 8:30 am to 4:30 pm in Dubai and Abu Dhabi — a weekend morning slot is the most relaxed.", "UAE भारत से 1½ घंटे पीछे है, इसलिए दुबई और अबू धाबी में स्लॉट सुबह 8:30 से शाम 4:30 तक हैं — वीकेंड की सुबह का स्लॉट सबसे आराम का है।"),
-    prep: L$1("The call runs on Zoom, which works in the UAE. Many Gulf clients also book an office visit in Jaipur during their trip home — upload the thumb print before you travel.", "कॉल Zoom पर होती है, जो UAE में चलता है। खाड़ी के कई क्लाइंट घर आने पर जयपुर ऑफिस विज़िट भी बुक करते हैं — यात्रा से पहले अंगूठे का निशान अपलोड कर दें।"),
-    remedies: L$1("With Hindu temples now open in Dubai and Abu Dhabi, remedies that involve a temple visit can be done locally; mantra and charity remedies can be done anywhere.", "अब दुबई और अबू धाबी में हिंदू मंदिर खुल गए हैं, इसलिए मंदिर दर्शन वाले उपाय वहीं हो सकते हैं; मंत्र और दान वाले उपाय कहीं भी हो जाते हैं।")
+    when: L$2("The UAE is 1½ hours behind India, so slots run from 8:30 am to 4:30 pm in Dubai and Abu Dhabi — a weekend morning slot is the most relaxed.", "UAE भारत से 1½ घंटे पीछे है, इसलिए दुबई और अबू धाबी में स्लॉट सुबह 8:30 से शाम 4:30 तक हैं — वीकेंड की सुबह का स्लॉट सबसे आराम का है।"),
+    prep: L$2("The call runs on Zoom, which works in the UAE. Many Gulf clients also book an office visit in Jaipur during their trip home — upload the thumb print before you travel.", "कॉल Zoom पर होती है, जो UAE में चलता है। खाड़ी के कई क्लाइंट घर आने पर जयपुर ऑफिस विज़िट भी बुक करते हैं — यात्रा से पहले अंगूठे का निशान अपलोड कर दें।"),
+    remedies: L$2("With Hindu temples now open in Dubai and Abu Dhabi, remedies that involve a temple visit can be done locally; mantra and charity remedies can be done anywhere.", "अब दुबई और अबू धाबी में हिंदू मंदिर खुल गए हैं, इसलिए मंदिर दर्शन वाले उपाय वहीं हो सकते हैं; मंत्र और दान वाले उपाय कहीं भी हो जाते हैं।")
   },
   "new-zealand": {
-    when: L$1("New Zealand is far ahead of India: the first slots of the Indian morning fall around 5:30–7:30 pm in Auckland during summer time, so book an early slot for an evening call.", "न्यूज़ीलैंड भारत से काफ़ी आगे है: गर्मियों के समय में भारत की सुबह के पहले स्लॉट ऑकलैंड में शाम लगभग 5:30–7:30 बजे पड़ते हैं, इसलिए शाम की कॉल के लिए सुबह का स्लॉट बुक करें।"),
-    prep: L$1("Fiji Indian and South Indian families often have relatives in India or Fiji who can join the call — useful when the reader asks about parents and grandparents.", "फ़िजी-भारतीय और दक्षिण भारतीय परिवारों के रिश्तेदार अक्सर भारत या फ़िजी में होते हैं जो कॉल में जुड़ सकते हैं — यह तब काम आता है जब रीडर माता-पिता और दादा-दादी के बारे में पूछते हैं।"),
-    remedies: L$1("Auckland and Wellington have Hindu temples for temple remedies. New Zealand’s biosecurity rules are strict, so yantras are sent as metal and printed material only.", "ऑकलैंड और वेलिंगटन में मंदिर वाले उपायों के लिए हिंदू मंदिर हैं। न्यूज़ीलैंड के बायोसिक्योरिटी नियम सख़्त हैं, इसलिए यंत्र सिर्फ़ धातु और छपी सामग्री के रूप में भेजे जाते हैं।")
+    when: L$2("New Zealand is far ahead of India: the first slots of the Indian morning fall around 5:30–7:30 pm in Auckland during summer time, so book an early slot for an evening call.", "न्यूज़ीलैंड भारत से काफ़ी आगे है: गर्मियों के समय में भारत की सुबह के पहले स्लॉट ऑकलैंड में शाम लगभग 5:30–7:30 बजे पड़ते हैं, इसलिए शाम की कॉल के लिए सुबह का स्लॉट बुक करें।"),
+    prep: L$2("Fiji Indian and South Indian families often have relatives in India or Fiji who can join the call — useful when the reader asks about parents and grandparents.", "फ़िजी-भारतीय और दक्षिण भारतीय परिवारों के रिश्तेदार अक्सर भारत या फ़िजी में होते हैं जो कॉल में जुड़ सकते हैं — यह तब काम आता है जब रीडर माता-पिता और दादा-दादी के बारे में पूछते हैं।"),
+    remedies: L$2("Auckland and Wellington have Hindu temples for temple remedies. New Zealand’s biosecurity rules are strict, so yantras are sent as metal and printed material only.", "ऑकलैंड और वेलिंगटन में मंदिर वाले उपायों के लिए हिंदू मंदिर हैं। न्यूज़ीलैंड के बायोसिक्योरिटी नियम सख़्त हैं, इसलिए यंत्र सिर्फ़ धातु और छपी सामग्री के रूप में भेजे जाते हैं।")
   },
   qatar: {
-    when: L$1("Qatar is 2½ hours behind India, so slots run from 7:30 am to 3:30 pm in Doha. With the weekend on Friday and Saturday, a Friday or Saturday morning slot suits most families.", "क़तर भारत से 2½ घंटे पीछे है, इसलिए दोहा में स्लॉट सुबह 7:30 से दोपहर 3:30 तक हैं। वीकेंड शुक्रवार-शनिवार होने से ज़्यादातर परिवारों को शुक्रवार या शनिवार सुबह का स्लॉट ठीक रहता है।"),
-    prep: L$1("Use Zoom for the call. Many Doha clients are from Kerala and Tamil Nadu and prefer the leaf read in Tamil or with Malayalam-speaking family on the call — mention it when you book.", "कॉल के लिए Zoom इस्तेमाल करें। दोहा के कई क्लाइंट केरल और तमिलनाडु से हैं और पट्टा तमिल में सुनना या मलयालम बोलने वाले परिवार को कॉल में रखना पसंद करते हैं — बुकिंग में बता दें।"),
-    remedies: L$1("Remedies are chosen so they can be done privately at home in Qatar — mantra, fasting and charity — and any temple pooja can be done on your next visit to India.", "उपाय ऐसे चुने जाते हैं जो क़तर में घर पर निजी तौर पर हो सकें — मंत्र, व्रत और दान — और मंदिर की कोई पूजा अगली भारत यात्रा में करवाई जा सकती है।")
+    when: L$2("Qatar is 2½ hours behind India, so slots run from 7:30 am to 3:30 pm in Doha. With the weekend on Friday and Saturday, a Friday or Saturday morning slot suits most families.", "क़तर भारत से 2½ घंटे पीछे है, इसलिए दोहा में स्लॉट सुबह 7:30 से दोपहर 3:30 तक हैं। वीकेंड शुक्रवार-शनिवार होने से ज़्यादातर परिवारों को शुक्रवार या शनिवार सुबह का स्लॉट ठीक रहता है।"),
+    prep: L$2("Use Zoom for the call. Many Doha clients are from Kerala and Tamil Nadu and prefer the leaf read in Tamil or with Malayalam-speaking family on the call — mention it when you book.", "कॉल के लिए Zoom इस्तेमाल करें। दोहा के कई क्लाइंट केरल और तमिलनाडु से हैं और पट्टा तमिल में सुनना या मलयालम बोलने वाले परिवार को कॉल में रखना पसंद करते हैं — बुकिंग में बता दें।"),
+    remedies: L$2("Remedies are chosen so they can be done privately at home in Qatar — mantra, fasting and charity — and any temple pooja can be done on your next visit to India.", "उपाय ऐसे चुने जाते हैं जो क़तर में घर पर निजी तौर पर हो सकें — मंत्र, व्रत और दान — और मंदिर की कोई पूजा अगली भारत यात्रा में करवाई जा सकती है।")
   },
   kuwait: {
-    when: L$1("Kuwait is 2½ hours behind India, so slots run from 7:30 am to 3:30 pm. A Friday or Saturday morning slot fits the Kuwaiti weekend.", "कुवैत भारत से 2½ घंटे पीछे है, इसलिए स्लॉट सुबह 7:30 से दोपहर 3:30 तक हैं। कुवैत के वीकेंड में शुक्रवार या शनिवार सुबह का स्लॉट ठीक रहता है।"),
-    prep: L$1("Use Zoom for the call and a quiet room. Keep your passport-style details handy — full name, parents’ names and place of birth — as the reader matches them against the leaf.", "कॉल के लिए Zoom और एक शांत कमरा रखें। पूरा नाम, माता-पिता के नाम और जन्मस्थान जैसी जानकारी पास रखें, क्योंकि रीडर इन्हें पट्टे से मिलाते हैं।"),
-    remedies: L$1("Remedies are kept to what can be done at home in Kuwait — mantra, fasting, charity and a yantra in the prayer corner — with any temple pooja left for your trip to India.", "उपाय वही रखे जाते हैं जो कुवैत में घर पर हो सकें — मंत्र, व्रत, दान और पूजा के कोने में यंत्र — मंदिर की पूजा भारत यात्रा के लिए रखी जाती है।")
+    when: L$2("Kuwait is 2½ hours behind India, so slots run from 7:30 am to 3:30 pm. A Friday or Saturday morning slot fits the Kuwaiti weekend.", "कुवैत भारत से 2½ घंटे पीछे है, इसलिए स्लॉट सुबह 7:30 से दोपहर 3:30 तक हैं। कुवैत के वीकेंड में शुक्रवार या शनिवार सुबह का स्लॉट ठीक रहता है।"),
+    prep: L$2("Use Zoom for the call and a quiet room. Keep your passport-style details handy — full name, parents’ names and place of birth — as the reader matches them against the leaf.", "कॉल के लिए Zoom और एक शांत कमरा रखें। पूरा नाम, माता-पिता के नाम और जन्मस्थान जैसी जानकारी पास रखें, क्योंकि रीडर इन्हें पट्टे से मिलाते हैं।"),
+    remedies: L$2("Remedies are kept to what can be done at home in Kuwait — mantra, fasting, charity and a yantra in the prayer corner — with any temple pooja left for your trip to India.", "उपाय वही रखे जाते हैं जो कुवैत में घर पर हो सकें — मंत्र, व्रत, दान और पूजा के कोने में यंत्र — मंदिर की पूजा भारत यात्रा के लिए रखी जाती है।")
   },
   oman: {
-    when: L$1("Oman is just 1½ hours behind India, so slots run from 8:30 am to 4:30 pm in Muscat — a weekend morning or a weekday afternoon both work.", "ओमान भारत से सिर्फ़ 1½ घंटे पीछे है, इसलिए मस्कट में स्लॉट सुबह 8:30 से शाम 4:30 तक हैं — वीकेंड की सुबह या काम के दिन की दोपहर, दोनों ठीक हैं।"),
-    prep: L$1("Use Zoom for the call. If you are travelling home soon, book an office visit in Jaipur instead and upload the thumb print in advance.", "कॉल के लिए Zoom इस्तेमाल करें। जल्द घर आ रहे हों, तो जयपुर ऑफिस विज़िट बुक करें और अंगूठे का निशान पहले से अपलोड कर दें।"),
-    remedies: L$1("Muscat has long-standing Hindu temples serving the Indian community, so temple remedies can often be done locally, alongside mantra and charity at home.", "मस्कट में भारतीय समुदाय के लिए पुराने हिंदू मंदिर हैं, इसलिए मंदिर वाले उपाय अक्सर वहीं हो जाते हैं, साथ में घर पर मंत्र और दान।")
+    when: L$2("Oman is just 1½ hours behind India, so slots run from 8:30 am to 4:30 pm in Muscat — a weekend morning or a weekday afternoon both work.", "ओमान भारत से सिर्फ़ 1½ घंटे पीछे है, इसलिए मस्कट में स्लॉट सुबह 8:30 से शाम 4:30 तक हैं — वीकेंड की सुबह या काम के दिन की दोपहर, दोनों ठीक हैं।"),
+    prep: L$2("Use Zoom for the call. If you are travelling home soon, book an office visit in Jaipur instead and upload the thumb print in advance.", "कॉल के लिए Zoom इस्तेमाल करें। जल्द घर आ रहे हों, तो जयपुर ऑफिस विज़िट बुक करें और अंगूठे का निशान पहले से अपलोड कर दें।"),
+    remedies: L$2("Muscat has long-standing Hindu temples serving the Indian community, so temple remedies can often be done locally, alongside mantra and charity at home.", "मस्कट में भारतीय समुदाय के लिए पुराने हिंदू मंदिर हैं, इसलिए मंदिर वाले उपाय अक्सर वहीं हो जाते हैं, साथ में घर पर मंत्र और दान।")
   },
   germany: {
-    when: L$1("Germany is 3½–4½ hours behind India, so slots run from early morning to early afternoon. The 13:00–18:00 India-time slots — 8:30 am to 1:30 pm in winter — are the most comfortable.", "जर्मनी भारत से 3½–4½ घंटे पीछे है, इसलिए स्लॉट सुबह से दोपहर तक पड़ते हैं। भारत के समय से 13:00–18:00 के स्लॉट — सर्दियों में सुबह 8:30 से दोपहर 1:30 — सबसे आरामदायक हैं।"),
-    prep: L$1("A stamp pad from any stationery shop or drugstore works for the thumb print. The reading is translated into English or Hindi; Tamil-speaking families can hear it in Tamil.", "अंगूठे के निशान के लिए किसी भी स्टेशनरी या ड्रगस्टोर का स्टैम्प पैड चल जाता है। रीडिंग अंग्रेज़ी या हिंदी में अनुवाद होती है; तमिल बोलने वाले परिवार तमिल में सुन सकते हैं।"),
-    remedies: L$1("Germany has Tamil Hindu temples, including well-known ones in North Rhine-Westphalia, so temple remedies from the leaf can be done there. Yantras pay EU import VAT on arrival.", "जर्मनी में तमिल हिंदू मंदिर हैं, नॉर्थ राइन-वेस्टफ़ेलिया के जाने-माने मंदिरों सहित, इसलिए पट्टे के मंदिर वाले उपाय वहाँ हो सकते हैं। यंत्र पर पहुँचने पर EU इम्पोर्ट VAT लगता है।")
+    when: L$2("Germany is 3½–4½ hours behind India, so slots run from early morning to early afternoon. The 13:00–18:00 India-time slots — 8:30 am to 1:30 pm in winter — are the most comfortable.", "जर्मनी भारत से 3½–4½ घंटे पीछे है, इसलिए स्लॉट सुबह से दोपहर तक पड़ते हैं। भारत के समय से 13:00–18:00 के स्लॉट — सर्दियों में सुबह 8:30 से दोपहर 1:30 — सबसे आरामदायक हैं।"),
+    prep: L$2("A stamp pad from any stationery shop or drugstore works for the thumb print. The reading is translated into English or Hindi; Tamil-speaking families can hear it in Tamil.", "अंगूठे के निशान के लिए किसी भी स्टेशनरी या ड्रगस्टोर का स्टैम्प पैड चल जाता है। रीडिंग अंग्रेज़ी या हिंदी में अनुवाद होती है; तमिल बोलने वाले परिवार तमिल में सुन सकते हैं।"),
+    remedies: L$2("Germany has Tamil Hindu temples, including well-known ones in North Rhine-Westphalia, so temple remedies from the leaf can be done there. Yantras pay EU import VAT on arrival.", "जर्मनी में तमिल हिंदू मंदिर हैं, नॉर्थ राइन-वेस्टफ़ेलिया के जाने-माने मंदिरों सहित, इसलिए पट्टे के मंदिर वाले उपाय वहाँ हो सकते हैं। यंत्र पर पहुँचने पर EU इम्पोर्ट VAT लगता है।")
   },
   mauritius: {
-    when: L$1("Mauritius is 1½ hours behind India, so every slot falls between 8:30 am and 4:30 pm — easy to book on any day.", "मॉरीशस भारत से 1½ घंटे पीछे है, इसलिए हर स्लॉट सुबह 8:30 से शाम 4:30 के बीच पड़ता है — किसी भी दिन आसानी से बुक हो जाता है।"),
-    prep: L$1("Tamil families often prefer the leaf in Tamil, and Bhojpuri- and Hindi-speaking families can hear the translation in Hindi. Keep the names of parents and grandparents ready.", "तमिल परिवार अक्सर पट्टा तमिल में सुनना पसंद करते हैं, और भोजपुरी व हिंदी बोलने वाले परिवार अनुवाद हिंदी में सुन सकते हैं। माता-पिता और दादा-दादी के नाम तैयार रखें।"),
-    remedies: L$1("With temples and kovils across the island and pilgrimages such as Grand Bassin (Ganga Talao) for Mahashivratri, temple and Shiva remedies from the leaf fit naturally into life in Mauritius.", "पूरे द्वीप में मंदिर और कोविल हैं, और महाशिवरात्रि पर ग्रैंड बेसिन (गंगा तालाब) जैसी तीर्थयात्राएँ होती हैं — इसलिए पट्टे के मंदिर और शिव उपाय मॉरीशस के जीवन में स्वाभाविक रूप से हो जाते हैं।")
+    when: L$2("Mauritius is 1½ hours behind India, so every slot falls between 8:30 am and 4:30 pm — easy to book on any day.", "मॉरीशस भारत से 1½ घंटे पीछे है, इसलिए हर स्लॉट सुबह 8:30 से शाम 4:30 के बीच पड़ता है — किसी भी दिन आसानी से बुक हो जाता है।"),
+    prep: L$2("Tamil families often prefer the leaf in Tamil, and Bhojpuri- and Hindi-speaking families can hear the translation in Hindi. Keep the names of parents and grandparents ready.", "तमिल परिवार अक्सर पट्टा तमिल में सुनना पसंद करते हैं, और भोजपुरी व हिंदी बोलने वाले परिवार अनुवाद हिंदी में सुन सकते हैं। माता-पिता और दादा-दादी के नाम तैयार रखें।"),
+    remedies: L$2("With temples and kovils across the island and pilgrimages such as Grand Bassin (Ganga Talao) for Mahashivratri, temple and Shiva remedies from the leaf fit naturally into life in Mauritius.", "पूरे द्वीप में मंदिर और कोविल हैं, और महाशिवरात्रि पर ग्रैंड बेसिन (गंगा तालाब) जैसी तीर्थयात्राएँ होती हैं — इसलिए पट्टे के मंदिर और शिव उपाय मॉरीशस के जीवन में स्वाभाविक रूप से हो जाते हैं।")
   }
 };
-const L = (en, hi) => ({ en, hi });
+const L$1 = (en, hi) => ({ en, hi });
 const BOOK = "/book?service=nadi-general-2-kandam";
 function istToday() {
   return new Date(Date.now() + 330 * 6e4).toISOString().slice(0, 10);
@@ -51353,7 +51364,7 @@ function CountryPage() {
   }, [c == null ? void 0 : c.order]);
   if (data === null) return /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {});
   if (data === void 0) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(PageShell, { title: L("Nadi Astrology", "नाड़ी ज्योतिष"), seed: 39, children: /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", style: { minHeight: "60vh" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(PageShell, { title: L$1("Nadi Astrology", "नाड़ी ज्योतिष"), seed: 39, children: /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", style: { minHeight: "60vh" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
       "— ",
       t("NADI ASTROLOGY · WORLDWIDE", "नाड़ी ज्योतिष · दुनिया भर में")
     ] }) }) }) });
@@ -51369,12 +51380,12 @@ function CountryPage() {
     provider: { "@type": "Person", name: "Pt. Rajneesh Sharma", address: { "@type": "PostalAddress", addressLocality: "Jaipur", addressCountry: "IN" } },
     availableChannel: { "@type": "ServiceChannel", serviceUrl: typeof window !== "undefined" ? window.location.href : void 0, availableLanguage: ["English", "Hindi", "Tamil"] }
   } : null;
-  const title = c ? L(c.seoTitle || `Nadi Astrology in ${c.inName || c.name} — Online Palm Leaf Reading`, `${c.nameHi || c.name} में नाड़ी ज्योतिष — ऑनलाइन ताड़-पत्र रीडिंग`) : L("Nadi Astrology", "नाड़ी ज्योतिष");
-  const description = c ? L(c.metaDescription || ((_b = (_a = c.intro) == null ? void 0 : _a.en) == null ? void 0 : _b.slice(0, 160)), ((_d = (_c = c.intro) == null ? void 0 : _c.hi) == null ? void 0 : _d.slice(0, 160)) || null) : void 0;
-  const cta = { to: BOOK, label: L("Book Nadi Reading", "नाड़ी रीडिंग बुक करें") };
+  const title = c ? L$1(c.seoTitle || `Nadi Astrology in ${c.inName || c.name} — Online Palm Leaf Reading`, `${c.nameHi || c.name} में नाड़ी ज्योतिष — ऑनलाइन ताड़-पत्र रीडिंग`) : L$1("Nadi Astrology", "नाड़ी ज्योतिष");
+  const description = c ? L$1(c.metaDescription || ((_b = (_a = c.intro) == null ? void 0 : _a.en) == null ? void 0 : _b.slice(0, 160)), ((_d = (_c = c.intro) == null ? void 0 : _c.hi) == null ? void 0 : _d.slice(0, 160)) || null) : void 0;
+  const cta = { to: BOOK, label: L$1("Book Nadi Reading", "नाड़ी रीडिंग बुक करें") };
   const generalFaq = [
-    [L("How do I send my thumb impression from abroad?", "विदेश से अंगूठे का निशान कैसे भेजें?"), L("Press your thumb on an ink pad (or use a little lipstick), press it on white paper, and upload a clear photo while booking. Men send the right thumb, women the left.", "अंगूठे को इंक पैड (या थोड़ी लिपस्टिक) पर लगाकर सफ़ेद कागज़ पर छापें, और बुकिंग के समय उसकी साफ़ फोटो अपलोड करें। पुरुष दायाँ अंगूठा, महिलाएँ बायाँ।")],
-    [L("What if my leaf is not found?", "अगर मेरा पट्टा न मिले तो?"), L("Not everyone has a leaf. Please ask on WhatsApp about the refund terms before you book.", "हर व्यक्ति का पट्टा होना ज़रूरी नहीं। बुकिंग से पहले WhatsApp पर रिफंड की शर्तें पूछ लें।")]
+    [L$1("How do I send my thumb impression from abroad?", "विदेश से अंगूठे का निशान कैसे भेजें?"), L$1("Press your thumb on an ink pad (or use a little lipstick), press it on white paper, and upload a clear photo while booking. Men send the right thumb, women the left.", "अंगूठे को इंक पैड (या थोड़ी लिपस्टिक) पर लगाकर सफ़ेद कागज़ पर छापें, और बुकिंग के समय उसकी साफ़ फोटो अपलोड करें। पुरुष दायाँ अंगूठा, महिलाएँ बायाँ।")],
+    [L$1("What if my leaf is not found?", "अगर मेरा पट्टा न मिले तो?"), L$1("Not everyone has a leaf. Please ask on WhatsApp about the refund terms before you book.", "हर व्यक्ति का पट्टा होना ज़रूरी नहीं। बुकिंग से पहले WhatsApp पर रिफंड की शर्तें पूछ लें।")]
   ];
   const faqs = c ? [...(c.faqs || []).map((f) => {
     var _a2, _b2, _c2, _d2;
@@ -51383,7 +51394,7 @@ function CountryPage() {
   const shipping = (c == null ? void 0 : c.shippingDays) ? t(`Delivery to ${c.name}: about ${c.shippingDays} working days after dispatch.`, `${c.nameHi || c.name} में डिलीवरी: डिस्पैच के बाद लगभग ${c.shippingDays} कार्य-दिवस।`) : t("Delivery time to your city is confirmed on WhatsApp before dispatch.", "आपके शहर तक डिलीवरी का समय डिस्पैच से पहले WhatsApp पर बताया जाता है।");
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(PageShell, { title, description, cta, disclaimer: DISCLAIMER.jyotish, schema, seed: ((c == null ? void 0 : c.order) || 3) * 13, revealKey: c == null ? void 0 : c.slug, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap-wide stack", style: { "--gap": "36px" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L("Nadi Astrology", "नाड़ी ज्योतिष"), to: "/nadi-astrology" }, { label: c ? L(c.name, c.nameHi || null) : "…" }] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L$1("Nadi Astrology", "नाड़ी ज्योतिष"), to: "/nadi-astrology" }, { label: c ? L$1(c.name, c.nameHi || null) : "…" }] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-row", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero-text rise", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "eyebrow-lg", children: [
@@ -51479,9 +51490,9 @@ function CountryPage() {
       COUNTRY_GUIDES[c.slug] && /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section-tight", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "28px" }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2 reveal", style: { fontSize: "clamp(28px,3.2vw,42px)" }, children: t(`A practical guide for clients in ${c.inName || c.name}`, `${c.nameHi || c.name} के क्लाइंट्स के लिए ज़रूरी बातें`) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid reveal", style: { "--min": "260px", "--gap": "16px" }, children: [
-          [L("Best time to book", "बुक करने का सही समय"), COUNTRY_GUIDES[c.slug].when],
-          [L("Getting ready", "तैयारी"), COUNTRY_GUIDES[c.slug].prep],
-          [L("Remedies where you live", "वहीं रहते हुए उपाय"), COUNTRY_GUIDES[c.slug].remedies]
+          [L$1("Best time to book", "बुक करने का सही समय"), COUNTRY_GUIDES[c.slug].when],
+          [L$1("Getting ready", "तैयारी"), COUNTRY_GUIDES[c.slug].prep],
+          [L$1("Remedies where you live", "वहीं रहते हुए उपाय"), COUNTRY_GUIDES[c.slug].remedies]
         ].map(([h, d]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card", style: { padding: 24, gap: 10 }, children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "serif", style: { fontSize: 22, margin: 0, fontWeight: 500 }, children: t(h) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "body", children: t(d) })
@@ -51490,10 +51501,10 @@ function CountryPage() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "44px" }, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "h2 reveal", children: t(`How it works from ${c.name}`, `${c.nameHi || c.name} से कैसे होता है`) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(Steps, { items: [
-          [L("Book and upload your thumb", "बुक करें और अंगूठा अपलोड करें"), L("Choose a package, pay in USD via PayPal and upload a photo of your thumb impression.", "पैकेज चुनें, PayPal से USD में भुगतान करें और अंगूठे के निशान की फोटो अपलोड करें।")],
-          [L("Your leaf is searched for", "पट्टा खोजा जाता है"), L("Nadi readers search the leaf bundles. On a short call you answer yes/no to confirm it is yours.", "नाड़ी रीडर पट्टों के गट्ठर में खोजते हैं। छोटी कॉल पर आप हाँ/ना में बताते हैं कि पट्टा आपका है।")],
-          [L("The reading, on video", "वीडियो पर रीडिंग"), L("The leaf is read with live translation at a time that suits your time zone. You receive the recording.", "आपके टाइम ज़ोन के हिसाब से समय पर, अनुवाद के साथ पट्टा पढ़ा जाता है। रिकॉर्डिंग मिलती है।")],
-          [L("Analysis and remedies", "विश्लेषण और उपाय"), L("Pt. Rajneesh Sharma studies the leaf with your birth chart (Vedic/KP) and sends a written summary of remedies.", "पं. रजनीश शर्मा पट्टे को कुंडली (वैदिक/केपी) के साथ देखते हैं और उपायों का लिखित सारांश भेजते हैं।")]
+          [L$1("Book and upload your thumb", "बुक करें और अंगूठा अपलोड करें"), L$1("Choose a package, pay in USD via PayPal and upload a photo of your thumb impression.", "पैकेज चुनें, PayPal से USD में भुगतान करें और अंगूठे के निशान की फोटो अपलोड करें।")],
+          [L$1("Your leaf is searched for", "पट्टा खोजा जाता है"), L$1("Nadi readers search the leaf bundles. On a short call you answer yes/no to confirm it is yours.", "नाड़ी रीडर पट्टों के गट्ठर में खोजते हैं। छोटी कॉल पर आप हाँ/ना में बताते हैं कि पट्टा आपका है।")],
+          [L$1("The reading, on video", "वीडियो पर रीडिंग"), L$1("The leaf is read with live translation at a time that suits your time zone. You receive the recording.", "आपके टाइम ज़ोन के हिसाब से समय पर, अनुवाद के साथ पट्टा पढ़ा जाता है। रिकॉर्डिंग मिलती है।")],
+          [L$1("Analysis and remedies", "विश्लेषण और उपाय"), L$1("Pt. Rajneesh Sharma studies the leaf with your birth chart (Vedic/KP) and sends a written summary of remedies.", "पं. रजनीश शर्मा पट्टे को कुंडली (वैदिक/केपी) के साथ देखते हैं और उपायों का लिखित सारांश भेजते हैं।")]
         ] })
       ] }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "40px" }, children: [
@@ -51502,9 +51513,9 @@ function CountryPage() {
           currency === "USD" ? "" : ` (${t("switch to $ USD in the top bar", "ऊपर $ USD चुनें")})`
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid reveal", style: { "--min": "280px" }, children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L("General (Kandam 1)", "सामान्य (कांडम 1)"), price: price(null, null), sub: L("International · PayPal", "विदेश · PayPal"), points: [L("Leaf search + general reading", "पट्टा खोज + सामान्य रीडिंग"), L("Recording", "रिकॉर्डिंग")], to: "/book?service=nadi-general" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { featured: true, badge: L("RECOMMENDED", "सुझाया गया"), title: L("General + 2 Kandams + Analysis", "सामान्य + 2 कांडम + विश्लेषण"), price: price(null, null), sub: L("International · PayPal", "विदेश · PayPal"), points: [L("2 kandams of your choice", "आपकी पसंद के 2 कांडम"), L("Vedic/KP analysis by Pt. Rajneesh Sharma", "पं. रजनीश शर्मा का वैदिक/केपी विश्लेषण"), L("Written summary of remedies", "उपायों का लिखित सारांश")], to: BOOK }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L("Shanti Kandam (remedies)", "शांति कांडम (उपाय)"), price: price(null, null), sub: L("International · PayPal", "विदेश · PayPal"), points: [L("Past karma and traditional remedies", "पूर्व कर्म और पारंपरिक उपाय"), L("Yantra advice", "यंत्र सलाह")], to: "/book?service=nadi-shanti" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$1("General (Kandam 1)", "सामान्य (कांडम 1)"), price: price(null, null), sub: L$1("International · PayPal", "विदेश · PayPal"), points: [L$1("Leaf search + general reading", "पट्टा खोज + सामान्य रीडिंग"), L$1("Recording", "रिकॉर्डिंग")], to: "/book?service=nadi-general" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { featured: true, badge: L$1("RECOMMENDED", "सुझाया गया"), title: L$1("General + 2 Kandams + Analysis", "सामान्य + 2 कांडम + विश्लेषण"), price: price(null, null), sub: L$1("International · PayPal", "विदेश · PayPal"), points: [L$1("2 kandams of your choice", "आपकी पसंद के 2 कांडम"), L$1("Vedic/KP analysis by Pt. Rajneesh Sharma", "पं. रजनीश शर्मा का वैदिक/केपी विश्लेषण"), L$1("Written summary of remedies", "उपायों का लिखित सारांश")], to: BOOK }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(PriceCard, { title: L$1("Shanti Kandam (remedies)", "शांति कांडम (उपाय)"), price: price(null, null), sub: L$1("International · PayPal", "विदेश · PayPal"), points: [L$1("Past karma and traditional remedies", "पूर्व कर्म और पारंपरिक उपाय"), L$1("Yantra advice", "यंत्र सलाह")], to: "/book?service=nadi-shanti" })
         ] })
       ] }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section row", style: { "--gap": "48px", alignItems: "center" }, children: [
@@ -51540,13 +51551,354 @@ function CountryPage() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid", style: { "--min": "280px" }, children: posts.map((p) => /* @__PURE__ */ jsxRuntimeExports.jsx(PostCard, { p }, p.slug)) })
       ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L(`Nadi astrology in ${c.inName || c.name} — FAQ`, `${c.nameHi || c.name} में नाड़ी ज्योतिष — प्रश्न-उत्तर`), items: faqs }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L$1(`Nadi astrology in ${c.inName || c.name} — FAQ`, `${c.nameHi || c.name} में नाड़ी ज्योतिष — प्रश्न-उत्तर`), items: faqs }),
       ((_g = data.others) == null ? void 0 : _g.length) > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "wrap z", style: { maxWidth: 860, paddingBottom: "var(--sp-section)" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "row", style: { "--gap": "10px 20px", fontSize: 14, color: "var(--muted)" }, children: [
         t("Nadi readings for other countries:", "दूसरे देशों के लिए नाड़ी रीडिंग:"),
         data.others.map((o) => /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: `/nadi-astrology/${o.slug}`, children: t(o.name, o.nameHi || null) }, o.slug))
       ] }) })
     ] })
   ] });
+}
+const CITIES = [
+  { id: "jaipur", name: "Jaipur", nameHi: "जयपुर", lat: 26.9124, lon: 75.7873 },
+  { id: "delhi", name: "Delhi", nameHi: "दिल्ली", lat: 28.6139, lon: 77.209 },
+  { id: "mumbai", name: "Mumbai", nameHi: "मुंबई", lat: 19.076, lon: 72.8777 },
+  { id: "bengaluru", name: "Bengaluru", nameHi: "बेंगलुरु", lat: 12.9716, lon: 77.5946 },
+  { id: "chennai", name: "Chennai", nameHi: "चेन्नई", lat: 13.0827, lon: 80.2707 },
+  { id: "kolkata", name: "Kolkata", nameHi: "कोलकाता", lat: 22.5726, lon: 88.3639 },
+  { id: "hyderabad", name: "Hyderabad", nameHi: "हैदराबाद", lat: 17.385, lon: 78.4867 },
+  { id: "ahmedabad", name: "Ahmedabad", nameHi: "अहमदाबाद", lat: 23.0225, lon: 72.5714 },
+  { id: "pune", name: "Pune", nameHi: "पुणे", lat: 18.5204, lon: 73.8567 },
+  { id: "lucknow", name: "Lucknow", nameHi: "लखनऊ", lat: 26.8467, lon: 80.9462 },
+  { id: "jodhpur", name: "Jodhpur", nameHi: "जोधपुर", lat: 26.2389, lon: 73.0243 },
+  { id: "udaipur", name: "Udaipur", nameHi: "उदयपुर", lat: 24.5854, lon: 73.7125 },
+  { id: "kota", name: "Kota", nameHi: "कोटा", lat: 25.2138, lon: 75.8648 },
+  { id: "ajmer", name: "Ajmer", nameHi: "अजमेर", lat: 26.4499, lon: 74.6399 }
+];
+const IST = 330;
+const rad = (d) => d * Math.PI / 180;
+const deg = (r) => r * 180 / Math.PI;
+function todayIST(now = /* @__PURE__ */ new Date()) {
+  const t = new Date(now.getTime() + IST * 6e4);
+  return { y: t.getUTCFullYear(), m: t.getUTCMonth() + 1, d: t.getUTCDate() };
+}
+function nowMinutesIST(now = /* @__PURE__ */ new Date()) {
+  const t = new Date(now.getTime() + IST * 6e4);
+  return t.getUTCHours() * 60 + t.getUTCMinutes() + t.getUTCSeconds() / 60;
+}
+const addDays = ({ y, m, d }, n) => {
+  const t = new Date(Date.UTC(y, m - 1, d + n));
+  return { y: t.getUTCFullYear(), m: t.getUTCMonth() + 1, d: t.getUTCDate() };
+};
+const weekday = ({ y, m, d }) => new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+const sameDate = (a, b) => a.y === b.y && a.m === b.m && a.d === b.d;
+const isoDate = ({ y, m, d }) => `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+function parseIso(s2) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s2 || "");
+  return m ? { y: +m[1], m: +m[2], d: +m[3] } : null;
+}
+function sunTimes(date, lat, lon) {
+  const jd = Date.UTC(date.y, date.m - 1, date.d) / 864e5 + 24405875e-1;
+  const event = (rising) => {
+    let utcMin = rising ? 720 - 4 * lon - 360 : 720 - 4 * lon + 360;
+    for (let k = 0; k < 3; k++) {
+      const T = (jd + utcMin / 1440 - 2451545) / 36525;
+      const L0 = (280.46646 + T * (36000.76983 + T * 3032e-7)) % 360;
+      const M = 357.52911 + T * (35999.05029 - 1537e-7 * T);
+      const e = 0.016708634 - T * (42037e-9 + 1267e-10 * T);
+      const C = Math.sin(rad(M)) * (1.914602 - T * (4817e-6 + 14e-6 * T)) + Math.sin(rad(2 * M)) * (0.019993 - 101e-6 * T) + Math.sin(rad(3 * M)) * 289e-6;
+      const trueLong = L0 + C;
+      const omega = 125.04 - 1934.136 * T;
+      const lambda = trueLong - 569e-5 - 478e-5 * Math.sin(rad(omega));
+      const eps0 = 23 + (26 + (21.448 - T * (46.815 + T * (59e-5 - T * 1813e-6))) / 60) / 60;
+      const eps = eps0 + 256e-5 * Math.cos(rad(omega));
+      const decl = deg(Math.asin(Math.sin(rad(eps)) * Math.sin(rad(lambda))));
+      const y = Math.tan(rad(eps / 2)) ** 2;
+      const eqTime = 4 * deg(y * Math.sin(2 * rad(L0)) - 2 * e * Math.sin(rad(M)) + 4 * e * y * Math.sin(rad(M)) * Math.cos(2 * rad(L0)) - 0.5 * y * y * Math.sin(4 * rad(L0)) - 1.25 * e * e * Math.sin(2 * rad(M)));
+      const cosH = Math.cos(rad(90.833)) / (Math.cos(rad(lat)) * Math.cos(rad(decl))) - Math.tan(rad(lat)) * Math.tan(rad(decl));
+      const ha = deg(Math.acos(Math.max(-1, Math.min(1, cosH))));
+      utcMin = 720 - 4 * (lon + (rising ? ha : -ha)) - eqTime;
+    }
+    return utcMin + IST;
+  };
+  return { sunrise: event(true), sunset: event(false) };
+}
+const RAHU = [8, 2, 7, 5, 6, 4, 3];
+const YAMAGANDA = [5, 4, 3, 2, 1, 7, 6];
+const GULIKA = [7, 6, 5, 4, 3, 2, 1];
+const CHOGHADIYA_INFO = {
+  amrit: { en: "Amrit", hi: "अमृत", good: true, use: { en: "Best for all work", hi: "हर काम के लिए उत्तम" } },
+  shubh: { en: "Shubh", hi: "शुभ", good: true, use: { en: "Auspicious — ceremonies, marriage, education", hi: "शुभ — संस्कार, विवाह, शिक्षा" } },
+  labh: { en: "Labh", hi: "लाभ", good: true, use: { en: "Gain — business, new start, study", hi: "लाभ — व्यापार, नई शुरुआत, पढ़ाई" } },
+  char: { en: "Char", hi: "चर", good: true, use: { en: "Good for travel and movement", hi: "यात्रा और चलने-फिरने के लिए अच्छा" } },
+  udveg: { en: "Udveg", hi: "उद्वेग", good: false, use: { en: "Avoid new beginnings (government work is fine)", hi: "नई शुरुआत से बचें (सरकारी काम ठीक)" } },
+  kaal: { en: "Kaal", hi: "काल", good: false, use: { en: "Avoid auspicious work", hi: "शुभ काम से बचें" } },
+  rog: { en: "Rog", hi: "रोग", good: false, use: { en: "Avoid; not for health matters", hi: "बचें; स्वास्थ्य संबंधी काम नहीं" } }
+};
+const DAY_ORDER = ["udveg", "char", "labh", "amrit", "kaal", "shubh", "rog"];
+const DAY_START = ["udveg", "amrit", "rog", "labh", "shubh", "char", "kaal"];
+const NIGHT_ORDER = ["shubh", "amrit", "char", "rog", "kaal", "labh", "udveg"];
+const NIGHT_START = ["shubh", "char", "kaal", "udveg", "amrit", "rog", "labh"];
+const slice = (start, len, i) => ({ start: start + len * (i - 1), end: start + len * i });
+function dayTimings(date, city) {
+  const { sunrise, sunset } = sunTimes(date, city.lat, city.lon);
+  const next = sunTimes(addDays(date, 1), city.lat, city.lon).sunrise + 1440;
+  const wd = weekday(date);
+  const part = (sunset - sunrise) / 8;
+  const nightPart = (next - sunset) / 8;
+  const seq = (order, startName, from, len) => {
+    const k = order.indexOf(startName);
+    return Array.from({ length: 8 }, (_, i) => ({ name: order[(k + i) % 7], ...slice(from, len, i + 1) }));
+  };
+  return {
+    date,
+    city,
+    weekday: wd,
+    sunrise,
+    sunset,
+    nextSunrise: next,
+    rahu: slice(sunrise, part, RAHU[wd]),
+    yamaganda: slice(sunrise, part, YAMAGANDA[wd]),
+    gulika: slice(sunrise, part, GULIKA[wd]),
+    dayChoghadiya: seq(DAY_ORDER, DAY_START[wd], sunrise, part),
+    nightChoghadiya: seq(NIGHT_ORDER, NIGHT_START[wd], sunset, nightPart)
+  };
+}
+function fmt(min, lang = "en") {
+  const total = Math.round(min) % 1440;
+  const h = Math.floor(total / 60);
+  const m = String(total % 60).padStart(2, "0");
+  const h12 = (h + 11) % 12 + 1;
+  if (lang === "hi") {
+    const part = h < 4 ? "रात" : h < 12 ? "सुबह" : h < 16 ? "दोपहर" : h < 19 ? "शाम" : "रात";
+    return `${part} ${h12}:${m}`;
+  }
+  return `${h12}:${m} ${h < 12 ? "AM" : "PM"}`;
+}
+const WEEKDAYS = [
+  { en: "Sunday", hi: "रविवार" },
+  { en: "Monday", hi: "सोमवार" },
+  { en: "Tuesday", hi: "मंगलवार" },
+  { en: "Wednesday", hi: "बुधवार" },
+  { en: "Thursday", hi: "गुरुवार" },
+  { en: "Friday", hi: "शुक्रवार" },
+  { en: "Saturday", hi: "शनिवार" }
+];
+const MONTHS = { en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], hi: ["जनवरी", "फ़रवरी", "मार्च", "अप्रैल", "मई", "जून", "जुलाई", "अगस्त", "सितंबर", "अक्टूबर", "नवंबर", "दिसंबर"] };
+const fmtDate = (date, lang = "en") => `${WEEKDAYS[weekday(date)][lang]}, ${date.d} ${MONTHS[lang][date.m - 1]} ${date.y}`;
+const L = (en, hi) => ({ en, hi });
+const CLASSIC = [
+  [L("Sunday", "रविवार"), "4:30 – 6:00 PM"],
+  [L("Monday", "सोमवार"), "7:30 – 9:00 AM"],
+  [L("Tuesday", "मंगलवार"), "3:00 – 4:30 PM"],
+  [L("Wednesday", "बुधवार"), "12:00 – 1:30 PM"],
+  [L("Thursday", "गुरुवार"), "1:30 – 3:00 PM"],
+  [L("Friday", "शुक्रवार"), "10:30 AM – 12:00 PM"],
+  [L("Saturday", "शनिवार"), "9:00 – 10:30 AM"]
+];
+function RahuKaal() {
+  const t = useT();
+  const { lang } = useApp();
+  const [params, setParams] = useSearchParams();
+  const city = CITIES.find((c) => c.id === params.get("city")) || CITIES[0];
+  const today2 = todayIST();
+  const date = parseIso(params.get("date")) || today2;
+  const isToday = sameDate(date, today2);
+  const cityName = t(city.name, city.nameHi);
+  const [now, setNow] = reactExports.useState(() => nowMinutesIST());
+  reactExports.useEffect(() => {
+    const id = setInterval(() => setNow(nowMinutesIST()), 6e4);
+    return () => clearInterval(id);
+  }, []);
+  const day = reactExports.useMemo(() => dayTimings(date, city), [date.y, date.m, date.d, city.id]);
+  const week = reactExports.useMemo(() => Array.from({ length: 7 }, (_, i) => dayTimings(addDays(today2, i), city)), [today2.y, today2.m, today2.d, city.id]);
+  const set = (next) => {
+    const p = {};
+    const c = next.city ?? city.id;
+    const d = next.date ?? date;
+    if (c !== "jaipur") p.city = c;
+    if (!sameDate(d, today2)) p.date = isoDate(d);
+    setParams(p, { replace: true });
+  };
+  const range = (p) => `${fmt(p.start, lang)} – ${fmt(p.end, lang)}`;
+  const isNow = (p) => isToday && now >= p.start && now < p.end;
+  const isNowNight = (p) => isToday && now + 1440 >= p.start && now + 1440 < p.end || isToday && now >= p.start && now < p.end;
+  let status = null;
+  if (isToday) {
+    if (now < day.rahu.start) status = t(`Rahu Kaal starts at ${fmt(day.rahu.start, "en")} today`, `आज राहु काल ${fmt(day.rahu.start, "hi")} से शुरू होगा`);
+    else if (now < day.rahu.end) status = t(`Rahu Kaal is on now — until ${fmt(day.rahu.end, "en")}`, `अभी राहु काल चल रहा है — ${fmt(day.rahu.end, "hi")} तक`);
+    else status = t("Rahu Kaal is over for today", "आज का राहु काल समाप्त हो चुका है");
+  }
+  const choghadiyaTable = (rows, night) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { overflowX: "auto" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("table", { className: "slots", style: { width: "100%", borderCollapse: "collapse", fontSize: 15 }, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("thead", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("tr", { style: { textAlign: "left" }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Time", "समय") }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Choghadiya", "चौघड़िया") }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Good for", "किसके लिए") })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("tbody", { children: rows.map((r) => {
+      const info = CHOGHADIYA_INFO[r.name];
+      const on = night ? isNowNight(r) : isNow(r);
+      return /* @__PURE__ */ jsxRuntimeExports.jsxs("tr", { style: { borderTop: "1px solid var(--line)", background: on ? "var(--bg-hover)" : void 0 }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("td", { style: { padding: "10px 12px", whiteSpace: "nowrap", fontVariantNumeric: "tabular-nums" }, children: [
+          range(r),
+          on && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chip", style: { marginLeft: 8, padding: "2px 8px", fontSize: 11 }, children: t("Now", "अभी") })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("td", { style: { padding: "10px 12px", whiteSpace: "nowrap" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { display: "inline-block", width: 8, height: 8, borderRadius: 999, marginRight: 8, background: info.good ? "#6FC08F" : "#E07B6A" }, "aria-hidden": "true" }),
+          t(info),
+          " ",
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "muted", style: { fontSize: 12 }, children: [
+            "· ",
+            info.good ? t("good", "शुभ") : t("avoid", "टालें")
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("td", { className: "muted", style: { padding: "10px 12px" }, children: t(info.use) })
+      ] }, r.start);
+    }) })
+  ] }) });
+  const card = (label, value, sub, strong) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card", style: { padding: 22, gap: 6, borderColor: strong ? "var(--gold)" : void 0 }, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "eyebrow", style: { letterSpacing: ".2em", fontSize: 12 }, children: label }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "serif", style: { fontSize: strong ? 32 : 26, color: strong ? "var(--gold-2)" : void 0, fontVariantNumeric: "tabular-nums" }, children: value }),
+    sub && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "muted", style: { fontSize: 13 }, children: sub })
+  ] });
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    PageShell,
+    {
+      title: L("Rahu Kaal Today Jaipur: Rahu Kaal & Choghadiya Timings", "आज का राहु काल जयपुर — राहु काल और चौघड़िया समय"),
+      description: L("Rahu Kaal today in Jaipur with Yamaganda, Gulika Kaal, sunrise, sunset and the day and night Choghadiya — also for Delhi, Mumbai and other cities. Updated daily.", "जयपुर में आज का राहु काल, यमगंड, गुलिक काल, सूर्योदय, सूर्यास्त और दिन-रात का चौघड़िया — दिल्ली, मुंबई और दूसरे शहरों के लिए भी। रोज़ अपडेट।"),
+      disclaimer: DISCLAIMER.jyotish,
+      seed: 157,
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "26px" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L("Rahu Kaal Today", "आज का राहु काल") }] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "h1 rise", children: [
+            t("Rahu Kaal Today in", "आज का राहु काल —"),
+            " ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: cityName })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "lead", style: { maxWidth: 700 }, children: t(`Rahu Kaal, Yamaganda and Gulika Kaal for ${city.name}, worked out from the actual sunrise and sunset of the day, with the day and night Choghadiya.`, `${city.nameHi} के लिए राहु काल, यमगंड और गुलिक काल — उस दिन के असली सूर्योदय और सूर्यास्त से निकाले गए, साथ में दिन और रात का चौघड़िया।`) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "stack", style: { "--gap": "6px" }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "serif", style: { fontSize: 24 }, children: [
+              fmtDate(date, lang),
+              isToday ? ` · ${t("today", "आज")}` : ""
+            ] }),
+            status && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { color: "var(--gold-2)", fontSize: 16 }, children: status })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid", style: { "--min": "200px", "--gap": "14px" }, children: [
+            card(t("Rahu Kaal", "राहु काल"), range(day.rahu), t("Avoid starting new work", "नया काम शुरू करने से बचें"), true),
+            card(t("Yamaganda", "यमगंड"), range(day.yamaganda), t("Inauspicious", "अशुभ")),
+            card(t("Gulika Kaal", "गुलिक काल"), range(day.gulika), t("Avoid new beginnings", "नई शुरुआत से बचें")),
+            card(t("Sunrise · Sunset", "सूर्योदय · सूर्यास्त"), `${fmt(day.sunrise, lang)} · ${fmt(day.sunset, lang)}`, cityName)
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "row", style: { "--gap": "10px 14px", alignItems: "center" }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "field", style: { flexDirection: "row", alignItems: "center", gap: 10 }, htmlFor: "rk-city", children: [
+              t("City", "शहर"),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("select", { id: "rk-city", className: "input", style: { width: "auto", padding: "10px 14px" }, value: city.id, onChange: (e) => set({ city: e.target.value }), children: CITIES.map((c) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: c.id, children: t(c.name, c.nameHi) }, c.id)) })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "row", style: { "--gap": "8px", alignItems: "center" }, role: "group", "aria-label": t("Date", "तारीख"), children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", className: "btn-ghost btn-sm", onClick: () => set({ date: addDays(date, -1) }), "aria-label": t("Previous day", "पिछला दिन"), children: "‹" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("input", { id: "rk-date", type: "date", className: "input", style: { width: "auto", padding: "9px 12px" }, value: isoDate(date), onChange: (e) => {
+                const d = parseIso(e.target.value);
+                if (d) set({ date: d });
+              }, "aria-label": t("Date", "तारीख") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", className: "btn-ghost btn-sm", onClick: () => set({ date: addDays(date, 1) }), "aria-label": t("Next day", "अगला दिन"), children: "›" }),
+              !isToday && /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", className: "btn-ghost btn-sm", onClick: () => set({ date: today2 }), children: t("Today", "आज") })
+            ] })
+          ] })
+        ] }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "28px" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "h2", children: [
+            t("Choghadiya", "चौघड़िया"),
+            " ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t(`for ${city.name}`, `— ${city.nameHi}`) })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "stack", style: { "--gap": "10px" }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "serif", style: { fontSize: 24, margin: 0, fontWeight: 500 }, children: [
+              t("Day Choghadiya", "दिन का चौघड़िया"),
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "muted", style: { fontSize: 15 }, children: [
+                "(",
+                fmt(day.sunrise, lang),
+                " – ",
+                fmt(day.sunset, lang),
+                ")"
+              ] })
+            ] }),
+            choghadiyaTable(day.dayChoghadiya, false)
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "stack", style: { "--gap": "10px" }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "serif", style: { fontSize: 24, margin: 0, fontWeight: 500 }, children: [
+              t("Night Choghadiya", "रात का चौघड़िया"),
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "muted", style: { fontSize: 15 }, children: [
+                "(",
+                fmt(day.sunset, lang),
+                " – ",
+                fmt(day.nextSunrise, lang),
+                ")"
+              ] })
+            ] }),
+            choghadiyaTable(day.nightChoghadiya, true)
+          ] })
+        ] }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "24px" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "h2", children: [
+            t("Rahu Kaal this week", "इस हफ़्ते का राहु काल"),
+            " ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t(`in ${city.name}`, `— ${city.nameHi}`) })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { overflowX: "auto" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("table", { style: { width: "100%", borderCollapse: "collapse", fontSize: 15 }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("thead", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("tr", { style: { textAlign: "left" }, children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Day", "दिन") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Rahu Kaal", "राहु काल") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Yamaganda", "यमगंड") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Gulika", "गुलिक") })
+            ] }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("tbody", { children: week.map((w) => /* @__PURE__ */ jsxRuntimeExports.jsxs("tr", { style: { borderTop: "1px solid var(--line)" }, children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("td", { style: { padding: "10px 12px", whiteSpace: "nowrap" }, children: [
+                t(WEEKDAYS[w.weekday]),
+                ", ",
+                w.date.d,
+                "/",
+                w.date.m
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("td", { style: { padding: "10px 12px", whiteSpace: "nowrap", color: "var(--gold-2)", fontVariantNumeric: "tabular-nums" }, children: range(w.rahu) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("td", { className: "muted", style: { padding: "10px 12px", whiteSpace: "nowrap", fontVariantNumeric: "tabular-nums" }, children: range(w.yamaganda) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("td", { className: "muted", style: { padding: "10px 12px", whiteSpace: "nowrap", fontVariantNumeric: "tabular-nums" }, children: range(w.gulika) })
+            ] }, isoDate(w.date))) })
+          ] }) })
+        ] }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "22px", maxWidth: 900 }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "h2", children: [
+            t("What is", "राहु काल"),
+            " ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t("Rahu Kaal?", "क्या है?") })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "prose", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t("Rahu Kaal (Rahu Kalam) is a period of about one and a half hours every day that is ruled by Rahu, the shadow planet. In Vedic tradition it is considered unfavourable for starting anything new — a business, a journey, a purchase, an important meeting or a ceremony. Work that is already under way can continue as usual.", "राहु काल (राहु कालम) हर दिन लगभग डेढ़ घंटे की वह अवधि है जिसका स्वामी छाया ग्रह राहु है। वैदिक परंपरा में इसे कोई भी नया काम शुरू करने के लिए अशुभ माना जाता है — व्यापार, यात्रा, ख़रीदारी, ज़रूरी मीटिंग या कोई संस्कार। जो काम पहले से चल रहा है, वह सामान्य रूप से जारी रह सकता है।") }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t("It is worked out from the actual sunrise and sunset of the place. The daytime is divided into eight equal parts, and Rahu Kaal falls in a fixed part for each weekday: the 8th on Sunday, 2nd on Monday, 7th on Tuesday, 5th on Wednesday, 6th on Thursday, 4th on Friday and 3rd on Saturday. Because the length of the day changes with the season and the city, the clock times change every day — which is why a fixed table is only an approximation.", "इसे उस जगह के असली सूर्योदय और सूर्यास्त से निकाला जाता है। दिन के समय को आठ बराबर भागों में बाँटा जाता है, और हर वार के लिए राहु काल एक तय भाग में आता है: रविवार को 8वाँ, सोमवार को 2रा, मंगलवार को 7वाँ, बुधवार को 5वाँ, गुरुवार को 6ठा, शुक्रवार को 4था और शनिवार को 3रा। मौसम और शहर के साथ दिन की लंबाई बदलती है, इसलिए घड़ी का समय रोज़ बदलता है — इसीलिए कोई तय तालिका सिर्फ़ अनुमान होती है।") }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t("Yamaganda and Gulika Kaal (in tradition, the time of Gulika, Saturn’s son) are worked out the same way and are also avoided for new beginnings. Choghadiya divides the day and the night into eight periods each, named Amrit, Shubh, Labh, Char, Udveg, Kaal and Rog — the first four are favourable, the last three are avoided.", "यमगंड और गुलिक काल (परंपरा में शनि के पुत्र गुलिक का समय) भी इसी तरह निकाले जाते हैं और नई शुरुआत के लिए टाले जाते हैं। चौघड़िया दिन और रात — दोनों को आठ-आठ भागों में बाँटता है, जिनके नाम अमृत, शुभ, लाभ, चर, उद्वेग, काल और रोग हैं — पहले चार शुभ हैं, बाकी तीन टाले जाते हैं।") })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "serif", style: { fontSize: 24, margin: 0, fontWeight: 500 }, children: t("Approximate Rahu Kaal by weekday (for a 6 am – 6 pm day)", "वार के अनुसार अनुमानित राहु काल (सुबह 6 से शाम 6 के दिन के लिए)") }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid", style: { "--min": "200px", "--gap": "10px" }, children: CLASSIC.map(([d, time]) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card", style: { padding: "14px 18px", gap: 4 }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { fontWeight: 600 }, children: t(d) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "muted", style: { fontVariantNumeric: "tabular-nums" }, children: time })
+          ] }, d.en)) })
+        ] }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Faq, { title: L("Rahu Kaal — questions", "राहु काल — प्रश्न-उत्तर"), items: [
+          [L("Is Rahu Kaal at the same time every day?", "क्या राहु काल रोज़ एक ही समय पर होता है?"), L("No. It depends on the weekday and on that day’s sunrise and sunset in your city, so it shifts a little every day and differs between cities.", "नहीं। यह वार और आपके शहर में उस दिन के सूर्योदय-सूर्यास्त पर निर्भर करता है, इसलिए रोज़ थोड़ा बदलता है और शहरों में अलग होता है।")],
+          [L("Can I travel during Rahu Kaal?", "क्या राहु काल में यात्रा कर सकते हैं?"), L("Traditionally, starting a journey in Rahu Kaal is avoided. If the timing cannot be changed, many families leave a little before it begins or after it ends, or begin with a short prayer.", "परंपरा से राहु काल में यात्रा शुरू करना टाला जाता है। समय बदल न सके, तो कई परिवार इसके शुरू होने से पहले या ख़त्म होने के बाद निकलते हैं, या एक छोटी प्रार्थना से शुरुआत करते हैं।")],
+          [L("What if something important must start in Rahu Kaal?", "अगर कोई ज़रूरी काम राहु काल में ही शुरू करना हो तो?"), L("Rahu Kaal is a guide, not a ban. Work already in progress continues normally. For an important new start, a muhurat can be chosen from your own chart — or a KP Prashna can answer a specific “when” question.", "राहु काल मार्गदर्शन है, रोक नहीं। जो काम चल रहा है वह सामान्य रूप से जारी रहता है। किसी ज़रूरी नई शुरुआत के लिए आपकी कुंडली से मुहूर्त चुना जा सकता है — या केपी प्रश्न किसी ख़ास “कब” वाले सवाल का उत्तर दे सकता है।")],
+          [L("Which Choghadiya is best?", "कौन-सा चौघड़िया सबसे अच्छा है?"), L("Amrit is considered best for all work, Shubh for ceremonies and marriage, Labh for business and study, and Char for travel. Udveg, Kaal and Rog are avoided for new beginnings.", "अमृत हर काम के लिए सबसे अच्छा माना जाता है, शुभ संस्कार और विवाह के लिए, लाभ व्यापार और पढ़ाई के लिए, और चर यात्रा के लिए। उद्वेग, काल और रोग नई शुरुआत के लिए टाले जाते हैं।")],
+          [L("Why do other panchangs show a slightly different time?", "दूसरे पंचांग में समय थोड़ा अलग क्यों दिखता है?"), L("Panchangs define sunrise slightly differently (the top edge or the centre of the sun) and use exact or rounded city coordinates, so times can differ by a minute or two.", "पंचांग सूर्योदय को थोड़ा अलग तरह से मानते हैं (सूर्य का ऊपरी किनारा या केंद्र) और शहर के सटीक या गोल निर्देशांक लेते हैं, इसलिए समय में एक-दो मिनट का अंतर हो सकता है।")]
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section-tight", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap row center", style: { "--gap": "14px", justifyContent: "center" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/kp-prashna", className: "btn", children: t("Ask one question with KP Prashna", "केपी प्रश्न से एक सवाल पूछें") }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/vedic-astrology", className: "btn-ghost", children: t("Muhurat from your birth chart", "कुंडली से मुहूर्त") })
+        ] }) })
+      ]
+    }
+  );
 }
 const AdminApp = reactExports.lazy(() => import("./assets/AdminApp-B80ng-WW.js"));
 function SiteRoutes() {
@@ -51568,6 +51920,7 @@ function SiteRoutes() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "online-vastu-consultation", element: /* @__PURE__ */ jsxRuntimeExports.jsx(OnlineVastu, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "contact", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Contact, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "faq", element: /* @__PURE__ */ jsxRuntimeExports.jsx(FaqPage, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "rahu-kaal-jaipur", element: /* @__PURE__ */ jsxRuntimeExports.jsx(RahuKaal, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "blog", element: /* @__PURE__ */ jsxRuntimeExports.jsx(BlogList, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "blog/:slug", element: /* @__PURE__ */ jsxRuntimeExports.jsx(BlogPost, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "privacy-policy", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Legal, { page: "privacy-policy" }) }),
