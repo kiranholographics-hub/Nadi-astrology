@@ -51686,6 +51686,32 @@ const WEEKDAYS = [
 ];
 const MONTHS = { en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], hi: ["जनवरी", "फ़रवरी", "मार्च", "अप्रैल", "मई", "जून", "जुलाई", "अगस्त", "सितंबर", "अक्टूबर", "नवंबर", "दिसंबर"] };
 const fmtDate = (date, lang = "en") => `${WEEKDAYS[weekday(date)][lang]}, ${date.d} ${MONTHS[lang][date.m - 1]} ${date.y}`;
+const cityPath = (id) => id === "jaipur" ? "/rahu-kaal-jaipur" : `/rahu-kaal/${id}`;
+function yearFacts(year, city) {
+  const days = [];
+  for (let d = { y: year, m: 1, d: 1 }; d.y === year; d = addDays(d, 1)) {
+    const s2 = sunTimes(d, city.lat, city.lon);
+    days.push({ date: d, ...s2, len: s2.sunset - s2.sunrise });
+  }
+  const pick = (key, dir) => days.reduce((a, b) => dir * (b[key] - a[key]) > 0 ? b : a);
+  const sundays = days.filter((x) => weekday(x.date) === 0).map((x) => ({ date: x.date, ...slice(x.sunrise, x.len / 8, RAHU[0]) }));
+  return {
+    months: days.filter((x) => x.date.d === 1),
+    earliestSunrise: pick("sunrise", -1),
+    latestSunrise: pick("sunrise", 1),
+    earliestSunset: pick("sunset", -1),
+    latestSunset: pick("sunset", 1),
+    longest: pick("len", 1),
+    shortest: pick("len", -1),
+    sundayRahu: { earliest: sundays.reduce((a, b) => b.start < a.start ? b : a), latest: sundays.reduce((a, b) => b.start > a.start ? b : a) }
+  };
+}
+const fmtLen = (min, lang = "en") => {
+  const h = Math.floor(min / 60);
+  const m = Math.round(min % 60);
+  return lang === "hi" ? `${h} घंटे ${m} मिनट` : `${h} h ${m} min`;
+};
+const MONTH_NAMES = MONTHS;
 const L = (en, hi) => ({ en, hi });
 const CLASSIC = [
   [L("Sunday", "रविवार"), "4:30 – 6:00 PM"],
@@ -51700,7 +51726,12 @@ function RahuKaal() {
   const t = useT();
   const { lang } = useApp();
   const [params, setParams] = useSearchParams();
-  const city = CITIES.find((c) => c.id === params.get("city")) || CITIES[0];
+  const navigate = useNavigate();
+  const { city: cityParam } = useParams();
+  const found = CITIES.find((c) => c.id === (cityParam || params.get("city")));
+  const missing = Boolean(cityParam) && (!found || found.id === "jaipur");
+  const city = found || CITIES[0];
+  const isJaipur = city.id === "jaipur";
   const today2 = todayIST();
   const date = parseIso(params.get("date")) || today2;
   const isToday = sameDate(date, today2);
@@ -51711,14 +51742,16 @@ function RahuKaal() {
     return () => clearInterval(id);
   }, []);
   const day = reactExports.useMemo(() => dayTimings(date, city), [date.y, date.m, date.d, city.id]);
+  const year = reactExports.useMemo(() => yearFacts(today2.y, city), [today2.y, city.id]);
+  const others = reactExports.useMemo(() => CITIES.filter((c) => c.id !== city.id).map((c) => ({ c, d: dayTimings(today2, c) })), [today2.y, today2.m, today2.d, city.id]);
+  const jaipurToday = reactExports.useMemo(() => dayTimings(today2, CITIES[0]), [today2.y, today2.m, today2.d]);
   const week = reactExports.useMemo(() => Array.from({ length: 7 }, (_, i) => dayTimings(addDays(today2, i), city)), [today2.y, today2.m, today2.d, city.id]);
   const set = (next) => {
-    const p = {};
     const c = next.city ?? city.id;
     const d = next.date ?? date;
-    if (c !== "jaipur") p.city = c;
-    if (!sameDate(d, today2)) p.date = isoDate(d);
-    setParams(p, { replace: true });
+    const q = sameDate(d, today2) ? "" : `?date=${isoDate(d)}`;
+    if (c !== city.id || params.get("city")) navigate(cityPath(c) + q);
+    else setParams(q ? { date: isoDate(d) } : {}, { replace: true });
   };
   const range = (p) => `${fmt(p.start, lang)} – ${fmt(p.end, lang)}`;
   const isNow = (p) => isToday && now >= p.start && now < p.end;
@@ -51761,16 +51794,19 @@ function RahuKaal() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "serif", style: { fontSize: strong ? 32 : 26, color: strong ? "var(--gold-2)" : void 0, fontVariantNumeric: "tabular-nums" }, children: value }),
     sub && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "muted", style: { fontSize: 13 }, children: sub })
   ] });
+  if (missing) return /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {});
+  const fmtD = (x) => `${x.date.d} ${MONTH_NAMES[lang][x.date.m - 1]}`;
+  const diff = Math.round(day.sunrise - jaipurToday.sunrise);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     PageShell,
     {
-      title: L("Rahu Kaal Today Jaipur: Rahu Kaal & Choghadiya Timings", "आज का राहु काल जयपुर — राहु काल और चौघड़िया समय"),
-      description: L("Rahu Kaal today in Jaipur with Yamaganda, Gulika Kaal, sunrise, sunset and the day and night Choghadiya — also for Delhi, Mumbai and other cities. Updated daily.", "जयपुर में आज का राहु काल, यमगंड, गुलिक काल, सूर्योदय, सूर्यास्त और दिन-रात का चौघड़िया — दिल्ली, मुंबई और दूसरे शहरों के लिए भी। रोज़ अपडेट।"),
+      title: isJaipur ? L("Rahu Kaal Today Jaipur: Rahu Kaal & Choghadiya Timings", "आज का राहु काल जयपुर — राहु काल और चौघड़िया समय") : L(`Rahu Kaal Today ${city.name}: Rahu Kaal & Choghadiya Timings`, `आज का राहु काल ${city.nameHi} — राहु काल और चौघड़िया समय`),
+      description: isJaipur ? L("Rahu Kaal today in Jaipur with Yamaganda, Gulika Kaal, sunrise, sunset and the day and night Choghadiya — also for Delhi, Mumbai and other cities. Updated daily.", "जयपुर में आज का राहु काल, यमगंड, गुलिक काल, सूर्योदय, सूर्यास्त और दिन-रात का चौघड़िया — दिल्ली, मुंबई और दूसरे शहरों के लिए भी। रोज़ अपडेट।") : L(`Rahu Kaal today in ${city.name} with Yamaganda, Gulika Kaal, sunrise, sunset, the day and night Choghadiya and a 7-day table — worked out for ${city.name}'s own sunrise. Updated daily.`, `${city.nameHi} में आज का राहु काल, यमगंड, गुलिक काल, सूर्योदय, सूर्यास्त, दिन-रात का चौघड़िया और 7 दिन की तालिका — ${city.nameHi} के अपने सूर्योदय से। रोज़ अपडेट।`),
       disclaimer: DISCLAIMER.jyotish,
       seed: 157,
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "hero", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "26px" }, children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: [{ label: L("Rahu Kaal Today", "आज का राहु काल") }] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Breadcrumb, { items: isJaipur ? [{ label: L("Rahu Kaal Today", "आज का राहु काल") }] : [{ label: L("Rahu Kaal Today", "आज का राहु काल"), to: "/rahu-kaal-jaipur" }, { label: L(city.name, city.nameHi) }] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "h1 rise", children: [
             t("Rahu Kaal Today in", "आज का राहु काल —"),
             " ",
@@ -51868,6 +51904,51 @@ function RahuKaal() {
             ] }, isoDate(w.date))) })
           ] }) })
         ] }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "24px" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "h2", children: [
+            t("Sunrise, sunset and Rahu Kaal", "सूर्योदय, सूर्यास्त और राहु काल"),
+            " ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t(`through ${today2.y} in ${city.name}`, `— ${city.nameHi} में ${today2.y} भर`) })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "prose", style: { maxWidth: 860 }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t(
+              `In ${city.name} the earliest sunrise of ${today2.y} is at ${fmt(year.earliestSunrise.sunrise, "en")} (${fmtD(year.earliestSunrise)}) and the latest at ${fmt(year.latestSunrise.sunrise, "en")} (${fmtD(year.latestSunrise)}). The longest day, ${fmtD(year.longest)}, has ${fmtLen(year.longest.len, "en")} of daylight; the shortest, ${fmtD(year.shortest)}, has ${fmtLen(year.shortest.len, "en")}. Because each part of the day is one-eighth of the daylight, Rahu Kaal here lasts about ${Math.round(year.shortest.len / 8)} minutes in winter and ${Math.round(year.longest.len / 8)} minutes in summer.`,
+              `${city.nameHi} में ${today2.y} का सबसे जल्दी सूर्योदय ${fmt(year.earliestSunrise.sunrise, "hi")} (${fmtD(year.earliestSunrise)}) और सबसे देर से ${fmt(year.latestSunrise.sunrise, "hi")} (${fmtD(year.latestSunrise)}) पर है। सबसे लंबे दिन, ${fmtD(year.longest)} को ${fmtLen(year.longest.len, "hi")} की रोशनी है; सबसे छोटे दिन, ${fmtD(year.shortest)} को ${fmtLen(year.shortest.len, "hi")}। दिन का हर भाग रोशनी का आठवाँ हिस्सा होता है, इसलिए यहाँ राहु काल सर्दी में लगभग ${Math.round(year.shortest.len / 8)} मिनट और गर्मी में ${Math.round(year.longest.len / 8)} मिनट का होता है।`
+            ) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
+              t(
+                `Sunday’s Rahu Kaal, the last part of the day, starts as early as ${fmt(year.sundayRahu.earliest.start, "en")} (${fmtD(year.sundayRahu.earliest)}) and as late as ${fmt(year.sundayRahu.latest.start, "en")} (${fmtD(year.sundayRahu.latest)}) — a swing of ${Math.round(year.sundayRahu.latest.start - year.sundayRahu.earliest.start)} minutes that a fixed “4:30 to 6:00” table cannot show.`,
+                `रविवार का राहु काल, जो दिन का आखिरी भाग है, सबसे जल्दी ${fmt(year.sundayRahu.earliest.start, "hi")} (${fmtD(year.sundayRahu.earliest)}) और सबसे देर से ${fmt(year.sundayRahu.latest.start, "hi")} (${fmtD(year.sundayRahu.latest)}) पर शुरू होता है — ${Math.round(year.sundayRahu.latest.start - year.sundayRahu.earliest.start)} मिनट का अंतर, जो “4:30 से 6:00” वाली तय तालिका में नहीं दिखता।`
+              ),
+              !isJaipur && " " + (diff === 0 ? t(`Today the sun rises in ${city.name} at the same minute as in Jaipur.`, `आज ${city.nameHi} में सूर्योदय जयपुर के ही मिनट पर है।`) : t(`Today the sun rises in ${city.name} ${Math.abs(diff)} minutes ${diff < 0 ? "earlier" : "later"} than in Jaipur, so all the timings on this page differ from Jaipur’s.`, `आज ${city.nameHi} में सूर्योदय जयपुर से ${Math.abs(diff)} मिनट ${diff < 0 ? "पहले" : "बाद"} है, इसलिए इस पेज के सभी समय जयपुर से अलग हैं।`))
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { overflowX: "auto" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("table", { style: { width: "100%", borderCollapse: "collapse", fontSize: 15 }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("thead", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("tr", { style: { textAlign: "left" }, children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Date", "तारीख") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Sunrise", "सूर्योदय") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Sunset", "सूर्यास्त") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("th", { style: { padding: "10px 12px" }, children: t("Daylight", "दिन की लंबाई") })
+            ] }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("tbody", { children: year.months.map((x) => /* @__PURE__ */ jsxRuntimeExports.jsxs("tr", { style: { borderTop: "1px solid var(--line)" }, children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("td", { style: { padding: "8px 12px", whiteSpace: "nowrap" }, children: fmtD(x) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("td", { style: { padding: "8px 12px", whiteSpace: "nowrap", fontVariantNumeric: "tabular-nums" }, children: fmt(x.sunrise, lang) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("td", { style: { padding: "8px 12px", whiteSpace: "nowrap", fontVariantNumeric: "tabular-nums" }, children: fmt(x.sunset, lang) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("td", { className: "muted", style: { padding: "8px 12px", whiteSpace: "nowrap" }, children: fmtLen(x.len, lang) })
+            ] }, x.date.m)) })
+          ] }) })
+        ] }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap stack", style: { "--gap": "24px" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "h2", children: [
+            t("Rahu Kaal today", "आज का राहु काल"),
+            " ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("em", { children: t("in other cities", "दूसरे शहरों में") })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid", style: { "--min": "220px", "--gap": "10px" }, children: others.map(({ c, d }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: cityPath(c.id), className: "card", style: { padding: "14px 18px", gap: 4 }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { fontWeight: 600 }, children: t(`Rahu Kaal ${c.name}`, `राहु काल ${c.nameHi}`) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "muted", style: { fontVariantNumeric: "tabular-nums" }, children: range(d.rahu) })
+          ] }, c.id)) })
+        ] }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "band", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "wrap section stack", style: { "--gap": "22px", maxWidth: 900 }, children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "h2", children: [
             t("What is", "राहु काल"),
@@ -51921,6 +52002,7 @@ function SiteRoutes() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "contact", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Contact, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "faq", element: /* @__PURE__ */ jsxRuntimeExports.jsx(FaqPage, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "rahu-kaal-jaipur", element: /* @__PURE__ */ jsxRuntimeExports.jsx(RahuKaal, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "rahu-kaal/:city", element: /* @__PURE__ */ jsxRuntimeExports.jsx(RahuKaal, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "blog", element: /* @__PURE__ */ jsxRuntimeExports.jsx(BlogList, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "blog/:slug", element: /* @__PURE__ */ jsxRuntimeExports.jsx(BlogPost, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "privacy-policy", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Legal, { page: "privacy-policy" }) }),

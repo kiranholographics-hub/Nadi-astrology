@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { Link } from '../components/LangLink.jsx';
+import { useParams, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate } from '../components/LangLink.jsx';
+import NotFound from './NotFound.jsx';
 import { DISCLAIMER, PageShell } from '../components/Layout.jsx';
 import { Breadcrumb, Faq } from '../components/ui.jsx';
 import { useApp, useT } from '../context/AppContext.jsx';
 import {
-  CHOGHADIYA_INFO, CITIES, WEEKDAYS, addDays, dayTimings, fmt, fmtDate, isoDate, nowMinutesIST, parseIso, sameDate, todayIST,
+  CHOGHADIYA_INFO, CITIES, MONTH_NAMES, WEEKDAYS, addDays, cityPath, dayTimings, fmt, fmtDate, fmtLen, isoDate, nowMinutesIST, parseIso, sameDate, todayIST, yearFacts,
 } from '../data/panchang.js';
 
 const L = (en, hi) => ({ en, hi });
@@ -20,7 +21,13 @@ export default function RahuKaal() {
   const t = useT();
   const { lang } = useApp();
   const [params, setParams] = useSearchParams();
-  const city = CITIES.find((c) => c.id === params.get('city')) || CITIES[0];
+  const navigate = useNavigate();
+  const { city: cityParam } = useParams();
+  // /rahu-kaal/<city>; the old ?city= links still work on the Jaipur page
+  const found = CITIES.find((c) => c.id === (cityParam || params.get('city')));
+  const missing = Boolean(cityParam) && (!found || found.id === 'jaipur');
+  const city = found || CITIES[0];
+  const isJaipur = city.id === 'jaipur';
   const today = todayIST();
   const date = parseIso(params.get('date')) || today;
   const isToday = sameDate(date, today);
@@ -34,15 +41,17 @@ export default function RahuKaal() {
   }, []);
 
   const day = useMemo(() => dayTimings(date, city), [date.y, date.m, date.d, city.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  const year = useMemo(() => yearFacts(today.y, city), [today.y, city.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  const others = useMemo(() => CITIES.filter((c) => c.id !== city.id).map((c) => ({ c, d: dayTimings(today, c) })), [today.y, today.m, today.d, city.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  const jaipurToday = useMemo(() => dayTimings(today, CITIES[0]), [today.y, today.m, today.d]); // eslint-disable-line react-hooks/exhaustive-deps
   const week = useMemo(() => Array.from({ length: 7 }, (_, i) => dayTimings(addDays(today, i), city)), [today.y, today.m, today.d, city.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const set = (next) => {
-    const p = {};
     const c = next.city ?? city.id;
     const d = next.date ?? date;
-    if (c !== 'jaipur') p.city = c;
-    if (!sameDate(d, today)) p.date = isoDate(d);
-    setParams(p, { replace: true });
+    const q = sameDate(d, today) ? '' : `?date=${isoDate(d)}`;
+    if (c !== city.id || params.get('city')) navigate(cityPath(c) + q);
+    else setParams(q ? { date: isoDate(d) } : {}, { replace: true });
   };
 
   const range = (p) => `${fmt(p.start, lang)} – ${fmt(p.end, lang)}`;
@@ -95,16 +104,25 @@ export default function RahuKaal() {
     </div>
   );
 
+  if (missing) return <NotFound />;
+
+  const fmtD = (x) => `${x.date.d} ${MONTH_NAMES[lang][x.date.m - 1]}`;
+  const diff = Math.round(day.sunrise - jaipurToday.sunrise);
+
   return (
     <PageShell
-      title={L('Rahu Kaal Today Jaipur: Rahu Kaal & Choghadiya Timings', 'आज का राहु काल जयपुर — राहु काल और चौघड़िया समय')}
-      description={L('Rahu Kaal today in Jaipur with Yamaganda, Gulika Kaal, sunrise, sunset and the day and night Choghadiya — also for Delhi, Mumbai and other cities. Updated daily.', 'जयपुर में आज का राहु काल, यमगंड, गुलिक काल, सूर्योदय, सूर्यास्त और दिन-रात का चौघड़िया — दिल्ली, मुंबई और दूसरे शहरों के लिए भी। रोज़ अपडेट।')}
+      title={isJaipur
+        ? L('Rahu Kaal Today Jaipur: Rahu Kaal & Choghadiya Timings', 'आज का राहु काल जयपुर — राहु काल और चौघड़िया समय')
+        : L(`Rahu Kaal Today ${city.name}: Rahu Kaal & Choghadiya Timings`, `आज का राहु काल ${city.nameHi} — राहु काल और चौघड़िया समय`)}
+      description={isJaipur
+        ? L('Rahu Kaal today in Jaipur with Yamaganda, Gulika Kaal, sunrise, sunset and the day and night Choghadiya — also for Delhi, Mumbai and other cities. Updated daily.', 'जयपुर में आज का राहु काल, यमगंड, गुलिक काल, सूर्योदय, सूर्यास्त और दिन-रात का चौघड़िया — दिल्ली, मुंबई और दूसरे शहरों के लिए भी। रोज़ अपडेट।')
+        : L(`Rahu Kaal today in ${city.name} with Yamaganda, Gulika Kaal, sunrise, sunset, the day and night Choghadiya and a 7-day table — worked out for ${city.name}'s own sunrise. Updated daily.`, `${city.nameHi} में आज का राहु काल, यमगंड, गुलिक काल, सूर्योदय, सूर्यास्त, दिन-रात का चौघड़िया और 7 दिन की तालिका — ${city.nameHi} के अपने सूर्योदय से। रोज़ अपडेट।`)}
       disclaimer={DISCLAIMER.jyotish}
       seed={157}
     >
       <section className="hero">
         <div className="wrap stack" style={{ '--gap': '26px' }}>
-          <Breadcrumb items={[{ label: L('Rahu Kaal Today', 'आज का राहु काल') }]} />
+          <Breadcrumb items={isJaipur ? [{ label: L('Rahu Kaal Today', 'आज का राहु काल') }] : [{ label: L('Rahu Kaal Today', 'आज का राहु काल'), to: '/rahu-kaal-jaipur' }, { label: L(city.name, city.nameHi) }]} />
           <h1 className="h1 rise">{t('Rahu Kaal Today in', 'आज का राहु काल —')} <em>{cityName}</em></h1>
           <p className="lead" style={{ maxWidth: 700 }}>{t(`Rahu Kaal, Yamaganda and Gulika Kaal for ${city.name}, worked out from the actual sunrise and sunset of the day, with the day and night Choghadiya.`, `${city.nameHi} के लिए राहु काल, यमगंड और गुलिक काल — उस दिन के असली सूर्योदय और सूर्यास्त से निकाले गए, साथ में दिन और रात का चौघड़िया।`)}</p>
 
@@ -174,6 +192,60 @@ export default function RahuKaal() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="band">
+        <div className="wrap section stack" style={{ '--gap': '24px' }}>
+          <h2 className="h2">{t('Sunrise, sunset and Rahu Kaal', 'सूर्योदय, सूर्यास्त और राहु काल')} <em>{t(`through ${today.y} in ${city.name}`, `— ${city.nameHi} में ${today.y} भर`)}</em></h2>
+          <div className="prose" style={{ maxWidth: 860 }}>
+            <p>{t(
+              `In ${city.name} the earliest sunrise of ${today.y} is at ${fmt(year.earliestSunrise.sunrise, 'en')} (${fmtD(year.earliestSunrise)}) and the latest at ${fmt(year.latestSunrise.sunrise, 'en')} (${fmtD(year.latestSunrise)}). The longest day, ${fmtD(year.longest)}, has ${fmtLen(year.longest.len, 'en')} of daylight; the shortest, ${fmtD(year.shortest)}, has ${fmtLen(year.shortest.len, 'en')}. Because each part of the day is one-eighth of the daylight, Rahu Kaal here lasts about ${Math.round(year.shortest.len / 8)} minutes in winter and ${Math.round(year.longest.len / 8)} minutes in summer.`,
+              `${city.nameHi} में ${today.y} का सबसे जल्दी सूर्योदय ${fmt(year.earliestSunrise.sunrise, 'hi')} (${fmtD(year.earliestSunrise)}) और सबसे देर से ${fmt(year.latestSunrise.sunrise, 'hi')} (${fmtD(year.latestSunrise)}) पर है। सबसे लंबे दिन, ${fmtD(year.longest)} को ${fmtLen(year.longest.len, 'hi')} की रोशनी है; सबसे छोटे दिन, ${fmtD(year.shortest)} को ${fmtLen(year.shortest.len, 'hi')}। दिन का हर भाग रोशनी का आठवाँ हिस्सा होता है, इसलिए यहाँ राहु काल सर्दी में लगभग ${Math.round(year.shortest.len / 8)} मिनट और गर्मी में ${Math.round(year.longest.len / 8)} मिनट का होता है।`,
+            )}</p>
+            <p>{t(
+              `Sunday’s Rahu Kaal, the last part of the day, starts as early as ${fmt(year.sundayRahu.earliest.start, 'en')} (${fmtD(year.sundayRahu.earliest)}) and as late as ${fmt(year.sundayRahu.latest.start, 'en')} (${fmtD(year.sundayRahu.latest)}) — a swing of ${Math.round(year.sundayRahu.latest.start - year.sundayRahu.earliest.start)} minutes that a fixed “4:30 to 6:00” table cannot show.`,
+              `रविवार का राहु काल, जो दिन का आखिरी भाग है, सबसे जल्दी ${fmt(year.sundayRahu.earliest.start, 'hi')} (${fmtD(year.sundayRahu.earliest)}) और सबसे देर से ${fmt(year.sundayRahu.latest.start, 'hi')} (${fmtD(year.sundayRahu.latest)}) पर शुरू होता है — ${Math.round(year.sundayRahu.latest.start - year.sundayRahu.earliest.start)} मिनट का अंतर, जो “4:30 से 6:00” वाली तय तालिका में नहीं दिखता।`,
+            )}{!isJaipur && ' ' + (diff === 0
+              ? t(`Today the sun rises in ${city.name} at the same minute as in Jaipur.`, `आज ${city.nameHi} में सूर्योदय जयपुर के ही मिनट पर है।`)
+              : t(`Today the sun rises in ${city.name} ${Math.abs(diff)} minutes ${diff < 0 ? 'earlier' : 'later'} than in Jaipur, so all the timings on this page differ from Jaipur’s.`, `आज ${city.nameHi} में सूर्योदय जयपुर से ${Math.abs(diff)} मिनट ${diff < 0 ? 'पहले' : 'बाद'} है, इसलिए इस पेज के सभी समय जयपुर से अलग हैं।`))}</p>
+          </div>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
+              <thead>
+                <tr style={{ textAlign: 'left' }}>
+                  <th style={{ padding: '10px 12px' }}>{t('Date', 'तारीख')}</th>
+                  <th style={{ padding: '10px 12px' }}>{t('Sunrise', 'सूर्योदय')}</th>
+                  <th style={{ padding: '10px 12px' }}>{t('Sunset', 'सूर्यास्त')}</th>
+                  <th style={{ padding: '10px 12px' }}>{t('Daylight', 'दिन की लंबाई')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {year.months.map((x) => (
+                  <tr key={x.date.m} style={{ borderTop: '1px solid var(--line)' }}>
+                    <td style={{ padding: '8px 12px', whiteSpace: 'nowrap' }}>{fmtD(x)}</td>
+                    <td style={{ padding: '8px 12px', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>{fmt(x.sunrise, lang)}</td>
+                    <td style={{ padding: '8px 12px', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>{fmt(x.sunset, lang)}</td>
+                    <td className="muted" style={{ padding: '8px 12px', whiteSpace: 'nowrap' }}>{fmtLen(x.len, lang)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap stack" style={{ '--gap': '24px' }}>
+          <h2 className="h2">{t('Rahu Kaal today', 'आज का राहु काल')} <em>{t('in other cities', 'दूसरे शहरों में')}</em></h2>
+          <div className="grid" style={{ '--min': '220px', '--gap': '10px' }}>
+            {others.map(({ c, d }) => (
+              <Link key={c.id} to={cityPath(c.id)} className="card" style={{ padding: '14px 18px', gap: 4 }}>
+                <span style={{ fontWeight: 600 }}>{t(`Rahu Kaal ${c.name}`, `राहु काल ${c.nameHi}`)}</span>
+                <span className="muted" style={{ fontVariantNumeric: 'tabular-nums' }}>{range(d.rahu)}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
