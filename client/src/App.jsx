@@ -49,6 +49,7 @@ function SiteRoutes() {
       <Route path="contact" element={<Contact />} />
       <Route path="faq" element={<FaqPage />} />
       <Route path="rahu-kaal-jaipur" element={<RahuKaal />} />
+      <Route path="rahu-kaal/:city" element={<RahuKaal />} />
       <Route path="blog" element={<BlogList />} />
       <Route path="blog/:slug" element={<BlogPost />} />
       <Route path="privacy-policy" element={<Legal page="privacy-policy" />} />

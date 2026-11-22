@@ -137,3 +137,30 @@ export const WEEKDAYS = [
 ];
 const MONTHS = { en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], hi: ['जनवरी', 'फ़रवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर'] };
 export const fmtDate = (date, lang = 'en') => `${WEEKDAYS[weekday(date)][lang]}, ${date.d} ${MONTHS[lang][date.m - 1]} ${date.y}`;
+
+// URL of a city's page: Jaipur is the main page, the others live under /rahu-kaal/<city>.
+export const cityPath = (id) => (id === 'jaipur' ? '/rahu-kaal-jaipur' : `/rahu-kaal/${id}`);
+
+// The city's sun through one year: the 1st of every month, plus the extremes.
+export function yearFacts(year, city) {
+  const days = [];
+  for (let d = { y: year, m: 1, d: 1 }; d.y === year; d = addDays(d, 1)) {
+    const s = sunTimes(d, city.lat, city.lon);
+    days.push({ date: d, ...s, len: s.sunset - s.sunrise });
+  }
+  const pick = (key, dir) => days.reduce((a, b) => (dir * (b[key] - a[key]) > 0 ? b : a));
+  const sundays = days.filter((x) => weekday(x.date) === 0).map((x) => ({ date: x.date, ...slice(x.sunrise, x.len / 8, RAHU[0]) }));
+  return {
+    months: days.filter((x) => x.date.d === 1),
+    earliestSunrise: pick('sunrise', -1), latestSunrise: pick('sunrise', 1),
+    earliestSunset: pick('sunset', -1), latestSunset: pick('sunset', 1),
+    longest: pick('len', 1), shortest: pick('len', -1),
+    sundayRahu: { earliest: sundays.reduce((a, b) => (b.start < a.start ? b : a)), latest: sundays.reduce((a, b) => (b.start > a.start ? b : a)) },
+  };
+}
+export const fmtLen = (min, lang = 'en') => {
+  const h = Math.floor(min / 60);
+  const m = Math.round(min % 60);
+  return lang === 'hi' ? `${h} घंटे ${m} मिनट` : `${h} h ${m} min`;
+};
+export const MONTH_NAMES = MONTHS;
